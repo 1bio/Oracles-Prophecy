@@ -60,38 +60,28 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Editor\UpdateRootBoneAndBounds.cs" />
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Editor\EquipmentObjectEditor.cs" />
-    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Editor\bl_MiniMapEditor.cs" />
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\---Game Modules\Audio Clip Combiner\Editor\AudioClipCombiner.cs" />
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Editor\InfinityPBRManager.cs" />
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Editor\BlendShapesManagerEditor.cs" />
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Editor\AnimationEventCopier.cs" />
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Editor\InfinityEditor.cs" />
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Editor\PrefabAndObjectManagerEditor.cs" />
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Editor\SFB_DisplayPolycount.cs" />
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Editor\SFB_SaveObjectAsMesh.cs" />
-    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Editor\bl_MiniMapItemEditor.cs" />
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\---Game Modules\Audio Clip Combiner\Editor\AudioClipCombinerEditor.cs" />
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Editor\InfinitySoEditor.cs" />
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Editor\InfinityEditorScriptableObject.cs" />
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Editor\SFB_LoadWelcome.cs" />
-    <Compile Include="Assets\InfinityPBR\Editor\AnimationClipReverser.cs" />
+    <Compile Include="Assets\InfinityPBR\Editor\InfinityPBRManager.cs" />
+    <Compile Include="Assets\InfinityPBR\Editor\InfinitySoEditor.cs" />
+    <Compile Include="Assets\InfinityPBR\Editor\SFB_SaveObjectAsMesh.cs" />
+    <Compile Include="Assets\InfinityPBR\Editor\SFB_LoadWelcome.cs" />
+    <Compile Include="Assets\InfinityPBR\Editor\InfinityEditor.cs" />
+    <Compile Include="Assets\InfinityPBR\---Game Modules\Audio Clip Combiner\Editor\AudioClipCombiner.cs" />
+    <Compile Include="Assets\InfinityPBR\Editor\SFB_BlendShapesManagerEditor.cs" />
+    <Compile Include="Assets\InfinityPBR\Equipment System\Editor\EquipmentSystemStatic.cs" />
+    <Compile Include="Assets\InfinityPBR\Editor\InfinityEditorScriptableObject.cs" />
+    <Compile Include="Assets\InfinityPBR\Editor\UpdateRootBoneAndBounds.cs" />
+    <Compile Include="Assets\InfinityPBR\Editor\SFB_DisplayPolycount.cs" />
     <Compile Include="Assets\MiniGames\Trail\Editor\TrailEditor.cs" />
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Editor\ObjExporterScript.cs" />
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Editor\WardrobePrefabManagerEditor.cs" />
-    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Editor\bl_MiniMapHelperEditor.cs" />
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Editor\SFB_BlendShapesManagerEditor.cs" />
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Editor\EquipObjectMenu.cs" />
-    <Compile Include="Assets\Hovl Studio\Render Pipelines support\Editor\ShaderChanger.cs" />
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Editor\BlendShapesPresetManagerEditor.cs" />
-    <Compile Include="Assets\InfinityPBR\Editor\AnimationEventCopierWindow.cs" />
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Editor\EquipmentSystemStatic.cs" />
-    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Editor\MiniMapDocumentation.cs" />
-    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Editor\SFB_AudioSnapshotExporterEditor.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Editor\Plugins\TutorialWizardMiniMap.dll" />
+    <Compile Include="Assets\InfinityPBR\Equipment System\Editor\PrefabAndObjectManagerEditor.cs" />
+    <Compile Include="Assets\InfinityPBR\Editor\AnimationEventCopier.cs" />
+    <Compile Include="Assets\InfinityPBR\Equipment System\Editor\EquipmentObjectEditor.cs" />
+    <Compile Include="Assets\InfinityPBR\Equipment System\Editor\EquipObjectMenu.cs" />
+    <Compile Include="Assets\InfinityPBR\Equipment System\Editor\BlendShapesPresetManagerEditor.cs" />
+    <Compile Include="Assets\InfinityPBR\Editor\SFB_AudioSnapshotExporterEditor.cs" />
+    <Compile Include="Assets\InfinityPBR\Equipment System\Editor\BlendShapesManagerEditor.cs" />
+    <Compile Include="Assets\InfinityPBR\Editor\ObjExporterScript.cs" />
+    <Compile Include="Assets\InfinityPBR\---Game Modules\Audio Clip Combiner\Editor\AudioClipCombinerEditor.cs" />
+    <Compile Include="Assets\InfinityPBR\Equipment System\Editor\WardrobePrefabManagerEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -434,6 +424,10 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
       <Private>False</Private>
@@ -474,10 +468,6 @@
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="TutorialWizardMiniMap">
-      <HintPath>Assets\UGUIMiniMap\Content\Scripts\Internal\Editor\Plugins\TutorialWizardMiniMap.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
       <Private>False</Private>
@@ -492,6 +482,18 @@
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.GradleProject">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.GradleProject.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="mscorlib">

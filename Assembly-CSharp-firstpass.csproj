@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{987EA179-8C34-9F28-C439-885D15A00D7C}</ProjectGuid>
+    <ProjectGuid>{EA8C8BDE-5151-CA18-5D57-F7F4B1A261D5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
@@ -1186,11 +1186,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="SingularityGroup.HotReload.Runtime.Public.csproj">
-      <Project>{B3E36DAD-0073-D99C-328C-48D3C9101F9E}</Project>
+      <Project>{E7BCF7C0-47D1-8324-8B8D-A3E5B28583A0}</Project>
       <Name>SingularityGroup.HotReload.Runtime.Public</Name>
     </ProjectReference>
     <ProjectReference Include="MBS.csproj">
-      <Project>{725C28C2-FB86-2A1E-9DA4-09C175E4022C}</Project>
+      <Project>{40C60AC7-F522-1086-2EFB-B3DC91E97B58}</Project>
       <Name>MBS</Name>
     </ProjectReference>
   </ItemGroup>

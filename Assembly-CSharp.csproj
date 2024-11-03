@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7826EC8C-265D-778C-73EB-29FBA3068C23}</ProjectGuid>
+    <ProjectGuid>{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -141,7 +141,9 @@
     <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\PrefabAndObjectManager.cs" />
     <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\WardrobePrefabManager.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Data\AttackData.cs" />
+    <Compile Include="Assets\MiniGames\Trail\Trail.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Combat\MonsterHealth.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\UI\SkillSlot\SkyFallShotSlot.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\Shape.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\HPBar\FollowCameraRotation.cs" />
@@ -155,6 +157,7 @@
     <Compile Include="Assets\InfinityPBR\Magic Spells &amp; Particles\Scripts\SFB_LightAutoOff.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Enum\GameVFX.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Combat\WeaponToggle.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\UI\SkillSlot\TripleShotSlot.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\Scripts\Slash_WroomWroom.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Range\PlayerRangeAimState.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Misc\bl_MiniMapPlane.cs" />
@@ -191,6 +194,7 @@
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Controls\SliderStepController.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Combat\MonsterDamageHandler.cs" />
     <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\MatchValue.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\UI\SkillSlot\DashSlashSlot.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\FadeInOut\TransparencyController.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\Troll\Troll.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Core\bl_MiniMap.cs" />
@@ -219,6 +223,7 @@
     <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\SFB_HumanDemoModel.cs" />
     <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\SFB_StayWithTarget.cs" />
     <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\SFB_CameraFocus.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\UI\LookToCamera.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Controls\SliderValueController.cs" />
@@ -284,18 +289,22 @@
     <Compile Include="Assets\05.LCH\02.Scripts\Utility\RandomNumberGenerator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\Assets\AssetFiles\MRF\Scripts\Splines.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\UI\SkillSlot\FireBladeSlot.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\MatchList.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Combat\MeleeComponenet.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\PlayerStateMachine.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\UI\ClassSelectWindow.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\SceneResources\Other\Slash_DemoGUI.cs" />
     <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\BlendShapeGameObject.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\UI\SkillSlot\SpinSlashSlot.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\ExitButtonController.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Controller\MonsterAnimationController.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Melee\PlayerMeleeAttackState.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\Troll\Skills\TrollChargeAttack.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\UI\SkillSlot\ChargingShotSlot.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Combat\CameraShake.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Controls\ResourceBarController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
@@ -306,7 +315,6 @@
     <Compile Include="Assets\05.LCH\02.Scripts\System\DataManager.cs" />
     <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Devils\Scripts\SFB_DemoDevils.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Enemy\EnemyStateMachine.cs" />
-    <Compile Include="Assets\05.LCH\02.Scripts\UI\StageController.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Inventory\DynamicInterface.cs" />
     <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Scripts - Jason Storey\EnumerableExtensions.cs" />
     <Compile Include="Assets\Vertical Fog Package by Tzar\Fix\FixMobileDepth.cs" />
@@ -321,6 +329,7 @@
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Controls\EventTriggerInvoker.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Inventory\StaticInterface.cs" />
     <Compile Include="Assets\InfinityPBR\Magic Spells &amp; Particles\Scripts\SFB_MoveOverTime.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\UI\StageSelectController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\PathFinding\PointNode.cs" />
@@ -363,7 +372,6 @@
     <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Scripts Static\InfinityStatic.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Controls\BinarySliderController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
-    <Compile Include="Assets\05.LCH\02.Scripts\Data\UIData.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Misc\bl_MapPointer.cs" />
     <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Dragons\Scripts\SFB_DragonHeight.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Window\PopupWindowController.cs" />
@@ -1572,15 +1580,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{987EA179-8C34-9F28-C439-885D15A00D7C}</Project>
+      <Project>{EA8C8BDE-5151-CA18-5D57-F7F4B1A261D5}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="SingularityGroup.HotReload.Runtime.Public.csproj">
-      <Project>{B3E36DAD-0073-D99C-328C-48D3C9101F9E}</Project>
+      <Project>{E7BCF7C0-47D1-8324-8B8D-A3E5B28583A0}</Project>
       <Name>SingularityGroup.HotReload.Runtime.Public</Name>
     </ProjectReference>
     <ProjectReference Include="MBS.csproj">
-      <Project>{725C28C2-FB86-2A1E-9DA4-09C175E4022C}</Project>
+      <Project>{40C60AC7-F522-1086-2EFB-B3DC91E97B58}</Project>
       <Name>MBS</Name>
     </ProjectReference>
   </ItemGroup>

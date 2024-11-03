@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>SingularityGroup.HotReload</RootNamespace>
-    <ProjectGuid>{436A7DFC-1EFA-4472-DE3F-B3F7C489FCFC}</ProjectGuid>
+    <ProjectGuid>{2C28CA6B-4C87-16CF-8DF9-642A8874E7C6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>SingularityGroup.HotReload.Editor</AssemblyName>
@@ -1029,11 +1029,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="SingularityGroup.HotReload.Runtime.Public.csproj">
-      <Project>{B3E36DAD-0073-D99C-328C-48D3C9101F9E}</Project>
+      <Project>{E7BCF7C0-47D1-8324-8B8D-A3E5B28583A0}</Project>
       <Name>SingularityGroup.HotReload.Runtime.Public</Name>
     </ProjectReference>
     <ProjectReference Include="SingularityGroup.HotReload.Runtime.csproj">
-      <Project>{F515E0FA-4AAB-AB3B-002C-290AE45DF7F5}</Project>
+      <Project>{96117BEE-E4CC-26AB-3420-87942EDEAE3D}</Project>
       <Name>SingularityGroup.HotReload.Runtime</Name>
     </ProjectReference>
   </ItemGroup>

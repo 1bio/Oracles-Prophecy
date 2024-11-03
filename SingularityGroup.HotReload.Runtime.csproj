@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>SingularityGroup.HotReload</RootNamespace>
-    <ProjectGuid>{F515E0FA-4AAB-AB3B-002C-290AE45DF7F5}</ProjectGuid>
+    <ProjectGuid>{96117BEE-E4CC-26AB-3420-87942EDEAE3D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>SingularityGroup.HotReload.Runtime</AssemblyName>
@@ -955,7 +955,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="SingularityGroup.HotReload.Runtime.Public.csproj">
-      <Project>{B3E36DAD-0073-D99C-328C-48D3C9101F9E}</Project>
+      <Project>{E7BCF7C0-47D1-8324-8B8D-A3E5B28583A0}</Project>
       <Name>SingularityGroup.HotReload.Runtime.Public</Name>
     </ProjectReference>
   </ItemGroup>

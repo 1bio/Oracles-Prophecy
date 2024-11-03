@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B3E36DAD-0073-D99C-328C-48D3C9101F9E}</ProjectGuid>
+    <ProjectGuid>{E7BCF7C0-47D1-8324-8B8D-A3E5B28583A0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>SingularityGroup.HotReload.Runtime.Public</AssemblyName>

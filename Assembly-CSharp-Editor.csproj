@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{04AE7B71-E375-D9D1-6A27-ADB6A02C7D7E}</ProjectGuid>
+    <ProjectGuid>{22ECA286-C2E2-B7D8-155C-27E2C607520E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -77,6 +77,7 @@
     <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Editor\InfinityEditorScriptableObject.cs" />
     <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Editor\SFB_LoadWelcome.cs" />
     <Compile Include="Assets\InfinityPBR\Editor\AnimationClipReverser.cs" />
+    <Compile Include="Assets\MiniGames\Trail\Editor\TrailEditor.cs" />
     <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Editor\ObjExporterScript.cs" />
     <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Editor\WardrobePrefabManagerEditor.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Editor\bl_MiniMapHelperEditor.cs" />
@@ -1276,19 +1277,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{987EA179-8C34-9F28-C439-885D15A00D7C}</Project>
+      <Project>{EA8C8BDE-5151-CA18-5D57-F7F4B1A261D5}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{7826EC8C-265D-778C-73EB-29FBA3068C23}</Project>
+      <Project>{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="SingularityGroup.HotReload.Runtime.Public.csproj">
-      <Project>{B3E36DAD-0073-D99C-328C-48D3C9101F9E}</Project>
+      <Project>{E7BCF7C0-47D1-8324-8B8D-A3E5B28583A0}</Project>
       <Name>SingularityGroup.HotReload.Runtime.Public</Name>
     </ProjectReference>
     <ProjectReference Include="MBS.csproj">
-      <Project>{725C28C2-FB86-2A1E-9DA4-09C175E4022C}</Project>
+      <Project>{40C60AC7-F522-1086-2EFB-B3DC91E97B58}</Project>
       <Name>MBS</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 61efdc97cb5079546b012d604aaaf92a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - p_monsterStatData: {fileID: 11400000, guid: 6cc3ecaf0cf95a945877fa8c5b4d78b2, type: 2}
+  - p_monsterLootItemData: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

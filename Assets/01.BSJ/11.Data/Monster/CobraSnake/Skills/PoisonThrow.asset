@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0961ce276c5b0c4dbd88f9afddfd39c, type: 3}
+  m_Name: PoisonThrow
+  m_EditorClassIdentifier: 
+  _vfx:
+  - {fileID: 2656757342246123783, guid: 26cee66bae5866442a9ef752eaf7ec55, type: 3}
+  _cooldownThreshold: 0
+  _damage: 30
+  _range: 8
+  _castTime: 0

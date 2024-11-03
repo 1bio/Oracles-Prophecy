@@ -1,0 +1,34 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class ChargingShotSlot : MonoBehaviour
+{
+    [SerializeField] private Image coolDownImage;
+    [SerializeField] private TextMeshProUGUI coolDownText;
+
+    private void Update()
+    {
+        SlotCoolDownUpdate("정조준");
+    }
+
+    public void SlotCoolDownUpdate(string skillName)
+    {
+        float skillCoolDown = SkillManager.instance.ReturnCoolDown(skillName);
+        float remainCoolDown = SkillManager.instance.GetRemainingCooldown(skillName);
+
+        if (remainCoolDown <= 0)
+        {
+            coolDownImage.fillAmount = 0;
+            coolDownText.text = " ";
+        }
+        else
+        {
+            coolDownImage.fillAmount = skillCoolDown / remainCoolDown;
+            coolDownText.text = $"{(int)remainCoolDown}";
+        }
+    }
+
+}

@@ -4958,7 +4958,6 @@ GameObject:
   - component: {fileID: 2275211197238850947}
   - component: {fileID: 9160130346796224751}
   - component: {fileID: 3856158983668948690}
-  - component: {fileID: -3965637367164589238}
   m_Layer: 0
   m_Name: Troll_White
   m_TagString: Untagged
@@ -5113,18 +5112,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 3126321095093259985}
   rollSpeed: 0
---- !u!114 &-3965637367164589238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6662603522697582783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd540d5ecfc8f85488684915acb7142f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6720636564407869898
 GameObject:
   m_ObjectHideFlags: 0

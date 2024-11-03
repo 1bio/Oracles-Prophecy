@@ -13,8 +13,6 @@ public class MonsterBehaviourDead : MonsterBehaviour
         _monsterObj = monster.gameObject;
 
         monster.LootItemController.DropLootItems(monster.transform.position);
-        
-        DataManager.instance.ExpUp(_monsterObj.gameObject.name);
     }
 
     public override void OnBehaviourUpdate(Monster monster)

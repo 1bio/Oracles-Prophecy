@@ -3,7 +3,6 @@
         "moveSpeed": 5.0,
         "currentHealth": 100.0,
         "maxHealth": 100.0,
-        "mana": 100.0,
         "defense": 50.0
     },
     "skillData": [
@@ -19,8 +18,7 @@
             "multipleDamage": 1.149999976158142,
             "multipleCoolDown": 0.8999999761581421,
             "duration": 0.0,
-            "isPassive": false,
-            "useMana": 20.0
+            "isPassive": false
         },
         {
             "skillName": "트리플샷",
@@ -34,8 +32,7 @@
             "multipleDamage": 1.100000023841858,
             "multipleCoolDown": 0.949999988079071,
             "duration": 5.0,
-            "isPassive": true,
-            "useMana": 20.0
+            "isPassive": true
         },
         {
             "skillName": "화살비",
@@ -49,8 +46,7 @@
             "multipleDamage": 1.0499999523162842,
             "multipleCoolDown": 0.949999988079071,
             "duration": 0.0,
-            "isPassive": false,
-            "useMana": 20.0
+            "isPassive": false
         },
         {
             "skillName": "도약베기",
@@ -64,8 +60,7 @@
             "multipleDamage": 1.0700000524520875,
             "multipleCoolDown": 0.8500000238418579,
             "duration": 0.0,
-            "isPassive": false,
-            "useMana": 20.0
+            "isPassive": false
         },
         {
             "skillName": "화염칼",
@@ -79,8 +74,7 @@
             "multipleDamage": 1.1299999952316285,
             "multipleCoolDown": 0.949999988079071,
             "duration": 5.0,
-            "isPassive": true,
-            "useMana": 20.0
+            "isPassive": true
         },
         {
             "skillName": "회전베기",
@@ -94,8 +88,7 @@
             "multipleDamage": 1.100000023841858,
             "multipleCoolDown": 0.8999999761581421,
             "duration": 0.0,
-            "isPassive": false,
-            "useMana": 20.0
+            "isPassive": false
         }
     ],
     "attackData": [

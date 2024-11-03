@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E6D3357B-0D60-B28D-9D58-72BD546ADD10}</ProjectGuid>
+    <ProjectGuid>{E9F3D2D4-5DDD-E902-C9FF-B2E4593FB44C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.InputSystem.TestFramework</AssemblyName>
@@ -916,15 +916,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.InputSystem.csproj">
-      <Project>{F9E94537-11FD-1AB2-058C-B6DA526A0F57}</Project>
+      <Project>{361F7471-FCD5-CA09-73B4-41A9094DAB3C}</Project>
       <Name>Unity.InputSystem</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{EFA2A98B-2FB6-C20C-3413-E3AF214BC0B9}</Project>
+      <Project>{DA1AD844-B61A-C18B-FBAD-5E8D8502FDBC}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{C40955CA-E5AF-899F-CE3F-5BD2CC6815C0}</Project>
+      <Project>{786ED8B2-12CC-69E8-697B-4561814FC0B0}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

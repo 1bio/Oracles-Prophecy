@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5C6694E6-5DC7-6C26-247F-BBCE37143B9C}</ProjectGuid>
+    <ProjectGuid>{FF54C1A4-6639-AD88-1012-1445BF9A8529}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Recorder.Editor</AssemblyName>
@@ -1153,31 +1153,31 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Recorder.Base.csproj">
-      <Project>{C428EF7A-ACEF-9332-409C-0C5D93C73E7D}</Project>
+      <Project>{879807A3-9972-026E-3E77-755815D1B94B}</Project>
       <Name>Unity.Recorder.Base</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Recorder.csproj">
-      <Project>{298235B7-9797-E8ED-6DC9-6AC5AF69B504}</Project>
+      <Project>{F5A97290-2E0E-CC7D-B659-8F493FD149DA}</Project>
       <Name>Unity.Recorder</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{94ADA585-1E1D-BC5C-2D82-C8D28FB6C479}</Project>
+      <Project>{93C1060E-0AC9-289B-80A7-E8BB42B18A77}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{66FFBEE8-AE0D-38C5-BD9B-2D4D0949CEE2}</Project>
+      <Project>{3932484E-C231-F868-62C5-8B7007E0933B}</Project>
       <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Collections.csproj">
-      <Project>{C3016598-20C1-4652-8D86-C89C4B642ADF}</Project>
+      <Project>{582925DF-F070-F520-4403-372816AD8A12}</Project>
       <Name>Unity.Collections</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{C40955CA-E5AF-899F-CE3F-5BD2CC6815C0}</Project>
+      <Project>{786ED8B2-12CC-69E8-697B-4561814FC0B0}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{EFA2A98B-2FB6-C20C-3413-E3AF214BC0B9}</Project>
+      <Project>{DA1AD844-B61A-C18B-FBAD-5E8D8502FDBC}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

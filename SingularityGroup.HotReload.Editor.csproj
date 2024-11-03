@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>SingularityGroup.HotReload</RootNamespace>
-    <ProjectGuid>{436A7DFC-1EFA-4472-DE3F-B3F7C489FCFC}</ProjectGuid>
+    <ProjectGuid>{2C28CA6B-4C87-16CF-8DF9-642A8874E7C6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>SingularityGroup.HotReload.Editor</AssemblyName>
@@ -1037,19 +1037,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="SingularityGroup.HotReload.Runtime.Public.csproj">
-      <Project>{B3E36DAD-0073-D99C-328C-48D3C9101F9E}</Project>
+      <Project>{E7BCF7C0-47D1-8324-8B8D-A3E5B28583A0}</Project>
       <Name>SingularityGroup.HotReload.Runtime.Public</Name>
     </ProjectReference>
     <ProjectReference Include="SingularityGroup.HotReload.Runtime.csproj">
-      <Project>{F515E0FA-4AAB-AB3B-002C-290AE45DF7F5}</Project>
+      <Project>{96117BEE-E4CC-26AB-3420-87942EDEAE3D}</Project>
       <Name>SingularityGroup.HotReload.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{EFA2A98B-2FB6-C20C-3413-E3AF214BC0B9}</Project>
+      <Project>{DA1AD844-B61A-C18B-FBAD-5E8D8502FDBC}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{C40955CA-E5AF-899F-CE3F-5BD2CC6815C0}</Project>
+      <Project>{786ED8B2-12CC-69E8-697B-4561814FC0B0}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

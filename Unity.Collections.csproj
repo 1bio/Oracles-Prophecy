@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C3016598-20C1-4652-8D86-C89C4B642ADF}</ProjectGuid>
+    <ProjectGuid>{582925DF-F070-F520-4403-372816AD8A12}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Collections</AssemblyName>
@@ -1024,11 +1024,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{90FBF82E-CC44-0FFC-4305-F0C375F978AB}</Project>
+      <Project>{A06BEB9B-0751-B670-A975-0EE1A6CEE055}</Project>
       <Name>Unity.Burst</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{31081E24-A038-F46C-B25A-24232598EA92}</Project>
+      <Project>{60351616-2AED-00D5-1DA2-201880763113}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
   </ItemGroup>

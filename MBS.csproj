@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>MBS</RootNamespace>
-    <ProjectGuid>{725C28C2-FB86-2A1E-9DA4-09C175E4022C}</ProjectGuid>
+    <ProjectGuid>{40C60AC7-F522-1086-2EFB-B3DC91E97B58}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>MBS</AssemblyName>

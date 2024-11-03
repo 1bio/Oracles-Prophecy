@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C428EF7A-ACEF-9332-409C-0C5D93C73E7D}</ProjectGuid>
+    <ProjectGuid>{879807A3-9972-026E-3E77-755815D1B94B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Recorder.Base</AssemblyName>

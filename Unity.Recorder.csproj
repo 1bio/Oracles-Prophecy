@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{298235B7-9797-E8ED-6DC9-6AC5AF69B504}</ProjectGuid>
+    <ProjectGuid>{F5A97290-2E0E-CC7D-B659-8F493FD149DA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Recorder</AssemblyName>
@@ -970,7 +970,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{94ADA585-1E1D-BC5C-2D82-C8D28FB6C479}</Project>
+      <Project>{93C1060E-0AC9-289B-80A7-E8BB42B18A77}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
   </ItemGroup>

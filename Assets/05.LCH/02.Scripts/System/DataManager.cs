@@ -13,20 +13,22 @@ public class DataManager : MonoBehaviour
     private List<SkillData> skillData;
     private List<AttackData> attackData;
     private RangeAttackData rangeAttackData;
+
+    private float limitExp = 30f; // 경험치 제한(레벨 업 시 경험치 증가)
     
 
     // 데이터 초기화
     #region Initialized Methods
     private void Initialized()
     {
-        statusData = new StatusData(0, 0f, 5f, 100f, 100f, 0f);
+        statusData = new StatusData(1, 0f, 5f, 100f, 100f, 0f);
 
         skillData = new List<SkillData>
         {
             // 원거리
             new SkillData("정조준", 0, 20f, 12f, 0f, 0f, true, "1초 동안 힘을 모아 \r\n강력한 화살을 발사합니다", 1.15f, 0.9f, 0f, false, 20), // 스킬 1 [0]
             new SkillData("트리플샷", 0, 7f, 7f, 0f, 0f, true, "기본 공격 시 10초 동안 3발의 \r\n화살을 연속으로 발사합니다", 1.1f, 0.95f, 5f, true, 20), // 스킬 2 [1]
-            new SkillData("화살비", 0, 0f, 10f, 0f, 0f, true, "하늘에 떨어지는 화살을 \r\n여러 번 발사합니다", 1.05f, 0.95f, 0f, false, 20), // 스킬 3 [2]
+            new SkillData("화살비", 0, 10f, 10f, 0f, 0f, true, "하늘에 떨어지는 화살을 \r\n여러 번 발사합니다", 1.05f, 0.95f, 0f, false, 20), // 스킬 3 [2]
 
             // 근거리
             new SkillData("도약베기", 0, 20f, 15f, 0.02f, 0.35f, true, "짧게 도약하며 \r\n근처의 적들을 공격합니다", 1.07f, 0.85f, 0f, false, 20), // 스킬 1 [3]
@@ -67,15 +69,47 @@ public class DataManager : MonoBehaviour
 
 
     #region Main Methods
+    // 경험치 증가
+    public void ExpUp(Monster monster)
+    {
+        switch (monster)
+        {
+            case Troll:
+                playerData.statusData.exp += Random.Range(1f, 7f);
+                break;
+            case Minotaur:
+                playerData.statusData.exp += Random.Range(2f, 5f);
+                break;
+            case Medusa:
+                playerData.statusData.exp += Random.Range(10f, 20f);
+                break;
+        }
+
+        if (playerData.statusData.exp >= limitExp)
+        {
+            LevelUp(25f, 50f);
+
+            limitExp += 10f;
+        }
+
+    }
+
     // 경험치 레벨업
-    public void LevelUp(float addHealth) 
+    public void LevelUp(float addHealth, float addMana) 
     {
         StatusData player = playerData.statusData;
-
+        
         player.level += 1;
         player.exp = 0f;
-        player.maxHealth += addHealth; // 추가 체력만큼 최대 체력 증가
-        player.currentHealth = player.maxHealth; // 플레이어 레벨 업 후 체력 회복
+
+        // 추가 체력만큼 최대 체력 및 마나 증가
+        player.maxHealth += addHealth;
+        player.maxMana += addMana;
+
+        // 플레이어 레벨 업 후 체력 및 마나 회복
+        player.currentHealth = player.maxHealth; 
+        player.currentMana = player.maxMana; 
+
     }
 
     // 스킬 레벨 업
@@ -101,32 +135,10 @@ public class DataManager : MonoBehaviour
             if (skill.skillName != skillName)
                 continue;
 
-            if (skill.useMana > statusData.mana)
+            if (skill.useMana > statusData.currentMana)
                 return;
 
-            statusData.mana -= skill.useMana;
-        }
-    }
-
-    public void ExpUp(string monsterName)
-    {
-        // 수정 필요
-        switch (monsterName)
-        {
-            case "Troll":
-                playerData.statusData.exp += Random.Range(1f, 7f);
-                break;
-            case "Minotaur":
-                playerData.statusData.exp += Random.Range(2f, 5f);
-                break;
-            case "Medusa":
-                playerData.statusData.exp += Random.Range(10f, 20f);
-                break;
-        }
-
-        if(playerData.statusData.exp >= 1f)
-        {
-            LevelUp(10f);
+            statusData.currentMana -= skill.useMana;
         }
     }
     #endregion

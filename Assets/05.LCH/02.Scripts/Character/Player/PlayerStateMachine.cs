@@ -61,31 +61,13 @@ public class PlayerStateMachine : StateMachine
 
     private void Start()
     {
-        SettingPlayerClass();
+        //SettingPlayerClass();
+
+        ChangeState(new PlayerFreeLookState(this));
+        //ChangeState(new PlayerRangeFreeLookState(this));
 
         DataManager.instance.SaveData();
     }
-
-
-    #region Event Methods
-    // Impact
-    void OnHandleTakeDamage()
-    {
-        ChangeState(new PlayerImpactState(this));
-    }
-
-    // Groggy
-    /* void OnHandleGroggy()
-     {
-         ChangeState(new PlayerGroggyState(this));
-     }*/
-
-    // Dead
-    /*void OnHandleDie()
-    {
-        ChangeState(new PlayerDeadState(this));
-    }*/
-    #endregion
 
 
     #region Main Methods
@@ -95,7 +77,7 @@ public class PlayerStateMachine : StateMachine
     }
 
     // 플레이어 클래스 설정
-    private void SettingPlayerClass()
+    public void SettingPlayerClass()
     {
         // 무기 활성화 및 비활성화
         foreach (GameObject weapon in WeaponPrefabs)
@@ -130,6 +112,30 @@ public class PlayerStateMachine : StateMachine
     {
         SkillManager.instance.StartCooldown(skillName);
     }
+    #endregion
+
+
+
+
+
+    #region Event Methods
+    // Impact
+    void OnHandleTakeDamage()
+    {
+        ChangeState(new PlayerImpactState(this));
+    }
+
+    // Groggy
+    /* void OnHandleGroggy()
+     {
+         ChangeState(new PlayerGroggyState(this));
+     }*/
+
+    // Dead
+    /*void OnHandleDie()
+    {
+        ChangeState(new PlayerDeadState(this));
+    }*/
     #endregion
 
 }

@@ -4084,10 +4084,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 154831846003138860}
+  - {fileID: 5889661677158080390}
   - {fileID: 9062847188956691608}
   - {fileID: 399615830384574668}
-  - {fileID: 5889661677158080390}
-  - {fileID: 154831846003138860}
   - {fileID: 1046643677032741771}
   - {fileID: 3965366015841510863}
   - {fileID: 2040588168215759173}
@@ -4161,6 +4161,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 67f9db96f281fbd468ad8eb0bc219606, type: 2}
+  equipment: {fileID: 0}
+  attributes: []
+  weaponTransform: {fileID: 0}
+  offhandWristTransform: {fileID: 0}
+  offhandHandTransform: {fileID: 0}
 --- !u!114 &6421235098220618430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4191,8 +4196,8 @@ MonoBehaviour:
   - {fileID: 7963103374477063319}
   - {fileID: 5667306821713486921}
   <RotationSpeed>k__BackingField: 25
-  <DodgeDuration>k__BackingField: 0
-  <DodgeLenght>k__BackingField: 0
+  <DodgeDuration>k__BackingField: 1.5
+  <DodgeLenght>k__BackingField: 1.5
   <PreviousDodgeTime>k__BackingField: -Infinity
   <DodgeCooldown>k__BackingField: 0
 --- !u!114 &2995021622645198466
@@ -4625,11 +4630,11 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.96362513, b: 0.72264147, a: 1}
   m_Intensity: 18
   m_Range: 20
   m_SpotAngle: 150.95236
-  m_InnerSpotAngle: 28.935501
+  m_InnerSpotAngle: 47.83452
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
@@ -4660,10 +4665,10 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 2103
+    m_Bits: 2359
   m_RenderingLayerMask: 1
   m_Lightmapping: 1
   m_LightShadowCasterMode: 0
@@ -4692,7 +4697,7 @@ MonoBehaviour:
   m_UsePipelineSettings: 1
   m_AdditionalLightsShadowResolutionTier: 2
   m_LightLayerMask: 1
-  m_RenderingLayers: 1
+  m_RenderingLayers: 2
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
   m_ShadowRenderingLayers: 1
@@ -6537,7 +6542,7 @@ Transform:
   m_GameObject: {fileID: 7550928032419975356}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.0499992, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6554,14 +6559,14 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 0.97179705, b: 0.73018867, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 1, g: 0.9864721, b: 0.8207547, a: 1}
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -6589,10 +6594,10 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 6199
+    m_Bits: 10551
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -6621,7 +6626,7 @@ MonoBehaviour:
   m_UsePipelineSettings: 1
   m_AdditionalLightsShadowResolutionTier: 2
   m_LightLayerMask: 1
-  m_RenderingLayers: 1
+  m_RenderingLayers: 5
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
   m_ShadowRenderingLayers: 1

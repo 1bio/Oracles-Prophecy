@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Data;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,7 @@ public class UIManager : MonoBehaviour
     [Header("원거리 스킬 프리팹")]
     public GameObject[] rangeSkillPrefabs;
 
+
     [Header("스킬 쿨다운")]
     public GameObject[] emptySlot;
     public GameObject[] skillSlot;
@@ -24,33 +26,46 @@ public class UIManager : MonoBehaviour
     public GameObject inventoryWindow;
 
     [Header("플레이어 스탯")]
+    public Text level;
     public Slider hp_Slider;
     public Slider mana_Slider;
-    public Text level;
     public Slider exp_Slider;
 
-    private bool isMelee;
+    private bool isMelee; // 클래스 확인
 
-    private string skillName;
+    private string skillName; // 스킬 이름 확인
+
+    // 스탯 필드
+    private float currentHp;
+    private float currentMana;
+    private float currentExp;
+
+    private float lerpSpeed = 3f;
 
     private void Awake()
     {
-        instance = this;
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Start()
     {
-        selectWindow.SetActive(true);
+        selectWindow.SetActive(true); 
 
         GetRandomSkill();
     }
 
     private void Update()
     {
-        hp_Slider.value = DataManager.instance.playerData.statusData.currentHealth / 100;
-        mana_Slider.value = DataManager.instance.playerData.statusData.mana / 100;
-        exp_Slider.value = DataManager.instance.playerData.statusData.exp / 100;
+        UpdateStatus();
 
+        // 스킬 선택 창
         if (Input.GetKeyDown(KeyCode.K))
         {
             SelectWindow(true);
@@ -58,27 +73,12 @@ public class UIManager : MonoBehaviour
             GetRandomSkill();
         }
 
+        // 인벤토리 선택 창
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             InventoryWindow(!inventoryWindow.activeSelf);
         }
     }
-
-
-    #region Toggle Window
-    // 스킬 선택 UI 토글
-    public void SelectWindow(bool openWindow)
-    {
-        selectWindow.SetActive(openWindow);
-    }   
-    
-    // 인벤토리 UI 토글
-    public void InventoryWindow(bool openWindow)
-    {
-        inventoryWindow.SetActive(openWindow);
-    }
-    #endregion
-
 
     #region Main Methods
     public void SetIsMelee(bool isMelee)
@@ -86,10 +86,24 @@ public class UIManager : MonoBehaviour
         this.isMelee = isMelee;
     }
 
+    // 스탯 업데이트
+    private void UpdateStatus()
+    {
+        level.text = DataManager.instance.playerData.statusData.level.ToString();
+
+        this.currentHp = DataManager.instance.playerData.statusData.currentHealth / 100;
+        this.currentMana = DataManager.instance.playerData.statusData.currentMana / 100;
+        this.currentExp = DataManager.instance.playerData.statusData.exp / 100;
+
+        hp_Slider.value = Mathf.Lerp(hp_Slider.value, this.currentHp, lerpSpeed * Time.deltaTime);
+        mana_Slider.value = Mathf.Lerp(mana_Slider.value, this.currentMana, lerpSpeed * Time.deltaTime);
+        exp_Slider.value = Mathf.Lerp(exp_Slider.value, this.currentExp, lerpSpeed * Time.deltaTime);
+    }
+
     // 랜덤 스킬 생성
     public void GetRandomSkill()
     {
-        if (isMelee)
+        if (!isMelee)
         {
             int[] randomValues = RandomNumberGenerator.GenerateRandomIndex(meleeSkillPrefabs.Length, selectPosition.Length);
 
@@ -155,6 +169,21 @@ public class UIManager : MonoBehaviour
                 break;
             }
         }
+    }
+    #endregion
+
+
+    #region Toggle Window
+    // 스킬 선택 UI 토글
+    public void SelectWindow(bool openWindow)
+    {
+        selectWindow.SetActive(openWindow);
+    }
+
+    // 인벤토리 UI 토글
+    public void InventoryWindow(bool openWindow)
+    {
+        inventoryWindow.SetActive(openWindow);
     }
     #endregion
 }

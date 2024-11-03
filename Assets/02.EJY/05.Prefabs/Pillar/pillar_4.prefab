@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 8644226626357078681}
   - component: {fileID: 7072623050546029698}
   - component: {fileID: 1896703530736227149}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: pillar_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4144119527933459244
 Transform:
@@ -59,7 +59,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 5
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 3fda52ab22a27cf4aab43bcae5bb45fa, type: 2}

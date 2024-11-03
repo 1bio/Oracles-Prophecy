@@ -60,17 +60,17 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\DemoKeyCommands.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\SceneResources\Other\Slash_MouseOrbit.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\PlayerFreeLookState.cs" />
-    <Compile Include="Assets\InfinityPBR\Scripts - Jason Storey\EnumerableExtensions.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_AudioManager.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Example\Scripts\bl_RandomBot.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\PathFinding\Astar.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Enum\MiniMapEnums.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Combat\MonsterAttack.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
-    <Compile Include="Assets\Synty\Tools\SyntyPropBoneTool\Runtime\PropBone.cs" />
     <Compile Include="Assets\TwoUncleVFX\Common\Script\BulletController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\ExtendedFlycam.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Minotaur\Scripts\MinotaurDemo.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\Scripts\Slash_AxisRotateByTime.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\UI\CharacterUI.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Data\RangeAttackData.cs" />
@@ -80,13 +80,18 @@
     <Compile Include="Assets\05.LCH\02.Scripts\Data\PlayerData.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Window\AnimatedWindowController.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\FadeInOut\ObjectFadeInOut.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\IPBR_EnvironmentWarning.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Combat\Targeting.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\UI\bl_MiniMapTexture.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Enemy\EnemyBaseState.cs" />
-    <Compile Include="Assets\MRF\Scripts\DynamicTrailGenerator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Behaviour\MonsterBehaviourDead.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_StayWithTarget.cs" />
-    <Compile Include="Assets\MRF\Scripts\Splines.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Util\bl_MiniMapRenderTool.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Base\bl_MiniMapPlaneBase.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Struct\MiniMapIconSettings.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\MRF\Scripts\SimpleWeaponTrail.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Base\bl_MiniMapIconBase.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\SFB_CameraRotate_v2.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\System\PoolManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Input\InputReader.cs" />
@@ -94,346 +99,364 @@
     <Compile Include="Assets\05.LCH\02.Scripts\Data\SkillData.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Window\NationPickController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
-    <Compile Include="Assets\InfinityPBR\_InfinityPBR - Cobra Snake\Scripts\SFB_CobraSnakeDemo.cs" />
-    <Compile Include="Assets\MRF\Scripts\MSFEffectGroupExample.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\FollowTarget.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
-    <Compile Include="Assets\MRF\Scripts\TrailController.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Scriptables\bl_MiniMapData.cs" />
+    <Compile Include="Assets\InfinityPBR\Magic Spells &amp; Particles\Scripts\SFB_ParticleGrowOverTime.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Base\bl_MiniMapInputBase.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\InfinityDemoAutomateStyles.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Devils\Scripts\DevilDemo.cs" />
+    <Compile Include="Assets\InfinityPBR\Magic Spells &amp; Particles\Scripts\SFB_ParticleTrailRotation.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Example\Standard Assets\Characters\FirstPersonCharacter\Scripts\MinimapPlayerController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\GotHitDirection.cs" />
-    <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\BlendShapesManager.cs" />
-    <Compile Include="Assets\InfinityPBR\_InfinityPBR - Medusa\Scripts\medusaTypeControl.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\MRF\Scripts\TrailController.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\System\SkillManager.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Cobra Snake\Scripts\SFB_CobraSnakeDemo.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Util\bl_MiniMapUtils.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\Medusa\Skills\MedusaSpinAttack.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Combat\VFXController.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Melee\PlayerMeleeSpinSlashState.cs" />
-    <Compile Include="Assets\01.BSJ\02.Scripts\MonsterHealthOnMouse.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\Medusa\Skills\MedusaJumpAttack.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\InfinityDemoCharacter.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Example\Scripts\bl_MiniMapDemo.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Inventory\InventoryObject.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Core\bl_MiniMapEntity.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Range\PlayerRangeSkyFallState.cs" />
-    <Compile Include="Assets\InfinityPBR\_InfinityPBR - Minotaur\Scripts\SFB_MinotaurDemo.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Input\InputActions.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Range\PlayerRangeRapidShotState.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Melee\PlayerHeavyAttackState.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\UI\bl_MiniMapOverlay.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Data\MonsterStatData.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Indicator\Indicator.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Controller\MonsterParticleController.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\MRF\Scripts\DynamicTrailGenerator.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\SFB_AudioManager.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\MobileBloom\Slashes_MobileBloom.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Example\Standard Assets\Utility\bl_LerpControlledBob.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\PrefabAndObjectManager.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\WardrobePrefabManager.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Data\AttackData.cs" />
-    <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\BlendShapePresetFile.cs" />
-    <Compile Include="Assets\MiniGames\Trail\Trail.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Combat\MonsterHealth.cs" />
-    <Compile Include="Assets\05.LCH\02.Scripts\UI\SkillSlot\SkyFallShotSlot.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\Shape.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\Monster\HPBar\FollowCameraRotation.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Item\ItemDatabaseObject.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\Monster\HPBar\MonsterHealthOnMouse.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Gethit\PlayerGroggyState.cs" />
     <Compile Include="Assets\TwoUncleVFX\Common\Script\ChangeFX.cs" />
-    <Compile Include="Assets\InfinityPBR\_InfinityPBR - Medusa\Scripts\medusaTextureControl.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Combat\Projectile.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Enemy\FreeLook\EnemyFreeLookState.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\EquipmentGroup.cs" />
+    <Compile Include="Assets\InfinityPBR\Magic Spells &amp; Particles\Scripts\SFB_LightAutoOff.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Enum\GameVFX.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Combat\WeaponToggle.cs" />
-    <Compile Include="Assets\05.LCH\02.Scripts\UI\SkillSlot\TripleShotSlot.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\Scripts\Slash_WroomWroom.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Range\PlayerRangeAimState.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Misc\bl_MiniMapPlane.cs" />
     <Compile Include="Assets\Vefects\ItemPickUp\Scripts\Demo_TurningAroundEffect.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\GotHitDirection.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\UI\Skill\DashSlash.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_TurnOffIfOn.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\BlendShapePreset.cs" />
+    <Compile Include="Assets\InfinityPBR\Scripts\InfinityExtensions.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Window\WindowController.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Behaviour\MonsterBehaviourMovement.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\SFB_AnubisDemo.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Base\bl_MapPointerBase.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Misc\bl_MiniMapBounds.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Controls\SliderPercentController.cs" />
-    <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\EquipmentObject.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Interface\IMonsterCombat.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\For demo scenes\HS_ArcherInput.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\State.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\SFB_ShotFollowTarget.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\Minotaur\Minotaur.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\State\MonsterStateMachine.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Range\PlayerRangeAttackState.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\BlendShapesPresetManager.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\UI\Icons\bl_MiniMapIcon.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Behaviour\MonsterBehaviourSpawn.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Behaviour\MonsterBehaviourAttack.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Combat\MonsterParticleDamageHandler.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Utility\Health.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\UI\Skill\FireBlade.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\InfinityDemoAutomateStyles.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\HS_ParticleCollisionInstance.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Combat\MonsterCombatAbility.cs" />
-    <Compile Include="Assets\MRF\Scripts\ShatterHandler.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\DemoWardrobe.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\UI\Icons\bl_MiniMapTagIcon.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Controls\SliderStepController.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Combat\MonsterDamageHandler.cs" />
-    <Compile Include="Assets\05.LCH\02.Scripts\UI\SkillSlot\DashSlashSlot.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\MatchValue.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\FadeInOut\TransparencyController.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\Troll\Troll.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Core\bl_MiniMap.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\Medusa\Medusa.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Minotaur\Scripts\SFB_MinotaurDemo.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\Minotaur\Skills\MinotaurRamAttack.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\Devils\Devils.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\UI\bl_MiniMapCompass.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Domain\NationProperties.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\PlayerBaseState.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Inventory\UserInterface.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Monster.cs" />
-    <Compile Include="Assets\01.BSJ\02.Scripts\FollowCameraRotation.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\TakeScreenshot.cs" />
-    <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\BlendShapePreset.cs" />
-    <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\MatchValue.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Troll\Scripts\SFB_TrollDemo.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Example\Standard Assets\Utility\bl_CurveControlledBob.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\EquipObject.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\For demo scenes\HS_CameraController.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Player\ModifiableInt.cs" />
-    <Compile Include="Assets\InfinityPBR\Scripts Static\InfinityStatic.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Player\IModifiers.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\UI\bl_MiniMapPlayerIcon.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Player\BoneCombiner.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Controller\MonsterMovementController.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\EquipmentObject.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Misc\bl_MiniMapSize.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\SFB_BlendShapesManager.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\UI\Skill\SpinSlash.cs" />
-    <Compile Include="Assets\Synty\Tools\SyntyPropBoneTool\Types\PropBoneBinding.cs" />
-    <Compile Include="Assets\05.LCH\02.Scripts\UI\LookToCamera.cs" />
-    <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\BlendShapeValue.cs" />
-    <Compile Include="Assets\InfinityPBR\_InfinityPBR - Troll\Scripts\SFB_TrollDemo.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_BlendShapesManager.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\SFB_HumanDemoModel.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\SFB_StayWithTarget.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\SFB_CameraFocus.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Controls\SliderValueController.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\BlendShapePresetValue.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\IPBR_EnvironmentWarning.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Combat\RangeComponent.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Item\ItemObject.cs" />
     <Compile Include="Assets\TwoUncleVFX\Common\Script\RotateAround.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_CameraRotate_v2.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Example\Scripts\bl_CreateItemExample.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\UI\bl_MiniMapMaskHandler.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Data\StatusData.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Behaviour\MonsterBehaviourSkill.cs" />
     <Compile Include="Assets\Vefects\ItemPickUp\Scripts\Demo_FreeCam.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\UI\Skill\ChargingShot.cs" />
-    <Compile Include="Assets\MRF\Scripts\BillBoardParticle.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Base\bl_MiniMapEntityBase.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Controls\HighlightToggle.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\MRF\Scripts\ShatterHandler.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\For demo scenes\HS_CameraShaker.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Controller\MonsterLootItemController.cs" />
-    <Compile Include="Assets\Synty\Tools\SyntyPropBoneTool\Utils\TransformUtil.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Scriptables\bl_MapRender.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Misc\bl_MiniMapInputLegacy.cs" />
+    <Compile Include="Assets\InfinityPBR\Magic Spells &amp; Particles\Scripts\SFB_LightFlicker.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Misc\bl_MiniMapDragArea.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\HS_FrontAttack.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\General\bl_MiniMapEvents.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\System\GameManager.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_AnubisDemo.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\Troll\Skills\TrollFireBreath.cs" />
-    <Compile Include="Assets\InfinityPBR\_InfinityPBR - Medusa\Scripts\SFB_MedusaDemoCameras.cs" />
-    <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\Shape.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\Minotaur\Skills\MinotaurFireThrow.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\InfinityDemoFloatSlider.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Controller\MonsterCombatController.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\System\UIManager.cs" />
-    <Compile Include="Assets\05.LCH\02.Scripts\UI\Skill\TripleShot.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\Scripts\AnimationEventEffects.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\UI\Skill\TripleShot.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\InfinityDemoAnimationButton.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\UI\Skill\SkyFallShot.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\PathFinding\PointGrid.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Item\Billboard.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\BlendShapeValue.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+    <Compile Include="Assets\InfinityPBR\Animation Scripts\BoneMotionReaction.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\Scripts\Slash_UIEffectList.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\CobraSnake\CobraSnake.cs" />
-    <Compile Include="Assets\Synty\Tools\SyntyPropBoneTool\Types\PropBoneDefinition.cs" />
-    <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\BlendShapePresetValue.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\BlendShapePresetFile.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Medusa\Scripts\SFB_MedusaDemoCameras.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\HS_TargetProjectile.cs" />
-    <Compile Include="Assets\MRF\Scripts\ParticleEventHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Scriptables\bl_MiniMapIconData.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Controller\MonsterSkillController.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\MRF\Scripts\MSFEffectGroupExample.cs" />
+    <Compile Include="Assets\InfinityPBR\Magic Spells &amp; Particles\Scripts\SFB_LightAutoOn.cs" />
     <Compile Include="Assets\TwoUncleVFX\Common\Script\LineManager.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\UI\NextScene.cs" />
-    <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\MatchList.cs" />
+    <Compile Include="Assets\InfinityPBR\Magic Spells &amp; Particles\Scripts\SFB_LightColorChange.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Example\Standard Assets\Utility\bl_FOVKick.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Misc\bl_MiniMapPlayer.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\System\SceneController.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\SFB_ToggleOpposite.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Utility\ForceReceiver.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\photoController.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Utility\RandomNumberGenerator.cs" />
-    <Compile Include="Assets\Synty\Tools\SyntyPropBoneTool\Runtime\PropBoneConfig.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
-    <Compile Include="Assets\05.LCH\02.Scripts\UI\SkillSlot\FireBladeSlot.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\MRF\Scripts\Splines.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\MatchList.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Combat\MeleeComponenet.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\PlayerStateMachine.cs" />
-    <Compile Include="Assets\05.LCH\02.Scripts\UI\ClassSelectWindow.cs" />
-    <Compile Include="Assets\InfinityPBR\_InfinityPBR Human - Humans\Scripts\MaterialColorChanger.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\SceneResources\Other\Slash_DemoGUI.cs" />
-    <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\BlendShapesPresetManager.cs" />
-    <Compile Include="Assets\05.LCH\02.Scripts\UI\SkillSlot\SpinSlashSlot.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\BlendShapeGameObject.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\ExitButtonController.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\InfinityDemoCharacter.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Controller\MonsterAnimationController.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Melee\PlayerMeleeAttackState.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\Troll\Skills\TrollChargeAttack.cs" />
-    <Compile Include="Assets\05.LCH\02.Scripts\UI\SkillSlot\ChargingShotSlot.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Combat\CameraShake.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\FollowTarget.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_HumanDemoControl.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Controls\ResourceBarController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Example\Scripts\bl_DamageBoxDemo.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Behaviour\MonsterBehaviourIdle.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Dragons\Scripts\SFB_DragonGroundToFly.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\SFB_TurnOffIfOn.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\System\DataManager.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\IPBR_SupportAndReview.cs" />
-    <Compile Include="Assets\Synty\Tools\SyntyPropBoneTool\Runtime\PropBoneBinder.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Devils\Scripts\SFB_DemoDevils.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Enemy\EnemyStateMachine.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\UI\StageController.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Inventory\DynamicInterface.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\DemoControl.cs" />
-    <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\EquipmentGroup.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Scripts - Jason Storey\EnumerableExtensions.cs" />
     <Compile Include="Assets\Vertical Fog Package by Tzar\Fix\FixMobileDepth.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\Scripts\Slash_Light.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\DemoWardrobe.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Audio Snapshot Exporter\SFB_AudioSnapshotExporter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\CobraSnake\CobraSnakePoisonThrow.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Medusa\Scripts\medusaDemo.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\MRF\Scripts\BillBoardParticle.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Melee\PlayerMeleeDashSlashState.cs" />
-    <Compile Include="Assets\Synty\Tools\SyntyPropBoneTool\Enums\UpdateType.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Controls\EventTriggerInvoker.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Inventory\StaticInterface.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\photoController.cs" />
-    <Compile Include="Assets\05.LCH\02.Scripts\UI\StageSelectController.cs" />
+    <Compile Include="Assets\InfinityPBR\Magic Spells &amp; Particles\Scripts\SFB_MoveOverTime.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\DemoKeyCommands.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\PathFinding\PointNode.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR Human - Humans\Scripts\MaterialColorChanger.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Scripts\BlendShapesManager.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\MonsterSpawnManager.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\UI\SlideWindow.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Controls\ScrollController.cs" />
-    <Compile Include="Assets\InfinityPBR\_InfinityPBR - Medusa\Scripts\medusaDemo.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_CameraFocus.cs" />
-    <Compile Include="Assets\Synty\Tools\SyntyPropBoneTool\Utils\PropBoneDefinitionPresets.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\SFB_HumanDemoControl.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Medusa\Scripts\medusaTypeControl.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_HumanDemoModel.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_ShotFollowTarget.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Dragons\Scripts\SFB_DragonDemo.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Dragons\Scripts\SFB_DragonFirebreath.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\State\MonsterBehaviourState.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_ToggleOpposite.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Example\Standard Assets\Characters\FirstPersonCharacter\Scripts\bl_MouseLook.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Data\MonsterLootItemData.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Enum\GameLayers.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Behaviour\MonsterBehaviour.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\State\MonsterStateMachineController.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Utility\RotationWeapon.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\Scripts\Teleport.cs" />
-    <Compile Include="Assets\MRF\Scripts\SimpleWeaponTrail.cs" />
-    <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\EquipObject.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Medusa\Scripts\medusaTextureControl.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Item\GroundItem.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\PlayerRangeFreeLookState.cs" />
-    <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\WardrobePrefabManager.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\InfinityDemoAnimationButton.cs" />
-    <Compile Include="Assets\InfinityPBR\Demo Scripts\InfinityDemoFloatSlider.cs" />
-    <Compile Include="Assets\InfinityPBR\Audio Snapshot Exporter\SFB_AudioSnapshotExporter.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\MRF\Scripts\ParticleEventHandler.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\TakeScreenshot.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\IPBR_SupportAndReview.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\DemoControl.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Roll\PlayerRollingState.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\UI\bl_MiniMapUI.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\Scripts\Slash_GrvityPoint.cs" />
-    <Compile Include="Assets\InfinityPBR\_InfinityPBR - Minotaur\Scripts\MinotaurDemo.cs" />
-    <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\PrefabAndObjectManager.cs" />
-    <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\BlendShapeGameObject.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Demo Scripts\ExtendedFlycam.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Gethit\PlayerImpactState.cs" />
     <Compile Include="Assets\To-do.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Controls\Transform\TransformInRect.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\StateMachine.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\PathFinding\TargetDetector.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Combat\Target.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\Scripts Static\InfinityStatic.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Controls\BinarySliderController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\Data\UIData.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Misc\bl_MapPointer.cs" />
+    <Compile Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Dragons\Scripts\SFB_DragonHeight.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Window\PopupWindowController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\InfinityPBR\Shaders\AV\Hair\AV HDRP 2020.3.4.f1 Hair.shader" />
-    <None Include="Assets\InfinityPBR\Audio Snapshot Exporter\Instructions.txt" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\Shaders\AV\Hair\AV HDRP 2020.3.4.f1 Hair.shader" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\Audio Snapshot Exporter\Instructions.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-    <None Include="Assets\MedievalKingdomUI\Shaders\Fluid.shader" />
+    <None Include="Assets\InfinityPBR\__READ ME &amp; Support &amp; Instructions\Character Packs - Get the rest of the content here!.txt" />
     <None Include="Assets\MBS\InternalData\UIToolkit\Builder\Builder_Window_Empty.uxml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\MBS\InternalData\UIToolkit\PackManager\WallModuleEditor_Window.uxml" />
+    <None Include="Assets\UGUIMiniMap\Content\Art\Shader\Mask.shader" />
     <None Include="Assets\MBS\InternalData\UIToolkit\PackManager\Uss\PackManager_Styles.uss" />
-    <None Include="Assets\InfinityPBR\_InfinityPBR - Minotaur\Blendshape Presets\Minotaur Demo Range 0.txt" />
-    <None Include="Assets\Vertical Fog Package by Tzar\Even Fog\EvenFog.shader" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Minotaur\Blendshape Presets\Minotaur Demo Range 0.txt" />
     <None Include="Assets\OrdosFX\Magic Slashes FX\MobileBloom\Resources\Slashes_Bloom.shader" />
-    <None Include="Assets\Vertical Fog Package by Tzar\Old\Advanced Fog\Advanced Vertical Fog.shader" />
-    <None Include="Assets\MedievalKingdomUI\Shaders\Blur.shader" />
-    <None Include="Assets\MRF\Shaders\CommonParticleOneShot.shader" />
+    <None Include="Assets\Assets\AssetFiles\MRF\Shaders\CommonParticleOneShot.shader" />
+    <None Include="Assets\InfinityPBR\__READ ME &amp; Support &amp; Instructions\GET THE SUPPORT FILES.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\InfinityPBR\Shaders\AV\Hair\AV Standard Hair.shader" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\Shaders\AV\Hair\AV Standard Hair.shader" />
     <None Include="Assets\MBS\InternalData\UIToolkit\PackManager\Uss\CategoriesManagerWindow_Styles.uss" />
-    <None Include="Assets\InfinityPBR\Shaders\AV\Hair\AV URP Hair.shader" />
-    <None Include="Assets\InfinityPBR\_InfinityPBR Human - Humans\Blendshape Preset Files\Human Female (v4) Range 0.txt" />
-    <None Include="Assets\MRF\Shaders\CommonMeshLoop.shader" />
-    <None Include="Assets\InfinityPBR\_InfinityPBR - Minotaur\_Fluffy Support\_FLUFFY SUPPORT READ ME.txt" />
-    <None Include="Assets\Vertical Fog Package by Tzar\Simple Fog\Standard LWRP URP VR\Vertical Fog.shader" />
-    <None Include="Assets\Vertical Fog Package by Tzar\Even Fog\supports.txt" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\Shaders\AV\Hair\AV URP Hair.shader" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR Human - Humans\Blendshape Preset Files\Human Female (v4) Range 0.txt" />
+    <None Include="Assets\Assets\AssetFiles\MRF\Shaders\CommonMeshLoop.shader" />
+    <None Include="Assets\InfinityPBR\__READ ME &amp; Support &amp; Instructions\READ ME.txt" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Minotaur\_Fluffy Support\_FLUFFY SUPPORT READ ME.txt" />
     <None Include="Assets\MBS\InternalData\UIToolkit\Helpbar\float-field-picker-block_light.uxml" />
-    <None Include="Assets\Vertical Fog Package by Tzar\Old\info.txt" />
-    <None Include="Assets\Hovl Studio\HSFiles\Shaders\SmoothSmoke.shader" />
-    <None Include="Assets\InfinityPBR\Blendshape Preset Files\Dragon DEMO (v5) Range 0.txt" />
-    <None Include="Assets\Vertical Fog Package by Tzar\Advanced Fog\Advanced Vertical Fog.shader" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Devils\Models\Devils Notes - Read it!.txt" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\Blendshape Preset Files\Dragon DEMO (v5) Range 0.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\MBS\InternalData\UIToolkit\Global_Styles.uss" />
     <None Include="Assets\MBS\InternalData\UIToolkit\Helpbar\Uss\Helpbar_Styles.uss" />
-    <None Include="Assets\Hovl Studio\HSFiles\Shaders\DissolveNoise.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-    <None Include="Assets\InfinityPBR\Shaders\AV\Hair\AV HDRP Hair.shader" />
-    <None Include="Assets\InfinityPBR\_InfinityPBR - Medusa\Blendshape Preset Files\Medusa_Humanoid DEMO Range 0.txt" />
+    <None Include="Assets\UGUIMiniMap\ReadMe.txt" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\Shaders\AV\Hair\AV HDRP Hair.shader" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Medusa\Blendshape Preset Files\Medusa_Humanoid DEMO Range 0.txt" />
     <None Include="Assets\MBS\InternalData\UIToolkit\PackManager\AssetCategoriesEditor_Window.uxml" />
-    <None Include="Assets\InfinityPBR\_InfinityPBR Human - Humans\Blendshape Preset Files\OLD Human Male Demo (v2) Range 0.txt" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR Human - Humans\Blendshape Preset Files\OLD Human Male Demo (v2) Range 0.txt" />
+    <None Include="Assets\UGUIMiniMap\Content\Art\Shader\Particle Add.shader" />
     <None Include="Assets\MBS\InternalData\UIToolkit\PackManager\FloorModuleEditor_Window.uxml" />
-    <None Include="Assets\Vertical Fog Package by Tzar\Simple Fog\HDRP\Setup Info.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\MBS\InternalData\UIToolkit\Builder\Uss\BuilderWindow_Styles.uss" />
     <None Include="Assets\MBS\InternalData\UIToolkit\PackManager\ListItem_IconAndLabel.uxml" />
-    <None Include="Assets\Vertical Fog Package by Tzar\Even Fog\instructions.txt" />
-    <None Include="Assets\Hovl Studio\HSFiles\Shaders\Distortion.shader" />
-    <None Include="Assets\Hovl Studio\HSFiles\Shaders\Blend_TwoSides.shader" />
-    <None Include="Assets\MRF\Shaders\Ice.shader" />
-    <None Include="Assets\Hovl Studio\HSFiles\Shaders\Blend_CenterGlow.shader" />
-    <None Include="Assets\InfinityPBR\Shaders\AV\Hair\AV HDRP Hair 2020.3.4.f1.shader" />
+    <None Include="Assets\Assets\AssetFiles\MRF\Shaders\Ice.shader" />
+    <None Include="Assets\InfinityPBR\Magic Spells &amp; Particles\Demo &amp; Read Me\SFB_ParticlePackage1_ReadMe.txt" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\Shaders\AV\Hair\AV HDRP Hair 2020.3.4.f1.shader" />
     <None Include="Assets\MBS\InternalData\UIToolkit\Construction\Construction_ListView_Item.uxml" />
-    <None Include="Assets\Hovl Studio\Render Pipelines support\Documentation.txt" />
+    <None Include="Assets\UGUIMiniMap\Content\Art\Shader\MiniMap Mask.shader" />
+    <None Include="Assets\UGUIMiniMap\Content\Art\Shader\Minimap.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\MBS\InternalData\UIToolkit\PackManager\PackManager_Window.uxml" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\MBS\InternalData\UIToolkit\PackManager\FloorGroupEditor_Window.uxml" />
-    <None Include="Assets\Hovl Studio\HSFiles\Shaders\Lightning.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-    <None Include="Assets\Vertical Fog Package by Tzar\Old\Simple Fog\Vertical Fog.shader" />
     <None Include="Assets\MBS\InternalData\UIToolkit\Elements\HelpBoxTemplate.uxml" />
     <None Include="Assets\MBS\InternalData\UIToolkit\PackManager\PlacerGroupEditor_Window.uxml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\Hovl Studio\HSFiles\Shaders\Blend_LinePath.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\MBS\InternalData\UIToolkit\PackManager\WallGroupEditor_Window.uxml" />
     <None Include="Assets\OrdosFX\Magic Slashes FX\MobileBloom\Resources\Slashes_Bloom_Inc.cginc" />
-    <None Include="Assets\InfinityPBR\_InfinityPBR Human - Humans\Blendshape Preset Files\Human Male (v4) Range 0.txt" />
-    <None Include="Assets\InfinityPBR\Equipment System\Demo (Read the Read Me!)\--READ ME--.txt" />
-    <None Include="Assets\Hovl Studio\HSFiles\Shaders\BlendDistort.shader" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR Human - Humans\Blendshape Preset Files\Human Male (v4) Range 0.txt" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Devils\Blendshape Preset Files\Devils DEMO Range 1.txt" />
+    <None Include="Assets\UGUIMiniMap\Content\Art\Shader\OverAll.shader" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\Equipment System\Demo (Read the Read Me!)\--READ ME--.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\OrdosFX\Magic Slashes FX\Shaders\Slash_AnimBlended.shader" />
-    <None Include="Assets\Hovl Studio\HSFiles\Shaders\AddTrail.shader" />
-    <None Include="Assets\Hovl Studio\HSFiles\Shaders\Scroll.shader" />
+    <None Include="Assets\HighlightPlusBundle\_README.txt" />
     <None Include="Assets\OrdosFX\Magic Slashes FX\Shaders\SlashBird.shader" />
-    <None Include="Assets\InfinityPBR\Shaders\AV\Hair\AV Hair readme.txt" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\Shaders\AV\Hair\AV Hair readme.txt" />
     <None Include="Assets\MBS\InternalData\UIToolkit\Builder\builder-window_dark.uxml" />
-    <None Include="Assets\Hovl Studio\HSFiles\Shaders\Fire.shader" />
     <None Include="Assets\OrdosFX\Magic Slashes FX\Shaders\SlashShader.shader" />
     <None Include="Assets\MBS\InternalData\UIToolkit\Helpbar\float-field-picker-block_dark.uxml" />
-    <None Include="Assets\InfinityPBR\_InfinityPBR - Medusa\Blendshape Preset Files\Medusa_Serpentine DEMO Range 0.txt" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Medusa\Blendshape Preset Files\Medusa_Serpentine DEMO Range 0.txt" />
     <None Include="Assets\OrdosFX\Magic Slashes FX\SceneResources\Other\CullOffMobileDiffuse.shader" />
     <None Include="Assets\MBS\InternalData\UIToolkit\PackManager\PlacerModuleEditor_Window.uxml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets\InfinityPBR\_InfinityPBR - Cobra Snake\Blendshape Preset Files\CobraSnake DEMO Range 0.txt" />
-    <None Include="Assets\InfinityPBR\---Game Modules\Audio Clip Combiner\ReadMe.txt" />
-    <None Include="Assets\Hovl Studio\HSFiles\Shaders\Add_CenterGlow.shader" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Cobra Snake\Blendshape Preset Files\CobraSnake DEMO Range 0.txt" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\---Game Modules\Audio Clip Combiner\ReadMe.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
-    <None Include="Assets\MRF\Shaders\SimpleEmissive.shader" />
-    <None Include="Assets\Vertical Fog Package by Tzar\Advanced Fog\Quick Setup.txt" />
-    <None Include="Assets\Hovl Studio\Archer skills pack\Demo scene\About demo.txt" />
-    <None Include="Assets\MRF\Shaders\LitParticles.shader" />
+    <None Include="Assets\Assets\AssetFiles\MRF\Shaders\SimpleEmissive.shader" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Dragons\Blendshape Preset Files\Dragon DEMO (v5) Range 0.txt" />
+    <None Include="Assets\Assets\AssetFiles\MRF\Shaders\LitParticles.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\MBS\InternalData\Materials\MBSVertexColorShader.shader" />
-    <None Include="Assets\Vertical Fog Package by Tzar\Advanced Fog\supports.txt" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\OrdosFX\Magic Slashes FX\Shaders\SlashParticles.shader" />
     <None Include="Assets\MBS\InternalData\UIToolkit\Construction\Construction.uxml" />
-    <None Include="Assets\MRF\Shaders\WeaponTrail.shader" />
-    <None Include="Assets\Vertical Fog Package by Tzar\Simple Fog\Standard LWRP URP VR\Info.txt" />
+    <None Include="Assets\Assets\AssetFiles\MRF\Shaders\WeaponTrail.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-    <None Include="Assets\InfinityPBR\_InfinityPBR - Troll\Blendshape Presets\Troll DEMO Range 0.txt" />
-    <None Include="Assets\Hovl Studio\HSFiles\Shaders\Explosion.shader" />
-    <None Include="Assets\Vefects\ItemPickUp\VFX\Shaders\SH_Vefects_VFX_AdvParticle.shader" />
+    <None Include="Assets\Assets\AssetFiles\InfinityPBR\_InfinityPBR - Troll\Blendshape Presets\Troll DEMO Range 0.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\MBS\InternalData\UIToolkit\Builder\builder-window_light.uxml" />
   </ItemGroup>
@@ -784,18 +807,6 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.1\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.Types">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.Gradle">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.GradleProject">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.GradleProject.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">
@@ -1286,12 +1297,40 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Recorder.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.IK.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualEffectGraph.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Burst.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Path.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Path.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
@@ -1310,12 +1349,48 @@
       <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
+      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Collections">
+      <HintPath>Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="PPv2URPConverters">
       <HintPath>Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Recorder">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
@@ -1326,32 +1401,172 @@
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.EditorCoroutines.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PsdPlugin">
+      <HintPath>Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.PlasticSCM.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Shared.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Recorder.Base">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Base.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualStudio.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Core">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Animation.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Core.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEditor.XR.LegacyInputHelpers">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEngineBridge.001">
+      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.InputSystem.ForUI">
+      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
+      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Psdimporter.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.State.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.State">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.IK.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Animation.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -1360,217 +1575,13 @@
       <Project>{987EA179-8C34-9F28-C439-885D15A00D7C}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Recorder.Editor.csproj">
-      <Project>{5C6694E6-5DC7-6C26-247F-BBCE37143B9C}</Project>
-      <Name>Unity.Recorder.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.IK.Runtime.csproj">
-      <Project>{489199F6-CEC2-2065-F1B8-DF6CE47F9E31}</Project>
-      <Name>Unity.2D.IK.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
-      <Project>{5B6A52F6-BC19-14E7-FDEF-31603BFB9731}</Project>
-      <Name>com.unity.cinemachine.editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
-      <Project>{A4545B86-0D7B-7447-8D03-D191EE160DDB}</Project>
-      <Name>Unity.Postprocessing.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Burst.Editor.csproj">
-      <Project>{2A7683D0-39C2-DDAC-F44D-EBFEB863DF87}</Project>
-      <Name>Unity.Burst.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Common.Path.Editor.csproj">
-      <Project>{6D0AE485-E35E-FAEE-0181-392E3B0C1EE4}</Project>
-      <Name>Unity.2D.Common.Path.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{DC13761A-1687-565F-C22D-8BAFE578D5E6}</Project>
-      <Name>Unity.Rider.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
-      <Project>{20739DDB-09CB-20A6-7548-CD3221E8D590}</Project>
-      <Name>Unity.VisualScripting.Flow</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
-      <Project>{F5BF1870-AA8D-3BED-F773-2E96691F3728}</Project>
-      <Name>Unity.Mathematics.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="SingularityGroup.HotReload.Runtime.Public.csproj">
       <Project>{B3E36DAD-0073-D99C-328C-48D3C9101F9E}</Project>
       <Name>SingularityGroup.HotReload.Runtime.Public</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.csproj">
-      <Project>{C3F27ABF-7A56-CDCB-6850-170749F00180}</Project>
-      <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection</Name>
-    </ProjectReference>
     <ProjectReference Include="MBS.csproj">
       <Project>{725C28C2-FB86-2A1E-9DA4-09C175E4022C}</Project>
       <Name>MBS</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Performance.Profile-Analyzer.Editor.csproj">
-      <Project>{075E779E-7DEA-1A3C-1064-17D991B6B4E5}</Project>
-      <Name>Unity.Performance.Profile-Analyzer.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.csproj">
-      <Project>{22610E65-4E6A-4A82-FA45-D78C3F9BF6BD}</Project>
-      <Name>Unity.TestTools.CodeCoverage.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Collections.csproj">
-      <Project>{C3016598-20C1-4652-8D86-C89C4B642ADF}</Project>
-      <Name>Unity.Collections</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{E68ED6FC-5B25-8E43-8712-DCA79F9751FF}</Project>
-      <Name>Unity.TextMeshPro</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Recorder.csproj">
-      <Project>{298235B7-9797-E8ED-6DC9-6AC5AF69B504}</Project>
-      <Name>Unity.Recorder</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{C2CF22D2-C981-CCEC-EA17-C3CFC7731080}</Project>
-      <Name>Unity.VSCode.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.EditorCoroutines.Editor.csproj">
-      <Project>{4DEB4174-C4D3-906F-1BE3-EF5451ECEF98}</Project>
-      <Name>Unity.EditorCoroutines.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PsdPlugin.csproj">
-      <Project>{7582944D-F37A-E58C-3465-5AFF84AEFF1A}</Project>
-      <Name>PsdPlugin</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.XR.LegacyInputHelpers.csproj">
-      <Project>{B324C8C5-727B-FBA5-8D43-1B99809CC34F}</Project>
-      <Name>UnityEngine.XR.LegacyInputHelpers</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{90FBF82E-CC44-0FFC-4305-F0C375F978AB}</Project>
-      <Name>Unity.Burst</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
-      <Project>{1FF2D779-3143-48ED-6A94-C22C74C33126}</Project>
-      <Name>Unity.PlasticSCM.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{66FFBEE8-AE0D-38C5-BD9B-2D4D0949CEE2}</Project>
-      <Name>Unity.Timeline.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
-      <Project>{4B49530F-BD32-0792-E52E-9FC1669C6318}</Project>
-      <Name>Unity.VisualScripting.Shared.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.SpatialTracking.csproj">
-      <Project>{61298276-08A4-7126-E730-4847E93FA911}</Project>
-      <Name>UnityEditor.SpatialTracking</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Recorder.Base.csproj">
-      <Project>{C428EF7A-ACEF-9332-409C-0C5D93C73E7D}</Project>
-      <Name>Unity.Recorder.Base</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
-      <Project>{25C00002-489B-71B0-87D6-E772C9273709}</Project>
-      <Name>Unity.VisualStudio.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Core.csproj">
-      <Project>{22F146F3-E822-5A15-39BD-5BAFE61BE5C9}</Project>
-      <Name>Unity.VisualScripting.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
-      <Project>{7EF7426D-CD70-DC4A-2DF6-38BACDB9F4D9}</Project>
-      <Name>Unity.2D.Animation.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
-      <Project>{5D76573A-A95C-2A79-00A4-157FA9FF1AB8}</Project>
-      <Name>Unity.VisualScripting.Core.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.SpatialTracking.csproj">
-      <Project>{8F6F42A8-B367-74DA-3D10-5B098D028FBC}</Project>
-      <Name>UnityEngine.SpatialTracking</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.XR.LegacyInputHelpers.csproj">
-      <Project>{437E9E43-7D59-2DFC-4E1F-6D5A63C662A0}</Project>
-      <Name>UnityEditor.XR.LegacyInputHelpers</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj">
-      <Project>{B1C97E8F-34E7-F75C-FFFF-76FE594EDFEB}</Project>
-      <Name>Unity.VisualScripting.Flow.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
-      <Project>{14F5F3FB-34D2-2F7C-8AA4-EE94EC646EEA}</Project>
-      <Name>Unity.InternalAPIEngineBridge.001</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
-      <Project>{5BF92ADB-A7A2-6086-7454-468CC4A03AAF}</Project>
-      <Name>Unity.2D.Common.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{94ADA585-1E1D-BC5C-2D82-C8D28FB6C479}</Project>
-      <Name>Unity.Timeline</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InputSystem.csproj">
-      <Project>{F9E94537-11FD-1AB2-058C-B6DA526A0F57}</Project>
-      <Name>Unity.InputSystem</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InputSystem.ForUI.csproj">
-      <Project>{1CF716A5-A4BB-2B32-EF2D-5A835CA601E0}</Project>
-      <Name>Unity.InputSystem.ForUI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
-      <Project>{460D0A5E-E0F4-A0FC-73BD-E0F901DDADEE}</Project>
-      <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.csproj">
-      <Project>{9B4482F4-973B-5130-5AAC-59DE1BD319AE}</Project>
-      <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj">
-      <Project>{10F26C4E-0FAD-FBF5-B520-54A50CF3C476}</Project>
-      <Name>Unity.InternalAPIEditorBridge.001</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Psdimporter.Editor.csproj">
-      <Project>{BC3DBA34-047A-FF5F-3B43-AFEDD2256F6E}</Project>
-      <Name>Unity.2D.Psdimporter.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
-      <Project>{C6AC8192-5170-A5C8-E292-343A0A0EAAD8}</Project>
-      <Name>Unity.Postprocessing.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj">
-      <Project>{B8C0D750-11CE-894A-DD5C-ACDACAB42380}</Project>
-      <Name>Unity.VisualScripting.State.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{31081E24-A038-F46C-B25A-24232598EA92}</Project>
-      <Name>Unity.Mathematics</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Common.Editor.csproj">
-      <Project>{8807DC06-4678-485B-FEC5-9FA155CD1714}</Project>
-      <Name>Unity.2D.Common.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{69BBD695-15CE-B335-A56C-0792C681BB5F}</Project>
-      <Name>Unity.TextMeshPro.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Searcher.Editor.csproj">
-      <Project>{05495B9E-9BD0-99D1-B714-062D36613AF2}</Project>
-      <Name>Unity.Searcher.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.State.csproj">
-      <Project>{EA783F7C-0C0C-1E82-0EDB-B073DCE2789A}</Project>
-      <Name>Unity.VisualScripting.State</Name>
-    </ProjectReference>
-    <ProjectReference Include="Cinemachine.csproj">
-      <Project>{04E23D1B-EC71-D9B8-CF45-3525C8E17A2F}</Project>
-      <Name>Cinemachine</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.IK.Editor.csproj">
-      <Project>{4A00446A-AD92-E168-645B-B37B403B1468}</Project>
-      <Name>Unity.2D.IK.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Animation.Editor.csproj">
-      <Project>{842841C5-6E03-FAD6-A9BD-F53C0224500B}</Project>
-      <Name>Unity.2D.Animation.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

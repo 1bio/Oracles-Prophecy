@@ -58,22 +58,6 @@ TextAsset:
     \"fileID\": 7557870195252733794,\n                            \"guid\": \"eca4373bbc4a42747a3e6a42611d44e4\",\n                           
     \"type\": 3\n                        },\n                        {\n                           
     \"instanceID\": 0\n                        }\n                    ]\n               
-    }\n            ]\n        },\n        {\n            \"guid\": \"ab1c7dc519c74115a2280867d26f51ee\",\n           
-    \"name\": \"Modling_side\",\n            \"_modules\": [\n                {\n                   
-    \"guid\": \"22e09e13b10d4307babf6cc1150b1543\",\n                    \"name\":
-    \"Modling_side\",\n                    \"prefabs\": [\n                       
-    {\n                            \"fileID\": 1429259789020304860,\n                           
-    \"guid\": \"1ea7c546f9e0aa148910e3e29a530538\",\n                           
-    \"type\": 3\n                        },\n                        {\n                           
-    \"instanceID\": 0\n                        }\n                    ]\n               
-    }\n            ]\n        },\n        {\n            \"guid\": \"df094adad90247f188a2e999e0a796aa\",\n           
-    \"name\": \"Modling_bottom\",\n            \"_modules\": [\n                {\n                   
-    \"guid\": \"cd13ec3441a240c480c3cbc5d8a7ba4a\",\n                    \"name\":
-    \"Modling_bottom\",\n                    \"prefabs\": [\n                       
-    {\n                            \"fileID\": 1284367963827436487,\n                           
-    \"guid\": \"7031bb3485cce22469de567e4e98b8cb\",\n                           
-    \"type\": 3\n                        },\n                        {\n                           
-    \"instanceID\": 0\n                        }\n                    ]\n               
     }\n            ]\n        }\n    ],\n    \"_floorGroups\": [\n        {\n           
     \"guid\": \"b8af458f7f524ac89c5cf7778a40444b\",\n            \"name\": \"Floor\",\n           
     \"_modules\": [\n                {\n                    \"guid\": \"f2533d945353472bbfd4e858e9f8b2d0\",\n                   
@@ -111,20 +95,6 @@ TextAsset:
     \"fileID\": 3605857445809111764,\n                            \"guid\": \"9f20a780e69ccb34bbc24fe83334a9f0\",\n                           
     \"type\": 3\n                        }\n                    ]\n               
     }\n            ],\n            \"_assetCategoryGuid\": \"5ed02f467a2443c7a77f6b068886c963\"\n       
-    },\n        {\n            \"guid\": \"1fd5182f788f4be29011bddd1f897c40\",\n           
-    \"name\": \"pillar_5\",\n            \"_modules\": [\n                {\n                   
-    \"guid\": \"613d395d274f4538bb23fec26a6183ca\",\n                    \"name\":
-    \"pillar_5\",\n                    \"prefabs\": [\n                        {\n                           
-    \"fileID\": 1764816974039738646,\n                            \"guid\": \"59dd82f5f6ced26499a63d6b81702c15\",\n                           
-    \"type\": 3\n                        }\n                    ]\n               
-    }\n            ],\n            \"_assetCategoryGuid\": \"5ed02f467a2443c7a77f6b068886c963\"\n       
-    },\n        {\n            \"guid\": \"6be73328fbcd468e837d958887d9c766\",\n           
-    \"name\": \"pillar_6\",\n            \"_modules\": [\n                {\n                   
-    \"guid\": \"1cfd6c50f4ae4a90a1dd763e64eecfb8\",\n                    \"name\":
-    \"pillar_6\",\n                    \"prefabs\": [\n                        {\n                           
-    \"fileID\": 8455822188867537715,\n                            \"guid\": \"eea5177e7b56c5d4692dc9a94ff99568\",\n                           
-    \"type\": 3\n                        }\n                    ]\n               
-    }\n            ],\n            \"_assetCategoryGuid\": \"5ed02f467a2443c7a77f6b068886c963\"\n       
     },\n        {\n            \"guid\": \"b1ce3cdd2a6e4ebb81946486da78ec06\",\n           
     \"name\": \"pillar_7\",\n            \"_modules\": [\n                {\n                   
     \"guid\": \"4544b443687a469998a2af05638a3f89\",\n                    \"name\":
@@ -146,25 +116,11 @@ TextAsset:
     \"fileID\": 9026282089432075811,\n                            \"guid\": \"2ab40cf29de9ebd47a78c4303f2e3fac\",\n                           
     \"type\": 3\n                        }\n                    ]\n               
     }\n            ],\n            \"_assetCategoryGuid\": \"5ed02f467a2443c7a77f6b068886c963\"\n       
-    },\n        {\n            \"guid\": \"f1760fafd15b4513883bb4aa8dc63295\",\n           
-    \"name\": \"grid_3\",\n            \"_modules\": [\n                {\n                   
-    \"guid\": \"40c62162db204e26a3d6d19893e3fc98\",\n                    \"name\":
-    \"grid_3\",\n                    \"prefabs\": [\n                        {\n                           
-    \"fileID\": 5100118432775307439,\n                            \"guid\": \"ce25290e84cae8b43a638cf84efc0052\",\n                           
-    \"type\": 3\n                        }\n                    ]\n               
-    }\n            ],\n            \"_assetCategoryGuid\": \"5ed02f467a2443c7a77f6b068886c963\"\n       
-    },\n        {\n            \"guid\": \"068543a2246444c0b879b1b22afa107b\",\n           
-    \"name\": \"grid_4\",\n            \"_modules\": [\n                {\n                   
-    \"guid\": \"fc1d6de637f640a4ac143e8d804d7b51\",\n                    \"name\":
-    \"grid_4\",\n                    \"prefabs\": [\n                        {\n                           
-    \"fileID\": 6357030182027003910,\n                            \"guid\": \"611d086bbcf31724fa0bda8f053e3f33\",\n                           
-    \"type\": 3\n                        }\n                    ]\n               
-    }\n            ],\n            \"_assetCategoryGuid\": \"5ed02f467a2443c7a77f6b068886c963\"\n       
     },\n        {\n            \"guid\": \"fe36be510e8e4a8c90b84450380c347d\",\n           
     \"name\": \"Touch\",\n            \"_modules\": [\n                {\n                   
     \"guid\": \"3fd75b2082044e6584fc79530511f474\",\n                    \"name\":
     \"Touch\",\n                    \"prefabs\": [\n                        {\n                           
-    \"fileID\": 5268667576140910156,\n                            \"guid\": \"442ea8ab109b14b4788c223346ea27a5\",\n                           
+    \"fileID\": 4916467779054868767,\n                            \"guid\": \"beb0691030ba59c4e94ffd7406eec0ae\",\n                           
     \"type\": 3\n                        }\n                    ]\n               
     }\n            ],\n            \"_assetCategoryGuid\": \"5ed02f467a2443c7a77f6b068886c963\"\n       
     },\n        {\n            \"guid\": \"c94aa5480fa847c59a2a59f18ce198bc\",\n           

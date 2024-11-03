@@ -13,6 +13,7 @@ public class TransparencyController : MonoBehaviour
     private int _layerMask = 0;
     private List<Collider> _raycastHitColliders = new List<Collider>();
 
+    private float _sphereRadius = 0.5f;
     private bool _hasHit = false;
 
     private void Start()
@@ -27,7 +28,7 @@ public class TransparencyController : MonoBehaviour
 
         List<Collider> currentFrameHitColliders = new List<Collider>();
 
-        foreach (RaycastHit hit in Physics.RaycastAll(transform.position, direction, maxDistance, _layerMask))
+        foreach (RaycastHit hit in Physics.SphereCastAll(transform.position, _sphereRadius, direction, maxDistance, _layerMask))
         {
             if (hit.collider != null && hit.collider is MeshCollider)
             {

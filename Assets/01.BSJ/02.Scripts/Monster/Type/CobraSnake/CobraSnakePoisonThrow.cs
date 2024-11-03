@@ -50,7 +50,7 @@ public class CobraSnakePoisonThrow : MonsterSkillData
     {
         if (_targetNode == null)
         {
-            BackDFS(monster, monster.transform.position, 5);
+            FindPathDFS(monster, monster.transform.position, 5);
             monster.MovementController.Astar.StartPathCalculation(monster.transform.position, _targetNode.Position);
         }
 
@@ -118,11 +118,27 @@ public class CobraSnakePoisonThrow : MonsterSkillData
        monster.MovementController.Astar.StartPathCalculation(monster.transform.position, monster.MovementController.Astar.TargetTransform.position);
     }  
 
+
+    private void FindPathDFS(Monster monster, Vector3 monsterPosition, int max)
+    {
+        BackDFS(monster, monster.transform.position, 5);
+
+        if (_targetNode == _grid.GetPointNodeFromGridByPosition(monster.transform.position))
+        {
+            LeftDFS(monster, monster.transform.position, 5);
+        }
+
+        if (_targetNode == _grid.GetPointNodeFromGridByPosition(monster.transform.position))
+        {
+            RightDFS(monster, monster.transform.position, 5);
+        }
+    }
+
     private void BackDFS(Monster monster, Vector3 monsterPosition, int max)
     {
         PointNode node = _grid.GetPointNodeFromGridByPosition(monsterPosition);
 
-        if (node == null || max <= 0)
+        if (node == null || !node.IsGround || node.IsObstacle || max <= 0)
             return;
 
         _targetNode = node;
@@ -130,5 +146,33 @@ public class CobraSnakePoisonThrow : MonsterSkillData
         Vector3 backwardPosition = _targetNode.Position - monster.transform.forward;
 
         BackDFS(monster, backwardPosition, max - 1);
+    }
+
+    private void LeftDFS(Monster monster, Vector3 monsterPosition, int max)
+    {
+        PointNode node = _grid.GetPointNodeFromGridByPosition(monsterPosition);
+
+        if (node == null || !node.IsGround || node.IsObstacle || max <= 0)
+            return;
+
+        _targetNode = node;
+
+        Vector3 backwardPosition = _targetNode.Position - monster.transform.right;
+
+        LeftDFS(monster, backwardPosition, max - 1);
+    }
+
+    private void RightDFS(Monster monster, Vector3 monsterPosition, int max)
+    {
+        PointNode node = _grid.GetPointNodeFromGridByPosition(monsterPosition);
+
+        if (node == null || !node.IsGround || node.IsObstacle || max <= 0)
+            return;
+
+        _targetNode = node;
+
+        Vector3 backwardPosition = _targetNode.Position + monster.transform.right;
+
+        RightDFS(monster, backwardPosition, max - 1);
     }
 }

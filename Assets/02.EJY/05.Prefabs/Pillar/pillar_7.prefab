@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 7245243290382621068}
   - component: {fileID: 6287165164317469243}
   - component: {fileID: 8206576548666572781}
+  - component: {fileID: 8114146894017913953}
   - component: {fileID: 2523731892176058454}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: pillar_7
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4
@@ -84,6 +85,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8114146894017913953
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166049548237679889}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1145609714338395077, guid: 7e99d35a2c278b14fba044e5cf7d9e31, type: 3}
 --- !u!54 &2523731892176058454
 Rigidbody:
   m_ObjectHideFlags: 0

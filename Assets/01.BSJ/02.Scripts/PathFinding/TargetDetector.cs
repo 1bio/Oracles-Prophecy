@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class TargetDetector : MonoBehaviour
@@ -9,7 +10,7 @@ public class TargetDetector : MonoBehaviour
     private RaycastHit _hit;
     [SerializeField] private float _detectionDistance = 5f;
     private float _fanAngle = 50f;
-    private float _fanCount = 10f;
+    private float _fanCount = 25f;
 
     public bool IsTargetDetected { get; set; } = false;
     public float DetectionDistance { get => _detectionDistance; }
@@ -29,6 +30,12 @@ public class TargetDetector : MonoBehaviour
         }
         else
         {
+            if (_monster.SkillController.CurrentSkillData != null)
+            {
+                _monster.SkillController.CurrentSkillData.IsTargetWithinSkillRange =
+                IsInFanShapeDetection(_monster.SkillController.CurrentSkillData.Range);
+            }
+
             _monster.CombatController.MonsterCombatAbility.MonsterAttack.IsTargetWithinAttackRange =
                IsInFanShapeDetection(_monster.CombatController.MonsterCombatAbility.MonsterAttack.Range);
         }

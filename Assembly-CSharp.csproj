@@ -232,6 +232,7 @@
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\Scripts\Slash_UIEffectList.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\CobraSnake\CobraSnake.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\Devils\Skills\DevilsFireFollowing.cs" />
     <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\BlendShapePresetValue.cs" />
     <Compile Include="Assets\MRF\Scripts\ParticleEventHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
@@ -399,6 +400,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\InfinityPBR\_InfinityPBR - Cobra Snake\Blendshape Preset Files\CobraSnake DEMO Range 0.txt" />
     <None Include="Assets\InfinityPBR\---Game Modules\Audio Clip Combiner\ReadMe.txt" />
+    <None Include="Assets\InfinityPBR\__Bundle Details\Monster Bundle #3.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\MRF\Shaders\SimpleEmissive.shader" />
     <None Include="Assets\InfinityPBR\_InfinityPBR - Dragons\Blendshape Preset Files\Dragon DEMO (v5) Range 0.txt" />

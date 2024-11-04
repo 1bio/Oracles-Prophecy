@@ -9,7 +9,9 @@ public class MonsterParticleDamageHandler : MonoBehaviour
     private Health _playerHealth;
 
     private bool _canTakeDamage = true;
-    [SerializeField] private bool _shouldStop = false;
+    [SerializeField] private bool _shutDownIfHitPlayer = false;
+    [SerializeField] private bool _shutDownIfHitObstacle = false;
+    [SerializeField] private bool _isFollowing = false;
     [SerializeField] private float _damageInterval = 1.5f;
     [SerializeField] private float _moveSpeed = 0;
 
@@ -30,6 +32,12 @@ public class MonsterParticleDamageHandler : MonoBehaviour
         if (particleSystem != null)
         {
             particleSystem.transform.position += particleSystem.transform.forward * _moveSpeed * Time.deltaTime;
+
+            if (_isFollowing)
+            {
+                Vector3 direction = _playerHealth.gameObject.transform.position - transform.position;
+                particleSystem.transform.rotation = Quaternion.LookRotation(direction);
+            }
         }
     }
 
@@ -51,7 +59,7 @@ public class MonsterParticleDamageHandler : MonoBehaviour
             {
                 StartCoroutine(DealDamageOverTime(_playerHealth));
 
-                if (_shouldStop)
+                if (_shutDownIfHitPlayer)
                 {
                     ParticleSystem particleSystem = this.gameObject.GetComponent<ParticleSystem>();
                     particleSystem.Stop();
@@ -60,7 +68,7 @@ public class MonsterParticleDamageHandler : MonoBehaviour
                 }
             }
         }
-        else if (_shouldStop && other.gameObject.layer == LayerMask.NameToLayer(GameLayers.Obstacle.ToString()))
+        else if (_shutDownIfHitObstacle && other.gameObject.layer == LayerMask.NameToLayer(GameLayers.Obstacle.ToString()))
         {
             ParticleSystem particleSystem = this.gameObject.GetComponent<ParticleSystem>();
             particleSystem.Stop();

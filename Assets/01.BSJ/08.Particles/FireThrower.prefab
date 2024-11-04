@@ -9812,6 +9812,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045c4bf43f025d040bf7af2ee29e55ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _shouldStop: 1
+  _shutDownIfHitPlayer: 0
+  _shutDownIfHitObstacle: 1
+  _isFollowing: 0
   _damageInterval: 1.5
   _moveSpeed: 5

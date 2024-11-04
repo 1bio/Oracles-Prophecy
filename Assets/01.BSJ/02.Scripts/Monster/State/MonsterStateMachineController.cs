@@ -48,7 +48,7 @@ public class MonsterStateMachineController : MonsterStateMachine
         {
             if (p_monster.MonsterStateType != MonsterStateType.Skill
                 && p_monster.SkillController.GetAvailableSkills().Count > 0
-                && p_monster.SkillController.UpdateCurrentSkillData().Range >= Vector3.Distance(p_monster.MovementController.Astar.TargetTransform.position, this.transform.position))
+                && p_monster.SkillController.UpdateCurrentSkillData().IsTargetWithinSkillRange)
             {
 
                 OnSkill();

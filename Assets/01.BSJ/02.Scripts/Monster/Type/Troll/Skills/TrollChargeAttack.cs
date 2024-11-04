@@ -4,7 +4,7 @@ using System.Xml.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-[CreateAssetMenu(fileName = "TrollChargeAttack", menuName = "Data/MonsterSKillData/Troll/ChargeAttack")]
+[CreateAssetMenu(fileName = "ChargeAttack", menuName = "Data/MonsterSKillData/Troll/ChargeAttack")]
 public class TrollChargeAttack : MonsterSkillData
 {
     private Transform _vfxTransform;

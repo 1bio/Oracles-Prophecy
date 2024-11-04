@@ -29,8 +29,8 @@ public class MonsterMovementController
 
         LookAtNode(targetNode, monster.CombatController.MonsterCombatAbility.TurnSpeed);
 
-        Vector3 newPosition = direction * speed;
-        CharacterController.SimpleMove(newPosition);
+        Vector3 newPosition = direction * speed * Time.deltaTime;
+        CharacterController.Move(newPosition);
     }
 
     public void LookAtTarget(float rotationSpeed)

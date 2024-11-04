@@ -1394,6 +1394,7 @@ GameObject:
   - component: {fileID: 1173101429820980718}
   - component: {fileID: 995606814836722059}
   - component: {fileID: 2529412884132052846}
+  - component: {fileID: 1415051848860503313}
   m_Layer: 0
   m_Name: Medusa_Humanoid
   m_TagString: Untagged
@@ -1531,6 +1532,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b066cc1251f0b3840a8f32ea9ef795ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1415051848860503313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147675175948022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd540d5ecfc8f85488684915acb7142f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1153596900122122

@@ -27,9 +27,9 @@ public class PlayerFreeLookState : PlayerBaseState
     {
         stateMachine.InputReader.RollEvent += OnRolling;
 
-        stateMachine.InputReader.firstSkillEvent += OnFirstSkill;
-        stateMachine.InputReader.SecondSkillEvent += OnSecondSkill;
-        stateMachine.InputReader.thirdSkillEvent += OnThirdSkill;
+        stateMachine.InputReader.firstSkillEvent += OnFirstSkill; // 도약베기
+        stateMachine.InputReader.SecondSkillEvent += OnSecondSkill; // 화염칼
+        stateMachine.InputReader.thirdSkillEvent += OnThirdSkill; // 회전베기
 
         stateMachine.Animator.CrossFadeInFixedTime(FreeLookWithMelee, CrossFadeDuration);
 
@@ -114,7 +114,7 @@ public class PlayerFreeLookState : PlayerBaseState
     private void OnFirstSkill() // 도약베기 [3]
     {
         if (SkillManager.instance.GetRemainingCooldown("도약베기") <= 0f && !DataManager.instance.playerData.skillData[3].isUnlock 
-            && DataManager.instance.playerData.statusData.mana >= DataManager.instance.playerData.skillData[3].useMana)
+            && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[3].useMana)
         {
             stateMachine.ChangeState(new PlayerMeleeDashSlashState(stateMachine));
         }
@@ -123,7 +123,7 @@ public class PlayerFreeLookState : PlayerBaseState
     private void OnSecondSkill() // 화염칼 [4]
     {
         if (SkillManager.instance.GetRemainingCooldown("화염칼") <= 0f && !DataManager.instance.playerData.skillData[4].isUnlock
-            && DataManager.instance.playerData.statusData.mana >= DataManager.instance.playerData.skillData[4].useMana)
+            && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[4].useMana)
         {
             SkillManager.instance.SetActiveSkill(true);
         }
@@ -132,7 +132,7 @@ public class PlayerFreeLookState : PlayerBaseState
     private void OnThirdSkill() // 회전베기 [5]
     {
         if(SkillManager.instance.GetRemainingCooldown("회전베기") <= 0f && !DataManager.instance.playerData.skillData[5].isUnlock 
-            && DataManager.instance.playerData.statusData.mana >= DataManager.instance.playerData.skillData[5].useMana)
+            && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[5].useMana)
         {
             stateMachine.ChangeState(new PlayerMeleeSpinSlashState(stateMachine));
         }

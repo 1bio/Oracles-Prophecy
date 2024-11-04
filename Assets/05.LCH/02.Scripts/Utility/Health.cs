@@ -1,8 +1,7 @@
 ﻿using System;
+using System.Collections;
 using TMPro;
-using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -93,6 +92,21 @@ public class Health : MonoBehaviour
 
             if (!monster.MovementController.TargetDetector.IsTargetDetected)
                 monster.MovementController.TargetDetector.IsTargetDetected = true;
+        }
+    }
+
+    public void Delay(float damage)
+    {
+        StartCoroutine(EventDelay(damage));
+    }
+
+    // 이벤트 딜레이(연속 피격 스킬용)
+    IEnumerator EventDelay(float damage)
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            TakeDamage(damage, false);
+            yield return new WaitForSeconds(0.3f);
         }
     }
 

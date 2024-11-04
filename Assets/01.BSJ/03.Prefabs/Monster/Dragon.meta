@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/01.BSJ/03.Prefabs/Monster/Dragon.meta
 guid: 35b83f902c1345c40a3a2e0dbf7ed738
+========
+guid: f6c2b56254098e84ea6a60eb29385d31
+>>>>>>>> 80efe443a524d9df1146188379804265a419fdec:Assets/05.LCH/02.Scripts/Skill.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

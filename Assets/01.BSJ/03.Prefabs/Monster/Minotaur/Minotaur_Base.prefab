@@ -1563,6 +1563,7 @@ GameObject:
   - component: {fileID: 3926910396179835079}
   - component: {fileID: 3607153516507840390}
   - component: {fileID: 3666362250666641575}
+  - component: {fileID: 9209985193390192787}
   m_Layer: 0
   m_Name: Minotaur_Base
   m_TagString: Untagged
@@ -1717,6 +1718,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b066cc1251f0b3840a8f32ea9ef795ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9209985193390192787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2711017880585719510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd540d5ecfc8f85488684915acb7142f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2932660032698762126

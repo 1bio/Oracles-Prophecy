@@ -27,11 +27,16 @@ public class PlayerRollingState : PlayerBaseState
 
         stateMachine.Health.SetInvulnerable(true);
 
-        stateMachine.WeaponToggle.DisableWeapon();
 
-        stateMachine.WeaponTrail.DestroyTrail();
-        stateMachine.ParticleEventHandler.StopParticleSystem();
+        // 근거리 무기 이펙트 제거
+        if (stateMachine.WeaponPrefabs[0].activeSelf)
+        {
+            stateMachine.WeaponToggle.DisableWeapon();
 
+            stateMachine.WeaponTrail.DestroyTrail();
+            stateMachine.ParticleEventHandler.StopParticleSystem();
+        }
+     
         if (Time.time - stateMachine.PreviousDodgeTime < stateMachine.DodgeCooldown)
             return;
 

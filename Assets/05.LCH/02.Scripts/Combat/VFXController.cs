@@ -12,6 +12,10 @@ public class VFXController : MonoBehaviour
     [SerializeField] private Targeting Targeting;
     [SerializeField] private Transform ShootingTransform;
 
+    WaitForSeconds wait;
+
+    private int hitCount = 5;
+
     private void Start()
     {
         s_prefabs[0].GetComponent<ParticleSystem>().Stop();
@@ -49,6 +53,10 @@ public class VFXController : MonoBehaviour
             s_prefabs[1].GetComponent<ParticleSystem>().Stop();
         }
 
+        // 목표물 없으면 취소
+        if (Targeting.CurrentTarget == null)
+            return;
+
         s_prefabs[0].GetComponent<ParticleSystem>().Play();
         s_prefabs[1].GetComponent<ParticleSystem>().Play();
 
@@ -64,9 +72,10 @@ public class VFXController : MonoBehaviour
 
     IEnumerator Attack(int EffectNumber)
     {
+        // 화살비
         if(EffectNumber == 0)
         {
-            yield return null;
+            yield return new WaitForSeconds(1.2f);
 
             c_prefabs[0].transform.parent = null;
             c_prefabs[0].transform.position = Targeting.CurrentTarget.gameObject.transform.position;
@@ -77,10 +86,18 @@ public class VFXController : MonoBehaviour
                 AudioSource soundComponentCast = c_prefabs[0].GetComponent<AudioSource>();
                 AudioClip clip = soundComponentCast.clip;
                 soundComponentCast.PlayOneShot(clip);
-            }
 
+                // 데미지 처리
+                float damage = DataManager.instance.playerData.skillData[2].damage;
+                for (int i = 0; i < hitCount; i++)
+                {
+                    yield return new WaitForSeconds(0.2f);
+                    Targeting.CurrentTarget.GetComponent<Health>()?.TakeDamage(damage, false);
+                }
+            }
         }
         
+        // 정조준
         if(EffectNumber == 1)
         {
             yield return null;

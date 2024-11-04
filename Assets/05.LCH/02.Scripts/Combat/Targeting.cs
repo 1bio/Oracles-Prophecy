@@ -99,14 +99,5 @@ public class Targeting : MonoBehaviour
         CurrentTarget = Targets[firstIndex];
         return CurrentTarget;
     }
-
-    private void OnDrawGizmosSelected()
-    {
-        if (CurrentTarget == null)
-            return;
-
-        Gizmos.color = Color.blue;
-        Gizmos.DrawLine(transform.position, CurrentTarget.transform.position);
-    }
     #endregion
 }

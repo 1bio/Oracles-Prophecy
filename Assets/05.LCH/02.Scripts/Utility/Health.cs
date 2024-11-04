@@ -79,11 +79,17 @@ public class Health : MonoBehaviour
         }
         else // 몬스터 체력 초기화
         {
-            FloatingText(damage);
-
             Monster monster = GetComponent<Monster>();
-            currentHealth = Mathf.Max(monster.CombatController.MonsterCombatAbility.MonsterHealth.CurrentHealth - damage, 0);
-            monster.CombatController.MonsterCombatAbility.MonsterHealth.CurrentHealth = currentHealth;
+            currentHealth = monster.CombatController.MonsterCombatAbility.MonsterHealth.CurrentHealth;
+            if (currentHealth > 0)
+            {
+                currentHealth = Mathf.Max(currentHealth - damage, 0);
+                monster.CombatController.MonsterCombatAbility.MonsterHealth.CurrentHealth = currentHealth;
+
+                FloatingText(damage);
+            }
+
+
             if (!monster.MovementController.TargetDetector.IsTargetDetected)
                 monster.MovementController.TargetDetector.IsTargetDetected = true;
         }

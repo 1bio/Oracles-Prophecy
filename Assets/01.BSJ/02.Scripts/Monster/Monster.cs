@@ -103,7 +103,7 @@ public class Monster : MonoBehaviour
 
     protected void LateUpdate()
     {
-        if (MonsterStateType != MonsterStateType.Skill)
+        if (MonsterStateType != MonsterStateType.Skill && ParticleController != null)
         {
             foreach (var vfxs in ParticleController.VFX)
             {

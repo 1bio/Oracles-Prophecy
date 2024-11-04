@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 186631495}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -50, y: 0, z: -95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec5fd0c640b595499b037fcd68080f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerTransform: {fileID: 0}
+  _playerTransform: {fileID: 663662753}
 --- !u!114 &376824277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,6 +256,17 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1003625210}
+--- !u!114 &394309774 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1166517824956196629, guid: 07d8511aa436c4e4aaa0fea5f33a08de, type: 3}
+  m_PrefabInstance: {fileID: 692973279}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &663662749
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,9 +279,10 @@ GameObject:
   - component: {fileID: 663662752}
   - component: {fileID: 663662751}
   - component: {fileID: 663662750}
-  m_Layer: 0
-  m_Name: Capsule
-  m_TagString: Untagged
+  - component: {fileID: 663662754}
+  m_Layer: 12
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -363,6 +375,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &663662754
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663662749}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1001 &692973279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -476,7 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b211b9c4662106a43b15414a76394ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _slider: {fileID: 0}
+  _slider: {fileID: 394309774}
 --- !u!114 &818616008
 MonoBehaviour:
   m_ObjectHideFlags: 0

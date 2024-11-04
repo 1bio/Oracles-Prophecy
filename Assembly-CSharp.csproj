@@ -109,6 +109,7 @@
     <Compile Include="Assets\05.LCH\02.Scripts\System\SkillManager.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\Medusa\Skills\MedusaSpinAttack.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Combat\VFXController.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\TestScripts\TestPlayerMove.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Melee\PlayerMeleeSpinSlashState.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\Medusa\Skills\MedusaJumpAttack.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Inventory\InventoryObject.cs" />
@@ -154,6 +155,7 @@
     <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\EquipmentObject.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Interface\IMonsterCombat.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\State.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\Skill\SkyFallShotDamage.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\Minotaur\Minotaur.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\State\MonsterStateMachine.cs" />
@@ -183,6 +185,7 @@
     <Compile Include="Assets\InfinityPBR\Demo Scripts\TakeScreenshot.cs" />
     <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\BlendShapePreset.cs" />
     <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\MatchValue.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\Utility\CameraShake.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Player\ModifiableInt.cs" />
     <Compile Include="Assets\InfinityPBR\Scripts Static\InfinityStatic.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Player\IModifiers.cs" />
@@ -220,6 +223,7 @@
     <Compile Include="Assets\05.LCH\02.Scripts\System\UIManager.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\UI\Skill\TripleShot.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\Scripts\AnimationEventEffects.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\Skill\ChargingShotDamage.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\UI\Skill\SkyFallShot.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\PathFinding\PointGrid.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Item\Billboard.cs" />
@@ -257,7 +261,6 @@
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Melee\PlayerMeleeAttackState.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\Troll\Skills\TrollChargeAttack.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\UI\SkillSlot\ChargingShotSlot.cs" />
-    <Compile Include="Assets\05.LCH\02.Scripts\Combat\CameraShake.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\FollowTarget.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_HumanDemoControl.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Controls\ResourceBarController.cs" />

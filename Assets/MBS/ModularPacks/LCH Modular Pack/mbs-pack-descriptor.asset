@@ -9,97 +9,146 @@ TextAsset:
   m_Name: mbs-pack-descriptor
   m_Script: "{\n    \"guid\": \"e53e1af8d67447dbb190d80be2a6e803\",\n    \"_name\":
     \"LCH Modular Pack\",\n    \"_wallGroups\": [\n        {\n            \"guid\":
-    \"610fc0c3ec114ef9b344368dc63a4f50\",\n            \"name\": \"Wall_1\",\n           
+    \"610fc0c3ec114ef9b344368dc63a4f50\",\n            \"name\": \"Wall1\",\n           
     \"_modules\": [\n                {\n                    \"guid\": \"ab11e29bd5eb42218e8a2b5a96503b78\",\n                   
-    \"name\": \"wall_1\",\n                    \"prefabs\": [\n                       
-    {\n                            \"fileID\": 2351365738658311442,\n                           
-    \"guid\": \"6acd1ff9a1982d24ab9cd9caf2ae2056\",\n                           
+    \"name\": \"wall1\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 8972960722196562997,\n                           
+    \"guid\": \"8412968a564e59d45b51fe00f8ebda67\",\n                           
     \"type\": 3\n                        },\n                        {\n                           
     \"instanceID\": 0\n                        }\n                    ]\n               
     }\n            ]\n        },\n        {\n            \"guid\": \"5e37ce916a1a469685f7f17f2bc17ad8\",\n           
-    \"name\": \"Wall_2\",\n            \"_modules\": [\n                {\n                   
+    \"name\": \"Wall2\",\n            \"_modules\": [\n                {\n                   
     \"guid\": \"46c3e711e2e24c2abcbaa5399f65d468\",\n                    \"name\":
-    \"Wall_2\",\n                    \"prefabs\": [\n                        {\n                           
-    \"fileID\": 1020179055841774713,\n                            \"guid\": \"1a7a26d879416754998c0d0610122d54\",\n                           
+    \"Wall2\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 1618479662210547316,\n                            \"guid\": \"dd18f05377249914898d521c76f78d88\",\n                           
     \"type\": 3\n                        },\n                        {\n                           
     \"instanceID\": 0\n                        }\n                    ]\n               
     }\n            ]\n        },\n        {\n            \"guid\": \"b05277f651c04c10894f78adaca35d59\",\n           
-    \"name\": \"Wall_3\",\n            \"_modules\": [\n                {\n                   
+    \"name\": \"Wall3\",\n            \"_modules\": [\n                {\n                   
     \"guid\": \"cf4f5c6bbb2549bb99e306e1ce85d08d\",\n                    \"name\":
-    \"Wall_3\",\n                    \"prefabs\": [\n                        {\n                           
-    \"fileID\": 4089370075195462265,\n                            \"guid\": \"019f2cf1641288c40b1ce73dba1eb5d8\",\n                           
+    \"Wall3\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 4965493539677015608,\n                            \"guid\": \"920c07fe5b94bd24d8b1ffd74122b6e8\",\n                           
     \"type\": 3\n                        },\n                        {\n                           
     \"instanceID\": 0\n                        }\n                    ]\n               
     }\n            ]\n        },\n        {\n            \"guid\": \"1a735a4196d04d54921e6e129ba02ff6\",\n           
-    \"name\": \"Wall_4\",\n            \"_modules\": [\n                {\n                   
+    \"name\": \"Wall4\",\n            \"_modules\": [\n                {\n                   
     \"guid\": \"f22123e43cf746e690468a95e4a5a452\",\n                    \"name\":
-    \"Wall_4\",\n                    \"prefabs\": [\n                        {\n                           
-    \"fileID\": 4877580600497921663,\n                            \"guid\": \"72bee8172fd63244db7df7e716d5d8d2\",\n                           
+    \"Wall4\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 4372108806765999411,\n                            \"guid\": \"8bb803a3907d2064798bbdf0311e8c62\",\n                           
     \"type\": 3\n                        },\n                        {\n                           
     \"instanceID\": 0\n                        }\n                    ]\n               
     }\n            ]\n        },\n        {\n            \"guid\": \"bbe25e63a2134295bdfe51d433cf7997\",\n           
-    \"name\": \"Wall_5\",\n            \"_modules\": [\n                {\n                   
+    \"name\": \"Wall5\",\n            \"_modules\": [\n                {\n                   
     \"guid\": \"6302dc6d1b5f4943885e2d8f4646430f\",\n                    \"name\":
-    \"Wall_5\",\n                    \"prefabs\": [\n                        {\n                           
-    \"fileID\": 2704000762914436119,\n                            \"guid\": \"3995439166245f24986e4d62a46519f0\",\n                           
+    \"Wall5\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 7346199783510313886,\n                            \"guid\": \"cc45eb74fbfe5d0489d8756190e46fd9\",\n                           
     \"type\": 3\n                        },\n                        {\n                           
     \"instanceID\": 0\n                        }\n                    ]\n               
     }\n            ]\n        },\n        {\n            \"guid\": \"26267bf6bb95410483b07e3b5c73bde3\",\n           
-    \"name\": \"Wall_6\",\n            \"_modules\": [\n                {\n                   
+    \"name\": \"Wall6\",\n            \"_modules\": [\n                {\n                   
     \"guid\": \"76c7f2347f394d08a723a25ba227f37b\",\n                    \"name\":
-    \"Wall_6\",\n                    \"prefabs\": [\n                        {\n                           
-    \"fileID\": 6553872482307449715,\n                            \"guid\": \"b40d5971c08ca2d4ca6c346c9b55ff6b\",\n                           
+    \"Wall6\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 5682963987219247727,\n                            \"guid\": \"c7640ee7941885b4c946db95d7520a97\",\n                           
     \"type\": 3\n                        },\n                        {\n                           
     \"instanceID\": 0\n                        }\n                    ]\n               
     }\n            ]\n        },\n        {\n            \"guid\": \"81adfbde85f845749f31da243c6f0011\",\n           
-    \"name\": \"Wall_7\",\n            \"_modules\": [\n                {\n                   
+    \"name\": \"Wall7\",\n            \"_modules\": [\n                {\n                   
     \"guid\": \"21d49d7b6e744181a897469e7a3521a2\",\n                    \"name\":
-    \"Wall_7\",\n                    \"prefabs\": [\n                        {\n                           
-    \"fileID\": 7557870195252733794,\n                            \"guid\": \"eca4373bbc4a42747a3e6a42611d44e4\",\n                           
+    \"Wall7\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 6529636464363866460,\n                            \"guid\": \"c9f675688d63a1246a56b5e0e53e3f1f\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    }\n            ]\n        },\n        {\n            \"guid\": \"4f9c85bd8dc742dfa1ca6df0f7c46f6c\",\n           
+    \"name\": \"door\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"54a9d13c4741441ab2f9f5650097b1cf\",\n                    \"name\":
+    \"door\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 4930818174071484651,\n                            \"guid\": \"5b9524a64b4bcaa409147f3a48532bae\",\n                           
     \"type\": 3\n                        },\n                        {\n                           
     \"instanceID\": 0\n                        }\n                    ]\n               
     }\n            ]\n        }\n    ],\n    \"_floorGroups\": [\n        {\n           
-    \"guid\": \"b8af458f7f524ac89c5cf7778a40444b\",\n            \"name\": \"Floor\",\n           
+    \"guid\": \"b8af458f7f524ac89c5cf7778a40444b\",\n            \"name\": \"Floor1\",\n           
     \"_modules\": [\n                {\n                    \"guid\": \"f2533d945353472bbfd4e858e9f8b2d0\",\n                   
-    \"name\": \"Floor\",\n                    \"prefabs\": [\n                       
-    {\n                            \"fileID\": 3953627856094836606,\n                           
-    \"guid\": \"c38276929baec134b9f361aaffe3b66a\",\n                           
+    \"name\": \"Floor1\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 5837392315909953665,\n                           
+    \"guid\": \"a0d013f311c65a74f8644e3f5fc9053a\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    }\n            ]\n        },\n        {\n            \"guid\": \"e9fa3662a18c4b8096510088f2b45d8b\",\n           
+    \"name\": \"Floor2\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"74d0bb8ec256455ab8eb81eb95887010\",\n                    \"name\":
+    \"Floor2\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 3652290367121303320,\n                            \"guid\": \"330ef388621c8cc408464a52f90dce54\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    }\n            ]\n        },\n        {\n            \"guid\": \"26c4b87530014f53b720497764c798ed\",\n           
+    \"name\": \"Floor3\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"bd10384f8cdd4814b1840ba7f6cc680f\",\n                    \"name\":
+    \"Floor3\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 457355578531048535,\n                            \"guid\": \"3841d5bf68d36cb48bc40e4f0e8733fc\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    }\n            ]\n        },\n        {\n            \"guid\": \"cf17ee32f099422ea0187d9797e98a28\",\n           
+    \"name\": \"Floor4\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"de0d3513ec6c4feaaed4d6122064c7d8\",\n                    \"name\":
+    \"Floor4\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 7231625720158932977,\n                            \"guid\": \"5c832cfc29f42bb41b51d230417d685e\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    }\n            ]\n        },\n        {\n            \"guid\": \"089a2c0920014556adcc96211afb4133\",\n           
+    \"name\": \"Floor5\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"2ee2481fa3e6486084dc400bca03d3d1\",\n                    \"name\":
+    \"Floor5\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 4830357638544467526,\n                            \"guid\": \"2b6e60678ed925d4790aaa261cc7b191\",\n                           
     \"type\": 3\n                        },\n                        {\n                           
     \"instanceID\": 0\n                        }\n                    ]\n               
     }\n            ]\n        }\n    ],\n    \"_decoratorGroups\": [\n        {\n           
-    \"guid\": \"c5ba79cf37a54422a74bf12579f8cb03\",\n            \"name\": \"pillar_1\",\n           
+    \"guid\": \"c5ba79cf37a54422a74bf12579f8cb03\",\n            \"name\": \"Pillar1\",\n           
     \"_modules\": [\n                {\n                    \"guid\": \"2b2bf7cb41cb4794914e37ba7897bdfc\",\n                   
-    \"name\": \"pillar_1\",\n                    \"prefabs\": [\n                       
-    {\n                            \"fileID\": 8453669980430380928,\n                           
-    \"guid\": \"34759e2cfffada74ea9a9def6f0d82bf\",\n                           
+    \"name\": \"Pillar1\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 8334083772442294344,\n                           
+    \"guid\": \"1f5018eb76207694b9acfe06fdf36ddd\",\n                           
     \"type\": 3\n                        }\n                    ]\n               
     }\n            ],\n            \"_assetCategoryGuid\": \"5ed02f467a2443c7a77f6b068886c963\"\n       
     },\n        {\n            \"guid\": \"3ef210b9b870447e87196d233711e910\",\n           
-    \"name\": \"pillar_2\",\n            \"_modules\": [\n                {\n                   
+    \"name\": \"Pillar2\",\n            \"_modules\": [\n                {\n                   
     \"guid\": \"b6923dafc9254ea3ac017559d10aa563\",\n                    \"name\":
-    \"pillar_2\",\n                    \"prefabs\": [\n                        {\n                           
-    \"fileID\": 7618217966884193430,\n                            \"guid\": \"7c4666e772db55040b55c207ab004765\",\n                           
+    \"Pillar2\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 4836822223161006307,\n                            \"guid\": \"4afef186385b292408360baedab58af2\",\n                           
     \"type\": 3\n                        }\n                    ]\n               
     }\n            ],\n            \"_assetCategoryGuid\": \"5ed02f467a2443c7a77f6b068886c963\"\n       
     },\n        {\n            \"guid\": \"802bcfa3b82b4dd0ae615afa31901f05\",\n           
-    \"name\": \"pillar_3\",\n            \"_modules\": [\n                {\n                   
+    \"name\": \"Pillar3\",\n            \"_modules\": [\n                {\n                   
     \"guid\": \"44c23aff0e8c48e5ae6d3841f6668f26\",\n                    \"name\":
-    \"pillar_3\",\n                    \"prefabs\": [\n                        {\n                           
-    \"fileID\": 8493960004957123804,\n                            \"guid\": \"00b8e27f8be7360499fb86378a6d20ac\",\n                           
+    \"Pillar3\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 5015422969776973389,\n                            \"guid\": \"40053b774b506994180e44b311b45e7a\",\n                           
     \"type\": 3\n                        }\n                    ]\n               
     }\n            ],\n            \"_assetCategoryGuid\": \"5ed02f467a2443c7a77f6b068886c963\"\n       
     },\n        {\n            \"guid\": \"7f798c96dfbc4280835701dd9cb2f6e9\",\n           
-    \"name\": \"pillar_4\",\n            \"_modules\": [\n                {\n                   
+    \"name\": \"Pillar4\",\n            \"_modules\": [\n                {\n                   
     \"guid\": \"1c0a9ca444bf47308d37d5a9b2d1ef5e\",\n                    \"name\":
-    \"pillar_4\",\n                    \"prefabs\": [\n                        {\n                           
-    \"fileID\": 3605857445809111764,\n                            \"guid\": \"9f20a780e69ccb34bbc24fe83334a9f0\",\n                           
+    \"Pillar4\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 6990373116960226003,\n                            \"guid\": \"c5b068dd652d730419e62a46636a87ac\",\n                           
     \"type\": 3\n                        }\n                    ]\n               
     }\n            ],\n            \"_assetCategoryGuid\": \"5ed02f467a2443c7a77f6b068886c963\"\n       
     },\n        {\n            \"guid\": \"b1ce3cdd2a6e4ebb81946486da78ec06\",\n           
-    \"name\": \"pillar_7\",\n            \"_modules\": [\n                {\n                   
+    \"name\": \"Pillar5\",\n            \"_modules\": [\n                {\n                   
     \"guid\": \"4544b443687a469998a2af05638a3f89\",\n                    \"name\":
-    \"pillar_7\",\n                    \"prefabs\": [\n                        {\n                           
-    \"fileID\": 166049548237679889,\n                            \"guid\": \"805e63a7957f86e498fd717ddc5a173a\",\n                           
+    \"Pillar5\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 1926041280264384042,\n                            \"guid\": \"39a87d384b822c14c9ae20b471c7a6a7\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"5ed02f467a2443c7a77f6b068886c963\"\n       
+    },\n        {\n            \"guid\": \"aa6309a1a5004e59bb5572ec159d3b0f\",\n           
+    \"name\": \"Pillar6\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"05e7fbd6aa9e49ec8dc0ba701dfc28a8\",\n                    \"name\":
+    \"Pillar6\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 2976992425169927547,\n                            \"guid\": \"a647cbf862e3ac04585761f043f0bba0\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"5ed02f467a2443c7a77f6b068886c963\"\n       
+    },\n        {\n            \"guid\": \"6e60127fe6064c5bb8d7240ab96bdb9d\",\n           
+    \"name\": \"Pillar7\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"60bb945175b946ae930d53ef301ef828\",\n                    \"name\":
+    \"Pillar7\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 4930818174071484651,\n                            \"guid\": \"5b9524a64b4bcaa409147f3a48532bae\",\n                           
     \"type\": 3\n                        }\n                    ]\n               
     }\n            ],\n            \"_assetCategoryGuid\": \"5ed02f467a2443c7a77f6b068886c963\"\n       
     },\n        {\n            \"guid\": \"f929283d7cac4f10add6cbf48e0e5628\",\n           
@@ -114,6 +163,27 @@ TextAsset:
     \"guid\": \"a6fa8c7dd4aa47a4947ec535d98e070d\",\n                    \"name\":
     \"grid_2\",\n                    \"prefabs\": [\n                        {\n                           
     \"fileID\": 9026282089432075811,\n                            \"guid\": \"2ab40cf29de9ebd47a78c4303f2e3fac\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"5ed02f467a2443c7a77f6b068886c963\"\n       
+    },\n        {\n            \"guid\": \"814397ee94d04b88ba030b493c47f911\",\n           
+    \"name\": \"grid_3\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"f00ed7bc021a40b8a6026158ade6a068\",\n                    \"name\":
+    \"grid_3\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 5100118432775307439,\n                            \"guid\": \"ce25290e84cae8b43a638cf84efc0052\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"5ed02f467a2443c7a77f6b068886c963\"\n       
+    },\n        {\n            \"guid\": \"e2ba78e4278d4e9bafa55ca6b9f9d6f5\",\n           
+    \"name\": \"grid_4\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"dcf3f717a7a34d569a387508168a78c9\",\n                    \"name\":
+    \"grid_4\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 6357030182027003910,\n                            \"guid\": \"611d086bbcf31724fa0bda8f053e3f33\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"5ed02f467a2443c7a77f6b068886c963\"\n       
+    },\n        {\n            \"guid\": \"72ad6d6f4fd44227b1e2365a28576476\",\n           
+    \"name\": \"grid_5\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"47da07bc16564aa1920858899bd929c4\",\n                    \"name\":
+    \"grid_5\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 7073586779240058160,\n                            \"guid\": \"8b1510b8043046f46a4736a720162314\",\n                           
     \"type\": 3\n                        }\n                    ]\n               
     }\n            ],\n            \"_assetCategoryGuid\": \"5ed02f467a2443c7a77f6b068886c963\"\n       
     },\n        {\n            \"guid\": \"fe36be510e8e4a8c90b84450380c347d\",\n           

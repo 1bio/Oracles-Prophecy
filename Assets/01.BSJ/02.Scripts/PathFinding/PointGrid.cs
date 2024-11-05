@@ -59,7 +59,7 @@ public class PointGrid : MonoBehaviour
                     Ray ray = new Ray(worldPoint + Vector3.up * 10, Vector3.down);
                     RaycastHit hit;
 
-                    if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
+                    if (Physics.SphereCast(ray, 0.2f, out hit, 10, layerMask))
                     {
                         if (hit.collider.gameObject.layer == obstacleLayer)
                         {

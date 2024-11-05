@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3932865580472722052}
   - component: {fileID: 5754301250623700219}
   - component: {fileID: 7116159426477955157}
-  - component: {fileID: -5127575215421592995}
+  - component: {fileID: -4937215324845003145}
   m_Layer: 11
   m_Name: floor2
   m_TagString: Ground
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-5127575215421592995
+--- !u!64 &-4937215324845003145
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -46,7 +46,7 @@ public class TargetDetector : MonoBehaviour
         int layerMask = (1 << LayerMask.NameToLayer(GameLayers.Player.ToString())) |
                         (1 << LayerMask.NameToLayer(GameLayers.Obstacle.ToString()));
 
-        Vector3 startPos = transform.position + new Vector3(0, 0.5f, 0);
+        Vector3 startPos = transform.position + new Vector3(0, 1f, 0);
 
         for (int i = 0; i < _fanCount; i++)
         {

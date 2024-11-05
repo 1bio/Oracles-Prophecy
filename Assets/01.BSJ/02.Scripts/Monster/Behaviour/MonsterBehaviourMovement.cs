@@ -27,8 +27,6 @@ public class MonsterBehaviourMovement : MonsterBehaviour
         _pointGrid = monster.MovementController.PointGrid;
         _characterController = monster.MovementController.CharacterController;
 
-        monster.AnimationController.PlayWalkAnimation();
-
         monster.CombatController.Health.ImpactEvent += OnImpact;
     }
 
@@ -41,10 +39,9 @@ public class MonsterBehaviourMovement : MonsterBehaviour
             monster.MovementController.Astar.StartPathCalculation(monster.transform.position, monster.MovementController.Astar.TargetTransform.position);
         }
 
-        if (monster == null || monster.MovementController.Path == null)
+        if (monster.MovementController.Path == null)
         {
-            monster.StateMachineController.OnIdle();
-            monster.MovementController.Astar.StartPathCalculation(monster.transform.position, monster.MovementController.Astar.TargetTransform.position);
+            monster.MovementController.Astar.StartPathCalculation(monster.transform.position, FindNeighborNode(_pointGrid.GetPointNodeFromGridByPosition(monster.MovementController.Astar.TargetTransform.position)).Position);
             return;
         }
 
@@ -64,6 +61,11 @@ public class MonsterBehaviourMovement : MonsterBehaviour
                 _pathIndex++;
             }
         }
+        else if (_pointGrid.GetPointNodeFromGridByPosition(monster.MovementController.Astar.TargetTransform.position).IsObstacle ||
+                !_pointGrid.GetPointNodeFromGridByPosition(monster.MovementController.Astar.TargetTransform.position).IsGround)
+        {
+            monster.MovementController.LookAtTarget(monster.CombatController.MonsterCombatAbility.TurnSpeed);
+        }
     }
 
     public override void OnBehaviourEnd(Monster monster)
@@ -77,5 +79,20 @@ public class MonsterBehaviourMovement : MonsterBehaviour
         _monster.StateMachineController.OnGotHit();
     }
 
+    private PointNode FindNeighborNode(PointNode node)
+    {
+        List<PointNode> neighborNodes = _pointGrid.GetNeighborNodes(node);
+        PointNode findNode = null;
+
+        foreach (PointNode neighborNode in neighborNodes)
+        {
+            if (neighborNode.IsGround && !neighborNode.IsObstacle)
+            {
+                findNode = neighborNode;
+                break;
+            }
+        }
+        return findNode;
+    }
     
 }

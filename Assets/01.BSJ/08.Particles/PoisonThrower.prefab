@@ -24362,6 +24362,7 @@ MonoBehaviour:
   _isFollowing: 0
   _damageInterval: 1.5
   _moveSpeed: 6
+  _spawnVFXOnHit: 0
 --- !u!199 &2652576756477941788
 ParticleSystemRenderer:
   serializedVersion: 6

@@ -46,7 +46,7 @@ public class MonsterAnimationController
     public void PlayAttackAnimation(int attackCount)
     {
         IsLockedInAnimation = true;
-        int randNum = Random.Range(0, attackCount) + 1;
+        int randNum = Random.Range(1, attackCount + 1);
         CurrentAnimationName = $"Attack{randNum}";
         Animator.SetTrigger(CurrentAnimationName);
     }

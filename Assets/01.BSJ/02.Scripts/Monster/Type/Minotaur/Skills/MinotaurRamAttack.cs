@@ -37,8 +37,8 @@ public class MinotaurRamAttack : MonsterSkillData
         _hasRamStarted = false;
         _hasHitObject = false;
 
-        _maxDistance = 0.5f;
-        _detectionRadius = 0.4f;
+        _maxDistance = 1f;
+        _detectionRadius = 0.5f;
     }
 
     public override void ActiveSkillEnter(Monster monster)

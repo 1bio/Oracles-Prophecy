@@ -257,6 +257,7 @@
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Controller\MonsterLootItemController.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Scriptables\bl_MapRender.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Misc\bl_MiniMapInputLegacy.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\Weeper\Weeper.cs" />
     <Compile Include="Assets\InfinityPBR\Magic Spells &amp; Particles\Scripts\SFB_LightFlicker.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Misc\bl_MiniMapDragArea.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\HS_FrontAttack.cs" />
@@ -326,6 +327,7 @@
     <Compile Include="Assets\05.LCH\02.Scripts\System\DataManager.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\IPBR_SupportAndReview.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Enemy\EnemyStateMachine.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\Weeper\Skills\WeeperFollowingShot.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Inventory\DynamicInterface.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\DemoControl.cs" />
     <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\EquipmentGroup.cs" />

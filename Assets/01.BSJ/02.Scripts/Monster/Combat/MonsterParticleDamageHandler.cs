@@ -9,9 +9,18 @@ public class MonsterParticleDamageHandler : MonoBehaviour
     private Health _playerHealth;
 
     private bool _canTakeDamage = true;
+    [Header(" # 피격 시 파티클 비활성화")]
     [SerializeField] private bool _shutDownIfHitPlayer = false;
     [SerializeField] private bool _shutDownIfHitObstacle = false;
+
+    [Header(" # 타겟 추적 여부")]
     [SerializeField] private bool _isFollowing = false;
+
+    [Header(" # 피격 시 파티클 생성 여부")]
+    [SerializeField] private bool _spawnVFXOnHit = false;
+    [SerializeField] private GameObject _nextVFXPrefab;
+    private ParticleSystem _particleSystem;
+
     [SerializeField] private float _damageInterval = 1.5f;
     [SerializeField] private float _moveSpeed = 0;
 
@@ -24,6 +33,13 @@ public class MonsterParticleDamageHandler : MonoBehaviour
     {
         _monster = GetComponentInParent<Monster>();
         _playerHealth = GameObject.Find("Player").GetComponent<Health>();
+
+        if (_spawnVFXOnHit && _nextVFXPrefab != null)
+        {
+            _particleSystem = _nextVFXPrefab.GetComponent<ParticleSystem>();
+            _particleSystem.Stop();
+            _particleSystem.Clear();
+        }
     }
 
     private void Update()
@@ -65,6 +81,8 @@ public class MonsterParticleDamageHandler : MonoBehaviour
                     particleSystem.Stop();
                     particleSystem.Clear();
                     particleSystem.time = 0;
+
+                    StartCoroutine(Explode(_nextVFXPrefab, particleSystem.transform.position, 3f));
                 }
             }
         }
@@ -74,6 +92,8 @@ public class MonsterParticleDamageHandler : MonoBehaviour
             particleSystem.Stop();
             particleSystem.Clear();
             particleSystem.time = 0;
+
+            StartCoroutine(Explode(_nextVFXPrefab, particleSystem.transform.position, 3f));
         }
     }
 
@@ -86,5 +106,12 @@ public class MonsterParticleDamageHandler : MonoBehaviour
         yield return new WaitForSeconds(_damageInterval);
 
         _canTakeDamage = true;
+    }
+
+    IEnumerator Explode(GameObject obj, Vector3 position, float delay)
+    {
+        GameObject explosion = Instantiate(obj, position, Quaternion.identity);
+        yield return new WaitForSeconds(delay);
+        Destroy(explosion);
     }
 }

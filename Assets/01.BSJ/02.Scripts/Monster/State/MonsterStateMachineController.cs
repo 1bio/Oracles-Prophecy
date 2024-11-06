@@ -54,8 +54,7 @@ public class MonsterStateMachineController : MonsterStateMachine
                 OnSkill();
             }
             else if (p_monster.CombatController.MonsterCombatAbility.MonsterAttack.IsTargetWithinAttackRange &&
-                    Vector3.Distance(p_monster.MovementController.Astar.TargetTransform.position, this.transform.position)
-                    <= p_monster.CombatController.MonsterCombatAbility.MonsterAttack.Range)
+                    p_monster.CombatController.MonsterCombatAbility.MonsterAttack.TotalCount > 0)
             {
                 if (p_monster.MonsterStateType != MonsterStateType.Idle
                     && p_monster.CombatController.MonsterCombatAbility.MonsterAttack.CooldownThreshold > CurrentBasicAttackCooldownTime)

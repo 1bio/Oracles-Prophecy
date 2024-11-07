@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class Medusa : Monster
 {
-    private float _jumpSpeed = 10f;
-    private bool _isJumping = false;
-
-    private float _spinSpeed = 5f;
-    private bool _isSpinning = false;
+    public float SkillMoveSpeed { get; private set; } = 0f;
+    public bool IsMovingDuringSkill { get; private set; } = false;
 
     public enum JumpAttackAnimationName
     {
@@ -30,33 +27,21 @@ public class Medusa : Monster
 
     private void SkillAttackMove()
     {
-        if (_isJumping &&
+        if (IsMovingDuringSkill &&
             Vector3.Distance(transform.position, MovementController.Astar.TargetTransform.position) > 1)
-            MovementController.CharacterController.SimpleMove(MovementController.Direction * _jumpSpeed);
-        else if (_isSpinning &&
-            Vector3.Distance(transform.position, MovementController.Astar.TargetTransform.position) > 1)
-            MovementController.CharacterController.SimpleMove(MovementController.Direction * _spinSpeed);
+            MovementController.CharacterController.SimpleMove(MovementController.Direction * SkillMoveSpeed);
     }
 
     // Animation Event
-    public void StartJumpAttackMove()
+    public void StartSkillMove(float speed)
     {
-        _isJumping = true;
+        SkillMoveSpeed = speed;
+        IsMovingDuringSkill = true;
     }
 
-    public void StopJumpAttackMove()
+    public void StopSkillMove()
     {
-        _isJumping = false;
-    }
-
-    public void StartSpinAttackMove()
-    {
-        _isSpinning = true;
-    }
-
-    public void StopSpinAttackMove()
-    {
-        _isSpinning = false;
+        IsMovingDuringSkill = false;
     }
 
     public void PlayCrackVFX()

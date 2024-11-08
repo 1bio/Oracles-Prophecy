@@ -29,10 +29,13 @@ public class MeleeComponenet : MonoBehaviour
         {
             if (other.CompareTag("Player"))
                 return;
+            
+            if (health != null && health.isAlive)
+            {
+                cameraShake.ShakeCamera(1.2f, 0.2f);
 
-            cameraShake.ShakeCamera(1.2f, 0.2f);
-
-            health?.TakeDamage(damage, false);
+                health.TakeDamage(damage, false);
+            }
         }
     }
     #endregion

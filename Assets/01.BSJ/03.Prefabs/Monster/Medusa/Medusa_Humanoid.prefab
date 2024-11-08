@@ -1388,20 +1388,22 @@ GameObject:
   m_Component:
   - component: {fileID: 4751363901410226}
   - component: {fileID: 95485276667253350}
+  - component: {fileID: 5169729723310167814}
+  - component: {fileID: 988904371710895933}
   - component: {fileID: -4139984266488118351}
   - component: {fileID: 1944867833062044710}
   - component: {fileID: 5745227527697410371}
   - component: {fileID: 1173101429820980718}
   - component: {fileID: 995606814836722059}
   - component: {fileID: 2529412884132052846}
-  - component: {fileID: 1415051848860503313}
+  - component: {fileID: 2628151016770411405}
   m_Layer: 0
   m_Name: Medusa_Humanoid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4751363901410226
 Transform:
   m_ObjectHideFlags: 0
@@ -1412,7 +1414,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4452987299353176}
@@ -1442,6 +1444,210 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!82 &5169729723310167814
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147675175948022}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.1
+      value: 1
+      inSlope: -10.0039835
+      outSlope: -10.0039835
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.17267914
+      value: 0.40293884
+      inSlope: -2.5009959
+      outSlope: -2.5009959
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.37267914
+      value: 0.15293884
+      inSlope: -0.62524897
+      outSlope: -0.62524897
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.77267915
+      value: 0.027938843
+      inSlope: -0.15631224
+      outSlope: -0.15631224
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.97267914
+      value: 0.0029388443
+      inSlope: -0.10003988
+      outSlope: -0.10003988
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &988904371710895933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147675175948022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2779324d52933d458291addade6eb39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - name: Armor Hit
+    audioClips:
+    - {fileID: 8300000, guid: 6f9293ac8810828449a76cae54de692d, type: 3}
+    - {fileID: 8300000, guid: 25b024af0fd20ac4baeb9890883a19f1, type: 3}
+    - {fileID: 8300000, guid: ca9d0222a31db2f4abbb193298391aa8, type: 3}
+  - name: Armor Movement
+    audioClips:
+    - {fileID: 8300000, guid: 38a27ec42aea0744e9678217a4a516fb, type: 3}
+    - {fileID: 8300000, guid: 12be1b168de80d149a1217211fc0c9c8, type: 3}
+    - {fileID: 8300000, guid: f8ec2c08d29b31c4b910008ba5d6fb0f, type: 3}
+    - {fileID: 8300000, guid: d36efb0315224ad4dad8ba216ada1d96, type: 3}
+    - {fileID: 8300000, guid: fb6556312870e67459dc3b32de0f30b8, type: 3}
+    - {fileID: 8300000, guid: 28463cec3259db446aeebd5d462545ec, type: 3}
+    - {fileID: 8300000, guid: 03fb6538e78739944aa8d81da565e70b, type: 3}
+  - name: Footstep
+    audioClips:
+    - {fileID: 8300000, guid: 883b330b075341a45bbfe93707bb05c0, type: 3}
+    - {fileID: 8300000, guid: e96aa7b959e65e444a84967872a5a42e, type: 3}
+    - {fileID: 8300000, guid: 4e6692ea42876274dada3f524be32ec9, type: 3}
+    - {fileID: 8300000, guid: 0d5de9f92d9f1c745a7c7f6611d55d21, type: 3}
+    - {fileID: 8300000, guid: 88f78a25a9342114f9b1bf75cd584d39, type: 3}
+  - name: Footstep Scuff
+    audioClips: []
+  - name: Death Thump
+    audioClips:
+    - {fileID: 8300000, guid: 30af81c2bdcc6bf4a9e9c31fd09f86b3, type: 3}
+  - name: Attack Vocals
+    audioClips:
+    - {fileID: 8300000, guid: a388fd1e9f9020241b15d36fb79475a8, type: 3}
+    - {fileID: 8300000, guid: eeb29cbdaff1de446bb66716706f0b40, type: 3}
+    - {fileID: 8300000, guid: ca5227bffeeb98349b9e621b0eb2016b, type: 3}
+    - {fileID: 8300000, guid: c6040ebd22878774a834ac5a50feb572, type: 3}
+  - name: Scream Vocals
+    audioClips:
+    - {fileID: 8300000, guid: 77d3d4cdd31ff6c4fb6f236989b01029, type: 3}
+    - {fileID: 8300000, guid: 21af62c03cc425b458536cb550917bc0, type: 3}
+    - {fileID: 8300000, guid: e86cedbd28a2269439f65701f31cd655, type: 3}
+  - name: Snakescream Vocals
+    audioClips:
+    - {fileID: 8300000, guid: edfdb78b38c91a54a948b74725fdbf94, type: 3}
+  - name: Tail Whoosh
+    audioClips:
+    - {fileID: 8300000, guid: 9f3ccbe64fe25674a8cd792d3d31a3f7, type: 3}
+    - {fileID: 8300000, guid: 535e5d27a3ac78f46a6b01fff9fb0fbc, type: 3}
+    - {fileID: 8300000, guid: fcf2525d367cdf2408af1b2b4ceaec1c, type: 3}
+  - name: Weapon Whoosh
+    audioClips:
+    - {fileID: 8300000, guid: 2cbb28861b5531549a7e772795a42abc, type: 3}
+    - {fileID: 8300000, guid: f53ceb068fbdabd41a978c682914bfae, type: 3}
+    - {fileID: 8300000, guid: 3e24d0c679c57614e82a553d46a496a3, type: 3}
+    - {fileID: 8300000, guid: de2e37a89cee38145bd477c16a702ed8, type: 3}
+    - {fileID: 8300000, guid: 5d51219df635b054e953a84349436ec2, type: 3}
+  - name: Tail Whoosh Light
+    audioClips:
+    - {fileID: 8300000, guid: 9f3ccbe64fe25674a8cd792d3d31a3f7, type: 3}
+    - {fileID: 8300000, guid: 535e5d27a3ac78f46a6b01fff9fb0fbc, type: 3}
+    - {fileID: 8300000, guid: fcf2525d367cdf2408af1b2b4ceaec1c, type: 3}
+  - name: Footstep Light
+    audioClips:
+    - {fileID: 8300000, guid: 883b330b075341a45bbfe93707bb05c0, type: 3}
+    - {fileID: 8300000, guid: e96aa7b959e65e444a84967872a5a42e, type: 3}
+    - {fileID: 8300000, guid: 4e6692ea42876274dada3f524be32ec9, type: 3}
+    - {fileID: 8300000, guid: 0d5de9f92d9f1c745a7c7f6611d55d21, type: 3}
+    - {fileID: 8300000, guid: 88f78a25a9342114f9b1bf75cd584d39, type: 3}
+  audioLoops:
+  - name: TailLocomotion
+    audioClips:
+    - {fileID: 8300000, guid: 47c87cb400881460daa7e8fa7b609108, type: 3}
 --- !u!143 &-4139984266488118351
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1534,7 +1740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b066cc1251f0b3840a8f32ea9ef795ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1415051848860503313
+--- !u!114 &2628151016770411405
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1543,9 +1749,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1147675175948022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd540d5ecfc8f85488684915acb7142f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bb6f3a597cf4bf40b7242eb7b7d0564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: -4139984266488118351}
+  rollSpeed: 0
 --- !u!1 &1153596900122122
 GameObject:
   m_ObjectHideFlags: 0

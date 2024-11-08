@@ -1,3 +1,4 @@
+using SingularityGroup.HotReload;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection.Emit;
@@ -39,6 +40,10 @@ public class MonsterStateMachineController : MonsterStateMachine
         {
             HandleLivingState();
         }
+        else if (!p_monster.AnimationController.IsLockedInAnimation)
+        {
+            OnIdle();
+        }
     }
 
     private void HandleLivingState()
@@ -48,14 +53,13 @@ public class MonsterStateMachineController : MonsterStateMachine
         {
             if (p_monster.MonsterStateType != MonsterStateType.Skill
                 && p_monster.SkillController.GetAvailableSkills().Count > 0
-                && p_monster.SkillController.UpdateCurrentSkillData().Range >= Vector3.Distance(p_monster.MovementController.Astar.TargetTransform.position, this.transform.position))
+                && p_monster.SkillController.UpdateCurrentSkillData().IsTargetWithinSkillRange)
             {
 
                 OnSkill();
             }
             else if (p_monster.CombatController.MonsterCombatAbility.MonsterAttack.IsTargetWithinAttackRange &&
-                    Vector3.Distance(p_monster.MovementController.Astar.TargetTransform.position, this.transform.position)
-                    <= p_monster.CombatController.MonsterCombatAbility.MonsterAttack.Range)
+                    p_monster.CombatController.MonsterCombatAbility.MonsterAttack.TotalCount > 0)
             {
                 if (p_monster.MonsterStateType != MonsterStateType.Idle
                     && p_monster.CombatController.MonsterCombatAbility.MonsterAttack.CooldownThreshold > CurrentBasicAttackCooldownTime)

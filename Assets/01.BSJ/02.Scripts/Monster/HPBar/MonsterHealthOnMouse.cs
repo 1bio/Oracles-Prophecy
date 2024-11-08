@@ -27,7 +27,7 @@ public class MonsterHealthOnMouse : MonoBehaviour
 
     private void Update()
     {
-        OnMouse = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, 50, _layerMask);
+        OnMouse = Physics.SphereCast(Camera.main.ScreenPointToRay(Input.mousePosition), 0.5f, out RaycastHit hit, 50, _layerMask);
 
         if (OnMouse)
         {

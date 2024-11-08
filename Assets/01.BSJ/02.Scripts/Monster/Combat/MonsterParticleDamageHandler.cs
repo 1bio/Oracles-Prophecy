@@ -9,7 +9,17 @@ public class MonsterParticleDamageHandler : MonoBehaviour
     private Health _playerHealth;
 
     private bool _canTakeDamage = true;
-    [SerializeField] private bool _shouldStop = false;
+    [Header(" # 피격 시 파티클 비활성화")]
+    [SerializeField] private bool _shutDownIfHitPlayer = false;
+    [SerializeField] private bool _shutDownIfHitObstacle = false;
+
+    [Header(" # 타겟 추적 여부")]
+    [SerializeField] private bool _isFollowing = false;
+
+    [Header(" # 피격 시 파티클 생성 여부")]
+    [SerializeField] private bool _spawnVFXOnHit = false;
+    [SerializeField] private GameObject _nextVFXPrefab;
+
     [SerializeField] private float _damageInterval = 1.5f;
     [SerializeField] private float _moveSpeed = 0;
 
@@ -20,7 +30,6 @@ public class MonsterParticleDamageHandler : MonoBehaviour
 
     private void Awake()
     {
-        _monster = GetComponentInParent<Monster>();
         _playerHealth = GameObject.Find("Player").GetComponent<Health>();
     }
 
@@ -30,6 +39,12 @@ public class MonsterParticleDamageHandler : MonoBehaviour
         if (particleSystem != null)
         {
             particleSystem.transform.position += particleSystem.transform.forward * _moveSpeed * Time.deltaTime;
+
+            if (_isFollowing)
+            {
+                Vector3 direction = _playerHealth.gameObject.transform.position - transform.position;
+                particleSystem.transform.rotation = Quaternion.LookRotation(direction);
+            }
         }
     }
 
@@ -51,21 +66,27 @@ public class MonsterParticleDamageHandler : MonoBehaviour
             {
                 StartCoroutine(DealDamageOverTime(_playerHealth));
 
-                if (_shouldStop)
+                if (_shutDownIfHitPlayer)
                 {
                     ParticleSystem particleSystem = this.gameObject.GetComponent<ParticleSystem>();
                     particleSystem.Stop();
                     particleSystem.Clear();
                     particleSystem.time = 0;
+
+                    if (_nextVFXPrefab != null)
+                        StartCoroutine(Explode(_nextVFXPrefab, particleSystem.transform.position, 3f));
                 }
             }
         }
-        else if (_shouldStop && other.gameObject.layer == LayerMask.NameToLayer(GameLayers.Obstacle.ToString()))
+        else if (_shutDownIfHitObstacle && other.gameObject.layer == LayerMask.NameToLayer(GameLayers.Obstacle.ToString()))
         {
             ParticleSystem particleSystem = this.gameObject.GetComponent<ParticleSystem>();
             particleSystem.Stop();
             particleSystem.Clear();
             particleSystem.time = 0;
+
+            if (_nextVFXPrefab != null)
+                StartCoroutine(Explode(_nextVFXPrefab, particleSystem.transform.position, 3f));
         }
     }
 
@@ -78,5 +99,12 @@ public class MonsterParticleDamageHandler : MonoBehaviour
         yield return new WaitForSeconds(_damageInterval);
 
         _canTakeDamage = true;
+    }
+
+    IEnumerator Explode(GameObject obj, Vector3 position, float delay)
+    {
+        GameObject explosion = Instantiate(obj, position, Quaternion.identity);
+        yield return new WaitForSeconds(delay);
+        Destroy(explosion);
     }
 }

@@ -1,3 +1,4 @@
+using SingularityGroup.HotReload;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection.Emit;
@@ -38,6 +39,10 @@ public class MonsterStateMachineController : MonsterStateMachine
         else if (p_monster.MovementController.TargetDetector.IsTargetDetected)
         {
             HandleLivingState();
+        }
+        else if (!p_monster.AnimationController.IsLockedInAnimation)
+        {
+            OnIdle();
         }
     }
 

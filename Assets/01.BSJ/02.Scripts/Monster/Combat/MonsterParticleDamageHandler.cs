@@ -19,7 +19,6 @@ public class MonsterParticleDamageHandler : MonoBehaviour
     [Header(" # 피격 시 파티클 생성 여부")]
     [SerializeField] private bool _spawnVFXOnHit = false;
     [SerializeField] private GameObject _nextVFXPrefab;
-    private ParticleSystem _particleSystem;
 
     [SerializeField] private float _damageInterval = 1.5f;
     [SerializeField] private float _moveSpeed = 0;
@@ -31,15 +30,7 @@ public class MonsterParticleDamageHandler : MonoBehaviour
 
     private void Awake()
     {
-        _monster = GetComponentInParent<Monster>();
         _playerHealth = GameObject.Find("Player").GetComponent<Health>();
-
-        if (_spawnVFXOnHit && _nextVFXPrefab != null)
-        {
-            _particleSystem = _nextVFXPrefab.GetComponent<ParticleSystem>();
-            _particleSystem.Stop();
-            _particleSystem.Clear();
-        }
     }
 
     private void Update()
@@ -82,7 +73,8 @@ public class MonsterParticleDamageHandler : MonoBehaviour
                     particleSystem.Clear();
                     particleSystem.time = 0;
 
-                    StartCoroutine(Explode(_nextVFXPrefab, particleSystem.transform.position, 3f));
+                    if (_nextVFXPrefab != null)
+                        StartCoroutine(Explode(_nextVFXPrefab, particleSystem.transform.position, 3f));
                 }
             }
         }
@@ -93,7 +85,8 @@ public class MonsterParticleDamageHandler : MonoBehaviour
             particleSystem.Clear();
             particleSystem.time = 0;
 
-            StartCoroutine(Explode(_nextVFXPrefab, particleSystem.transform.position, 3f));
+            if (_nextVFXPrefab != null)
+                StartCoroutine(Explode(_nextVFXPrefab, particleSystem.transform.position, 3f));
         }
     }
 

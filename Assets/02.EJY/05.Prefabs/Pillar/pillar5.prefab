@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5632650990837799175}
   - component: {fileID: 7184447405410037371}
   - component: {fileID: 2692142074803238649}
-  - component: {fileID: 3908573272768845423}
   - component: {fileID: 8707951662595746316}
+  - component: {fileID: 5342042373419196958}
   m_Layer: 13
   m_Name: pillar5
   m_TagString: Obstacle
@@ -85,28 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3908573272768845423
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926041280264384042}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6969744916816444028, guid: b8464266b4167af449080ba246d6ca61, type: 3}
 --- !u!54 &8707951662595746316
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -134,3 +112,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &5342042373419196958
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926041280264384042}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.2386987, y: 2.3489015, z: 1.1987197}
+  m_Center: {x: -0.51998955, y: 1.1744508, z: 0.00000004796132}

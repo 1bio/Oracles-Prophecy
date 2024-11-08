@@ -35,6 +35,11 @@ public class MedusaSpinAttack : MonsterSkillData
                 monster.AnimationController.PlaySkillAnimation(Medusa.SpinAttackAnimationName.SpinAttack.ToString());
             }
         }
+        else
+        {
+            if (monster.AnimationController.AnimatorStateInfo.normalizedTime > 0.9f)
+                monster.AnimationController.IsLockedInAnimation = false;
+        }
     }
 
     public override void ActiveSkillExit(Monster monster)

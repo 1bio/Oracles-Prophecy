@@ -10,6 +10,7 @@ public class MonsterAnimationController
         BlendTransitionSpeed = blendTransitionSpeed;
         LocomotionBlendValue = 0f;
         CurrentAnimationName = string.Empty;
+        IsLockedInAnimation = false;
     }
 
     public Animator Animator { get; private set; }

@@ -12,6 +12,9 @@ public class TargetDetector : MonoBehaviour
     private float _fanAngle = 50f;
     private float _fanCount = 25f;
 
+    private float _currentTime = 0;
+    private float _updateTime = 100f;
+
     public bool IsTargetDetected { get; set; } = false;
     public float DetectionDistance { get => _detectionDistance; }
 
@@ -38,6 +41,17 @@ public class TargetDetector : MonoBehaviour
 
             _monster.CombatController.MonsterCombatAbility.MonsterAttack.IsTargetWithinAttackRange =
                IsInFanShapeDetection(_monster.CombatController.MonsterCombatAbility.MonsterAttack.Range);
+
+            if (IsInFanShapeDetection(_detectionDistance))
+                _currentTime = 0;
+            else
+                _currentTime += Time.deltaTime;
+        }
+
+        if (_currentTime > _updateTime)
+        {
+            IsTargetDetected = IsInFanShapeDetection(_detectionDistance);
+            _currentTime = 0;
         }
     }
 

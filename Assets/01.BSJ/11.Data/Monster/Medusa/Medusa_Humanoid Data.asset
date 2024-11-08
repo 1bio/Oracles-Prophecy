@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01027fa622f7dde4dad3d6d34f9f8fd6, type: 3}
   m_Name: Medusa_Humanoid Data
   m_EditorClassIdentifier: 
-  _moveSpeed: 4
+  _moveSpeed: 3.5
   _turnSpeed: 600
   _monsterHealth:
     _currentHealth: 100

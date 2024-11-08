@@ -1388,8 +1388,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4751363901410226}
   - component: {fileID: 95485276667253350}
-  - component: {fileID: -8922108261367904956}
-  - component: {fileID: 47492031138047461}
+  - component: {fileID: 5169729723310167814}
+  - component: {fileID: 988904371710895933}
   - component: {fileID: -4139984266488118351}
   - component: {fileID: 1944867833062044710}
   - component: {fileID: 5745227527697410371}
@@ -1444,7 +1444,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!82 &-8922108261367904956
+--- !u!82 &5169729723310167814
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1455,17 +1455,17 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -1475,23 +1475,50 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.1
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -10.0039835
+      outSlope: -10.0039835
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      time: 0.17267914
+      value: 0.40293884
+      inSlope: -2.5009959
+      outSlope: -2.5009959
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.37267914
+      value: 0.15293884
+      inSlope: -0.62524897
+      outSlope: -0.62524897
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.77267915
+      value: 0.027938843
+      inSlope: -0.15631224
+      outSlope: -0.15631224
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.97267914
+      value: 0.0029388443
+      inSlope: -0.10003988
+      outSlope: -0.10003988
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -1509,7 +1536,7 @@ AudioSource:
       outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1524,7 +1551,7 @@ AudioSource:
       outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1539,8 +1566,8 @@ AudioSource:
       outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
---- !u!114 &47492031138047461
+    m_RotationOrder: 4
+--- !u!114 &988904371710895933
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1549,175 +1576,78 @@ MonoBehaviour:
   m_GameObject: {fileID: 1147675175948022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 609f49429392c476bb71685431efda79, type: 3}
+  m_Script: {fileID: 11500000, guid: a2779324d52933d458291addade6eb39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips:
   - name: Armor Hit
     audioClips:
-    - {fileID: 8300000, guid: 1ccbb0fa38fe3470e8d2f4c1bfe6ca29, type: 3}
-    - {fileID: 8300000, guid: bd8e2e582d56c408781505e36c2962ab, type: 3}
-    - {fileID: 8300000, guid: c4c35ab38d7cb494ca8f3574a57b4360, type: 3}
-    chanceOfPlaying: 100
-    volume: 0.6
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
+    - {fileID: 8300000, guid: 6f9293ac8810828449a76cae54de692d, type: 3}
+    - {fileID: 8300000, guid: 25b024af0fd20ac4baeb9890883a19f1, type: 3}
+    - {fileID: 8300000, guid: ca9d0222a31db2f4abbb193298391aa8, type: 3}
   - name: Armor Movement
     audioClips:
-    - {fileID: 8300000, guid: 224b3b002daa3436a8bd4533a53c0302, type: 3}
-    - {fileID: 8300000, guid: da474c52573e947f7a6d682214fb2cc6, type: 3}
-    - {fileID: 8300000, guid: 1f77461ac914249acb18a14ec231216b, type: 3}
-    - {fileID: 8300000, guid: 3ea5fe5bbb0054802b69438deffa5d09, type: 3}
-    - {fileID: 8300000, guid: c494d62244f9940179cb84a464aa7749, type: 3}
-    - {fileID: 8300000, guid: 6927fdfc681e34f2e8db59f531f5d359, type: 3}
-    - {fileID: 8300000, guid: 1160d69d979d946c8a79b8ab0cb7cb58, type: 3}
-    chanceOfPlaying: 15
-    volume: 0.5
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
+    - {fileID: 8300000, guid: 38a27ec42aea0744e9678217a4a516fb, type: 3}
+    - {fileID: 8300000, guid: 12be1b168de80d149a1217211fc0c9c8, type: 3}
+    - {fileID: 8300000, guid: f8ec2c08d29b31c4b910008ba5d6fb0f, type: 3}
+    - {fileID: 8300000, guid: d36efb0315224ad4dad8ba216ada1d96, type: 3}
+    - {fileID: 8300000, guid: fb6556312870e67459dc3b32de0f30b8, type: 3}
+    - {fileID: 8300000, guid: 28463cec3259db446aeebd5d462545ec, type: 3}
+    - {fileID: 8300000, guid: 03fb6538e78739944aa8d81da565e70b, type: 3}
   - name: Footstep
     audioClips:
-    - {fileID: 8300000, guid: 5acb6d65513434691a4fa5d6efbd252c, type: 3}
-    - {fileID: 8300000, guid: 5eccc82da291e464aabf3aa9b1e4c023, type: 3}
-    - {fileID: 8300000, guid: 7b4e981acee7448ef8ba8b7b65491fff, type: 3}
-    - {fileID: 8300000, guid: 1c8573ab196954ec68793dd12c077b50, type: 3}
-    - {fileID: 8300000, guid: f836d9bd2a8f74ffb8a5971f489011d0, type: 3}
-    chanceOfPlaying: 100
-    volume: 0.3
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
+    - {fileID: 8300000, guid: 883b330b075341a45bbfe93707bb05c0, type: 3}
+    - {fileID: 8300000, guid: e96aa7b959e65e444a84967872a5a42e, type: 3}
+    - {fileID: 8300000, guid: 4e6692ea42876274dada3f524be32ec9, type: 3}
+    - {fileID: 8300000, guid: 0d5de9f92d9f1c745a7c7f6611d55d21, type: 3}
+    - {fileID: 8300000, guid: 88f78a25a9342114f9b1bf75cd584d39, type: 3}
   - name: Footstep Scuff
-    audioClips:
-    - {fileID: 8300000, guid: dd4c04b08e9bf4a2f844972cd470fa71, type: 3}
-    - {fileID: 8300000, guid: 632087a90150740eda3333c837891f69, type: 3}
-    - {fileID: 8300000, guid: 6d4f0ac439dd0425a9d5e9ae0daf7912, type: 3}
-    - {fileID: 8300000, guid: 26c3e62e73b30454db817f918b5e7c37, type: 3}
-    - {fileID: 8300000, guid: 4cf9f823c47814094a4c5df2aec14d5a, type: 3}
-    chanceOfPlaying: 100
-    volume: 0.3
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
+    audioClips: []
   - name: Death Thump
     audioClips:
-    - {fileID: 8300000, guid: 944a13923779b470995e36c49e3518b0, type: 3}
-    chanceOfPlaying: 100
-    volume: 1
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
+    - {fileID: 8300000, guid: 30af81c2bdcc6bf4a9e9c31fd09f86b3, type: 3}
   - name: Attack Vocals
     audioClips:
-    - {fileID: 8300000, guid: d11a36641a6994a39b2bd238ac3e73b7, type: 3}
-    - {fileID: 8300000, guid: 29f44354fdc1d468596756421d3aeb23, type: 3}
-    - {fileID: 8300000, guid: 93b0b7a6d2c134ea381d92dab959fcd9, type: 3}
-    - {fileID: 8300000, guid: a079770e5a1ee47f4b00bef5ff9f4419, type: 3}
-    chanceOfPlaying: 100
-    volume: 1
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
+    - {fileID: 8300000, guid: a388fd1e9f9020241b15d36fb79475a8, type: 3}
+    - {fileID: 8300000, guid: eeb29cbdaff1de446bb66716706f0b40, type: 3}
+    - {fileID: 8300000, guid: ca5227bffeeb98349b9e621b0eb2016b, type: 3}
+    - {fileID: 8300000, guid: c6040ebd22878774a834ac5a50feb572, type: 3}
   - name: Scream Vocals
     audioClips:
-    - {fileID: 8300000, guid: d890f9ae2bd614cd7a23866e15f3fce2, type: 3}
-    - {fileID: 8300000, guid: 994b383d2839f40c3b85d093d60c7798, type: 3}
-    - {fileID: 8300000, guid: 386400027753c4ac9b9d7b12643ea6e9, type: 3}
-    chanceOfPlaying: 100
-    volume: 1
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
+    - {fileID: 8300000, guid: 77d3d4cdd31ff6c4fb6f236989b01029, type: 3}
+    - {fileID: 8300000, guid: 21af62c03cc425b458536cb550917bc0, type: 3}
+    - {fileID: 8300000, guid: e86cedbd28a2269439f65701f31cd655, type: 3}
   - name: Snakescream Vocals
     audioClips:
-    - {fileID: 8300000, guid: a28cda57bfffb4192a7d73e8d187e050, type: 3}
-    chanceOfPlaying: 100
-    volume: 1
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
+    - {fileID: 8300000, guid: edfdb78b38c91a54a948b74725fdbf94, type: 3}
   - name: Tail Whoosh
     audioClips:
-    - {fileID: 8300000, guid: bdf054871c04d40e6a4975bfe099fcdf, type: 3}
-    - {fileID: 8300000, guid: 80b86572b2d124b41a4d2efaece5557a, type: 3}
-    - {fileID: 8300000, guid: d3715476f5061464cb38ce953ff1f5ee, type: 3}
-    chanceOfPlaying: 100
-    volume: 1
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
+    - {fileID: 8300000, guid: 9f3ccbe64fe25674a8cd792d3d31a3f7, type: 3}
+    - {fileID: 8300000, guid: 535e5d27a3ac78f46a6b01fff9fb0fbc, type: 3}
+    - {fileID: 8300000, guid: fcf2525d367cdf2408af1b2b4ceaec1c, type: 3}
   - name: Weapon Whoosh
     audioClips:
-    - {fileID: 8300000, guid: b8af383c011fa442d94ccf3f170536ad, type: 3}
-    - {fileID: 8300000, guid: b5d6c17b35ed34e4e9cd23bbe3e1abf7, type: 3}
-    - {fileID: 8300000, guid: ce457934ec8a34b779d1e41663cba6e6, type: 3}
-    - {fileID: 8300000, guid: 3f97e380607ad4d9d92231c4dd4f980e, type: 3}
-    - {fileID: 8300000, guid: b2e5a043fcc5e4a08af82cd76f71800d, type: 3}
-    chanceOfPlaying: 100
-    volume: 1
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
+    - {fileID: 8300000, guid: 2cbb28861b5531549a7e772795a42abc, type: 3}
+    - {fileID: 8300000, guid: f53ceb068fbdabd41a978c682914bfae, type: 3}
+    - {fileID: 8300000, guid: 3e24d0c679c57614e82a553d46a496a3, type: 3}
+    - {fileID: 8300000, guid: de2e37a89cee38145bd477c16a702ed8, type: 3}
+    - {fileID: 8300000, guid: 5d51219df635b054e953a84349436ec2, type: 3}
   - name: Tail Whoosh Light
     audioClips:
-    - {fileID: 8300000, guid: bdf054871c04d40e6a4975bfe099fcdf, type: 3}
-    - {fileID: 8300000, guid: 80b86572b2d124b41a4d2efaece5557a, type: 3}
-    - {fileID: 8300000, guid: d3715476f5061464cb38ce953ff1f5ee, type: 3}
-    chanceOfPlaying: 100
-    volume: 0.3
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
+    - {fileID: 8300000, guid: 9f3ccbe64fe25674a8cd792d3d31a3f7, type: 3}
+    - {fileID: 8300000, guid: 535e5d27a3ac78f46a6b01fff9fb0fbc, type: 3}
+    - {fileID: 8300000, guid: fcf2525d367cdf2408af1b2b4ceaec1c, type: 3}
   - name: Footstep Light
     audioClips:
-    - {fileID: 8300000, guid: 5acb6d65513434691a4fa5d6efbd252c, type: 3}
-    - {fileID: 8300000, guid: 5eccc82da291e464aabf3aa9b1e4c023, type: 3}
-    - {fileID: 8300000, guid: 7b4e981acee7448ef8ba8b7b65491fff, type: 3}
-    - {fileID: 8300000, guid: 1c8573ab196954ec68793dd12c077b50, type: 3}
-    - {fileID: 8300000, guid: f836d9bd2a8f74ffb8a5971f489011d0, type: 3}
-    chanceOfPlaying: 100
-    volume: 0.3
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
+    - {fileID: 8300000, guid: 883b330b075341a45bbfe93707bb05c0, type: 3}
+    - {fileID: 8300000, guid: e96aa7b959e65e444a84967872a5a42e, type: 3}
+    - {fileID: 8300000, guid: 4e6692ea42876274dada3f524be32ec9, type: 3}
+    - {fileID: 8300000, guid: 0d5de9f92d9f1c745a7c7f6611d55d21, type: 3}
+    - {fileID: 8300000, guid: 88f78a25a9342114f9b1bf75cd584d39, type: 3}
   audioLoops:
   - name: TailLocomotion
     audioClips:
     - {fileID: 8300000, guid: 47c87cb400881460daa7e8fa7b609108, type: 3}
-    chanceOfPlaying: 100
-    volume: 1
-    volumeBySpeed: 1
-    minVolume: 0
-    pitchBySpeed: 1
-    minPitch: 0.5
-    maxPitch: 1
-  pitchByTimescale: 1
 --- !u!143 &-4139984266488118351
 CharacterController:
   m_ObjectHideFlags: 0

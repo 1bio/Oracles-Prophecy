@@ -34,20 +34,25 @@ public class FireBlade : MonoBehaviour
         }
 
         DataManager.instance.SkillLevelUp("화염칼", 1);
-        UIManager.instance.SelectWindow(false);
-
         UpdateUI();
     }
 
     // 텍스트 업데이트
     public void UpdateUI()
     {
-        fireBladeTexts[0].text = fireBlade.skillName; // 스킬 이름
-        fireBladeTexts[1].text = $"레벨 {fireBlade.level}"; // 레벨
-        fireBladeTexts[2].text = $"쿨타임: {Mathf.Floor(fireBlade.coolDown)}초"; // 쿨타임
-        fireBladeTexts[3].text = fireBlade.description; // 설명
-        fireBladeTexts[4].text = $"공격력 +{Mathf.Floor((fireBlade.multipleDamage - 1) * 100)}%"; // 공격력 증가율 
-        fireBladeTexts[5].text = $"쿨타임 {Mathf.Floor((fireBlade.multipleCoolDown - 1) * 100)}%"; // 쿨타임 감소율
+        //fireBladeTexts[0].text = fireBlade.skillName; // 스킬 이름
+        //fireBladeTexts[1].text = $"레벨 {fireBlade.level}"; // 레벨
+        //fireBladeTexts[2].text = $"쿨타임: {Mathf.Floor(fireBlade.coolDown)}초"; // 쿨타임
+        //fireBladeTexts[3].text = fireBlade.description; // 설명
+        //fireBladeTexts[4].text = $"공격력 +{Mathf.Floor((fireBlade.multipleDamage - 1) * 100)}%"; // 공격력 증가율 
+        //fireBladeTexts[5].text = $"쿨타임 {Mathf.Floor((fireBlade.multipleCoolDown - 1) * 100)}%"; // 쿨타임 감소율
+
+        fireBladeTexts[0].text = $"{fireBlade.level}"; // 레벨
+        fireBladeTexts[1].text = fireBlade.skillName; // 스킬 이름
+        fireBladeTexts[2].text = fireBlade.description; // 설명
+        fireBladeTexts[3].text = $"Damage {Mathf.Floor(fireBlade.minDamage)} - {Mathf.Floor(fireBlade.maxDamage)}"; // 공격력 증가율 
+        fireBladeTexts[4].text = $"CoolDown {Mathf.Floor(fireBlade.coolDown)}"; // 쿨타임 감소율
+        fireBladeTexts[5].text = $"Mana: {Mathf.Floor(fireBlade.useMana)}";
     }
     #endregion
 }

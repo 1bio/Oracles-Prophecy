@@ -27,9 +27,9 @@ public class PlayerFreeLookState : PlayerBaseState
     {
         stateMachine.InputReader.RollEvent += OnRolling;
 
-        stateMachine.InputReader.firstSkillEvent += OnFirstSkill; // 도약베기
+        stateMachine.InputReader.firstSkillEvent += OnFirstSkill; // 절단
         stateMachine.InputReader.SecondSkillEvent += OnSecondSkill; // 화염칼
-        stateMachine.InputReader.thirdSkillEvent += OnThirdSkill; // 회전베기
+        stateMachine.InputReader.thirdSkillEvent += OnThirdSkill; // 빙결
 
         stateMachine.Animator.CrossFadeInFixedTime(FreeLookWithMelee, CrossFadeDuration);
 
@@ -111,9 +111,9 @@ public class PlayerFreeLookState : PlayerBaseState
         stateMachine.ChangeState(new PlayerRollingState(stateMachine));
     }
 
-    private void OnFirstSkill() // 도약베기 [3]
+    private void OnFirstSkill() // 절단 [3]
     {
-        if (SkillManager.instance.GetRemainingCooldown("도약베기") <= 0f && !DataManager.instance.playerData.skillData[3].isUnlock 
+        if (SkillManager.instance.GetRemainingCooldown("절단") <= 0f && !DataManager.instance.playerData.skillData[3].isUnlock 
             && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[3].useMana)
         {
             stateMachine.ChangeState(new PlayerMeleeDashSlashState(stateMachine));
@@ -129,12 +129,12 @@ public class PlayerFreeLookState : PlayerBaseState
         }
     }
 
-    private void OnThirdSkill() // 회전베기 [5]
+    private void OnThirdSkill() // 빙결 [5]
     {
-        if(SkillManager.instance.GetRemainingCooldown("회전베기") <= 0f && !DataManager.instance.playerData.skillData[5].isUnlock 
+        if(SkillManager.instance.GetRemainingCooldown("빙결") <= 0f && !DataManager.instance.playerData.skillData[5].isUnlock 
             && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[5].useMana)
         {
-            stateMachine.ChangeState(new PlayerMeleeSpinSlashState(stateMachine));
+            stateMachine.ChangeState(new PlayerMeleeFrostState(stateMachine));
         }
     }
     #endregion

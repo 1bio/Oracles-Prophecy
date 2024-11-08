@@ -3898,7 +3898,7 @@ ParticleSystem:
     radiusScale: 0.01
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 1024
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -5097,7 +5097,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a959a1b0b8414d4fb8a68bdc12d69ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraShake: {fileID: 0}
   EffectsOnCollision:
   - {fileID: 1605380917820772, guid: 72e72a48a930df248ab3e62d9efaea25, type: 3}
   DestroyTimeDelay: 2

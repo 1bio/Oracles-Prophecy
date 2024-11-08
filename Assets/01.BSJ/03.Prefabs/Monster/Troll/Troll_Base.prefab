@@ -6004,7 +6004,7 @@ GameObject:
   - component: {fileID: 6232515372858526173}
   - component: {fileID: 6449116757535947445}
   - component: {fileID: 5898460478478352485}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Troll_Base
   m_TagString: Monster
   m_Icon: {fileID: 0}

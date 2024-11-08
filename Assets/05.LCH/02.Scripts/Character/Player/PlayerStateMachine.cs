@@ -21,7 +21,7 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public CameraShake CameraShake { get; private set; }
 
     [field: SerializeField] public VFXController VFXController { get; private set; }
-
+    
     [field: SerializeField] public SimpleWeaponTrail WeaponTrail { get; private set; }
 
     [field: SerializeField] public ParticleEventHandler ParticleEventHandler { get; private set; }

@@ -34,20 +34,18 @@ public class TripleShot : MonoBehaviour
         }
 
         DataManager.instance.SkillLevelUp("트리플샷", 1);
-        UIManager.instance.SelectWindow(false);
-
         UpdateUI(); 
     }
 
     // 텍스트 업데이트
     private void UpdateUI()
     {
-        tripleShotTexts[0].text = tripleShot.skillName; // 스킬 이름
-        tripleShotTexts[1].text = $"레벨 {tripleShot.level}"; // 레벨
-        tripleShotTexts[2].text = $"쿨타임: {Mathf.Floor(tripleShot.coolDown)}초"; // 쿨타임
-        tripleShotTexts[3].text = tripleShot.description; // 설명
-        tripleShotTexts[4].text = $"공격력 +{Mathf.Floor((tripleShot.multipleDamage - 1) * 100)}%"; // 공격력 증가율 
-        tripleShotTexts[5].text = $"쿨타임 {Mathf.Floor((tripleShot.multipleCoolDown - 1) * 100)}%"; // 쿨타임 감소율
+        tripleShotTexts[0].text = $"{tripleShot.level}"; // 레벨
+        tripleShotTexts[1].text = tripleShot.skillName; // 스킬 이름
+        tripleShotTexts[2].text = tripleShot.description; // 설명
+        tripleShotTexts[3].text = $"Damage {Mathf.Floor(tripleShot.minDamage)} - {Mathf.Floor(tripleShot.maxDamage)}"; // 공격력 증가율 
+        tripleShotTexts[4].text = $"CoolDown {Mathf.Floor(tripleShot.coolDown)}"; // 쿨타임 감소율
+        tripleShotTexts[5].text = $"Mana: {Mathf.Floor(tripleShot.useMana)}";
     }
     #endregion
 }

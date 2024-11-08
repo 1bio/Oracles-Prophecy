@@ -34,20 +34,18 @@ public class ChargingShot : MonoBehaviour
         }
 
         DataManager.instance.SkillLevelUp("정조준", 1);
-        UIManager.instance.SelectWindow(false);
-
         UpdateUI(); 
     }
 
     // 텍스트 업데이트
     private void UpdateUI()
     {
-        chargingShotTexts[0].text = chargingShot.skillName; // 스킬 이름
-        chargingShotTexts[1].text = $"레벨 {chargingShot.level}"; // 레벨
-        chargingShotTexts[2].text = $"쿨타임: {Mathf.Floor(chargingShot.coolDown)}초"; // 쿨타임
-        chargingShotTexts[3].text = chargingShot.description; // 설명
-        chargingShotTexts[4].text = $"공격력 +{Mathf.Floor((chargingShot.multipleDamage - 1) * 100)}%"; // 공격력 증가율 
-        chargingShotTexts[5].text = $"쿨타임 {Mathf.Floor((chargingShot.multipleCoolDown - 1) * 100)}%"; // 쿨타임 감소율
+        chargingShotTexts[0].text = $"{chargingShot.level}"; // 레벨
+        chargingShotTexts[1].text = chargingShot.skillName; // 스킬 이름
+        chargingShotTexts[2].text = chargingShot.description; // 설명
+        chargingShotTexts[3].text = $"Damage {Mathf.Floor(chargingShot.minDamage)} - {Mathf.Floor(chargingShot.maxDamage)}"; // 공격력 증가율 
+        chargingShotTexts[4].text = $"CoolDown {Mathf.Floor(chargingShot.coolDown)}"; // 쿨타임 감소율
+        chargingShotTexts[5].text = $"Mana: {Mathf.Floor(chargingShot.useMana)}";
     }
     #endregion
 }

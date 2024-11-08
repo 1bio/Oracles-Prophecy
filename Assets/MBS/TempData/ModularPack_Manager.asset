@@ -20,9 +20,9 @@ MonoBehaviour:
       name: Wall1
       _modules:
       - guid: ab11e29bd5eb42218e8a2b5a96503b78
-        name: wall_1
+        name: wall1
         prefabs:
-        - {fileID: 6616378973212696739, guid: 8412968a564e59d45b51fe00f8ebda67, type: 3}
+        - {fileID: 8972960722196562997, guid: 8412968a564e59d45b51fe00f8ebda67, type: 3}
         - {fileID: 0}
     - guid: 5e37ce916a1a469685f7f17f2bc17ad8
       name: Wall2
@@ -30,7 +30,7 @@ MonoBehaviour:
       - guid: 46c3e711e2e24c2abcbaa5399f65d468
         name: Wall2
         prefabs:
-        - {fileID: 8047709610776718322, guid: dd18f05377249914898d521c76f78d88, type: 3}
+        - {fileID: 1618479662210547316, guid: dd18f05377249914898d521c76f78d88, type: 3}
         - {fileID: 0}
     - guid: b05277f651c04c10894f78adaca35d59
       name: Wall3
@@ -38,7 +38,7 @@ MonoBehaviour:
       - guid: cf4f5c6bbb2549bb99e306e1ce85d08d
         name: Wall3
         prefabs:
-        - {fileID: 1100454157711248997, guid: 920c07fe5b94bd24d8b1ffd74122b6e8, type: 3}
+        - {fileID: 4965493539677015608, guid: 920c07fe5b94bd24d8b1ffd74122b6e8, type: 3}
         - {fileID: 0}
     - guid: 1a735a4196d04d54921e6e129ba02ff6
       name: Wall4
@@ -46,7 +46,7 @@ MonoBehaviour:
       - guid: f22123e43cf746e690468a95e4a5a452
         name: Wall4
         prefabs:
-        - {fileID: 6994290533101231459, guid: 8bb803a3907d2064798bbdf0311e8c62, type: 3}
+        - {fileID: 4372108806765999411, guid: 8bb803a3907d2064798bbdf0311e8c62, type: 3}
         - {fileID: 0}
     - guid: bbe25e63a2134295bdfe51d433cf7997
       name: Wall5
@@ -54,7 +54,7 @@ MonoBehaviour:
       - guid: 6302dc6d1b5f4943885e2d8f4646430f
         name: Wall5
         prefabs:
-        - {fileID: 848335814005046546, guid: cc45eb74fbfe5d0489d8756190e46fd9, type: 3}
+        - {fileID: 7346199783510313886, guid: cc45eb74fbfe5d0489d8756190e46fd9, type: 3}
         - {fileID: 0}
     - guid: 26267bf6bb95410483b07e3b5c73bde3
       name: Wall6
@@ -62,7 +62,7 @@ MonoBehaviour:
       - guid: 76c7f2347f394d08a723a25ba227f37b
         name: Wall6
         prefabs:
-        - {fileID: 5385834324034709839, guid: c7640ee7941885b4c946db95d7520a97, type: 3}
+        - {fileID: 5682963987219247727, guid: c7640ee7941885b4c946db95d7520a97, type: 3}
         - {fileID: 0}
     - guid: 81adfbde85f845749f31da243c6f0011
       name: Wall7
@@ -70,7 +70,15 @@ MonoBehaviour:
       - guid: 21d49d7b6e744181a897469e7a3521a2
         name: Wall7
         prefabs:
-        - {fileID: 5260297494536205336, guid: c9f675688d63a1246a56b5e0e53e3f1f, type: 3}
+        - {fileID: 6529636464363866460, guid: c9f675688d63a1246a56b5e0e53e3f1f, type: 3}
+        - {fileID: 0}
+    - guid: 4f9c85bd8dc742dfa1ca6df0f7c46f6c
+      name: door
+      _modules:
+      - guid: 54a9d13c4741441ab2f9f5650097b1cf
+        name: door
+        prefabs:
+        - {fileID: 4930818174071484651, guid: 5b9524a64b4bcaa409147f3a48532bae, type: 3}
         - {fileID: 0}
     _floorGroups:
     - guid: b8af458f7f524ac89c5cf7778a40444b

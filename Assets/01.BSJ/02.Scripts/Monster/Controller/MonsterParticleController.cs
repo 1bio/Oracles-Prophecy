@@ -101,8 +101,8 @@ public class MonsterParticleController
         {
             for (int i = 0; i < vfxCount; i++)
             {
-                float angle = -_fanAngle / 2 + i * (_fanAngle / (vfxCount - 1));
-                Vector3 direction = Quaternion.Euler(0, angle, 0) * _monster.transform.forward;
+                float angle = _fanAngle > 0 && vfxCount > 1 ? -_fanAngle / 2 + i * (_fanAngle / (vfxCount - 1)) : 0;
+                Vector3 direction = angle == 0 ? Quaternion.Euler(0, angle, 0) * _monster.transform.forward : Quaternion.Euler(0, angle, 0) * Vector3.zero;
 
                 ParticleSystem particleSystem = GetAvailableParticle(vfxName);
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "MedusaSpinAttack", menuName = "Data/MonsterSKillData/Medusa/SpinAttack")]
+[CreateAssetMenu(fileName = "SpinAttack", menuName = "Data/MonsterSKillData/Medusa/Humanoid/SpinAttack")]
 public class MedusaSpinAttack : MonsterSkillData
 {
     private Transform _vfxTransform;

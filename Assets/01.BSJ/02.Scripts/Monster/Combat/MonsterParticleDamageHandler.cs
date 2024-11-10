@@ -11,6 +11,7 @@ public class MonsterParticleDamageHandler : MonoBehaviour
 
     private bool _canTakeDamage = true;
     [Header(" # 피격 시 파티클 비활성화")]
+    [SerializeField] private bool _shutDown = false;
     [SerializeField] private bool _shutDownIfHitPlayer = false;
     [SerializeField] private bool _shutDownIfHitObstacle = false;
 
@@ -87,7 +88,6 @@ public class MonsterParticleDamageHandler : MonoBehaviour
         if (_spawnVFXOnHit && _nextVFXPrefab != null && particleSystem.isPlaying)
             StartCoroutine(Explode(_nextVFXPrefab, particleSystem.transform.position, 3f));
 
-
         if (other.gameObject.layer == LayerMask.NameToLayer(GameLayers.Player.ToString()) && _canTakeDamage)
         {
             if (_playerHealth != null && particleSystem.isPlaying)
@@ -99,6 +99,9 @@ public class MonsterParticleDamageHandler : MonoBehaviour
                     particleSystem.Stop(true);
                     particleSystem.Clear();
                     particleSystem.time = 0;
+
+                    _canTakeDamage = true;
+                    _currentTime = 0f;
                 }
             }
         }
@@ -107,15 +110,19 @@ public class MonsterParticleDamageHandler : MonoBehaviour
             particleSystem.Stop(true);
             particleSystem.Clear();
             particleSystem.time = 0;
+
+            _canTakeDamage = true;
+            _currentTime = 0f;
         }
-        else
+        else if (_shutDown)
         {
             particleSystem.Stop(true);
             particleSystem.Clear();
             particleSystem.time = 0;
-        }
 
-        _currentTime = 0f;
+            _canTakeDamage = true;
+            _currentTime = 0f;
+        }
     }
 
     private IEnumerator DealDamageOverTime(Health health)

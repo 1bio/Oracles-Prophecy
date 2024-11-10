@@ -89,19 +89,6 @@ public class Monster : MonoBehaviour
         }
     }
 
-    /*protected void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            if (MonsterSkillController.GetAvailableSkills().Count > 0
-                && MonsterSkillController.UpdateCurrentSkillData() != null)
-            {
-                MonsterStateMachineController.OnSkill();
-            }
-        }
-    }*/
-
-
     protected void LateUpdate()
     {
         if (MonsterStateType != MonsterStateType.Skill && ParticleController != null)

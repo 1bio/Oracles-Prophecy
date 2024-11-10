@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class Medusa : Monster
 {
-    public float SkillMoveSpeed { get; private set; } = 0f;
-    public bool IsMovingDuringSkill { get; private set; } = false;
+    private float _skillMoveSpeed = 0f;
+    private bool _isMovingDuringSkill = false;
+    private bool _isLookAtTargetActive = false;
 
-    public enum JumpAttackAnimationName
-    {
-        JumpAttack
-    }
 
     public enum SpinAttackAnimationName
     {
@@ -27,25 +24,40 @@ public class Medusa : Monster
 
     private void SkillAttackMove()
     {
-        if (IsMovingDuringSkill &&
+        if (_isMovingDuringSkill &&
             Vector3.Distance(transform.position, MovementController.Astar.TargetTransform.position) > 1)
-            MovementController.CharacterController.SimpleMove(MovementController.Direction * SkillMoveSpeed);
+            MovementController.CharacterController.SimpleMove(MovementController.Direction * _skillMoveSpeed);
+
+        if (_isLookAtTargetActive)
+        {
+            MovementController.LookAtTarget(CombatController.MonsterCombatAbility.TurnSpeed);
+        }
     }
 
     // Animation Event
     public void StartSkillMove(float speed)
     {
-        SkillMoveSpeed = speed;
-        IsMovingDuringSkill = true;
+        _skillMoveSpeed = speed;
+        _isMovingDuringSkill = true;
     }
 
     public void StopSkillMove()
     {
-        IsMovingDuringSkill = false;
+        _isMovingDuringSkill = false;
+    }
+
+    public void SetLookAtTargetActive()
+    {
+        _isLookAtTargetActive = _isLookAtTargetActive ? false : true;
     }
 
     public void PlayCrackVFX()
     {
         ParticleController.RePlayVFX("Crack", 60, 3);
+    }
+
+    public void PlayWideCrackVFX()
+    {
+        ParticleController.RePlayVFX("WideEffect", 0, 1);
     }
 }

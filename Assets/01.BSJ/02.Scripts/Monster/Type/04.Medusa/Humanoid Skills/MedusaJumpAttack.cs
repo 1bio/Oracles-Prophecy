@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-[CreateAssetMenu(fileName = "MedusaJumpAttack", menuName = "Data/MonsterSKillData/Medusa/JumpAttack")]
+[CreateAssetMenu(fileName = "JumpAttack", menuName = "Data/MonsterSKillData/Medusa/Humanoid/JumpAttack")]
 public class MedusaJumpAttack : MonsterSkillData
 {
+    public enum JumpAttackAnimationName
+    {
+        JumpAttack
+    }
+
     private Transform _vfxTransform;
 
     private int _currentAttackCount;
     private int _maxAttackLimit;
 
-    private HashSet<Collider> damagedPlayers = new HashSet<Collider>();
     private bool _hasAttacked = false;
 
     public override void ActiveSkillEnter(Monster monster)
@@ -23,7 +27,6 @@ public class MedusaJumpAttack : MonsterSkillData
         _currentAttackCount = 0;
         _maxAttackLimit = 3;
 
-        damagedPlayers = new HashSet<Collider>();
         _hasAttacked = false;
     }
 
@@ -45,14 +48,13 @@ public class MedusaJumpAttack : MonsterSkillData
         }
         else
         {
-            damagedPlayers = new HashSet<Collider>();
             _hasAttacked = false;
 
             monster.AnimationController.PlayIdleAnimation();
             monster.MovementController.LookAtTarget(monster.CombatController.MonsterCombatAbility.TurnSpeed);
             
             if (Vector3.Angle(monster.transform.forward, monster.MovementController.Direction) <= 3 && !_hasAttacked)
-                monster.AnimationController.PlaySkillAnimation(Medusa.JumpAttackAnimationName.JumpAttack.ToString());
+                monster.AnimationController.PlaySkillAnimation(JumpAttackAnimationName.JumpAttack.ToString());
         }
     }
 

@@ -3,10 +3,9 @@ using UnityEngine;
 
 public class MonsterAnimationController
 {
-    public MonsterAnimationController(Animator animator, ObjectFadeInOut objectFadeInOut, float blendTransitionSpeed)
+    public MonsterAnimationController(Animator animator, float blendTransitionSpeed)
     {
         Animator = animator;
-        ObjectFadeInOut = objectFadeInOut;
         BlendTransitionSpeed = blendTransitionSpeed;
         LocomotionBlendValue = 0f;
         CurrentAnimationName = string.Empty;
@@ -15,7 +14,6 @@ public class MonsterAnimationController
 
     public Animator Animator { get; private set; }
     private string CurrentAnimationName { get; set; }
-    public ObjectFadeInOut ObjectFadeInOut { get; }
     public AnimatorStateInfo AnimatorStateInfo { get; set; }
 
     public bool IsLockedInAnimation { get; set; } = false;

@@ -66,7 +66,7 @@ public class MonsterParticleDamageHandler : MonoBehaviour
                 }
                 particleSystem.transform.position += particleSystem.transform.forward * _moveSpeed * Time.deltaTime;
 
-                float randomDeactivationTime = Random.Range(_deactivationTime - _deactivationTimeVariance, _deactivationTime + _deactivationTimeVariance);
+                float randomDeactivationTime = Random.Range(Mathf.Max(_deactivationTime - _deactivationTimeVariance, 0), _deactivationTime + _deactivationTimeVariance);
                 StartCoroutine(Deactivate(particleSystem, randomDeactivationTime));
             }
         }
@@ -86,6 +86,7 @@ public class MonsterParticleDamageHandler : MonoBehaviour
     {
         if (_spawnVFXOnHit && _nextVFXPrefab != null && particleSystem.isPlaying)
             StartCoroutine(Explode(_nextVFXPrefab, particleSystem.transform.position, 3f));
+
 
         if (other.gameObject.layer == LayerMask.NameToLayer(GameLayers.Player.ToString()) && _canTakeDamage)
         {

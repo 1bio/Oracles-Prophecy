@@ -9,7 +9,6 @@ public class MonsterAudioManager : MonoBehaviour
     private Animator _animator;
 
     public List<Monster_AudioClips> audioClips = new List<Monster_AudioClips>();
-    public List<Monster_AudioClips> audioLoops = new List<Monster_AudioClips>();
 
     private AudioListener _listener;
 
@@ -24,10 +23,12 @@ public class MonsterAudioManager : MonoBehaviour
     {
         if (_audioSource != null)
         {
+            _audioSource.volume = 0.2f;
             _audioSource.spatialBlend = 1f;
-            _audioSource.rolloffMode = AudioRolloffMode.Logarithmic;
+            _audioSource.dopplerLevel = 0f;
+            _audioSource.rolloffMode = AudioRolloffMode.Linear;
             _audioSource.minDistance = 1f;
-            _audioSource.maxDistance = 12f;
+            _audioSource.maxDistance = 10f;
         }
     }
 
@@ -70,19 +71,6 @@ public class MonsterAudioManager : MonoBehaviour
             }
         }
         Debug.LogError("Did not find an audioClips[] entry named \"" + name + "\".");
-        return 0;
-    }
-
-    private int AudioLoopIndex(string name)
-    {
-        for (int i = 0; i < audioLoops.Count; i++)
-        {
-            if (audioLoops[i].name == name)
-            {
-                return i;
-            }
-        }
-        Debug.LogError("Did not find an audioLopos[] entry named \"" + name + "\".");
         return 0;
     }
 }

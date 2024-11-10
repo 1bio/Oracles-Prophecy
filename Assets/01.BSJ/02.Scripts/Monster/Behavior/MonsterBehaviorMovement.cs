@@ -19,6 +19,8 @@ public class MonsterBehaviorMovement : MonsterBehavior
     private List<PointNode> _path;
     private int _pathIndex = 0;
 
+    private bool _checkTarget = false;
+
     public override void OnBehaviorStart(Monster monster)
     {
         _monster = monster;
@@ -26,6 +28,10 @@ public class MonsterBehaviorMovement : MonsterBehavior
 
         _pointGrid = monster.MovementController.PointGrid;
         _characterController = monster.MovementController.CharacterController;
+
+        _pathIndex = 0;
+
+        _checkTarget = false;
 
         monster.CombatController.Health.ImpactEvent += OnImpact;
     }
@@ -60,11 +66,18 @@ public class MonsterBehaviorMovement : MonsterBehavior
             {
                 _pathIndex++;
             }
+
+            _checkTarget = false;
         }
-        else if (_pointGrid.GetPointNodeFromGridByPosition(monster.MovementController.Astar.TargetTransform.position).IsObstacle ||
-                !_pointGrid.GetPointNodeFromGridByPosition(monster.MovementController.Astar.TargetTransform.position).IsGround)
+        else
         {
-            monster.MovementController.LookAtTarget(monster.CombatController.MonsterCombatAbility.TurnSpeed);
+            if (_checkTarget)
+                monster.MovementController.LookAtTarget(monster.CombatController.MonsterCombatAbility.TurnSpeed);
+            else
+            {
+                _checkTarget = _pointGrid.GetPointNodeFromGridByPosition(monster.MovementController.Astar.TargetTransform.position).IsObstacle ||
+                                !_pointGrid.GetPointNodeFromGridByPosition(monster.MovementController.Astar.TargetTransform.position).IsGround;
+            }
         }
     }
 

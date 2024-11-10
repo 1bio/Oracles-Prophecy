@@ -1,6 +1,6 @@
-﻿using System.Data;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -9,14 +9,6 @@ public class UIManager : MonoBehaviour
 
     [Header("스킬 선택창 UI 필드")]
     public GameObject selectWindow;
-    public GameObject[] selectPosition = new GameObject[2];
-
-    [Header("근거리 스킬 프리팹")]
-    public GameObject[] meleeSkillPrefabs;
-
-    [Header("원거리 스킬 프리팹")]
-    public GameObject[] rangeSkillPrefabs;
-
 
     [Header("스킬 쿨다운")]
     public GameObject[] emptySlot;
@@ -54,23 +46,14 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        selectWindow.SetActive(true); 
-
-        GetRandomSkill();
-    }
-
     private void Update()
     {
         UpdateStatus();
 
-        // 스킬 선택 창
-        if (Input.GetKeyDown(KeyCode.K))
+        // 스킬창(캐릭터 스탯창이랑 통합 예정)
+        if (Input.GetKeyDown(KeyCode.I))
         {
-            SelectWindow(true);
-
-            GetRandomSkill();
+            SelectWindow(!selectWindow.activeSelf);
         }
 
         // 인벤토리 선택 창
@@ -100,7 +83,7 @@ public class UIManager : MonoBehaviour
         exp_Slider.value = Mathf.Lerp(exp_Slider.value, this.currentExp, lerpSpeed * Time.deltaTime);
     }
 
-    // 랜덤 스킬 생성
+    /*// 랜덤 스킬 생성
     public void GetRandomSkill()
     {
         if (!isMelee)
@@ -125,7 +108,7 @@ public class UIManager : MonoBehaviour
                 Instantiate(rangeSkillPrefabs[randomValue], selectPosition[i].transform);
             }
         }
-    }
+    }*/
 
     public void AddSkillSlot(int index)
     {
@@ -160,7 +143,7 @@ public class UIManager : MonoBehaviour
                         fireBladeSlot.transform.SetSiblingIndex(0);
                         break;
 
-                    case 5: // 회전베기
+                    case 5: // 빙결
                         GameObject spinSlashSlot = Instantiate(skillSlot[index], emptySlot[2].transform);
                         spinSlashSlot.transform.SetSiblingIndex(0);
                         break;

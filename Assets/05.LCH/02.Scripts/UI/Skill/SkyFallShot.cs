@@ -34,7 +34,6 @@ public class SkyFallShot : MonoBehaviour
         }
 
         DataManager.instance.SkillLevelUp("화살비", 1);
-        UIManager.instance.SelectWindow(false);
 
         UpdateUI();
     }
@@ -42,12 +41,12 @@ public class SkyFallShot : MonoBehaviour
     // 텍스트 업데이트
     private void UpdateUI()
     {
-        skyfallShotTexts[0].text = skyfallShot.skillName; // 스킬 이름
-        skyfallShotTexts[1].text = $"레벨 {skyfallShot.level}"; // 레벨
-        skyfallShotTexts[2].text = $"쿨타임: {Mathf.Floor(skyfallShot.coolDown)}초"; // 쿨타임
-        skyfallShotTexts[3].text = skyfallShot.description; // 설명
-        skyfallShotTexts[4].text = $"공격력 +{Mathf.Floor((skyfallShot.multipleDamage - 1) * 100)}%"; // 공격력 증가율 
-        skyfallShotTexts[5].text = $"쿨타임 {Mathf.Floor((skyfallShot.multipleCoolDown - 1) * 100)}%"; // 쿨타임 감소율
+        skyfallShotTexts[0].text = $"{skyfallShot.level}"; // 레벨
+        skyfallShotTexts[1].text = skyfallShot.skillName; // 스킬 이름
+        skyfallShotTexts[2].text = skyfallShot.description; // 설명
+        skyfallShotTexts[3].text = $"Damage {Mathf.Floor(skyfallShot.minDamage)} - {Mathf.Floor(skyfallShot.maxDamage)}"; // 공격력 증가율 
+        skyfallShotTexts[4].text = $"CoolDown {Mathf.Floor(skyfallShot.coolDown)}"; // 쿨타임 감소율
+        skyfallShotTexts[5].text = $"Mana: {Mathf.Floor(skyfallShot.useMana)}";
     }
     #endregion
 }

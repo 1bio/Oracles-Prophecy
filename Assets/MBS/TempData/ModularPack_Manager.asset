@@ -245,3 +245,83 @@ MonoBehaviour:
     _decoratorCategories:
     - guid: 5ed02f467a2443c7a77f6b068886c963
       _name: All
+  - guid: 5edafb096b4d4c51b91d16d944ab53b4
+    _name: village
+    _wallGroups:
+    - guid: 9bd0c4227f74451c81e9eeb05255c866
+      name: basic wall
+      _modules:
+      - guid: c63e32102b354d8398b36b925121fd1a
+        name: basic wall
+        prefabs:
+        - {fileID: 2303032598579831282, guid: eb37a5e3eee78304bb101069f532188b, type: 3}
+        - {fileID: 0}
+    - guid: 4734e6f9986741e7bcce21b1dd8bda26
+      name: door wall B
+      _modules:
+      - guid: 615e4111e8c64bf194a7f625685602b3
+        name: door wall B
+        prefabs:
+        - {fileID: 3095044339819123942, guid: 888f78f13a954044784da7c59e5aa3a5, type: 3}
+        - {fileID: 0}
+    - guid: 1c8c4f7c0ac04e57a6c58043c376be8b
+      name: door wall S
+      _modules:
+      - guid: 17e10cf381ee40ef857184d910337bf8
+        name: door wall S
+        prefabs:
+        - {fileID: 7251010557993076133, guid: b200cb82fba2c4a429302fddf2cfb125, type: 3}
+        - {fileID: 0}
+    - guid: 33248f8d977b4da78356fac622b4e5e5
+      name: window wall B
+      _modules:
+      - guid: 6ce1861d8a114c3aad354219464ea79f
+        name: window wall B
+        prefabs:
+        - {fileID: 7703476298649747248, guid: f4a92e3268f4998438dc6afbbc498f15, type: 3}
+        - {fileID: 0}
+    - guid: 2e805b469baa4ff38c1e6c44e84627f8
+      name: window wall S
+      _modules:
+      - guid: 9acecd520d67416bb768418194a08494
+        name: window wall S
+        prefabs:
+        - {fileID: 3971083890718545758, guid: bce80906da263de41b0e6890c3ca850e, type: 3}
+        - {fileID: 0}
+    - guid: 9b34d0173eec4e6cb0a0e0e2ae93c308
+      name: fence
+      _modules:
+      - guid: 7dca4c5bcc684ffba9022cb98cd7f7d5
+        name: fence
+        prefabs:
+        - {fileID: 649195111869694822, guid: b2149250dd2070849956fea17594f79a, type: 3}
+        - {fileID: 0}
+    - guid: 8c1ae3ff8e974fc78daaac3400ebe055
+      name: roof
+      _modules:
+      - guid: 6c25b80eee794e5d82598ad58dfe0472
+        name: roof
+        prefabs:
+        - {fileID: 3220024057309237501, guid: 406a723fba2dc944293c073aa43a9be2, type: 3}
+        - {fileID: 0}
+    - guid: 47eb1c854c0b45c88cdaf0091d8431c5
+      name: roof corner
+      _modules:
+      - guid: 777f30a40da0498fbd7d22d3d4847a31
+        name: roof corner
+        prefabs:
+        - {fileID: 8890098391460175364, guid: 10cea44afee7b9446bc12fb132093d7b, type: 3}
+        - {fileID: 0}
+    _floorGroups:
+    - guid: 750e818ff82746a3b00a17ea53a0a9e0
+      name: wood floor
+      _modules:
+      - guid: 9ac0034635ac41ef927f27b5af3d2382
+        name: wood floor
+        prefabs:
+        - {fileID: 1780056580686444173, guid: 4a87da0d9f8314c4f80e20150a2f0d4c, type: 3}
+        - {fileID: 0}
+    _decoratorGroups: []
+    _decoratorCategories:
+    - guid: dde601d1bd194b85855d33f89a9c6d78
+      _name: All

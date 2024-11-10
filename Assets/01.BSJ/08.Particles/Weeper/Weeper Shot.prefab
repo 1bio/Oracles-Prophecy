@@ -9544,7 +9544,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: acfc6bce0ac4d4ffab2218e8c8cc6570, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9643,10 +9643,11 @@ MonoBehaviour:
   _shutDownIfHitPlayer: 1
   _shutDownIfHitObstacle: 1
   _isFollowing: 1
-  _spawnVFXOnHit: 0
-  _nextVFXPrefab: {fileID: 0}
-  _damageInterval: 1.5
-  _moveSpeed: 0
+  _spawnVFXOnHit: 1
+  _nextVFXPrefab: {fileID: 128886, guid: e847d6e3df1ef3442a04a18a399de5a4, type: 3}
+  _damageInterval: 0
+  _moveSpeed: 5
+  _rotationSpeed: 2
 --- !u!1 &153770
 GameObject:
   m_ObjectHideFlags: 0

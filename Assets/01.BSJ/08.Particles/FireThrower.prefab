@@ -9815,5 +9815,8 @@ MonoBehaviour:
   _shutDownIfHitPlayer: 0
   _shutDownIfHitObstacle: 1
   _isFollowing: 0
+  _spawnVFXOnHit: 0
+  _nextVFXPrefab: {fileID: 0}
   _damageInterval: 1.5
   _moveSpeed: 5
+  _rotationSpeed: 0

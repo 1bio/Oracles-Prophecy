@@ -24359,14 +24359,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shutDownIfHitPlayer: 1
   _shutDownIfHitObstacle: 1
+  _isFollowing: 0
   _spawnVFXOnHit: 0
   _nextVFXPrefab: {fileID: 0}
-  _isFollowing: 0
-  _isCurvedPath: 1
-  _curveAngle: 90
-  _curveSpeed: 100
-  _damageInterval: 1.5
+  _isTrailEnabled: 1
+  _trailVFXPrefab: {fileID: 2656757342246123783, guid: 599401f4c33184147a0e908f9348b660, type: 3}
+  _maxTrailCount: 10
+  _damageInterval: 0
   _moveSpeed: 6
+  _rotationSpeed: 0
 --- !u!199 &2652576756477941788
 ParticleSystemRenderer:
   serializedVersion: 6

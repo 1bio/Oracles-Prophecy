@@ -52,7 +52,7 @@ TextAsset:
     \"name\": \"fence\",\n            \"_modules\": [\n                {\n                   
     \"guid\": \"7dca4c5bcc684ffba9022cb98cd7f7d5\",\n                    \"name\":
     \"fence\",\n                    \"prefabs\": [\n                        {\n                           
-    \"fileID\": 649195111869694822,\n                            \"guid\": \"b2149250dd2070849956fea17594f79a\",\n                           
+    \"fileID\": 7639903158162793214,\n                            \"guid\": \"b2149250dd2070849956fea17594f79a\",\n                           
     \"type\": 3\n                        },\n                        {\n                           
     \"instanceID\": 0\n                        }\n                    ]\n               
     }\n            ]\n        },\n        {\n            \"guid\": \"8c1ae3ff8e974fc78daaac3400ebe055\",\n           
@@ -63,11 +63,19 @@ TextAsset:
     \"type\": 3\n                        },\n                        {\n                           
     \"instanceID\": 0\n                        }\n                    ]\n               
     }\n            ]\n        },\n        {\n            \"guid\": \"47eb1c854c0b45c88cdaf0091d8431c5\",\n           
-    \"name\": \"roof corner\",\n            \"_modules\": [\n                {\n                   
+    \"name\": \"roof L corner\",\n            \"_modules\": [\n                {\n                   
     \"guid\": \"777f30a40da0498fbd7d22d3d4847a31\",\n                    \"name\":
-    \"roof corner\",\n                    \"prefabs\": [\n                       
-    {\n                            \"fileID\": 8890098391460175364,\n                           
-    \"guid\": \"10cea44afee7b9446bc12fb132093d7b\",\n                           
+    \"roof L corner\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 2001840381485745505,\n                           
+    \"guid\": \"f2db2963f4f2fd94aa22d7c01296229e\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    }\n            ]\n        },\n        {\n            \"guid\": \"02b28aa4bab4444cb02d0a435b1157c9\",\n           
+    \"name\": \"roof R corner\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"1a043ccab6ca48f99ae0028759619bff\",\n                    \"name\":
+    \"roof R corner\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 8504828228208116802,\n                           
+    \"guid\": \"da7e8a65af4e24c4fae01c5779b1b67c\",\n                           
     \"type\": 3\n                        },\n                        {\n                           
     \"instanceID\": 0\n                        }\n                    ]\n               
     }\n            ]\n        }\n    ],\n    \"_floorGroups\": [\n        {\n           
@@ -75,8 +83,24 @@ TextAsset:
     floor\",\n            \"_modules\": [\n                {\n                   
     \"guid\": \"9ac0034635ac41ef927f27b5af3d2382\",\n                    \"name\":
     \"wood floor\",\n                    \"prefabs\": [\n                       
-    {\n                            \"fileID\": 1780056580686444173,\n                           
+    {\n                            \"fileID\": 117926314653972372,\n                           
     \"guid\": \"4a87da0d9f8314c4f80e20150a2f0d4c\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    }\n            ]\n        },\n        {\n            \"guid\": \"830179b4ffbc4802aca0943860b83f99\",\n           
+    \"name\": \"wood floor H\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"e56270f190684156bc5fd2f2b7d6749e\",\n                    \"name\":
+    \"wood floor H\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 4501318800527945108,\n                           
+    \"guid\": \"ce4a4d5a3862d2541b1a628be6cca94f\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    }\n            ]\n        },\n        {\n            \"guid\": \"755d5753a68f428ab0966df9ddfa67c7\",\n           
+    \"name\": \"wood floor H2\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"4dce71f5854740a4888301d4cf919a80\",\n                    \"name\":
+    \"wood floor H2\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 1513952157624368011,\n                           
+    \"guid\": \"2e957597f57d1c6409f9e1124badc459\",\n                           
     \"type\": 3\n                        },\n                        {\n                           
     \"instanceID\": 0\n                        }\n                    ]\n               
     }\n            ]\n        }\n    ],\n    \"_decoratorGroups\": [],\n    \"_decoratorCategories\":

@@ -25,6 +25,7 @@ public abstract class MonsterSkillData : ScriptableObject
     public float Damage { get => _damage; }
     public float Range { get => _range; }
     public float CastTime { get => _castTime; }
+    public bool IsTargetWithinSkillRange { get; set; } = false;
 
     public Indicator Indicator { get; set; }
 

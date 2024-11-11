@@ -3,13 +3,13 @@
 public class RangeAttackData : AttackData
 {
     public RangeAttackData(
-        string animationName, 
-        int comboAttackIndex, 
+        string animationName,
+        int comboAttackIndex,
         float comboAttackTime,
         float transitionDuration,
-        float force, 
+        float force,
         float forceTime,
-        float damage,
+        //float damage,
         float knockBack)
          :
          base(animationName,
@@ -18,7 +18,7 @@ public class RangeAttackData : AttackData
             transitionDuration,
             force,
             forceTime,
-            damage,
+            //Damage,
             knockBack)
     {
     }

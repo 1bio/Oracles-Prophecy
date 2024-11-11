@@ -21,30 +21,15 @@ public class VFXController : MonoBehaviour
         s_prefabs[0].GetComponent<ParticleSystem>().Stop();
         s_prefabs[1].GetComponent<ParticleSystem>().Stop();
         s_prefabs[2].GetComponent<ParticleSystem>().Stop();
+        s_prefabs[3].GetComponent<ParticleSystem>().Stop();
+
 
         c_prefabs[0].GetComponent<ParticleSystem>().Stop();
         c_prefabs[1].GetComponent<ParticleSystem>().Stop();
     }
 
-    public void VFX_AimingShot()
-    {
-        if (!s_prefabs[2].GetComponent<ParticleSystem>().isPlaying)
-        {
-            s_prefabs[2].GetComponent<ParticleSystem>().Stop();
-        }
 
-        s_prefabs[2].GetComponent<ParticleSystem>().Play();
-
-        if (s_prefabs[2].GetComponent<AudioSource>() != null)
-        {
-            AudioSource soundComponentCast = s_prefabs[2].GetComponent<AudioSource>();
-            AudioClip clip = soundComponentCast.clip;
-            soundComponentCast.PlayOneShot(clip);
-
-            StartCoroutine(Attack(1));
-        }
-    }
-
+    // 화살비
     public void VFX_SkyFall()
     {
         if (!s_prefabs[0].GetComponent<ParticleSystem>().isPlaying || !s_prefabs[1].GetComponent<ParticleSystem>().isPlaying)
@@ -70,6 +55,46 @@ public class VFXController : MonoBehaviour
         }
     }
 
+    // 정조준
+    public void VFX_AimingShot()
+    {
+        if (!s_prefabs[2].GetComponent<ParticleSystem>().isPlaying)
+        {
+            s_prefabs[2].GetComponent<ParticleSystem>().Stop();
+        }
+
+        s_prefabs[2].GetComponent<ParticleSystem>().Play();
+
+        if (s_prefabs[2].GetComponent<AudioSource>() != null)
+        {
+            AudioSource soundComponentCast = s_prefabs[2].GetComponent<AudioSource>();
+            AudioClip clip = soundComponentCast.clip;
+            soundComponentCast.PlayOneShot(clip);
+
+            StartCoroutine(Attack(1));
+        }
+    }
+
+    // 빙결
+    public void VFX_Frost()
+    {
+        if (!s_prefabs[3].GetComponent<ParticleSystem>().isPlaying)
+        {
+            s_prefabs[3].GetComponent<ParticleSystem>().Stop();
+        }
+
+        s_prefabs[3].transform.position = transform.position;
+        s_prefabs[3].transform.SetParent(null);
+        s_prefabs[3].GetComponent<ParticleSystem>().Play();
+
+        if (s_prefabs[3].GetComponent<AudioSource>() != null)
+        {
+            AudioSource soundComponentCast = s_prefabs[3].GetComponent<AudioSource>();
+            AudioClip clip = soundComponentCast.clip;
+            soundComponentCast.PlayOneShot(clip);
+        }
+    }
+    
     IEnumerator Attack(int EffectNumber)
     {
         // 화살비
@@ -106,7 +131,6 @@ public class VFXController : MonoBehaviour
             c_prefabs[EffectNumber].transform.position = ShootingTransform.transform.position;
             c_prefabs[EffectNumber].transform.rotation = ShootingTransform.transform.rotation;
             c_prefabs[EffectNumber].GetComponent<ParticleSystem>().Play();
-
         }
     }
 

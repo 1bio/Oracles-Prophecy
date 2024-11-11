@@ -17,6 +17,7 @@ public class Health : MonoBehaviour
     private float hitDurationCoolDown = 1f; // 1초 후에 hitCount 초기화
 
     private bool isInvunerable;
+    public bool isAlive { get; private set; } = true;
 
     // 이벤트 필드
     public event Action ImpactEvent;
@@ -81,14 +82,15 @@ public class Health : MonoBehaviour
         {
             Monster monster = GetComponent<Monster>();
             currentHealth = monster.CombatController.MonsterCombatAbility.MonsterHealth.CurrentHealth;
-            if (currentHealth > 0)
+
+            isAlive = currentHealth > 0;
+            if (isAlive)
             {
                 currentHealth = Mathf.Max(currentHealth - damage, 0);
                 monster.CombatController.MonsterCombatAbility.MonsterHealth.CurrentHealth = currentHealth;
 
                 FloatingText(damage);
             }
-
 
             if (!monster.MovementController.TargetDetector.IsTargetDetected)
                 monster.MovementController.TargetDetector.IsTargetDetected = true;

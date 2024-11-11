@@ -21,7 +21,7 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public CameraShake CameraShake { get; private set; }
 
     [field: SerializeField] public VFXController VFXController { get; private set; }
-
+    
     [field: SerializeField] public SimpleWeaponTrail WeaponTrail { get; private set; }
 
     [field: SerializeField] public ParticleEventHandler ParticleEventHandler { get; private set; }
@@ -61,8 +61,9 @@ public class PlayerStateMachine : StateMachine
 
     private void Start()
     {
-        //SettingPlayerClass();
+        //SetPlayerClass();
 
+        // 삭제 예정
         ChangeState(new PlayerFreeLookState(this));
         //ChangeState(new PlayerRangeFreeLookState(this));
 
@@ -77,9 +78,9 @@ public class PlayerStateMachine : StateMachine
     }
 
     // 플레이어 클래스 설정
-    public void SettingPlayerClass()
+    public void SetPlayerClass()
     {
-        // 무기 활성화 및 비활성화
+        // 기본 무기 활성화 및 비활성화
         foreach (GameObject weapon in WeaponPrefabs)
         {
             if (weapon == WeaponPrefabs[ClassSelectWindow.classIndex])
@@ -92,7 +93,7 @@ public class PlayerStateMachine : StateMachine
             }
         }
 
-        // 상태 전환
+        // 기본 상태 전환
         switch (ClassSelectWindow.classIndex)
         {
             case 0: // 전사
@@ -114,15 +115,13 @@ public class PlayerStateMachine : StateMachine
     }
     #endregion
 
-
-
-
-
     #region Event Methods
     // Impact
     void OnHandleTakeDamage()
     {
-        ChangeState(new PlayerImpactState(this));
+        //ChangeState(new PlayerImpactState(this));
+
+        Health.SetHealth(DataManager.instance.playerData.statusData.currentHealth);
     }
 
     // Groggy

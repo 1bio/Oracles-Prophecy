@@ -15,7 +15,10 @@ public class MonsterBehaviorGotHit : MonsterBehavior
 
         moveSpeed = _monster.CombatController.MonsterCombatAbility.MoveSpeed;
 
-        monster.AnimationController.PlayGotHitAnimation();
+        if (monster.CombatController.MonsterCombatAbility.MonsterHealth.CurrentHealth > 0)
+            monster.AnimationController.PlayGotHitAnimation();
+        else
+            monster.StateMachineController.OnDead();
 
         monster.MovementController.TargetDetector.IsTargetDetected = true;
     }

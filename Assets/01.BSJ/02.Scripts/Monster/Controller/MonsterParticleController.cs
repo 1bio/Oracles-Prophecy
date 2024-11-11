@@ -101,8 +101,8 @@ public class MonsterParticleController
         {
             for (int i = 0; i < vfxCount; i++)
             {
-                float angle = _fanAngle > 0 && vfxCount > 1 ? -_fanAngle / 2 + i * (_fanAngle / (vfxCount - 1)) : 0;
-                Vector3 direction = angle == 0 ? Quaternion.Euler(0, angle, 0) * _monster.transform.forward : Quaternion.Euler(0, angle, 0) * Vector3.zero;
+                float angle = -_fanAngle / 2 + i * (_fanAngle / (vfxCount - 1));
+                Vector3 direction = Quaternion.Euler(0, angle, 0) * _monster.transform.forward;
 
                 ParticleSystem particleSystem = GetAvailableParticle(vfxName);
 
@@ -122,29 +122,25 @@ public class MonsterParticleController
         }
     }
 
-    public void RePlayVFX(string vfxName, float _fanAngle, float vfxCount, Vector3 forward)
+    public void RePlayVFX(string vfxName, Vector3 forward)
     {
         if (VFX.ContainsKey(vfxName))
         {
-            for (int i = 0; i < vfxCount; i++)
+            Vector3 direction = Quaternion.Euler(0, 0, 0) * forward;
+
+            ParticleSystem particleSystem = GetAvailableParticle(vfxName);
+
+            if (particleSystem != null)
             {
-                float angle = -_fanAngle / 2 + i * (_fanAngle / (vfxCount - 1));
-                Vector3 direction = Quaternion.Euler(0, 0, angle) * (_monster.transform.forward * 2);
+                particleSystem.Stop();
+                particleSystem.Clear();
 
-                ParticleSystem particleSystem = GetAvailableParticle(vfxName);
+                particleSystem.transform.position = _monster.transform.position + new Vector3(0, 0.5f, 0) + direction;
+                particleSystem.transform.rotation = Quaternion.LookRotation(direction);
 
-                if (particleSystem != null)
-                {
-                    particleSystem.Stop();
-                    particleSystem.Clear();
+                particleSystem.Play();
 
-                    particleSystem.transform.position = _monster.transform.position + new Vector3(0, 0.5f, 0) + direction;
-                    particleSystem.transform.rotation = Quaternion.LookRotation(direction);
-
-                    particleSystem.Play();
-
-                    _monster.StartCoroutine(DelayTime());
-                }
+                _monster.StartCoroutine(DelayTime());
             }
         }
     }

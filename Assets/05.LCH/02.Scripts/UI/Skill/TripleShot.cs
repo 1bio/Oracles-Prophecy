@@ -1,10 +1,16 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TripleShot : MonoBehaviour
 {
     private SkillData tripleShot;
-    public TextMeshProUGUI[] tripleShotTexts; 
+    public TextMeshProUGUI[] tripleShotTexts;
+
+    public Image icon_skill;
+    public GameObject icon_lock;
+
+    public int limitLevel;
 
     #region Initialized Methods
     public SkillData GetTripleShotData() // 트리플샷 데이터
@@ -20,21 +26,38 @@ public class TripleShot : MonoBehaviour
     }
     #endregion
 
+    private void Update()
+    {
+        UpdateUI();
+    }
 
     #region Main Methods
     public void TripleShot_LevelUp() // 버튼 이벤트
     {
+        // 스킬 포인트가 없으면 반환
+        if (DataManager.instance.playerData.statusData.skillPoint <= 0)
+            return;
+
+        if (DataManager.instance.playerData.statusData.level < limitLevel)
+            return;
+
         // 스킬 잠금 해제
         if (tripleShot.level == 0)
         {
+            // 스킬 아이콘 투명도 조절
+            Color color = icon_skill.color;
+            color.a = 0.8f;
+            icon_skill.color = color;
+
+            icon_lock.SetActive(false);
             tripleShot.isUnlock = false;
+
             SkillManager.instance.AddSkill(tripleShot.skillName, tripleShot.coolDown);
             UIManager.instance.AddSkillSlot(1);
             Debug.Log("트리플샷 얻음!");
         }
 
         DataManager.instance.SkillLevelUp("트리플샷", 1);
-        UpdateUI(); 
     }
 
     // 텍스트 업데이트

@@ -27,7 +27,9 @@ public class Projectile : MonoBehaviour
 
     private void OnEnable()
     {
-        damage = DataManager.instance.playerData.rangeAttackData.Damage;
+        StatusData status = DataManager.instance.playerData.statusData;
+
+        this.damage = Random.Range(status.minDamage, status.maxDamage);
 
         arrow_rigid = GetComponent<Rigidbody>();
         arrow_col = GetComponent<Collider>();
@@ -39,7 +41,7 @@ public class Projectile : MonoBehaviour
 
     private void Update()
     {
-        ArrowRange(); 
+        //ArrowRange(); 
     }
 
     #region Main Methods

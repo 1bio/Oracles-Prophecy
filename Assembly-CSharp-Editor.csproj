@@ -67,14 +67,10 @@
     <Compile Include="Assets\InfinityPBR\Editor\InfinityEditor.cs" />
     <Compile Include="Assets\InfinityPBR\---Game Modules\Audio Clip Combiner\Editor\AudioClipCombiner.cs" />
     <Compile Include="Assets\InfinityPBR\Editor\SFB_BlendShapesManagerEditor.cs" />
-    <Compile Include="Assets\Synty\Tools\SyntyPropBoneTool\Editor\PropBoneBinderEditor.cs" />
     <Compile Include="Assets\InfinityPBR\Equipment System\Editor\EquipmentSystemStatic.cs" />
     <Compile Include="Assets\InfinityPBR\Editor\InfinityEditorScriptableObject.cs" />
     <Compile Include="Assets\InfinityPBR\Editor\UpdateRootBoneAndBounds.cs" />
     <Compile Include="Assets\InfinityPBR\Editor\SFB_DisplayPolycount.cs" />
-    <Compile Include="Assets\MiniGames\Trail\Editor\TrailEditor.cs" />
-    <Compile Include="Assets\Synty\Tools\SyntyPropBoneTool\Editor\PropBoneConfigEditor.cs" />
-    <Compile Include="Assets\Synty\Tools\SyntyPropBoneTool\Editor\Utils\PropBoneToolEditorUtil.cs" />
     <Compile Include="Assets\InfinityPBR\Equipment System\Editor\PrefabAndObjectManagerEditor.cs" />
     <Compile Include="Assets\InfinityPBR\Editor\AnimationEventCopier.cs" />
     <Compile Include="Assets\InfinityPBR\Equipment System\Editor\EquipmentObjectEditor.cs" />

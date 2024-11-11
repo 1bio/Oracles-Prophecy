@@ -25,7 +25,11 @@ public class PlayerHeavyAttackState : PlayerFreeLookState
 
         Aiming();
 
-        stateMachine.MeleeComponenet.SetAttack(attack.Damage, attack.KnockBack);
+        StatusData status = DataManager.instance.playerData.statusData;
+
+        stateMachine.MeleeComponenet.SetAttack(status.minDamage, status.maxDamage);
+
+        //stateMachine.MeleeComponenet.SetAttack(attack.Damage, attack.KnockBack);
     }
 
     public override void Tick(float deltaTime)

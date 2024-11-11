@@ -1,10 +1,16 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FireBlade : MonoBehaviour
 {
     private SkillData fireBlade;
     public TextMeshProUGUI[] fireBladeTexts;
+
+    public Image icon_skill;
+    public GameObject icon_lock;
+
+    public int limitLevel;
 
     #region Initialized Methods
     public SkillData GetFireBladeData() // 화염칼 데이터
@@ -20,21 +26,38 @@ public class FireBlade : MonoBehaviour
     }
     #endregion
 
+    private void Update()
+    {
+        UpdateUI();
+    }
 
     #region Main Methods
     public void FireBlade_LevelUp() // 버튼 이벤트
     {
+        // 스킬 포인트가 없으면 반환
+        if (DataManager.instance.playerData.statusData.skillPoint <= 0)
+            return;
+
+        if (DataManager.instance.playerData.statusData.level < limitLevel)
+            return;
+
         // 스킬 잠금 해제
         if (fireBlade.level == 0)
         {
+            // 스킬 아이콘 투명도 조절
+            Color color = icon_skill.color;
+            color.a = 0.8f;
+            icon_skill.color = color;
+
+            icon_lock.SetActive(false);
             fireBlade.isUnlock = false;
+
             SkillManager.instance.AddSkill(fireBlade.skillName, fireBlade.coolDown);
             UIManager.instance.AddSkillSlot(4);
             Debug.Log("화염칼 얻음!");
         }
 
         DataManager.instance.SkillLevelUp("화염칼", 1);
-        UpdateUI();
     }
 
     // 텍스트 업데이트

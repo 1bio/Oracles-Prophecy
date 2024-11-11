@@ -8,10 +8,11 @@ public class MeleeComponenet : MonoBehaviour
     private float knockBack;
 
     // 공격력 및 넉백
-    public void SetAttack(float damage, float knockBack)
+    public void SetAttack(float minDamage, float maxDamage/*, float damage, float knockBack*/)
     {
-        this.damage = damage;
-        this.knockBack = knockBack;
+        this.damage = Mathf.Floor(Random.Range(minDamage, maxDamage));
+        /*this.damage = damage;
+        this.knockBack = knockBack;*/
     }
 
 

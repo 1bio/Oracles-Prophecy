@@ -13,12 +13,16 @@ public class AttackData
 
     public float ForceTime; // 시전 시간
 
+    public float minDamage;
+
+    public float maxDamage;
+
     public float Damage;// 데미지
 
     public float KnockBack; // 넉백 속도
 
 
-    public AttackData(string animationName, int comboAttackIndex, float comboAttackTime, float transitionDuration, float force, float forceTime, float damage, float knockBack)
+    public AttackData(string animationName, int comboAttackIndex, float comboAttackTime, float transitionDuration, float force, /*float damage, */float forceTime, float knockBack)
     {
         this.AnimationName = animationName;
         this.ComboAttackIndex = comboAttackIndex;
@@ -26,7 +30,7 @@ public class AttackData
         this.TransitionDuration = transitionDuration;
         this.Force = force;
         this.ForceTime = forceTime;
-        this.Damage = damage;
+        //this.Damage = damage;
         this.KnockBack = knockBack;
     }
 }

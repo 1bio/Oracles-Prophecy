@@ -1,10 +1,16 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChargingShot : MonoBehaviour
 {
     private SkillData chargingShot;
-    public TextMeshProUGUI[] chargingShotTexts; 
+    public TextMeshProUGUI[] chargingShotTexts;
+
+    public Image icon_skill;
+    public GameObject icon_lock;
+
+    public int limitLevel;
 
     #region Initialized Methods
     public SkillData GetChargingShotData() // 차징샷 데이터
@@ -20,21 +26,38 @@ public class ChargingShot : MonoBehaviour
     }
     #endregion
 
+    private void Update()
+    {
+        UpdateUI();
+    }
 
     #region Main Methods
     public void ChargingShot_LevelUp() // 버튼 이벤트
     {
+        // 스킬 포인트가 없으면 반환
+        if (DataManager.instance.playerData.statusData.skillPoint <= 0)
+            return;
+
+        if (DataManager.instance.playerData.statusData.level < limitLevel)
+            return;
+
         // 스킬 잠금 해제
         if (chargingShot.level == 0)
         {
+            // 스킬 아이콘 투명도 조절
+            Color color = icon_skill.color;
+            color.a = 0.8f;
+            icon_skill.color = color;
+
+            icon_lock.SetActive(false);
             chargingShot.isUnlock = false;
+
             SkillManager.instance.AddSkill(chargingShot.skillName, chargingShot.coolDown);
             UIManager.instance.AddSkillSlot(0);
             Debug.Log("정조준 얻음!");
         }
 
         DataManager.instance.SkillLevelUp("정조준", 1);
-        UpdateUI(); 
     }
 
     // 텍스트 업데이트

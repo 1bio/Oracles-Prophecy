@@ -21,7 +21,7 @@ public class DataManager : MonoBehaviour
     #region Initialized Methods
     private void Initialized()
     {
-        statusData = new StatusData(1, 0f, 5f, 100f, 100f, 0f);
+        statusData = new StatusData(1, 0f, 5f, 100f, 100f, 8f, 15f, 0f);
 
         skillData = new List<SkillData>
         {
@@ -38,16 +38,16 @@ public class DataManager : MonoBehaviour
         
         attackData = new List<AttackData>()
         {
-            new AttackData("Attack1@Melee", 1, 0.6f, 0.1f, 0.25f, 0.05f, 10f, 0f), // 근거리 공격 1
-            new AttackData("Attack2@Melee", 2, 0.5f, 0.1f, 0.25f, 0.05f, 10f, 0f), // 근거리 공격 2
-            new AttackData("Attack3@Melee", -1, 0, 0.1f, 0.25f, 0.05f, 20f, 0f), // 근거리 공격 3
+            new AttackData("Attack1@Melee", 1, 0.6f, 0.1f, 0.25f, 0.05f, 0f), // 근거리 공격 1
+            new AttackData("Attack2@Melee", 2, 0.5f, 0.1f, 0.25f, 0.05f, 0f), // 근거리 공격 2
+            new AttackData("Attack3@Melee", -1, 0, 0.1f, 0.25f, 0.05f, 0f), // 근거리 공격 3
 
-            new AttackData("HeavyAttack1@Melee", 4, 0.6f, 0.1f, 0.25f, 0.35f, 20f, 0f), // 근거리 패시브 공격 1
-            new AttackData("HeavyAttack2@Melee", 5, 0.5f, 0.1f, 0.25f, 0.35f, 20f, 0f), // 근거리 패시브 공격 2
-            new AttackData("HeavyAttack3@Melee", -1, 0, 0.1f, 0.25f, 0.35f, 35f, 0f) // 근거리 패시브 공격 3
+            new AttackData("HeavyAttack1@Melee", 4, 0.6f, 0.1f, 0.25f, 0.35f, 0f), // 근거리 패시브 공격 1
+            new AttackData("HeavyAttack2@Melee", 5, 0.5f, 0.1f, 0.25f, 0.35f, 0f), // 근거리 패시브 공격 2
+            new AttackData("HeavyAttack3@Melee", -1, 0, 0.1f, 0.25f, 0.35f, 0f) // 근거리 패시브 공격 3
         };
 
-        rangeAttackData = new RangeAttackData("None", 0, 0f, 0f, 0f, 0f, 10f, 0.3f); // 원거리 공격
+        rangeAttackData = new RangeAttackData("None", 0, 0f, 0f, 0f, 0f, 0.3f); // 원거리 공격
 
         playerData = new PlayerData(statusData, skillData, attackData, rangeAttackData);
     }
@@ -75,26 +75,26 @@ public class DataManager : MonoBehaviour
         switch (monster)
         {
             case Troll:
-                playerData.statusData.exp += Random.Range(1f, 7f);
+                playerData.statusData.exp += Random.Range(15f, 30f);
                 break;
             case Minotaur:
-                playerData.statusData.exp += Random.Range(2f, 5f);
+                playerData.statusData.exp += Random.Range(25f, 35f);
                 break;
             case Medusa:
-                playerData.statusData.exp += Random.Range(10f, 20f);
+                playerData.statusData.exp += Random.Range(35f, 45f);
                 break;
         }
 
+        // 레벨 업
         if (playerData.statusData.exp >= limitExp)
         {
             LevelUp(25f, 50f);
 
             limitExp += 10f;
         }
-
     }
 
-    // 경험치 레벨업
+    // 레벨업
     public void LevelUp(float addHealth, float addMana) 
     {
         StatusData player = playerData.statusData;
@@ -106,10 +106,7 @@ public class DataManager : MonoBehaviour
         player.maxHealth += addHealth;
         player.maxMana += addMana;
 
-        // 플레이어 레벨 업 후 체력 및 마나 회복
-        player.currentHealth = player.maxHealth; 
-        player.currentMana = player.maxMana; 
-
+        playerData.statusData.skillPoint += 1;
     }
 
     // 스킬 레벨 업
@@ -121,8 +118,11 @@ public class DataManager : MonoBehaviour
                 continue;
 
             skill.level += level;
-            //skill.damage *= skill.multipleDamage;
+            skill.minDamage += 3;
+            skill.maxDamage += 3;
             skill.coolDown *= skill.multipleCoolDown;
+
+            playerData.statusData.skillPoint -= 1;
             break; 
         }
     }

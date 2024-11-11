@@ -1,27 +1,30 @@
 ﻿using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
 
-    [Header("스킬 선택창 UI 필드")]
-    public GameObject selectWindow;
-
-    [Header("스킬 쿨다운")]
-    public GameObject[] emptySlot;
-    public GameObject[] skillSlot;
+    [Header("스킬 트리")]
+    public GameObject[] selectWindow; // [0]: 전사, [1]: 궁수
+    public TextMeshProUGUI[] skillPoint;
 
     [Header("인벤토리 UI")]
     public GameObject inventoryWindow;
+    public Text[] inventoryStatus;
 
+
+    // 하단 인터페이스
     [Header("플레이어 스탯")]
     public Text level;
     public Slider hp_Slider;
     public Slider mana_Slider;
     public Slider exp_Slider;
+
+    [Header("스킬 슬롯")]
+    public GameObject[] emptySlot;
+    public GameObject[] skillSlot;
 
     private bool isMelee; // 클래스 확인
 
@@ -48,18 +51,37 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        UpdateStatus();
-
-        // 스킬창(캐릭터 스탯창이랑 통합 예정)
-        if (Input.GetKeyDown(KeyCode.I))
+        // 임시
+        if (Input.GetKeyDown(KeyCode.V))
         {
-            SelectWindow(!selectWindow.activeSelf);
+            DataManager.instance.playerData.statusData.skillPoint += 1;
+        }
+        else if (Input.GetKeyDown(KeyCode.B))
+        {
+            DataManager.instance.LevelUp(50, 50);
         }
 
-        // 인벤토리 선택 창
+        UpdateStatus(); // 하단 스탯
+        UpdateInventoryStatus(); // 인벤토리 스탯
+
+        // 인벤토리
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             InventoryWindow(!inventoryWindow.activeSelf);
+        }
+
+        // 스킬 트리
+        switch (!isMelee)
+        {
+            case true: // 전사 스킬 트리
+                skillPoint[0].text = $"Unused Skill Points {DataManager.instance.playerData.statusData.skillPoint} point";
+                if (Input.GetKeyDown(KeyCode.K)) { SetActiveSKillWindow(!selectWindow[0].activeSelf); }
+                break;
+
+            case false: // 궁수 스킬 트리
+                skillPoint[1].text = $"Unused Skill Points {DataManager.instance.playerData.statusData.skillPoint} point";
+                if (Input.GetKeyDown(KeyCode.K)) { SetActiveSKillWindow(!selectWindow[1].activeSelf); }
+                break;
         }
     }
 
@@ -69,13 +91,13 @@ public class UIManager : MonoBehaviour
         this.isMelee = isMelee;
     }
 
-    // 스탯 업데이트
+    // 하단 UI 업데이트
     private void UpdateStatus()
     {
         level.text = DataManager.instance.playerData.statusData.level.ToString();
 
-        this.currentHp = DataManager.instance.playerData.statusData.currentHealth / 100;
-        this.currentMana = DataManager.instance.playerData.statusData.currentMana / 100;
+        this.currentHp = DataManager.instance.playerData.statusData.currentHealth / DataManager.instance.playerData.statusData.maxHealth;
+        this.currentMana = DataManager.instance.playerData.statusData.currentMana / DataManager.instance.playerData.statusData.maxHealth;
         this.currentExp = DataManager.instance.playerData.statusData.exp / 100;
 
         hp_Slider.value = Mathf.Lerp(hp_Slider.value, this.currentHp, lerpSpeed * Time.deltaTime);
@@ -83,33 +105,18 @@ public class UIManager : MonoBehaviour
         exp_Slider.value = Mathf.Lerp(exp_Slider.value, this.currentExp, lerpSpeed * Time.deltaTime);
     }
 
-    /*// 랜덤 스킬 생성
-    public void GetRandomSkill()
+    // 인벤토리 UI 업데이트
+    private void UpdateInventoryStatus()
     {
-        if (!isMelee)
-        {
-            int[] randomValues = RandomNumberGenerator.GenerateRandomIndex(meleeSkillPrefabs.Length, selectPosition.Length);
+        inventoryStatus[0].text = DataManager.instance.playerData.statusData.level.ToString();
+        inventoryStatus[1].text = $"{DataManager.instance.playerData.statusData.minDamage} - {DataManager.instance.playerData.statusData.maxDamage}";
+        inventoryStatus[2].text = Mathf.Floor(100f / DataManager.instance.playerData.statusData.defense).ToString() + "%";
+        inventoryStatus[3].text = DataManager.instance.playerData.statusData.currentHealth.ToString();
+        inventoryStatus[4].text = DataManager.instance.playerData.statusData.currentMana.ToString();
+        inventoryStatus[5].text = Mathf.Floor(100f / DataManager.instance.playerData.statusData.moveSpeed).ToString() + "%";
+    }
 
-            for (int i = 0; i < randomValues.Length; i++)
-            {
-                int randomValue = randomValues[i];
-
-                Instantiate(meleeSkillPrefabs[randomValue], selectPosition[i].transform);
-            }
-        }
-        else
-        {
-            int[] randomValues = RandomNumberGenerator.GenerateRandomIndex(rangeSkillPrefabs.Length, selectPosition.Length);
-
-            for (int i = 0; i < randomValues.Length; i++)
-            {
-                int randomValue = randomValues[i];
-
-                Instantiate(rangeSkillPrefabs[randomValue], selectPosition[i].transform);
-            }
-        }
-    }*/
-
+    // 스킬 슬롯 생성
     public void AddSkillSlot(int index)
     {
         for (int i = 0; i < emptySlot.Length; i++)
@@ -153,14 +160,49 @@ public class UIManager : MonoBehaviour
             }
         }
     }
+
+    /*// 랜덤 스킬 생성
+    public void GetRandomSkill()
+    {
+        if (!isMelee)
+        {
+            int[] randomValues = RandomNumberGenerator.GenerateRandomIndex(meleeSkillPrefabs.Length, selectPosition.Length);
+
+            for (int i = 0; i < randomValues.Length; i++)
+            {
+                int randomValue = randomValues[i];
+
+                Instantiate(meleeSkillPrefabs[randomValue], selectPosition[i].transform);
+            }
+        }
+        else
+        {
+            int[] randomValues = RandomNumberGenerator.GenerateRandomIndex(rangeSkillPrefabs.Length, selectPosition.Length);
+
+            for (int i = 0; i < randomValues.Length; i++)
+            {
+                int randomValue = randomValues[i];
+
+                Instantiate(rangeSkillPrefabs[randomValue], selectPosition[i].transform);
+            }
+        }
+    }*/
     #endregion
 
 
     #region Toggle Window
     // 스킬 선택 UI 토글
-    public void SelectWindow(bool openWindow)
+    public void SetActiveSKillWindow(bool openWindow)
     {
-        selectWindow.SetActive(openWindow);
+        switch (!isMelee)
+        {
+            case true: 
+                selectWindow[0].SetActive(openWindow);
+                break;
+            case false: 
+                selectWindow[1].SetActive(openWindow);
+                break;
+        }
     }
 
     // 인벤토리 UI 토글

@@ -7,9 +7,11 @@ public class MonsterParticleDamageHandler : MonoBehaviour
 {
     private Monster _monster;
     private Health _playerHealth;
+    private ParticleSystem particleSystem;
 
     private bool _canTakeDamage = true;
     [Header(" # 피격 시 파티클 비활성화")]
+    [SerializeField] private bool _shutDown = false;
     [SerializeField] private bool _shutDownIfHitPlayer = false;
     [SerializeField] private bool _shutDownIfHitObstacle = false;
 
@@ -20,8 +22,17 @@ public class MonsterParticleDamageHandler : MonoBehaviour
     [SerializeField] private bool _spawnVFXOnHit = false;
     [SerializeField] private GameObject _nextVFXPrefab;
 
+    [Header(" # 비활성화 타이머")]
+    [SerializeField] private float _deactivationTime = 0;
+    [SerializeField] private float _deactivationTimeVariance = 0;
+
+    [Header(" # 대기 시간")]
+    [SerializeField] private float _stayTime = 0;
+    private float _currentTime = 0;
+
     [SerializeField] private float _damageInterval = 1.5f;
     [SerializeField] private float _moveSpeed = 0;
+    [SerializeField] private float _rotationSpeed = 0;
 
     public void SetMonster(Monster monster)
     {
@@ -31,24 +42,38 @@ public class MonsterParticleDamageHandler : MonoBehaviour
     private void Awake()
     {
         _playerHealth = GameObject.Find("Player").GetComponent<Health>();
+        particleSystem = this.GetComponent<ParticleSystem>();
     }
 
     private void Update()
     {
-        ParticleSystem particleSystem = this.GetComponent<ParticleSystem>();
-        if (particleSystem != null)
+        if (particleSystem != null && particleSystem.isPlaying)
         {
-            particleSystem.transform.position += particleSystem.transform.forward * _moveSpeed * Time.deltaTime;
-
-            if (_isFollowing)
+            if (_currentTime <= _stayTime)
+                _currentTime += Time.deltaTime;
+            else
             {
-                Vector3 direction = _playerHealth.gameObject.transform.position - transform.position;
-                particleSystem.transform.rotation = Quaternion.LookRotation(direction);
+                if (_isFollowing)
+                {
+                    Vector3 targetPosition = _playerHealth.gameObject.transform.position + new Vector3(0, 0.5f, 0);
+                    Vector3 direction = targetPosition - particleSystem.transform.position;
+
+                    Quaternion targetRotation = Quaternion.LookRotation(direction);
+                    particleSystem.transform.rotation = Quaternion.Slerp(
+                        particleSystem.transform.rotation,
+                        targetRotation,
+                        _rotationSpeed * Time.deltaTime
+                    );
+                }
+                particleSystem.transform.position += particleSystem.transform.forward * _moveSpeed * Time.deltaTime;
+
+                float randomDeactivationTime = Random.Range(Mathf.Max(_deactivationTime - _deactivationTimeVariance, 0), _deactivationTime + _deactivationTimeVariance);
+                StartCoroutine(Deactivate(particleSystem, randomDeactivationTime));
             }
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         ProcessCollisionEffect(other.gameObject);
     }
@@ -60,33 +85,43 @@ public class MonsterParticleDamageHandler : MonoBehaviour
 
     private void ProcessCollisionEffect(GameObject other)
     {
+        if (_spawnVFXOnHit && _nextVFXPrefab != null && particleSystem.isPlaying)
+            StartCoroutine(Explode(_nextVFXPrefab, particleSystem.transform.position, 3f));
+
         if (other.gameObject.layer == LayerMask.NameToLayer(GameLayers.Player.ToString()) && _canTakeDamage)
         {
-            if (_playerHealth != null)
+            if (_playerHealth != null && particleSystem.isPlaying)
             {
                 StartCoroutine(DealDamageOverTime(_playerHealth));
 
                 if (_shutDownIfHitPlayer)
                 {
-                    ParticleSystem particleSystem = this.gameObject.GetComponent<ParticleSystem>();
-                    particleSystem.Stop();
+                    particleSystem.Stop(true);
                     particleSystem.Clear();
                     particleSystem.time = 0;
 
-                    if (_nextVFXPrefab != null)
-                        StartCoroutine(Explode(_nextVFXPrefab, particleSystem.transform.position, 3f));
+                    _canTakeDamage = true;
+                    _currentTime = 0f;
                 }
             }
         }
         else if (_shutDownIfHitObstacle && other.gameObject.layer == LayerMask.NameToLayer(GameLayers.Obstacle.ToString()))
         {
-            ParticleSystem particleSystem = this.gameObject.GetComponent<ParticleSystem>();
-            particleSystem.Stop();
+            particleSystem.Stop(true);
             particleSystem.Clear();
             particleSystem.time = 0;
 
-            if (_nextVFXPrefab != null)
-                StartCoroutine(Explode(_nextVFXPrefab, particleSystem.transform.position, 3f));
+            _canTakeDamage = true;
+            _currentTime = 0f;
+        }
+        else if (_shutDown)
+        {
+            particleSystem.Stop(true);
+            particleSystem.Clear();
+            particleSystem.time = 0;
+
+            _canTakeDamage = true;
+            _currentTime = 0f;
         }
     }
 
@@ -106,5 +141,22 @@ public class MonsterParticleDamageHandler : MonoBehaviour
         GameObject explosion = Instantiate(obj, position, Quaternion.identity);
         yield return new WaitForSeconds(delay);
         Destroy(explosion);
+    }
+
+    IEnumerator Deactivate(ParticleSystem particleSystem, float delay)
+    {
+        if (delay <= 0f)
+            yield break;
+
+        yield return new WaitForSeconds(delay);
+
+        if (_spawnVFXOnHit && _nextVFXPrefab != null && particleSystem.isPlaying)
+            StartCoroutine(Explode(_nextVFXPrefab, particleSystem.transform.position, 3f));
+
+        particleSystem.Stop(true);
+        particleSystem.Clear();
+        particleSystem.time = 0;
+
+        _currentTime = 0f;
     }
 }

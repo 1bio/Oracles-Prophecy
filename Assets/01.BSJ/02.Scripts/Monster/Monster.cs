@@ -77,7 +77,7 @@ public class Monster : MonoBehaviour
         SkillController = new MonsterSkillController(p_monsterSkillDatas);
         LootItemController = new MonsterLootItemController(p_monsterLootItemData);
         MovementController = new MonsterMovementController(GetComponent<TargetDetector>(), GetComponent<Astar>(), FindObjectOfType<PointGrid>(), GetComponent<CharacterController>());
-        AnimationController = new MonsterAnimationController(GetComponent<Animator>(), GetComponent<ObjectFadeInOut>(),100f);
+        AnimationController = new MonsterAnimationController(GetComponent<Animator>(), 100f);
         CombatController = new MonsterCombatController(p_monsterStatData, GetComponent<Health>());
      
         Controller = GetComponent<CharacterController>();
@@ -88,19 +88,6 @@ public class Monster : MonoBehaviour
             ParticleController = new MonsterParticleController(p_monsterSkillDatas, VFXContainerTransform, this);
         }
     }
-
-    /*protected void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            if (MonsterSkillController.GetAvailableSkills().Count > 0
-                && MonsterSkillController.UpdateCurrentSkillData() != null)
-            {
-                MonsterStateMachineController.OnSkill();
-            }
-        }
-    }*/
-
 
     protected void LateUpdate()
     {

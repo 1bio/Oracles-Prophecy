@@ -294,7 +294,7 @@ MonoBehaviour:
       - guid: 7dca4c5bcc684ffba9022cb98cd7f7d5
         name: fence
         prefabs:
-        - {fileID: 649195111869694822, guid: b2149250dd2070849956fea17594f79a, type: 3}
+        - {fileID: 7639903158162793214, guid: b2149250dd2070849956fea17594f79a, type: 3}
         - {fileID: 0}
     - guid: 8c1ae3ff8e974fc78daaac3400ebe055
       name: roof
@@ -305,12 +305,20 @@ MonoBehaviour:
         - {fileID: 3220024057309237501, guid: 406a723fba2dc944293c073aa43a9be2, type: 3}
         - {fileID: 0}
     - guid: 47eb1c854c0b45c88cdaf0091d8431c5
-      name: roof corner
+      name: roof L corner
       _modules:
       - guid: 777f30a40da0498fbd7d22d3d4847a31
-        name: roof corner
+        name: roof L corner
         prefabs:
-        - {fileID: 8890098391460175364, guid: 10cea44afee7b9446bc12fb132093d7b, type: 3}
+        - {fileID: 2001840381485745505, guid: f2db2963f4f2fd94aa22d7c01296229e, type: 3}
+        - {fileID: 0}
+    - guid: 02b28aa4bab4444cb02d0a435b1157c9
+      name: roof R corner
+      _modules:
+      - guid: 1a043ccab6ca48f99ae0028759619bff
+        name: roof R corner
+        prefabs:
+        - {fileID: 8504828228208116802, guid: da7e8a65af4e24c4fae01c5779b1b67c, type: 3}
         - {fileID: 0}
     _floorGroups:
     - guid: 750e818ff82746a3b00a17ea53a0a9e0
@@ -319,7 +327,23 @@ MonoBehaviour:
       - guid: 9ac0034635ac41ef927f27b5af3d2382
         name: wood floor
         prefabs:
-        - {fileID: 1780056580686444173, guid: 4a87da0d9f8314c4f80e20150a2f0d4c, type: 3}
+        - {fileID: 117926314653972372, guid: 4a87da0d9f8314c4f80e20150a2f0d4c, type: 3}
+        - {fileID: 0}
+    - guid: 830179b4ffbc4802aca0943860b83f99
+      name: wood floor H
+      _modules:
+      - guid: e56270f190684156bc5fd2f2b7d6749e
+        name: wood floor H
+        prefabs:
+        - {fileID: 4501318800527945108, guid: ce4a4d5a3862d2541b1a628be6cca94f, type: 3}
+        - {fileID: 0}
+    - guid: 755d5753a68f428ab0966df9ddfa67c7
+      name: wood floor H2
+      _modules:
+      - guid: 4dce71f5854740a4888301d4cf919a80
+        name: wood floor H2
+        prefabs:
+        - {fileID: 1513952157624368011, guid: 2e957597f57d1c6409f9e1124badc459, type: 3}
         - {fileID: 0}
     _decoratorGroups: []
     _decoratorCategories:

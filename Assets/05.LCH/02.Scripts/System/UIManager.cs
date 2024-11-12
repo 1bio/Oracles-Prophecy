@@ -71,7 +71,7 @@ public class UIManager : MonoBehaviour
         }
 
         // 스킬 트리
-        switch (!isMelee)
+        switch (isMelee)
         {
             case true: // 전사 스킬 트리
                 skillPoint[0].text = $"Unused Skill Points {DataManager.instance.playerData.statusData.skillPoint} point";
@@ -194,7 +194,7 @@ public class UIManager : MonoBehaviour
     // 스킬 선택 UI 토글
     public void SetActiveSKillWindow(bool openWindow)
     {
-        switch (!isMelee)
+        switch (isMelee)
         {
             case true: 
                 selectWindow[0].SetActive(openWindow);

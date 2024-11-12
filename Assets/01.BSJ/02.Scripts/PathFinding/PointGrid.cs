@@ -130,7 +130,7 @@ public class PointGrid : MonoBehaviour
     }
 
     // 만든 grid 큐브로 시각화
-    /*private void OnDrawGizmos()
+    private void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(transform.position, new Vector3(_gridWorldSize.x, _gridWorldSize.y, _gridWorldSize.z));
 
@@ -149,5 +149,5 @@ public class PointGrid : MonoBehaviour
                 Gizmos.DrawCube(node.Position, Vector3.one * (_nodeDiameter - .1f));
             }
         }
-    }*/
+    }
 }

@@ -14,10 +14,14 @@ public class MonsterHealthOnMouse : MonoBehaviour
     [SerializeField] private Slider _slider;
     private TextMeshProUGUI _textMeshPro;
 
+    private float _currentTime = 0;
+
     private void Awake()
     {
         _layerMask = (1 << LayerMask.NameToLayer(GameLayers.Monster.ToString()));
         _textMeshPro = _slider.GetComponentInChildren<TextMeshProUGUI>();
+
+        _currentTime = 0;
     }
 
     private void Start()
@@ -35,10 +39,15 @@ public class MonsterHealthOnMouse : MonoBehaviour
 
             if (Monster != null)
                 _slider.gameObject.SetActive(true);
+
+            _currentTime = 0;
         }
         else
         {
-            StartCoroutine(HideSlider());
+            _currentTime += Time.deltaTime;
+
+            if (_currentTime > 0.5f)
+                _slider.gameObject.SetActive(false);
         }
 
         if (Monster != null && Monster.CombatController.MonsterCombatAbility.MonsterHealth.CurrentHealth >= 0)
@@ -61,12 +70,5 @@ public class MonsterHealthOnMouse : MonoBehaviour
                 Monster = null;
             }
         }
-    }
-
-    private IEnumerator HideSlider()
-    {
-        yield return new WaitForSeconds(3f);
-
-        _slider.gameObject.SetActive(false);
     }
 }

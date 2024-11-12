@@ -27,7 +27,7 @@ public class MonsterHealthOnMouse : MonoBehaviour
 
     private void Update()
     {
-        OnMouse = Physics.SphereCast(Camera.main.ScreenPointToRay(Input.mousePosition), 0.5f, out RaycastHit hit, 50, _layerMask);
+        OnMouse = Physics.SphereCast(Camera.main.ScreenPointToRay(Input.mousePosition), 0.5f, out RaycastHit hit, 100, _layerMask);
 
         if (OnMouse)
         {
@@ -38,7 +38,7 @@ public class MonsterHealthOnMouse : MonoBehaviour
         }
         else
         {
-            _slider.gameObject.SetActive(false);
+            StartCoroutine(HideSlider());
         }
 
         if (Monster != null && Monster.CombatController.MonsterCombatAbility.MonsterHealth.CurrentHealth >= 0)
@@ -61,5 +61,12 @@ public class MonsterHealthOnMouse : MonoBehaviour
                 Monster = null;
             }
         }
+    }
+
+    private IEnumerator HideSlider()
+    {
+        yield return new WaitForSeconds(3f);
+
+        _slider.gameObject.SetActive(false);
     }
 }

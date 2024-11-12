@@ -37,7 +37,7 @@ public class TrollChargeAttack : MonsterSkillData
             if (particleSystem != null)
             {
                 _vfxTransform = particleSystem.transform;
-                _vfxTransform.position = monster.transform.position + monster.transform.forward * _hitSphere;
+                _vfxTransform.position = monster.transform.position + new Vector3(0, 0.2f,0) + monster.transform.forward * _hitSphere;
                 particleSystem = monster.ParticleController.CurrentParticleSystem;
                 if (particleSystem != null && particleSystem.isPlaying && !_hasHit)
                 {

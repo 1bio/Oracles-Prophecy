@@ -1314,9 +1314,9 @@ GameObject:
   - component: {fileID: 6380450406922317669}
   - component: {fileID: 7212337456210025347}
   - component: {fileID: 1558285271300407855}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Weeper
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

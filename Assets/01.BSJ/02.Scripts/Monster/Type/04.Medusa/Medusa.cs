@@ -58,6 +58,6 @@ public class Medusa : Monster
 
     public void PlayWideCrackVFX()
     {
-        ParticleController.RePlayVFX("WideEffect", 0, 1);
+        ParticleController.RePlayVFX("WideEffect", transform.forward);
     }
 }

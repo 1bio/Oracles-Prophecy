@@ -47431,15 +47431,15 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.44444445
-    functionName: PlayFireVFX
-    data: 
+    functionName: PlayAudio
+    data: FireWhoosh
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.44444445
-    functionName: PlayAudio
-    data: FireWhoosh
+    functionName: PlayFireVFX
+    data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

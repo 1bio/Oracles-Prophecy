@@ -24,7 +24,7 @@ public class TransparencyController : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 direction = (_playerTransform.position - transform.position).normalized;
-        float maxDistance = Vector3.Distance(transform.position, _playerTransform.position);
+        float maxDistance = Vector3.Distance(transform.position, _playerTransform.position - transform.forward);
 
         List<Collider> currentFrameHitColliders = new List<Collider>();
 

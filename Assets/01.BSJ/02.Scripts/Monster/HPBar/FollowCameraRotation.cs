@@ -52,6 +52,6 @@ public class FollowCameraRotation : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.rotation = Quaternion.Euler(45, 315, 0);
+        transform.rotation = Quaternion.Euler(30, 45, 0);
     }
 }

@@ -85,13 +85,13 @@ public class MonsterParticleDamageHandler : MonoBehaviour
 
     private void ProcessCollisionEffect(GameObject other)
     {
-        if (_spawnVFXOnHit && _nextVFXPrefab != null && particleSystem.isPlaying)
-            StartCoroutine(Explode(_nextVFXPrefab, particleSystem.transform.position, 3f));
-
         if (other.gameObject.layer == LayerMask.NameToLayer(GameLayers.Player.ToString()) && _canTakeDamage)
         {
             if (_playerHealth != null && particleSystem.isPlaying)
             {
+                if (_spawnVFXOnHit && _nextVFXPrefab != null && particleSystem.isPlaying)
+                    StartCoroutine(Explode(_nextVFXPrefab, particleSystem.transform.position, 3f));
+
                 StartCoroutine(DealDamageOverTime(_playerHealth));
 
                 if (_shutDownIfHitPlayer)
@@ -107,6 +107,9 @@ public class MonsterParticleDamageHandler : MonoBehaviour
         }
         else if (_shutDownIfHitObstacle && other.gameObject.layer == LayerMask.NameToLayer(GameLayers.Obstacle.ToString()))
         {
+            if (_spawnVFXOnHit && _nextVFXPrefab != null && particleSystem.isPlaying)
+                StartCoroutine(Explode(_nextVFXPrefab, particleSystem.transform.position, 3f));
+
             particleSystem.Stop(true);
             particleSystem.Clear();
             particleSystem.time = 0;
@@ -116,6 +119,9 @@ public class MonsterParticleDamageHandler : MonoBehaviour
         }
         else if (_shutDown)
         {
+            if (_spawnVFXOnHit && _nextVFXPrefab != null && particleSystem.isPlaying)
+                StartCoroutine(Explode(_nextVFXPrefab, particleSystem.transform.position, 3f));
+
             particleSystem.Stop(true);
             particleSystem.Clear();
             particleSystem.time = 0;

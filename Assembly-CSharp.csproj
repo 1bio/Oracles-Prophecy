@@ -89,6 +89,7 @@
     <Compile Include="Assets\MRF\Scripts\DynamicTrailGenerator.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Behavior\MonsterBehavior.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+    <Compile Include="Assets\KETO_DISSOLVE\Scripts\Tester.cs" />
     <Compile Include="Assets\InfinityPBR\_InfinityPBR - Gargoyle\Scripts\SFB_DemoGargoyle.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Util\bl_MiniMapRenderTool.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Base\bl_MiniMapPlaneBase.cs" />
@@ -358,6 +359,7 @@
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\04.Medusa\Medusa.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_CameraFocus.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\KETO_DISSOLVE\Scripts\DissolveTest.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_HumanDemoModel.cs" />
     <Compile Include="Assets\InfinityPBR\_InfinityPBR - Devils\Scripts\SFB_DemoDevils.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_ShotFollowTarget.cs" />
@@ -459,6 +461,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\InfinityPBR\_InfinityPBR - Gargoyle\Blendshape Preset Files\GargoyleHumanoid Demo Range 0.txt" />
+    <None Include="Assets\Big Fantasy RPG Music Bundle\Read Me.txt" />
     <None Include="Assets\MBS\InternalData\UIToolkit\PackManager\FloorGroupEditor_Window.uxml" />
     <None Include="Assets\Hovl Studio\HSFiles\Shaders\Lightning.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
@@ -506,6 +509,7 @@
     <None Include="Assets\MRF\Shaders\WeaponTrail.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\InfinityPBR\_InfinityPBR - Troll\Blendshape Presets\Troll DEMO Range 0.txt" />
+    <None Include="Assets\KETO_DISSOLVE\readme.txt" />
     <None Include="Assets\Hovl Studio\HSFiles\Shaders\Explosion.shader" />
     <None Include="Assets\Vefects\ItemPickUp\VFX\Shaders\SH_Vefects_VFX_AdvParticle.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />

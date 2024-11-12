@@ -26,6 +26,8 @@ public class TargetDetector : MonoBehaviour
 
     private void FixedUpdate()
     {
+        BGMAudioManager.Instance.SetIsCombat(IsTargetDetected);
+
         if (!IsTargetDetected)
         {
             if (IsInFanShapeDetection(_detectionDistance))
@@ -53,6 +55,9 @@ public class TargetDetector : MonoBehaviour
             IsTargetDetected = IsInFanShapeDetection(_detectionDistance);
             _currentTime = 0;
         }
+
+        if (!_monster.StateMachineController.IsAlive())
+            IsTargetDetected = false;
     }
 
     public bool IsInFanShapeDetection(float detectionDistance)

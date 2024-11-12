@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Rendering;
 
 public class MonsterAudioManager : MonoBehaviour
 {
@@ -19,16 +20,16 @@ public class MonsterAudioManager : MonoBehaviour
         public AudioClip[] audioClips;
     }
 
-    private void ConfigureAudioSource()
+    private void ConfigureAudioSource(AudioSource audioSource)
     {
-        if (_audioSource != null)
+        if (audioSource != null)
         {
-            _audioSource.volume = 0.2f;
-            _audioSource.spatialBlend = 1f;
-            _audioSource.dopplerLevel = 0f;
-            _audioSource.rolloffMode = AudioRolloffMode.Linear;
-            _audioSource.minDistance = 1f;
-            _audioSource.maxDistance = 10f;
+            audioSource.volume = BGMAudioManager.Instance.GetMonsterVolume();
+            audioSource.spatialBlend = 1f;
+            audioSource.dopplerLevel = 0f;
+            audioSource.rolloffMode = AudioRolloffMode.Linear;
+            audioSource.minDistance = 2f;
+            audioSource.maxDistance = 12f;
         }
     }
 
@@ -39,7 +40,7 @@ public class MonsterAudioManager : MonoBehaviour
 
         _listener = FindAnyObjectByType<AudioListener>();
 
-        ConfigureAudioSource();
+        ConfigureAudioSource(_audioSource);
     }
 
     public void PlayAudio(string name)
@@ -49,16 +50,28 @@ public class MonsterAudioManager : MonoBehaviour
         AudioClip audioClip = audioClips[index].audioClips[Random.Range(0, audioClips[index].audioClips.Length)];
         _audioSource.clip = audioClip;
 
-        ConfigureAudioSource();
-
         float horizontalDistance = Vector3.Distance(new Vector3(_listener.transform.position.x, 0, _listener.transform.position.z), new Vector3(transform.position.x, 0, transform.position.z));
         float verticalDistance = Vector3.Distance(new Vector3(0 ,_listener.transform.position.y, 0), new Vector3(0, transform.position.y, 0));
         float distance = horizontalDistance + verticalDistance;
 
         if (distance <= _audioSource.maxDistance)
         {
-            AudioSource.PlayClipAtPoint(audioClip, transform.position, _audioSource.volume);
+            PlayCustomAudioClip(audioClip, transform.position);
         }
+    }
+
+    private void PlayCustomAudioClip(AudioClip audioClip, Vector3 position)
+    {
+        GameObject gameObject = new GameObject("One shot audio");
+        gameObject.transform.position = position;
+
+        AudioSource audioSource = (AudioSource)gameObject.AddComponent(typeof(AudioSource));
+        audioSource.clip = audioClip;
+
+        ConfigureAudioSource(audioSource);
+        audioSource.Play();
+
+        Object.Destroy(gameObject, audioClip.length * ((Time.timeScale < 0.01f) ? 0.01f : Time.timeScale));
     }
 
     private int AudioClipIndex(string name)

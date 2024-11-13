@@ -235,8 +235,8 @@
     <Compile Include="Assets\05.LCH\02.Scripts\UI\ClassSelectWindow.cs" />
     <Compile Include="Assets\InfinityPBR\_InfinityPBR Human - Humans\Scripts\MaterialColorChanger.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-    <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\BlendShapesPresetManager.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\SceneResources\Other\Slash_DemoGUI.cs" />
+    <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\BlendShapesPresetManager.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\UI\SkillSlot\SpinSlashSlot.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\InfinityDemoCharacter.cs" />
@@ -270,15 +270,15 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\PathFinding\PointNode.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
-    <Compile Include="Assets\01.BSJ\02.Scripts\Monster\MonsterSpawnManager.cs" />
     <Compile Include="Assets\Assets\MedievalKingdomUI\Scripts\Controls\EventTriggerInvoker.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\Monster\MonsterSpawnManager.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\UI\SlideWindow.cs" />
     <Compile Include="Assets\InfinityPBR\_InfinityPBR - Medusa\Scripts\medusaDemo.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_CameraFocus.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_HumanDemoModel.cs" />
-    <Compile Include="Assets\01.BSJ\02.Scripts\Monster\State\MonsterBehaviourState.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_ShotFollowTarget.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\Monster\State\MonsterBehaviourState.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_ToggleOpposite.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Data\MonsterLootItemData.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Enum\GameLayers.cs" />

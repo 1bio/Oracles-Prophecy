@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\InfinityPBR\Editor\InfinityPBRManager.cs" />
     <Compile Include="Assets\InfinityPBR\Editor\InfinitySoEditor.cs" />
+    <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Shaders\Editor\RFX4_UberDistortionGUI.cs" />
     <Compile Include="Assets\InfinityPBR\Editor\SFB_SaveObjectAsMesh.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Editor\bl_MiniMapEditor.cs" />
     <Compile Include="Assets\InfinityPBR\Editor\SFB_LoadWelcome.cs" />
@@ -74,14 +75,18 @@
     <Compile Include="Assets\InfinityPBR\Editor\UpdateRootBoneAndBounds.cs" />
     <Compile Include="Assets\InfinityPBR\Editor\SFB_DisplayPolycount.cs" />
     <Compile Include="Assets\InfinityPBR\Editor\AnimationClipReverser.cs" />
+    <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Shaders\Editor\RFX4_UberDecalGUI.cs" />
     <Compile Include="Assets\InfinityPBR\Equipment System\Editor\PrefabAndObjectManagerEditor.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Editor\bl_MiniMapHelperEditor.cs" />
     <Compile Include="Assets\InfinityPBR\Editor\AnimationEventCopier.cs" />
     <Compile Include="Assets\InfinityPBR\Equipment System\Editor\EquipmentObjectEditor.cs" />
+    <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\Editor\RFX4_CustomMaterialInspectorParticle.cs" />
     <Compile Include="Assets\InfinityPBR\Equipment System\Editor\EquipObjectMenu.cs" />
+    <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\Editor\RFX4_ReplaceDistortionForMobile.cs" />
     <Compile Include="Assets\InfinityPBR\Equipment System\Editor\BlendShapesPresetManagerEditor.cs" />
     <Compile Include="Assets\InfinityPBR\Editor\SFB_AudioSnapshotExporterEditor.cs" />
     <Compile Include="Assets\InfinityPBR\Equipment System\Editor\BlendShapesManagerEditor.cs" />
+    <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Shaders\Editor\RFX4_UberParticleGUI.cs" />
     <Compile Include="Assets\Hovl Studio\Render Pipelines support\Editor\ShaderChanger.cs" />
     <Compile Include="Assets\InfinityPBR\Editor\ObjExporterScript.cs" />
     <Compile Include="Assets\InfinityPBR\Editor\AnimationEventCopierWindow.cs" />

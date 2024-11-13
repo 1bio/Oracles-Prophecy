@@ -75,12 +75,14 @@ public class MonsterParticleDamageHandler : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        ProcessCollisionEffect(other.gameObject);
+        if (particleSystem != null && particleSystem.isPlaying)
+            ProcessCollisionEffect(other.gameObject);
     }
 
     private void OnParticleCollision(GameObject other)
     {
-        ProcessCollisionEffect(other);
+        if (particleSystem != null && particleSystem.isPlaying)
+            ProcessCollisionEffect(other);
     }
 
     private void ProcessCollisionEffect(GameObject other)

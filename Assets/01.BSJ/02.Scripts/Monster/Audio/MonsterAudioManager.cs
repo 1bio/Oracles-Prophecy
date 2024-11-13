@@ -24,7 +24,7 @@ public class MonsterAudioManager : MonoBehaviour
     {
         if (audioSource != null)
         {
-            audioSource.volume = BGMAudioManager.Instance.GetMonsterVolume();
+            audioSource.volume = BGMAudioManager.GetMonsterVolume();
             audioSource.spatialBlend = 1f;
             audioSource.dopplerLevel = 0f;
             audioSource.rolloffMode = AudioRolloffMode.Linear;

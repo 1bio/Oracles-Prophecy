@@ -1307,7 +1307,7 @@ GameObject:
   - component: {fileID: 1462321819811338663}
   - component: {fileID: 4803961078727148509}
   - component: {fileID: 8513436648838172865}
-  - component: {fileID: 1423573507187752570}
+  - component: {fileID: 4225665533046233074}
   - component: {fileID: 8132709075179377168}
   - component: {fileID: 2085329842031104135}
   - component: {fileID: 3791652849487926791}
@@ -1456,7 +1456,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1423573507187752570
+--- !u!114 &4225665533046233074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1465,158 +1465,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 2234037607394181917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 609f49429392c476bb71685431efda79, type: 3}
+  m_Script: {fileID: 11500000, guid: a2779324d52933d458291addade6eb39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips:
-  - name: Cloth Movement
-    audioClips:
-    - {fileID: 8300000, guid: 97c3d7a3b8cc34849b10960afde706d8, type: 3}
-    - {fileID: 8300000, guid: 7d605b5e659a94dcbb75031ba43c9ae1, type: 3}
-    - {fileID: 8300000, guid: dc9da956b53c14587a0abf35b23b3539, type: 3}
-    - {fileID: 8300000, guid: 095c0146147644976b90889e11e1a528, type: 3}
-    - {fileID: 8300000, guid: 441994140a3ed412b8e5a532c3134e73, type: 3}
-    chanceOfPlaying: 100
-    volume: 1
-    volumeBySpeed: 1
-    minVolume: 0.25
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
-  - name: Death Cloth
-    audioClips:
-    - {fileID: 8300000, guid: 4dc05c75c2ab8436e80251ecc83f052f, type: 3}
-    chanceOfPlaying: 100
-    volume: 1
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
-  - name: Death Soul
-    audioClips:
-    - {fileID: 8300000, guid: 513058e15a01a43a296d85662635466b, type: 3}
-    chanceOfPlaying: 100
-    volume: 1
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
-  - name: Attack Vocals
-    audioClips:
-    - {fileID: 8300000, guid: 4208b755e8be94eb4876dd6cd94f4581, type: 3}
-    - {fileID: 8300000, guid: 27b03216f89ca4d94a3784b353719591, type: 3}
-    - {fileID: 8300000, guid: a9dd606f08e8b43d086ae7c868bd4498, type: 3}
-    chanceOfPlaying: 100
-    volume: 1
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
-  - name: Got Hit Vocals
-    audioClips:
-    - {fileID: 8300000, guid: 6914b41663dbe4b19a66a260b0fbde27, type: 3}
-    - {fileID: 8300000, guid: c83902301a03f4b1aaf907d18104d334, type: 3}
-    - {fileID: 8300000, guid: 08320fa0596db44f2a3cb085998d162d, type: 3}
-    chanceOfPlaying: 100
-    volume: 1
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
   - name: Got Hit Cloth
     audioClips:
-    - {fileID: 8300000, guid: 1606b0498621b45caac31bf71540cb2a, type: 3}
-    - {fileID: 8300000, guid: 8663e2158f71e4da680cbd924a7fc532, type: 3}
-    - {fileID: 8300000, guid: f62cc7ed40e9a45e59934f3aae1074cc, type: 3}
-    chanceOfPlaying: 100
-    volume: 1
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
-  - name: Fog Build
+    - {fileID: 8300000, guid: 23fad11b3391e624c88969e161b187c0, type: 3}
+    - {fileID: 8300000, guid: 0af32b98237806d4197af571089717ae, type: 3}
+    - {fileID: 8300000, guid: 9061267a859f7fe4a944831cb971c78b, type: 3}
+  - name: Got Hit Vocals
     audioClips:
-    - {fileID: 8300000, guid: 648b67e913bc44d9caff95bf93d05f6a, type: 3}
-    chanceOfPlaying: 100
-    volume: 1
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
-  - name: Fog Release
+    - {fileID: 8300000, guid: dadb07d5e7b55aa4b9cf690806e3f623, type: 3}
+    - {fileID: 8300000, guid: 4d4f3466b83c2784f9e77e387a151c73, type: 3}
+    - {fileID: 8300000, guid: dd98830faa3239947af5281cf6c1db6e, type: 3}
+  - name: Death Soul
     audioClips:
-    - {fileID: 8300000, guid: df4e9cf963a6843a1a6bb9915ec9725f, type: 3}
-    chanceOfPlaying: 100
-    volume: 1
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
+    - {fileID: 8300000, guid: 4adc28d541e106b42bab12adb64cc6ab, type: 3}
+  - name: Death Cloth
+    audioClips:
+    - {fileID: 8300000, guid: 3e03cbdc8fcca834986326a30af564da, type: 3}
   - name: Cloth Idle
     audioClips:
-    - {fileID: 8300000, guid: 7d605b5e659a94dcbb75031ba43c9ae1, type: 3}
-    - {fileID: 8300000, guid: 97c3d7a3b8cc34849b10960afde706d8, type: 3}
-    - {fileID: 8300000, guid: dc9da956b53c14587a0abf35b23b3539, type: 3}
-    - {fileID: 8300000, guid: 095c0146147644976b90889e11e1a528, type: 3}
-    - {fileID: 8300000, guid: 441994140a3ed412b8e5a532c3134e73, type: 3}
-    chanceOfPlaying: 33
-    volume: 0.8
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
-  - name: Vocal Random
+    - {fileID: 8300000, guid: 5df504a9b2d2d714eb399e87c274d9dd, type: 3}
+    - {fileID: 8300000, guid: f273bc446bfc70949a33430526805576, type: 3}
+    - {fileID: 8300000, guid: d39a715d04c9daa4ab61625c1a69d46e, type: 3}
+    - {fileID: 8300000, guid: 73affcdf276a9934b8ce8aa580d8d424, type: 3}
+    - {fileID: 8300000, guid: df615ea1cc3cc474aac9ebf3f200634e, type: 3}
+  - name: Attack Vocals
     audioClips:
-    - {fileID: 8300000, guid: 4208b755e8be94eb4876dd6cd94f4581, type: 3}
-    - {fileID: 8300000, guid: 27b03216f89ca4d94a3784b353719591, type: 3}
-    - {fileID: 8300000, guid: a9dd606f08e8b43d086ae7c868bd4498, type: 3}
-    chanceOfPlaying: 5
-    volume: 0.8
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
-  audioLoops:
-  - name: Buff
+    - {fileID: 8300000, guid: d7ffebbe0603c0243b42770af9e222ed, type: 3}
+    - {fileID: 8300000, guid: 2cb23853707c699458bc1fb8cdc158d6, type: 3}
+    - {fileID: 8300000, guid: f2b5169c71c14ae4090081076a14e19e, type: 3}
+  - name: Cloth Movement
     audioClips:
-    - {fileID: 8300000, guid: c61b56775e5c4489eb18416978ec1131, type: 3}
-    chanceOfPlaying: 100
-    volume: 1
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
-  - name: Darkfire
-    audioClips:
-    - {fileID: 8300000, guid: c7bbf7abeef904354ae70593206d110c, type: 3}
-    chanceOfPlaying: 100
-    volume: 1
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
-  - name: ClothMovement
-    audioClips:
-    - {fileID: 8300000, guid: 8d93344cac16949dea353ca0f5c1f579, type: 3}
-    chanceOfPlaying: 100
-    volume: 1
-    volumeBySpeed: 0
-    minVolume: 0
-    pitchBySpeed: 0
-    minPitch: 0
-    maxPitch: 0
-  pitchByTimescale: 1
+    - {fileID: 8300000, guid: 5df504a9b2d2d714eb399e87c274d9dd, type: 3}
+    - {fileID: 8300000, guid: f273bc446bfc70949a33430526805576, type: 3}
+    - {fileID: 8300000, guid: d39a715d04c9daa4ab61625c1a69d46e, type: 3}
+    - {fileID: 8300000, guid: 73affcdf276a9934b8ce8aa580d8d424, type: 3}
+    - {fileID: 8300000, guid: df615ea1cc3cc474aac9ebf3f200634e, type: 3}
 --- !u!143 &8132709075179377168
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1705,7 +1592,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p_monsterStatData: {fileID: 11400000, guid: 9d980c34eeae7a140b8425572cd79bbc, type: 2}
-  p_monsterSkillDatas: []
+  p_monsterSkillDatas:
+  - {fileID: 11400000, guid: 8a39a8f74a0a76a408661eac659e1b97, type: 2}
   p_monsterLootItemData: {fileID: 11400000, guid: fab7c1ddcaa51ac44aa2d494d082e35c, type: 2}
 --- !u!1 &2243591111499271117
 GameObject:
@@ -3902,7 +3790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5522839553687619424}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: FirePosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3917,7 +3805,7 @@ Transform:
   m_GameObject: {fileID: 6439297996245432343}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: -0.395, y: 1.391, z: 1.098}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

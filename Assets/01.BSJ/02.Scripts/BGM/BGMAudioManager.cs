@@ -1,33 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using static SFB_AudioSnapshotExporter;
+using UnityEngine.SceneManagement;
 
 public class BGMAudioManager : MonoBehaviour
 {
     public static BGMAudioManager Instance { get; private set; }
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    private void OnDestroy()
-    {
-        if (Instance == this)
-        {
-            Instance = null;
-        }
-    }
 
     [SerializeField] private List<BGMAudioClips> _bgmAudioClips = new List<BGMAudioClips>();
 
@@ -41,28 +19,66 @@ public class BGMAudioManager : MonoBehaviour
     private AudioSource _audioSource;
 
     [Range(0, 1f)]
-    [SerializeField] private float _bgmVolume = 0.2f;
+    [SerializeField] private float _bgmVolume;
     [Range(0, 1f)]
-    [SerializeField] private float _monsterVolume = 0.2f;
+    [SerializeField] private float _monsterVolume;
     [Range(0, 1f)]
-    [SerializeField] private float _playerVolume = 0.2f;
-
-    private bool _isBGMSwitched = false;
-    private bool _isCombat = false;
+    [SerializeField] private float _playerVolume;
 
     private BGMAudioName _lastPlayBGM = BGMAudioName.None;
 
-    public float GetMonsterVolume() { return _monsterVolume; }
-    public float GetPlayerVolume() { return _playerVolume; }
-    public void SetIsCombat(bool isCombat) { _isCombat = isCombat; }
+    private string _currentSceneName;
+    private bool _isBGMSwitched = false;
 
-    private void Start()
+    // Dungeon
+    private static bool _isCombat = false;
+
+    public static float GetMonsterVolume() { return Instance._monsterVolume; }
+    public static float GetPlayerVolume() { return Instance._playerVolume; } 
+    public static void SetIsCombat(bool isCombat) { _isCombat = isCombat; }
+
+
+    private void OnEnable()
     {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (_audioSource == null)
+        {
+            _audioSource = GetComponent<AudioSource>();
+        }
+
+        int index = scene.name.IndexOf(' ');
+
+        if (index != -1)
+            _currentSceneName = scene.name.Substring(0, index);
+        else
+            _currentSceneName = scene.name;
+
+        _isBGMSwitched = true;
+        SetBGMForScene();
+    }
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         _audioSource = GetComponent<AudioSource>();
         _audioSource.spatialBlend = 0f;
         _audioSource.loop = true;
-
-        PlayBGM(BGMAudioName.Dungeon.ToString());
     }
         
     private void Update()
@@ -75,6 +91,24 @@ public class BGMAudioManager : MonoBehaviour
 
     private void LateUpdate()
     {
+        SetBGMForScene();
+    }
+
+    private void SetBGMForScene()
+    {
+        switch (_currentSceneName)
+        {
+            case "BSJ":
+                DungeonBGM();
+                break;
+            default:
+                break;
+        }
+    }
+
+
+    private void DungeonBGM()
+    {
         if (_isCombat)
         {
             if (_lastPlayBGM != BGMAudioName.Combat)
@@ -86,10 +120,9 @@ public class BGMAudioManager : MonoBehaviour
                 PlayDungeonBGM();
         }
     }
-
     private void PlayDungeonBGM()
     {
-        StartCoroutine(SwitchBGM(BGMAudioName.Dungeon.ToString(), 2, 0));
+        StartCoroutine(SwitchBGM(BGMAudioName.Dungeon.ToString(), 1.5f, 0));
         _lastPlayBGM = BGMAudioName.Dungeon;
         _isBGMSwitched = false;
     }
@@ -118,7 +151,6 @@ public class BGMAudioManager : MonoBehaviour
     {
         return SwitchBGM(bgmName, 0f, 0f);
     }
-
     private IEnumerator SwitchBGM(string bgmName, float delayTime, float targetVolume)
     {
         float startVolume = _bgmVolume;

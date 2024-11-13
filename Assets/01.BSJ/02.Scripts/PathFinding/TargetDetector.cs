@@ -26,7 +26,7 @@ public class TargetDetector : MonoBehaviour
 
     private void FixedUpdate()
     {
-        BGMAudioManager.Instance.SetIsCombat(IsTargetDetected);
+        BGMAudioManager.SetIsCombat(IsTargetDetected);
 
         if (!IsTargetDetected)
         {

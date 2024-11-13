@@ -80,7 +80,7 @@ public class Player : MonoBehaviour
                 }
 
                 break;
-            case InterfaceType.Chest:
+            case InterfaceType.Box:
                 break;
             default:
                 break;
@@ -127,13 +127,13 @@ public class Player : MonoBehaviour
                             }
                             break;
                         case ItemType.Helmet:
-                            helmet = Instantiate(_slot.ItemObject.characterDisplay, helmetTransform).transform;
+                            
                             break;
                     }
                 }
 
                 break;
-            case InterfaceType.Chest:
+            case InterfaceType.Box:
                 break;
             default:
                 break;

@@ -18,12 +18,16 @@ public class PlayerImpactState : PlayerBaseState
     {
         stateMachine.Animator.CrossFadeInFixedTime(ImpactAnimationHash, CrossFadeDuration);
 
-        stateMachine.WeaponToggle.DisableWeapon();
-
-        stateMachine.WeaponTrail.DestroyTrail();
-        stateMachine.ParticleEventHandler.StopParticleSystem();
-
         stateMachine.Health.SetHealth(DataManager.instance.playerData.statusData.currentHealth);
+
+        // 근거리 무기 이펙트 제거
+        if (stateMachine.WeaponPrefabs[0].activeSelf)
+        {
+            stateMachine.WeaponToggle.DisableWeapon();
+
+            stateMachine.WeaponTrail.DestroyTrail();
+            stateMachine.ParticleEventHandler.StopParticleSystem();
+        }
     }
 
 

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class MonsterHealthOnMouse : MonoBehaviour
 {
-    public Monster Monster { get; private set; }
+    public static Monster Monster { get; set; } = null;
     public bool OnMouse { get; private set; } = false;
 
     private int _layerMask;
@@ -14,10 +14,15 @@ public class MonsterHealthOnMouse : MonoBehaviour
     [SerializeField] private Slider _slider;
     private TextMeshProUGUI _textMeshPro;
 
+    public static float CurrentTime { get; set; } = 0;
+    private float _thresholdTime = 0.8f;
+
     private void Awake()
     {
         _layerMask = (1 << LayerMask.NameToLayer(GameLayers.Monster.ToString()));
         _textMeshPro = _slider.GetComponentInChildren<TextMeshProUGUI>();
+
+        CurrentTime = 0;
     }
 
     private void Start()
@@ -27,22 +32,24 @@ public class MonsterHealthOnMouse : MonoBehaviour
 
     private void Update()
     {
-        OnMouse = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, 50, _layerMask);
-
-        if (OnMouse)
+        if (Physics.SphereCast(Camera.main.ScreenPointToRay(Input.mousePosition), 0.5f, out RaycastHit hit, 100, _layerMask))
         {
             Monster = hit.collider.gameObject.GetComponentInParent<Monster>();
 
-            if (Monster != null)
-                _slider.gameObject.SetActive(true);
+            CurrentTime = 0;
         }
         else
         {
-            _slider.gameObject.SetActive(false);
+            CurrentTime += Time.deltaTime;
+
+            if (CurrentTime > _thresholdTime)
+                Monster = null;
         }
 
-        if (Monster != null && Monster.CombatController.MonsterCombatAbility.MonsterHealth.CurrentHealth >= 0)
+        if (Monster != null)
         {
+            _slider.gameObject.SetActive(true);
+
             _slider.maxValue = Monster.CombatController.MonsterCombatAbility.MonsterHealth.MaxHealth;
             _slider.value = Monster.CombatController.MonsterCombatAbility.MonsterHealth.CurrentHealth;
 
@@ -53,7 +60,7 @@ public class MonsterHealthOnMouse : MonoBehaviour
             {
                 gameObjectName = Monster.gameObject.name.Substring(0, index);
             }
-            _textMeshPro.text = $"{gameObjectName} : {_slider.value}";
+            _textMeshPro.text = gameObjectName;
 
             if (_slider.value <= 0)
             {
@@ -61,5 +68,7 @@ public class MonsterHealthOnMouse : MonoBehaviour
                 Monster = null;
             }
         }
+        else
+            _slider.gameObject.SetActive(false);
     }
 }

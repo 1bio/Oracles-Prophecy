@@ -14,13 +14,13 @@ public class MonsterLootItemController
     private List<GameObject> GetLootItems()
     {
         List<GameObject> lootlist = new List<GameObject>();
-        float randPersent;
+        int randPersent;
 
         if (_monsterLootItemData.LootItemDropRates != null)
         {
             foreach (GameObject item in _monsterLootItemData.LootItemDropRates.Keys)
             {
-                randPersent = Random.Range(0, 100);
+                randPersent = Random.Range(0, 101);
 
                 if (_monsterLootItemData.LootItemDropRates[item] >= randPersent)
                 {
@@ -41,15 +41,11 @@ public class MonsterLootItemController
 
         foreach (GameObject lootItem in lootItems)
         {
-            Vector3 dropPosition = monsterPosition + new Vector3(Random.Range(-2f, 2f), 0f, Random.Range(-2f, 2f));
+            Vector3 dropPosition = monsterPosition + Vector3.up / 10 + new Vector3(Random.Range(-1.5f, 1.5f), 0f, Random.Range(-1.5f, 1.5f));
 
             GameObject droppedItem = GameObject.Instantiate(lootItem, dropPosition, Quaternion.identity);
 
-            Rigidbody rb = droppedItem.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.AddForce(new Vector3(Random.Range(-1f, 1f), 1f, Random.Range(-1f, 1f)) * 5f, ForceMode.Impulse);
-            }
+            droppedItem.transform.position = dropPosition;
         }
     }
 }

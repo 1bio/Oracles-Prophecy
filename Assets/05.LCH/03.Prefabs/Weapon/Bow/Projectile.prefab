@@ -5082,6 +5082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trail: {fileID: 7494013494781164848}
+  delay: 1
 --- !u!82 &8555749783291908298
 AudioSource:
   m_ObjectHideFlags: 0

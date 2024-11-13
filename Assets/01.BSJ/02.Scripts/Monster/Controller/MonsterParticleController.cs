@@ -122,6 +122,29 @@ public class MonsterParticleController
         }
     }
 
+    public void RePlayVFX(string vfxName, Vector3 forward)
+    {
+        if (VFX.ContainsKey(vfxName))
+        {
+            Vector3 direction = Quaternion.Euler(0, 0, 0) * forward;
+
+            ParticleSystem particleSystem = GetAvailableParticle(vfxName);
+
+            if (particleSystem != null)
+            {
+                particleSystem.Stop();
+                particleSystem.Clear();
+
+                particleSystem.transform.position = _monster.transform.position + new Vector3(0, 0.5f, 0) + direction;
+                particleSystem.transform.rotation = Quaternion.LookRotation(direction);
+
+                particleSystem.Play();
+
+                _monster.StartCoroutine(DelayTime());
+            }
+        }
+    }
+
     private IEnumerator DelayTime()
     {
         yield return new WaitForSeconds(0.1f);

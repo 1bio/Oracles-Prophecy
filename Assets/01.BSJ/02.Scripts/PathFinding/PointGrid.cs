@@ -59,7 +59,7 @@ public class PointGrid : MonoBehaviour
                     Ray ray = new Ray(worldPoint + Vector3.up * 10, Vector3.down);
                     RaycastHit hit;
 
-                    if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
+                    if (Physics.SphereCast(ray, 0.3f, out hit, 10, layerMask))
                     {
                         if (hit.collider.gameObject.layer == obstacleLayer)
                         {
@@ -130,7 +130,7 @@ public class PointGrid : MonoBehaviour
     }
 
     // 만든 grid 큐브로 시각화
-    /*private void OnDrawGizmos()
+    private void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(transform.position, new Vector3(_gridWorldSize.x, _gridWorldSize.y, _gridWorldSize.z));
 
@@ -149,5 +149,5 @@ public class PointGrid : MonoBehaviour
                 Gizmos.DrawCube(node.Position, Vector3.one * (_nodeDiameter - .1f));
             }
         }
-    }*/
+    }
 }

@@ -3,18 +3,17 @@ using UnityEngine;
 
 public class MonsterAnimationController
 {
-    public MonsterAnimationController(Animator animator, ObjectFadeInOut objectFadeInOut, float blendTransitionSpeed)
+    public MonsterAnimationController(Animator animator, float blendTransitionSpeed)
     {
         Animator = animator;
-        ObjectFadeInOut = objectFadeInOut;
         BlendTransitionSpeed = blendTransitionSpeed;
         LocomotionBlendValue = 0f;
         CurrentAnimationName = string.Empty;
+        IsLockedInAnimation = false;
     }
 
     public Animator Animator { get; private set; }
     private string CurrentAnimationName { get; set; }
-    public ObjectFadeInOut ObjectFadeInOut { get; }
     public AnimatorStateInfo AnimatorStateInfo { get; set; }
 
     public bool IsLockedInAnimation { get; set; } = false;
@@ -46,7 +45,7 @@ public class MonsterAnimationController
     public void PlayAttackAnimation(int attackCount)
     {
         IsLockedInAnimation = true;
-        int randNum = Random.Range(0, attackCount) + 1;
+        int randNum = Random.Range(1, attackCount + 1);
         CurrentAnimationName = $"Attack{randNum}";
         Animator.SetTrigger(CurrentAnimationName);
     }

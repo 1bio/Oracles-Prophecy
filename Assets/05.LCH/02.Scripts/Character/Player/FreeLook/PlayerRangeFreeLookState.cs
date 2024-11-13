@@ -101,7 +101,7 @@ public class PlayerRangeFreeLookState : PlayerBaseState
     private void OnFirstSkill() // 정조준 [0]
     {
         if (SkillManager.instance.GetRemainingCooldown("정조준") <= 0f && !DataManager.instance.playerData.skillData[0].isUnlock
-            && DataManager.instance.playerData.statusData.mana >= DataManager.instance.playerData.skillData[0].useMana)
+            && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[0].useMana)
         {
             stateMachine.ChangeState(new PlayerRangeAimState(stateMachine));
         }
@@ -110,7 +110,7 @@ public class PlayerRangeFreeLookState : PlayerBaseState
     private void OnSecondSkill() // 트리플샷 [1]
     {
         if (SkillManager.instance.GetRemainingCooldown("트리플샷") <= 0f && !DataManager.instance.playerData.skillData[1].isUnlock 
-            && DataManager.instance.playerData.statusData.mana >= DataManager.instance.playerData.skillData[1].useMana)
+            && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[1].useMana)
         {
             SkillManager.instance.SetActiveSkill(true);
         }
@@ -119,7 +119,8 @@ public class PlayerRangeFreeLookState : PlayerBaseState
     private void OnThirdSkill() // 화살비 [2]
     {
         if (SkillManager.instance.GetRemainingCooldown("화살비") <= 0f && !DataManager.instance.playerData.skillData[2].isUnlock 
-            && DataManager.instance.playerData.statusData.mana >= DataManager.instance.playerData.skillData[2].useMana)
+            && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[2].useMana
+            && stateMachine.Targeting.CurrentTarget != null)
         {
             stateMachine.ChangeState(new PlayerRangeSkyFallState(stateMachine));
         }

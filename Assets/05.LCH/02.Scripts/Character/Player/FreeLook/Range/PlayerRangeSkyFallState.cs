@@ -11,9 +11,9 @@ public class PlayerRangeSkyFallState : PlayerRangeFreeLookState
     #region abstract Methods
     public override void Enter()
     {
-        stateMachine.Animator.SetFloat(RangeVelocity, 0);
-
         stateMachine.Animator.CrossFadeInFixedTime(SkyFallAnimationHash, CrossFadeDuration);
+
+        stateMachine.transform.rotation = Quaternion.LookRotation(stateMachine.Targeting.CurrentTarget.transform.position - stateMachine.transform.position);
     }
 
     public override void Tick(float deltaTime)

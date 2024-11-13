@@ -187,6 +187,32 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1102 &-3766191007102576376
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Slash@Melee
+  m_Speed: 2
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: a979415d25222694dbe126207be070de, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!206 &-2933409825144320525
 BlendTree:
   m_ObjectHideFlags: 1
@@ -226,15 +252,15 @@ BlendTree:
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
   m_BlendType: 0
---- !u!1102 &-2260018560513996971
+--- !u!1102 &-1074903384161600475
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SpinSlash@Melee
-  m_Speed: 1.5
+  m_Name: Frost@Melee
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -246,7 +272,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 50d598d992f15074eaeb1d9323c724a4, type: 2}
+  m_Motion: {fileID: 7400000, guid: 64c5b4e70f5eb5645ba65e0ec0beb773, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -400,32 +426,6 @@ BlendTree:
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
   m_BlendType: 0
---- !u!1102 &3306574927456352577
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: DashSlash@Melee
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d3f1b7a0791cf1b4ab8733e928f116be, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1102 &3680257116164928716
 AnimatorState:
   serializedVersion: 6
@@ -619,12 +619,6 @@ AnimatorStateMachine:
     m_State: {fileID: 6370320498997713419}
     m_Position: {x: -80, y: 250, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: -2260018560513996971}
-    m_Position: {x: -80, y: 310, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 3306574927456352577}
-    m_Position: {x: -80, y: 370, z: 0}
-  - serializedVersion: 1
     m_State: {fileID: 6420969552803018742}
     m_Position: {x: -390, y: -90, z: 0}
   - serializedVersion: 1
@@ -645,6 +639,12 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -4921598131379131644}
     m_Position: {x: -390, y: -30, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -1074903384161600475}
+    m_Position: {x: -80, y: 370, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -3766191007102576376}
+    m_Position: {x: -80, y: 310, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

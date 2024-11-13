@@ -6,79 +6,84 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
 
-    [Header("스킬 선택창 UI 필드")]
-    public GameObject selectWindow;
-    public GameObject[] selectPosition = new GameObject[2];
-
-    [Header("근거리 스킬 프리팹")]
-    public GameObject[] meleeSkillPrefabs;
-
-    [Header("원거리 스킬 프리팹")]
-    public GameObject[] rangeSkillPrefabs;
-
-    [Header("스킬 쿨다운")]
-    public GameObject[] emptySlot;
-    public GameObject[] skillSlot;
+    [Header("스킬 트리")]
+    public GameObject[] selectWindow; // [0]: 전사, [1]: 궁수
+    public TextMeshProUGUI[] skillPoint;
 
     [Header("인벤토리 UI")]
     public GameObject inventoryWindow;
+    public Text[] inventoryStatus;
 
+
+    // 하단 인터페이스
     [Header("플레이어 스탯")]
+    public Text level;
     public Slider hp_Slider;
     public Slider mana_Slider;
-    public Text level;
     public Slider exp_Slider;
 
-    private bool isMelee;
+    [Header("스킬 슬롯")]
+    public GameObject[] emptySlot;
+    public GameObject[] skillSlot;
 
-    private string skillName;
+    private bool isMelee; // 클래스 확인
+
+    private string skillName; // 스킬 이름 확인
+
+    // 스탯 필드
+    private float currentHp;
+    private float currentMana;
+    private float currentExp;
+
+    private float lerpSpeed = 3f;
 
     private void Awake()
     {
-        instance = this;
-    }
-
-    private void Start()
-    {
-        selectWindow.SetActive(true);
-
-        GetRandomSkill();
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Update()
     {
-        hp_Slider.value = DataManager.instance.playerData.statusData.currentHealth / 100;
-        mana_Slider.value = DataManager.instance.playerData.statusData.mana / 100;
-        exp_Slider.value = DataManager.instance.playerData.statusData.exp / 100;
-
-        if (Input.GetKeyDown(KeyCode.K))
+        // 임시
+        if (Input.GetKeyDown(KeyCode.V))
         {
-            SelectWindow(true);
-
-            GetRandomSkill();
+            DataManager.instance.playerData.statusData.skillPoint += 1;
+        }
+        else if (Input.GetKeyDown(KeyCode.B))
+        {
+            DataManager.instance.LevelUp(50, 50);
         }
 
+        UpdateStatus(); // 하단 스탯
+        UpdateInventoryStatus(); // 인벤토리 스탯
+
+        // 인벤토리
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             InventoryWindow(!inventoryWindow.activeSelf);
         }
+
+        // 스킬 트리
+        switch (isMelee)
+        {
+            case true: // 전사 스킬 트리
+                skillPoint[0].text = $"Unused Skill Points {DataManager.instance.playerData.statusData.skillPoint} point";
+                if (Input.GetKeyDown(KeyCode.K)) { SetActiveSKillWindow(!selectWindow[0].activeSelf); }
+                break;
+
+            case false: // 궁수 스킬 트리
+                skillPoint[1].text = $"Unused Skill Points {DataManager.instance.playerData.statusData.skillPoint} point";
+                if (Input.GetKeyDown(KeyCode.K)) { SetActiveSKillWindow(!selectWindow[1].activeSelf); }
+                break;
+        }
     }
-
-
-    #region Toggle Window
-    // 스킬 선택 UI 토글
-    public void SelectWindow(bool openWindow)
-    {
-        selectWindow.SetActive(openWindow);
-    }   
-    
-    // 인벤토리 UI 토글
-    public void InventoryWindow(bool openWindow)
-    {
-        inventoryWindow.SetActive(openWindow);
-    }
-    #endregion
-
 
     #region Main Methods
     public void SetIsMelee(bool isMelee)
@@ -86,33 +91,32 @@ public class UIManager : MonoBehaviour
         this.isMelee = isMelee;
     }
 
-    // 랜덤 스킬 생성
-    public void GetRandomSkill()
+    // 하단 UI 업데이트
+    private void UpdateStatus()
     {
-        if (isMelee)
-        {
-            int[] randomValues = RandomNumberGenerator.GenerateRandomIndex(meleeSkillPrefabs.Length, selectPosition.Length);
+        level.text = DataManager.instance.playerData.statusData.level.ToString();
 
-            for (int i = 0; i < randomValues.Length; i++)
-            {
-                int randomValue = randomValues[i];
+        this.currentHp = DataManager.instance.playerData.statusData.currentHealth / DataManager.instance.playerData.statusData.maxHealth;
+        this.currentMana = DataManager.instance.playerData.statusData.currentMana / DataManager.instance.playerData.statusData.maxHealth;
+        this.currentExp = DataManager.instance.playerData.statusData.exp / 100;
 
-                Instantiate(meleeSkillPrefabs[randomValue], selectPosition[i].transform);
-            }
-        }
-        else
-        {
-            int[] randomValues = RandomNumberGenerator.GenerateRandomIndex(rangeSkillPrefabs.Length, selectPosition.Length);
-
-            for (int i = 0; i < randomValues.Length; i++)
-            {
-                int randomValue = randomValues[i];
-
-                Instantiate(rangeSkillPrefabs[randomValue], selectPosition[i].transform);
-            }
-        }
+        hp_Slider.value = Mathf.Lerp(hp_Slider.value, this.currentHp, lerpSpeed * Time.deltaTime);
+        mana_Slider.value = Mathf.Lerp(mana_Slider.value, this.currentMana, lerpSpeed * Time.deltaTime);
+        exp_Slider.value = Mathf.Lerp(exp_Slider.value, this.currentExp, lerpSpeed * Time.deltaTime);
     }
 
+    // 인벤토리 UI 업데이트
+    private void UpdateInventoryStatus()
+    {
+        inventoryStatus[0].text = DataManager.instance.playerData.statusData.level.ToString();
+        inventoryStatus[1].text = $"{DataManager.instance.playerData.statusData.minDamage} - {DataManager.instance.playerData.statusData.maxDamage}";
+        inventoryStatus[2].text = Mathf.Floor(100f / DataManager.instance.playerData.statusData.defense).ToString() + "%";
+        inventoryStatus[3].text = DataManager.instance.playerData.statusData.currentHealth.ToString();
+        inventoryStatus[4].text = DataManager.instance.playerData.statusData.currentMana.ToString();
+        inventoryStatus[5].text = Mathf.Floor(100f / DataManager.instance.playerData.statusData.moveSpeed).ToString() + "%";
+    }
+
+    // 스킬 슬롯 생성
     public void AddSkillSlot(int index)
     {
         for (int i = 0; i < emptySlot.Length; i++)
@@ -146,7 +150,7 @@ public class UIManager : MonoBehaviour
                         fireBladeSlot.transform.SetSiblingIndex(0);
                         break;
 
-                    case 5: // 회전베기
+                    case 5: // 빙결
                         GameObject spinSlashSlot = Instantiate(skillSlot[index], emptySlot[2].transform);
                         spinSlashSlot.transform.SetSiblingIndex(0);
                         break;
@@ -155,6 +159,56 @@ public class UIManager : MonoBehaviour
                 break;
             }
         }
+    }
+
+    /*// 랜덤 스킬 생성
+    public void GetRandomSkill()
+    {
+        if (!isMelee)
+        {
+            int[] randomValues = RandomNumberGenerator.GenerateRandomIndex(meleeSkillPrefabs.Length, selectPosition.Length);
+
+            for (int i = 0; i < randomValues.Length; i++)
+            {
+                int randomValue = randomValues[i];
+
+                Instantiate(meleeSkillPrefabs[randomValue], selectPosition[i].transform);
+            }
+        }
+        else
+        {
+            int[] randomValues = RandomNumberGenerator.GenerateRandomIndex(rangeSkillPrefabs.Length, selectPosition.Length);
+
+            for (int i = 0; i < randomValues.Length; i++)
+            {
+                int randomValue = randomValues[i];
+
+                Instantiate(rangeSkillPrefabs[randomValue], selectPosition[i].transform);
+            }
+        }
+    }*/
+    #endregion
+
+
+    #region Toggle Window
+    // 스킬 선택 UI 토글
+    public void SetActiveSKillWindow(bool openWindow)
+    {
+        switch (isMelee)
+        {
+            case true: 
+                selectWindow[0].SetActive(openWindow);
+                break;
+            case false: 
+                selectWindow[1].SetActive(openWindow);
+                break;
+        }
+    }
+
+    // 인벤토리 UI 토글
+    public void InventoryWindow(bool openWindow)
+    {
+        inventoryWindow.SetActive(openWindow);
     }
     #endregion
 }

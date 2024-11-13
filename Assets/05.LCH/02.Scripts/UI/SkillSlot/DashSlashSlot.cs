@@ -9,7 +9,7 @@ public class DashSlashSlot : MonoBehaviour
 
     private void Update()
     {
-        SlotCoolDownUpdate("도약베기");
+        SlotCoolDownUpdate("절단");
     }
 
     public void SlotCoolDownUpdate(string skillName)

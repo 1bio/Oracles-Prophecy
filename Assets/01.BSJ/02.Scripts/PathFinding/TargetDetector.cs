@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class TargetDetector : MonoBehaviour
@@ -9,7 +10,10 @@ public class TargetDetector : MonoBehaviour
     private RaycastHit _hit;
     [SerializeField] private float _detectionDistance = 5f;
     private float _fanAngle = 50f;
-    private float _fanCount = 10f;
+    private float _fanCount = 25f;
+
+    private float _currentTime = 0;
+    private float _updateTime = 100f;
 
     public bool IsTargetDetected { get; set; } = false;
     public float DetectionDistance { get => _detectionDistance; }
@@ -22,6 +26,8 @@ public class TargetDetector : MonoBehaviour
 
     private void FixedUpdate()
     {
+        BGMAudioManager.SetIsCombat(IsTargetDetected);
+
         if (!IsTargetDetected)
         {
             if (IsInFanShapeDetection(_detectionDistance))
@@ -29,9 +35,29 @@ public class TargetDetector : MonoBehaviour
         }
         else
         {
+            if (_monster.SkillController.CurrentSkillData != null)
+            {
+                _monster.SkillController.CurrentSkillData.IsTargetWithinSkillRange =
+                IsInFanShapeDetection(_monster.SkillController.CurrentSkillData.Range);
+            }
+
             _monster.CombatController.MonsterCombatAbility.MonsterAttack.IsTargetWithinAttackRange =
                IsInFanShapeDetection(_monster.CombatController.MonsterCombatAbility.MonsterAttack.Range);
+
+            if (IsInFanShapeDetection(_detectionDistance))
+                _currentTime = 0;
+            else
+                _currentTime += Time.deltaTime;
         }
+
+        if (_currentTime > _updateTime)
+        {
+            IsTargetDetected = IsInFanShapeDetection(_detectionDistance);
+            _currentTime = 0;
+        }
+
+        if (!_monster.StateMachineController.IsAlive())
+            IsTargetDetected = false;
     }
 
     public bool IsInFanShapeDetection(float detectionDistance)
@@ -39,7 +65,7 @@ public class TargetDetector : MonoBehaviour
         int layerMask = (1 << LayerMask.NameToLayer(GameLayers.Player.ToString())) |
                         (1 << LayerMask.NameToLayer(GameLayers.Obstacle.ToString()));
 
-        Vector3 startPos = transform.position + new Vector3(0, 0.5f, 0);
+        Vector3 startPos = transform.position + new Vector3(0, 1f, 0);
 
         for (int i = 0; i < _fanCount; i++)
         {

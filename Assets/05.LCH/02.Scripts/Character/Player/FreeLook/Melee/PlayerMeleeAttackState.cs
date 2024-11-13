@@ -21,7 +21,11 @@ public class PlayerMeleeAttackState : PlayerFreeLookState
 
         stateMachine.Animator.CrossFadeInFixedTime(attack.AnimationName, attack.TransitionDuration);
 
-        stateMachine.MeleeComponenet.SetAttack(attack.Damage, attack.KnockBack);
+        StatusData status = DataManager.instance.playerData.statusData;
+
+        stateMachine.MeleeComponenet.SetAttack(status.minDamage, status.maxDamage);
+
+        //stateMachine.MeleeComponenet.SetAttack(attack.Damage, attack.KnockBack);
 
         //stateMachine.WeaponTrail.CreateTrail();
 

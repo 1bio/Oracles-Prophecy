@@ -1272,7 +1272,6 @@ MonoBehaviour:
     - {fileID: 8300000, guid: f0eac462013e3c046bf8c59effd0b76e, type: 3}
   - name: DeathBody
     audioClips:
-    - {fileID: 8300000, guid: a65bc087ad150b44980d27409b3c0c7b, type: 3}
     - {fileID: 8300000, guid: 57be984066505e647abddb14ed43962e, type: 3}
   - name: DeathChains
     audioClips:

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour
     public Transform weaponTransform;
     public Transform offhandWristTransform;
     public Transform offhandHandTransform;
+    public Transform helmetTransform;
 
     private void Start()
     {
@@ -78,7 +80,7 @@ public class Player : MonoBehaviour
                 }
 
                 break;
-            case InterfaceType.Chest:
+            case InterfaceType.Box:
                 break;
             default:
                 break;
@@ -123,13 +125,15 @@ public class Player : MonoBehaviour
                                         .transform;
                                     break;
                             }
-
+                            break;
+                        case ItemType.Helmet:
+                            
                             break;
                     }
                 }
 
                 break;
-            case InterfaceType.Chest:
+            case InterfaceType.Box:
                 break;
             default:
                 break;

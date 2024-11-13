@@ -80,6 +80,22 @@ MonoBehaviour:
         prefabs:
         - {fileID: 4930818174071484651, guid: 5b9524a64b4bcaa409147f3a48532bae, type: 3}
         - {fileID: 0}
+    - guid: 9540330431534835873dd6b458bd6239
+      name: shield wall
+      _modules:
+      - guid: 7ba558450b684d72bc9b72bb352ddddd
+        name: shield wall
+        prefabs:
+        - {fileID: 6007756150463106985, guid: 6c6d360a7952d4040b5e5bd70da7a85e, type: 3}
+        - {fileID: 0}
+    - guid: 8759078b968c461980c9827ed03166ed
+      name: weapon wall
+      _modules:
+      - guid: 467353769e2a4533a016384b87e11042
+        name: weapon wall
+        prefabs:
+        - {fileID: 1808275083503820000, guid: c9051cb39db4ca241ba5e8e15f9a7e2b, type: 3}
+        - {fileID: 0}
     _floorGroups:
     - guid: b8af458f7f524ac89c5cf7778a40444b
       name: Floor1
@@ -218,14 +234,6 @@ MonoBehaviour:
         prefabs:
         - {fileID: 7073586779240058160, guid: 8b1510b8043046f46a4736a720162314, type: 3}
       _assetCategoryGuid: 5ed02f467a2443c7a77f6b068886c963
-    - guid: fe36be510e8e4a8c90b84450380c347d
-      name: Touch
-      _modules:
-      - guid: 3fd75b2082044e6584fc79530511f474
-        name: Touch
-        prefabs:
-        - {fileID: 4916467779054868767, guid: beb0691030ba59c4e94ffd7406eec0ae, type: 3}
-      _assetCategoryGuid: 5ed02f467a2443c7a77f6b068886c963
     - guid: c94aa5480fa847c59a2a59f18ce198bc
       name: Box
       _modules:
@@ -241,6 +249,46 @@ MonoBehaviour:
         name: Rum
         prefabs:
         - {fileID: 4835829558058133802, guid: e300ca4f63ac7df468a1dc91d9291585, type: 3}
+      _assetCategoryGuid: 5ed02f467a2443c7a77f6b068886c963
+    - guid: d43af7c8d3c0436d8f8232dc1059ec90
+      name: floorart1
+      _modules:
+      - guid: 5df5877660384ec8af3ee78712504938
+        name: floorart1
+        prefabs:
+        - {fileID: 4128879354391559217, guid: f7c11897c0ba396469b811f6bd3e8c70, type: 3}
+      _assetCategoryGuid: 5ed02f467a2443c7a77f6b068886c963
+    - guid: c110a19258d847099e3f874989db57d4
+      name: floorart2
+      _modules:
+      - guid: 2b4bf251b05749a89d3df4edf4e6a7d4
+        name: floorart2
+        prefabs:
+        - {fileID: 6999038423477717236, guid: f72afe8bfc2cd7142985d2e68e950fca, type: 3}
+      _assetCategoryGuid: 5ed02f467a2443c7a77f6b068886c963
+    - guid: 7153b1bfed91461f9dbc756435dafb42
+      name: floorart1B
+      _modules:
+      - guid: 50d4cf6fcf3f4a6cbdc0111f132479cd
+        name: floorart1B
+        prefabs:
+        - {fileID: 5999280577840918378, guid: 2a05251c7560c0e45aae6d2aeac7662e, type: 3}
+      _assetCategoryGuid: 5ed02f467a2443c7a77f6b068886c963
+    - guid: 2feabab1d1d04deeb3a00cc1b34295f8
+      name: floorart2B
+      _modules:
+      - guid: 76b6bf733c4e43509546381e4687839f
+        name: floorart2B
+        prefabs:
+        - {fileID: 8629874566629763256, guid: 61bac4f58f4273b4496186a3dccca228, type: 3}
+      _assetCategoryGuid: 5ed02f467a2443c7a77f6b068886c963
+    - guid: c1400c87ce5941d48eed911af318a765
+      name: Fire Touch
+      _modules:
+      - guid: 911289bd7cef418a9b236ad7c9b7e98e
+        name: Fire Touch
+        prefabs:
+        - {fileID: 5268667576140910156, guid: 442ea8ab109b14b4788c223346ea27a5, type: 3}
       _assetCategoryGuid: 5ed02f467a2443c7a77f6b068886c963
     _decoratorCategories:
     - guid: 5ed02f467a2443c7a77f6b068886c963

@@ -80,8 +80,8 @@ public class Health : MonoBehaviour
         {
             Monster monster = GetComponent<Monster>();
 
-            //MonsterHealthOnMouse.Monster = monster;
-            //MonsterHealthOnMouse.CurrentTime = 0;
+            MonsterHealthOnMouse.Monster = monster;
+            MonsterHealthOnMouse.CurrentTime = 0;
 
             currentHealth = monster.CombatController.MonsterCombatAbility.MonsterHealth.CurrentHealth;
 

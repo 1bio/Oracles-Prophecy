@@ -26,6 +26,8 @@ public class PlayerStateMachine : StateMachine
 
     [field: SerializeField] public ParticleEventHandler ParticleEventHandler { get; private set; }
 
+    [field: SerializeField] public PlayerAudio PlayerAudio { get; private set; }
+
 
     [field: Header("컴포넌트")]
     [field: SerializeField] public Animator Animator { get; private set; }
@@ -52,19 +54,21 @@ public class PlayerStateMachine : StateMachine
     private void OnEnable()
     {
         Health.ImpactEvent += OnHandleTakeDamage;
+        Health.DeadEvent += OnHandleDie;
     }
 
     private void OnDisable()
     {
         Health.ImpactEvent -= OnHandleTakeDamage;
+        Health.DeadEvent -= OnHandleDie;
     }
 
     private void Start()
     {
-        //SetPlayerClass();
+        SetPlayerClass();
 
         // 삭제 예정
-        ChangeState(new PlayerFreeLookState(this));
+        //ChangeState(new PlayerFreeLookState(this));
         //ChangeState(new PlayerRangeFreeLookState(this));
 
         DataManager.instance.SaveData();
@@ -124,17 +128,13 @@ public class PlayerStateMachine : StateMachine
         Health.SetHealth(DataManager.instance.playerData.statusData.currentHealth);
     }
 
-    // Groggy
-    /* void OnHandleGroggy()
-     {
-         ChangeState(new PlayerGroggyState(this));
-     }*/
-
     // Dead
-    /*void OnHandleDie()
+    void OnHandleDie()
     {
         ChangeState(new PlayerDeadState(this));
-    }*/
+
+        UIManager.instance.GameoverUI();
+    }
     #endregion
 
 }

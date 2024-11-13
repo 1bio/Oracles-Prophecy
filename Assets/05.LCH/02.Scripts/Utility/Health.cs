@@ -7,6 +7,12 @@ public class Health : MonoBehaviour
 {
     private float currentHealth;
 
+    private bool isInvunerable;
+    public bool isAlive { get; private set; } = true;
+    private bool isDead = false;
+
+    [SerializeField] private GameObject bloodVFX;
+
     // 피격 카운트 필드
     private int hitCount;
     private int groggyCount = 3;
@@ -16,12 +22,8 @@ public class Health : MonoBehaviour
 
     private float hitDurationCoolDown = 1f; // 1초 후에 hitCount 초기화
 
-    private bool isInvunerable;
-    public bool isAlive { get; private set; } = true;
-
     // 이벤트 필드
     public event Action ImpactEvent;
-    public event Action GroggyEvent;
     public event Action DeadEvent;
 
     private void Start()
@@ -31,7 +33,7 @@ public class Health : MonoBehaviour
 
     private void Update()
     {
-        CheckCoolDown(); 
+        //CheckCoolDown(); 
     }
 
     #region Main Methods
@@ -59,13 +61,6 @@ public class Health : MonoBehaviour
     {
         ImpactEvent?.Invoke();
 
-        Groggy(); 
-
-        if (currentHealth == 0)
-        {
-            Dead();
-        }
-
         // 플레이어 체력 초기화
         if (IsPlayer)
         {
@@ -76,11 +71,18 @@ public class Health : MonoBehaviour
 
             DataManager.instance.playerData.statusData.currentHealth = currentHealth;
 
-            return;
+            if(currentHealth <= 0)
+            {
+                Dead();
+            }
         }
         else // 몬스터 체력 초기화
         {
             Monster monster = GetComponent<Monster>();
+
+            //MonsterHealthOnMouse.Monster = monster;
+            //MonsterHealthOnMouse.CurrentTime = 0;
+
             currentHealth = monster.CombatController.MonsterCombatAbility.MonsterHealth.CurrentHealth;
 
             isAlive = currentHealth > 0;
@@ -94,6 +96,20 @@ public class Health : MonoBehaviour
 
             if (!monster.MovementController.TargetDetector.IsTargetDetected)
                 monster.MovementController.TargetDetector.IsTargetDetected = true;
+        }
+
+        PlayBloodVFX();
+    }
+
+    private void PlayBloodVFX()
+    {
+        ParticleSystem[] bloods = bloodVFX.GetComponentsInChildren<ParticleSystem>();
+
+        foreach (ParticleSystem blood in bloods)
+        {
+            blood.transform.position = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
+
+            blood.Play();
         }
     }
 
@@ -130,7 +146,21 @@ public class Health : MonoBehaviour
         }
     }
 
-    // hitCount 확인
+    // GameManager에서 이벤트 실행, 로비로 가기, UI 패널 열기 등 
+    private void Dead()
+    {
+        if (isDead)
+            return;
+
+        if(currentHealth <= 0)
+        {
+            isDead = true;
+
+            DeadEvent?.Invoke();
+        }
+    }
+
+    /*// hitCount 확인
     private void Groggy()
     {
         // 피격 횟수 로직
@@ -144,13 +174,6 @@ public class Health : MonoBehaviour
 
             hitCount = 0;
         }
-    }
-
-    private void Dead()
-    {
-        DeadEvent?.Invoke();
-
-        // GameManager에서 이벤트 실행, 로비로 가기, UI 패널 열기 등 
-    }
+    }*/
     #endregion
 }

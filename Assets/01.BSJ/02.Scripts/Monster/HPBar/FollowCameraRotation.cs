@@ -1,4 +1,4 @@
-using TMPro;
+/*using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -55,3 +55,4 @@ public class FollowCameraRotation : MonoBehaviour
         transform.rotation = Quaternion.Euler(30, 45, 0);
     }
 }
+*/

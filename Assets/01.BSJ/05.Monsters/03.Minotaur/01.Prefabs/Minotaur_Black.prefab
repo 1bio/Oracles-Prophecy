@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2136094727510901620}
+  - component: {fileID: -1049101472385386243}
+  - component: {fileID: 6357133407457737075}
   - component: {fileID: 2146750712450027517}
   - component: {fileID: -1617069489926129344}
   - component: {fileID: 2002745035083182435}
@@ -42,6 +44,150 @@ Transform:
   - {fileID: 1093468192688898945}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &-1049101472385386243
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250573953759366113}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &6357133407457737075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250573953759366113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2779324d52933d458291addade6eb39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - name: Footstep
+    audioClips:
+    - {fileID: 8300000, guid: 749b1b99b3d130d40a9b7614543b08e2, type: 3}
+    - {fileID: 8300000, guid: 4c75d9af65d5bbf4b8fe75e826e2cb59, type: 3}
+    - {fileID: 8300000, guid: 13f16bb2b0e14de4fbe538113b7f3cee, type: 3}
+    - {fileID: 8300000, guid: be08b5e4e46ece642a8ac6061e075980, type: 3}
+  - name: Death Body
+    audioClips:
+    - {fileID: 8300000, guid: a65bc087ad150b44980d27409b3c0c7b, type: 3}
+  - name: Death Voice
+    audioClips:
+    - {fileID: 8300000, guid: d357ef62f7d29dc4693c55d037c65c52, type: 3}
+  - name: Weapon Swing
+    audioClips:
+    - {fileID: 8300000, guid: 25014880d64424e4a8b460dd3bf81ed6, type: 3}
+    - {fileID: 8300000, guid: d86a031dbcb532c47a09228ba303d7f1, type: 3}
+  - name: Scream
+    audioClips:
+    - {fileID: 8300000, guid: 8834377ca6a6ec240a95be0ba27757d8, type: 3}
+    - {fileID: 8300000, guid: 6d5fbbff0d999aa4da01f20c579b989e, type: 3}
+  - name: Attack
+    audioClips:
+    - {fileID: 8300000, guid: c53af5cba50317645959a671ebdb5deb, type: 3}
+  - name: Got Hit
+    audioClips:
+    - {fileID: 8300000, guid: f77a57d4477b4f64b905200cd9689fee, type: 3}
+  - name: Heavy Foot
+    audioClips:
+    - {fileID: 8300000, guid: 448621980a103a24582c8924d18b4b6e, type: 3}
+  - name: Impact
+    audioClips:
+    - {fileID: 8300000, guid: 0b577f02b3462b440bd20fb215556542, type: 3}
+  - name: Sliding
+    audioClips:
+    - {fileID: 8300000, guid: 82ac79a27036e4241acd0d5e67f67a3d, type: 3}
 --- !u!95 &2146750712450027517
 Animator:
   serializedVersion: 5

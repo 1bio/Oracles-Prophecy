@@ -81,6 +81,10 @@ public class Health : MonoBehaviour
         else // 몬스터 체력 초기화
         {
             Monster monster = GetComponent<Monster>();
+
+            MonsterHealthOnMouse.Monster = monster;
+            MonsterHealthOnMouse.CurrentTime = 0;
+
             currentHealth = monster.CombatController.MonsterCombatAbility.MonsterHealth.CurrentHealth;
 
             isAlive = currentHealth > 0;

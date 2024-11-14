@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonsterBehaviorDead : MonsterBehavior
 {
     private GameObject _monsterObj;
+    private bool _hasPlayed = false;
 
     public override void OnBehaviorStart(Monster monster)
     {
@@ -22,11 +23,15 @@ public class MonsterBehaviorDead : MonsterBehavior
     {
         monster.AnimationController.AnimatorStateInfo = monster.AnimationController.Animator.GetCurrentAnimatorStateInfo(0);
 
-        if (monster.AnimationController.AnimatorStateInfo.IsName("Death") &&
-            monster.AnimationController.AnimatorStateInfo.normalizedTime >= 0.9f)
+        if (monster.AnimationController.AnimatorStateInfo.IsName("Death"))
         {
-            monster.AnimationController.IsLockedInAnimation = false;
-            _monsterObj.SetActive(false);
+            if (monster.AnimationController.AnimatorStateInfo.normalizedTime >= 0.9f)
+                monster.AnimationController.IsLockedInAnimation = false;
+        }
+        else if (!_hasPlayed)
+        {
+            monster.AnimationController.PlayDeathAnimation();
+            _hasPlayed = true;
         }
     }
 

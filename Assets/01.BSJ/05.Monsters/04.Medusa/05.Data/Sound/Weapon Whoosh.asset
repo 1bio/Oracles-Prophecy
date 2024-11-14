@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a22fd948cb66a64e8e2f55d067a35e0, type: 3}
+  m_Name: Weapon Whoosh
+  m_EditorClassIdentifier: 
+  _audioClipName: Weapon Whoosh
+  _audioClips:
+  - {fileID: 8300000, guid: 2cbb28861b5531549a7e772795a42abc, type: 3}
+  - {fileID: 8300000, guid: f53ceb068fbdabd41a978c682914bfae, type: 3}
+  - {fileID: 8300000, guid: 3e24d0c679c57614e82a553d46a496a3, type: 3}
+  - {fileID: 8300000, guid: de2e37a89cee38145bd477c16a702ed8, type: 3}
+  - {fileID: 8300000, guid: 5d51219df635b054e953a84349436ec2, type: 3}

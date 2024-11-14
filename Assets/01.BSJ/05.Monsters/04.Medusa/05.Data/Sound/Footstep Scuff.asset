@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a22fd948cb66a64e8e2f55d067a35e0, type: 3}
+  m_Name: Footstep Scuff
+  m_EditorClassIdentifier: 
+  _audioClipName: Footstep Scuff
+  _audioClips:
+  - {fileID: 8300000, guid: 0f39e0a9f779a8849972aa3f8d95e2a5, type: 3}
+  - {fileID: 8300000, guid: 8d30f0cfb00dc4d40a189b6f245f7fec, type: 3}
+  - {fileID: 8300000, guid: 6d197f5b37fbfa446b94df37d5afd1e4, type: 3}
+  - {fileID: 8300000, guid: 81059fb06e4ccf343a3d574d7aae1e08, type: 3}
+  - {fileID: 8300000, guid: 6171090b97253dd42a1ab0bd3647bea7, type: 3}

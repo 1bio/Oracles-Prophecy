@@ -12,24 +12,16 @@ public class MonsterBehaviorIdle : MonsterBehavior
         _monster.CombatController.Health.SetHealth(monster.CombatController.MonsterCombatAbility.MonsterHealth.CurrentHealth);
 
         monster.AnimationController.PlayIdleAnimation();
-
-        monster.CombatController.Health.ImpactEvent += OnImpact;
     }
 
     public override void OnBehaviorUpdate(Monster monster)
     {
         if (monster.MovementController.TargetDetector.IsTargetDetected)
             monster.MovementController.LookAtTarget(monster.CombatController.MonsterCombatAbility.TurnSpeed);
-        monster.MovementController.Astar.StartPathCalculation(monster.transform.position, monster.MovementController.Astar.TargetTransform.position);
     }
 
     public override void OnBehaviorEnd(Monster monster)
     {
-        monster.CombatController.Health.ImpactEvent -= OnImpact;
-    }
 
-    private void OnImpact()
-    {
-        _monster.StateMachineController.OnGotHit();
     }
 }

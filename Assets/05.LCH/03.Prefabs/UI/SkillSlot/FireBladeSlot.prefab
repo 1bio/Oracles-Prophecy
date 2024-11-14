@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f92080ceb465dec4aae7358646040028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  icon: {fileID: 4349231452270919538}
   coolDownImage: {fileID: 3818579855221594838}
   coolDownText: {fileID: 4433308101575075891}
 --- !u!1 &7096837344680725722
@@ -111,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -123,7 +124,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 0
+  m_FillAmount: -0
   m_FillClockwise: 1
   m_FillOrigin: 2
   m_UseSpriteMesh: 0

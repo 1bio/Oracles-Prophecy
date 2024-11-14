@@ -45,8 +45,6 @@ public class MinotaurRamAttack : MonsterSkillData
     {
         InitializeValues(monster);
         
-        monster.ObjectTrail.gameObject.SetActive(true);
-
         //_indicator = monster.GetComponentInChildren<Indicator>(true);
         /*Debug.Log($"ActiveSkillEnter called. _hasRamStarted: {_hasRamStarted}");*/
     }
@@ -63,7 +61,7 @@ public class MinotaurRamAttack : MonsterSkillData
 
     public override void ActiveSkillExit(Monster monster)
     {
-        monster.ObjectTrail.gameObject.SetActive(false);
+
     }
 
     private void StartRamAttack(Monster monster)

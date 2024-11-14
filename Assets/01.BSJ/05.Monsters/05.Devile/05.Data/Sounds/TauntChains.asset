@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a22fd948cb66a64e8e2f55d067a35e0, type: 3}
+  m_Name: TauntChains
+  m_EditorClassIdentifier: 
+  _audioClipName: TauntChains
+  _audioClips:
+  - {fileID: 8300000, guid: 88081030c7217b241b7f9d2b3f73036e, type: 3}
+  - {fileID: 8300000, guid: cca1bb0d3cb8f8b499e0d5c38feb5693, type: 3}

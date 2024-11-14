@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a22fd948cb66a64e8e2f55d067a35e0, type: 3}
+  m_Name: Attack1Voice
+  m_EditorClassIdentifier: 
+  _audioClipName: Attack1Voice
+  _audioClips:
+  - {fileID: 8300000, guid: 8737082bcf0207c469c4a7bb370de84b, type: 3}
+  - {fileID: 8300000, guid: 3d4b506b8e7aae842ad1c3c02185cef6, type: 3}
+  - {fileID: 8300000, guid: b99152abbe235ed4aa64713f0ab90171, type: 3}

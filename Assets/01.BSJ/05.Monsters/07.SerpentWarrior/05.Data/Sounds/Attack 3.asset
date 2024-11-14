@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a22fd948cb66a64e8e2f55d067a35e0, type: 3}
+  m_Name: Attack 3
+  m_EditorClassIdentifier: 
+  _audioClipName: Attack 3
+  _audioClips:
+  - {fileID: 8300000, guid: 1526bca6fa8be974fbd8981167b4ef42, type: 3}
+  - {fileID: 8300000, guid: b4d06dd7dc3d6bb42a08cf0b3d933158, type: 3}
+  - {fileID: 8300000, guid: 6c6e9b17fcd928f489fa08f4a4690128, type: 3}

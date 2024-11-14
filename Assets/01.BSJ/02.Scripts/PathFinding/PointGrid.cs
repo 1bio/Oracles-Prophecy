@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -111,26 +112,36 @@ public class PointGrid : MonoBehaviour
 
     public void InitializeNodeValues()
     {
-        foreach (PointNode node in _grid)
+        int sizeX = _grid.GetLength(0);
+        int sizeZ = _grid.GetLength(2);
+
+        for (int x = 0; x < sizeX; x++)
         {
-            node.Initialize();
+            for (int z = 0; z < sizeZ; z++)
+            {
+                _grid[x, 0, z].Initialize();
+            }
         }
     }
+
 
     public PointNode GetPointNodeFromGridByPosition(Vector3 position)
     {
-        foreach (PointNode node in _grid)
-        {
-            if (node.Position.x - _nodeRadius <= position.x && node.Position.x + _nodeRadius > position.x
-                && node.Position.z - _nodeRadius <= position.z && node.Position.z + _nodeRadius > position.z)
-                return node;
-        }
+        int nodeX = (int) Mathf.Floor(position.x);
+        int nodeZ = (int) Mathf.Floor(position.z);
 
-        return null;
+        if ((nodeX >= 0 && nodeX < _grid.GetLength(0)) &&
+            (nodeZ >= 0 && nodeZ < _grid.GetLength(2)))
+            return _grid[nodeX, 0, nodeZ];
+        else
+        {
+            Debug.Log("position grid null");
+            return null;
+        }
     }
 
     // 만든 grid 큐브로 시각화
-    private void OnDrawGizmos()
+    /*private void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(transform.position, new Vector3(_gridWorldSize.x, _gridWorldSize.y, _gridWorldSize.z));
 
@@ -149,5 +160,5 @@ public class PointGrid : MonoBehaviour
                 Gizmos.DrawCube(node.Position, Vector3.one * (_nodeDiameter - .1f));
             }
         }
-    }
+    }*/
 }

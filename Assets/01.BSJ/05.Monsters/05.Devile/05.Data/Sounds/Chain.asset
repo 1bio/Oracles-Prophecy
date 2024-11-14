@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a22fd948cb66a64e8e2f55d067a35e0, type: 3}
+  m_Name: Chain
+  m_EditorClassIdentifier: 
+  _audioClipName: Chain
+  _audioClips:
+  - {fileID: 8300000, guid: df489f93759cd1f43a537d7d41b675b7, type: 3}
+  - {fileID: 8300000, guid: b30a8d8a9873fb842be1b3d89d9a2d74, type: 3}
+  - {fileID: 8300000, guid: 718ba4b102d88794b9c0e7ffeab1fd0d, type: 3}
+  - {fileID: 8300000, guid: 7101d77105a5e154995594e81e0fe41a, type: 3}
+  - {fileID: 8300000, guid: 5fdb618a01355114e9ed45fb1e039415, type: 3}
+  - {fileID: 8300000, guid: 7be7e16da1a7a7a4990070f746810a6f, type: 3}
+  - {fileID: 8300000, guid: 92981904dce92ef43a82b0acda51f9a6, type: 3}
+  - {fileID: 8300000, guid: 4e3ac411ee4fd584497cdfe43fa2268e, type: 3}
+  - {fileID: 8300000, guid: 45fa59ab2296b3e4c9dab72eedf54e33, type: 3}
+  - {fileID: 8300000, guid: 08591a1d293aab246812ae83faa9fda8, type: 3}
+  - {fileID: 8300000, guid: a139fec873b3bf046801ffb5d91e49c7, type: 3}
+  - {fileID: 8300000, guid: 5acfd54849cb5554abf911cbfacebe39, type: 3}

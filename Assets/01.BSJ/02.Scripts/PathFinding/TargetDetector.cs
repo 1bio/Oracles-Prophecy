@@ -6,6 +6,8 @@ using UnityEngine;
 public class TargetDetector : MonoBehaviour
 {
     private Monster _monster;
+    private Health _playerHealth;
+
     // Raycast ฐüทร
     private RaycastHit _hit;
     [SerializeField] private float _detectionDistance = 5f;
@@ -22,19 +24,22 @@ public class TargetDetector : MonoBehaviour
     {
         _monster = GetComponent<Monster>();
         IsTargetDetected = false;
+        _playerHealth = GameObject.Find("Player")?.GetComponent<Health>();
     }
 
     private void FixedUpdate()
     {
-        BGMAudioManager.SetIsCombat(IsTargetDetected);
-
         if (!IsTargetDetected)
         {
             if (IsInFanShapeDetection(_detectionDistance))
+            {
                 IsTargetDetected = true;
+            }
         }
         else
         {
+            BGMAudioManager.SetIsCombat(IsTargetDetected);
+
             if (_monster.SkillController.CurrentSkillData != null)
             {
                 _monster.SkillController.CurrentSkillData.IsTargetWithinSkillRange =
@@ -53,11 +58,15 @@ public class TargetDetector : MonoBehaviour
         if (_currentTime > _updateTime)
         {
             IsTargetDetected = IsInFanShapeDetection(_detectionDistance);
+            BGMAudioManager.SetIsCombat(IsTargetDetected);
             _currentTime = 0;
         }
 
         if (!_monster.StateMachineController.IsAlive())
+        {
             IsTargetDetected = false;
+            BGMAudioManager.SetIsCombat(IsTargetDetected);
+        }
     }
 
     public bool IsInFanShapeDetection(float detectionDistance)
@@ -83,7 +92,7 @@ public class TargetDetector : MonoBehaviour
                 if (_hit.distance > detectionDistance)
                     return false;
 
-                if (_hit.collider.gameObject.layer == LayerMask.NameToLayer(GameLayers.Player.ToString()))
+                if (_hit.collider.gameObject.layer == LayerMask.NameToLayer(GameLayers.Player.ToString()) && _playerHealth != null && _playerHealth.GetHealth() > 0)
                 {
                     return true;
                 }

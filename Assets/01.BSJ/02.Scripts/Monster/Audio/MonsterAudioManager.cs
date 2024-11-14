@@ -1,24 +1,14 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
-using UnityEngine.Rendering;
 
 public class MonsterAudioManager : MonoBehaviour
 {
     private AudioSource _audioSource;
     private Animator _animator;
 
-    public List<Monster_AudioClips> audioClips = new List<Monster_AudioClips>();
+    public List<MonsterAudioClipData> audioClips = new List<MonsterAudioClipData>();
 
     private AudioListener _listener;
-
-    [System.Serializable]
-    public class Monster_AudioClips
-    {
-        public string name; 
-        public AudioClip[] audioClips;
-    }
 
     private void ConfigureAudioSource(AudioSource audioSource)
     {
@@ -46,16 +36,14 @@ public class MonsterAudioManager : MonoBehaviour
 
     public void PlayAudio(string name)
     {
-        int index = AudioClipIndex(name);
-
-        AudioClip audioClip = audioClips[index].audioClips[Random.Range(0, audioClips[index].audioClips.Length)];
+        AudioClip audioClip = GetRandomAudioClip(name);
         _audioSource.clip = audioClip;
 
         float horizontalDistance = Vector3.Distance(new Vector3(_listener.transform.position.x, 0, _listener.transform.position.z), new Vector3(transform.position.x, 0, transform.position.z));
         float verticalDistance = Vector3.Distance(new Vector3(0 ,_listener.transform.position.y, 0), new Vector3(0, transform.position.y, 0));
         float distance = horizontalDistance + verticalDistance;
 
-        if (distance <= _audioSource.maxDistance)
+        if (distance <= _audioSource.maxDistance && audioClip != null)
         {
             PlayCustomAudioClip(audioClip, transform.position);
         }
@@ -72,19 +60,19 @@ public class MonsterAudioManager : MonoBehaviour
         ConfigureAudioSource(audioSource);
         audioSource.Play();
 
-        Object.Destroy(gameObject, audioClip.length * ((Time.timeScale < 0.01f) ? 0.01f : Time.timeScale));
+        Destroy(gameObject, audioClip.length * ((Time.timeScale < 0.01f) ? 0.01f : Time.timeScale));
     }
 
-    private int AudioClipIndex(string name)
+    private AudioClip GetRandomAudioClip(string name)
     {
-        for (int i = 0; i < audioClips.Count; i++)
+        foreach (MonsterAudioClipData clipData in audioClips)
         {
-            if (audioClips[i].name == name)
+            if (clipData.GetAudioClipName() == name)
             {
-                return i;
+                return clipData.GetAudioClips()[Random.Range(0, clipData.GetAudioClips().Length)];
             }
         }
-        Debug.LogError("Did not find an audioClips[] entry named \"" + name + "\".");
-        return 0;
+
+        return null;
     }
 }

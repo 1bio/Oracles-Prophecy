@@ -7,14 +7,7 @@ public class BGMAudioManager : MonoBehaviour
 {
     public static BGMAudioManager Instance { get; private set; }
 
-    [SerializeField] private List<BGMAudioClips> _bgmAudioClips = new List<BGMAudioClips>();
-
-    [System.Serializable]
-    public class BGMAudioClips
-    {
-        public string name;
-        public AudioClip[] audioClips;
-    }
+    [SerializeField] private List<BGMAudioClipData> _bgmAudioClips = new List<BGMAudioClipData>();
 
     private AudioSource _audioSource;
 
@@ -25,44 +18,14 @@ public class BGMAudioManager : MonoBehaviour
     [Range(0, 1f)]
     [SerializeField] private float _playerVolume;
 
-    private BGMAudioName _lastPlayBGM = BGMAudioName.None;
-
     private string _currentSceneName;
-    private bool _isBGMSwitched = false;
-
-    // Dungeon
+    private BGMAudioName _lastPlayBGM = BGMAudioName.None;
+    private bool _isSwitching = false;
     private static bool _isCombat = false;
 
-    public static float GetMonsterVolume() { return Instance._monsterVolume; }
-    public static float GetPlayerVolume() { return Instance._playerVolume; } 
+    public static float GetMonsterVolume() => Instance._monsterVolume;
+    public static float GetPlayerVolume() => Instance._playerVolume;
     public static void SetIsCombat(bool isCombat) { _isCombat = isCombat; }
-
-
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        if (_audioSource == null)
-        {
-            _audioSource = GetComponent<AudioSource>();
-        }
-
-        int index = scene.name.IndexOf(' ');
-
-        if (index != -1)
-            _currentSceneName = scene.name.Substring(0, index);
-        else
-            _currentSceneName = scene.name;
-
-        _isBGMSwitched = true;
-        SetBGMForScene();
-    }
 
     private void Awake()
     {
@@ -74,24 +37,30 @@ public class BGMAudioManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            return;
         }
 
         _audioSource = GetComponent<AudioSource>();
         _audioSource.spatialBlend = 0f;
         _audioSource.loop = true;
     }
-        
+
+    private void OnEnable() => SceneManager.sceneLoaded += OnSceneLoaded;
+    private void OnDisable() => SceneManager.sceneLoaded -= OnSceneLoaded;
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        _currentSceneName = scene.name.Split(' ')[0];
+        SetBGMForScene();
+    }
+
     private void Update()
     {
         if (_audioSource != null)
         {
             _audioSource.volume = _bgmVolume;
+            SetBGMForScene();
         }
-    }
-
-    private void LateUpdate()
-    {
-        SetBGMForScene();
     }
 
     private void SetBGMForScene()
@@ -99,102 +68,67 @@ public class BGMAudioManager : MonoBehaviour
         switch (_currentSceneName)
         {
             case "BSJ":
-                DungeonBGM();
+                if (_isCombat) PlayBGM(BGMAudioName.Combat);
+                else PlayBGM(BGMAudioName.Dungeon);
                 break;
-            default:
+            case "Village":
+                PlayBGM(BGMAudioName.Village);
                 break;
         }
     }
 
+    private void PlayBGM(BGMAudioName bgmName)
+    {
+        if (_lastPlayBGM == bgmName || _isSwitching) return;
 
-    private void DungeonBGM()
-    {
-        if (_isCombat)
-        {
-            if (_lastPlayBGM != BGMAudioName.Combat)
-                PlayCombatBGM();
-        }
-        else if (_isBGMSwitched)
-        {
-            if (_lastPlayBGM != BGMAudioName.Dungeon)
-                PlayDungeonBGM();
-        }
-    }
-    private void PlayDungeonBGM()
-    {
-        StartCoroutine(SwitchBGM(BGMAudioName.Dungeon.ToString(), 1.5f, 0));
-        _lastPlayBGM = BGMAudioName.Dungeon;
-        _isBGMSwitched = false;
-    }
-    private void PlayCombatBGM()
-    {
-        StartCoroutine(SwitchBGM(BGMAudioName.Combat.ToString()));
-        _lastPlayBGM = BGMAudioName.Combat;
-        _isBGMSwitched = true;
+        _lastPlayBGM = bgmName;
+
+        StartCoroutine(SwitchBGM(bgmName.ToString(), bgmName == BGMAudioName.Combat ? 0.5f : 1.5f));
     }
 
-    private void PlayBGM(string bgmName)
+    private IEnumerator SwitchBGM(string bgmName, float transitionTime)
     {
+        if (_isSwitching) yield break;
+
+        _isSwitching = true;
         float startVolume = _bgmVolume;
 
-        int index = AudioClipIndex(bgmName);
-        _audioSource.clip = _bgmAudioClips[index].audioClips[Random.Range(0, _bgmAudioClips[index].audioClips.Length)];
-
-        if (!_audioSource.isPlaying)
+        for (float t = 0; t < transitionTime; t += Time.deltaTime)
         {
-            _audioSource.Play();
-            _bgmVolume = startVolume;
-        }
-    }
-
-    private IEnumerator SwitchBGM(string bgmName)    // ±âº» °ª 0
-    {
-        return SwitchBGM(bgmName, 0f, 0f);
-    }
-    private IEnumerator SwitchBGM(string bgmName, float delayTime, float targetVolume)
-    {
-        float startVolume = _bgmVolume;
-
-        for (float t = 0; t < delayTime; t += Time.deltaTime)
-        {
-            _bgmVolume = Mathf.Lerp(startVolume, targetVolume, t / delayTime);
+            _bgmVolume = Mathf.Lerp(startVolume, 0, t / transitionTime);
             yield return null;
         }
-        _bgmVolume = targetVolume;
 
-        int index = AudioClipIndex(bgmName);
-        _audioSource.clip = _bgmAudioClips[index].audioClips[Random.Range(0, _bgmAudioClips[index].audioClips.Length)];
+        _audioSource.clip = GetAudioClip(bgmName);
+        _audioSource.Play();
 
-        if (!_audioSource.isPlaying)
+        for (float t = 0; t < transitionTime; t += Time.deltaTime)
         {
-            _audioSource.Play();
-
-            for (float t = 0; t < delayTime; t += Time.deltaTime)
-            {
-                _bgmVolume = Mathf.Lerp(targetVolume, startVolume, t / delayTime);
-                yield return null;
-            }
+            _bgmVolume = Mathf.Lerp(0, startVolume, t / transitionTime);
+            yield return null;
         }
-        _bgmVolume = startVolume;
+
+        _isSwitching = false;
     }
 
-    private int AudioClipIndex(string name)
+    private AudioClip GetAudioClip(string name)
     {
-        for (int i = 0; i < _bgmAudioClips.Count; i++)
+        foreach (BGMAudioClipData bgmClip in _bgmAudioClips)
         {
-            if (_bgmAudioClips[i].name == name)
+            if (bgmClip.GetSceneName() == name)
             {
-                return i;
+                return bgmClip.GetAudioClip();
             }
         }
-        Debug.LogError("Did not find an audioClips[] entry named \"" + name + "\".");
-        return 0;
+        Debug.LogError($"Audio clip not found for BGM: {name}");
+        return null;
     }
 
-    enum BGMAudioName
+    private enum BGMAudioName
     {
         None,
         Dungeon,
-        Combat
+        Combat,
+        Village,
     }
 }

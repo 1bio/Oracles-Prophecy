@@ -10,6 +10,7 @@ public class MonsterDamageHandler : MonoBehaviour
     public void SetMonster(Monster monster)
     {
         _monster = monster;
+        _cameraShake = monster.GetComponent<CameraShake>();
     }
 
     private void Awake()
@@ -26,6 +27,7 @@ public class MonsterDamageHandler : MonoBehaviour
         {
             Debug.Log("Player Hit");
             _playerHealth?.TakeDamage(_monster.CombatController.MonsterCombatAbility.MonsterAttack.Damage, true);
+            _cameraShake.ShakeCamera(1.5f, 0.3f);
         }
     }
 }

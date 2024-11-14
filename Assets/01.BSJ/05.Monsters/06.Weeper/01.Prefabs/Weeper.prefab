@@ -6302,41 +6302,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips:
-  - name: Got Hit Cloth
-    audioClips:
-    - {fileID: 8300000, guid: 23fad11b3391e624c88969e161b187c0, type: 3}
-    - {fileID: 8300000, guid: 0af32b98237806d4197af571089717ae, type: 3}
-    - {fileID: 8300000, guid: 9061267a859f7fe4a944831cb971c78b, type: 3}
-  - name: Got Hit Vocals
-    audioClips:
-    - {fileID: 8300000, guid: dadb07d5e7b55aa4b9cf690806e3f623, type: 3}
-    - {fileID: 8300000, guid: 4d4f3466b83c2784f9e77e387a151c73, type: 3}
-    - {fileID: 8300000, guid: dd98830faa3239947af5281cf6c1db6e, type: 3}
-  - name: Death Soul
-    audioClips:
-    - {fileID: 8300000, guid: 4adc28d541e106b42bab12adb64cc6ab, type: 3}
-  - name: Death Cloth
-    audioClips:
-    - {fileID: 8300000, guid: 3e03cbdc8fcca834986326a30af564da, type: 3}
-  - name: Cloth Idle
-    audioClips:
-    - {fileID: 8300000, guid: 5df504a9b2d2d714eb399e87c274d9dd, type: 3}
-    - {fileID: 8300000, guid: f273bc446bfc70949a33430526805576, type: 3}
-    - {fileID: 8300000, guid: d39a715d04c9daa4ab61625c1a69d46e, type: 3}
-    - {fileID: 8300000, guid: 73affcdf276a9934b8ce8aa580d8d424, type: 3}
-    - {fileID: 8300000, guid: df615ea1cc3cc474aac9ebf3f200634e, type: 3}
-  - name: Attack Vocals
-    audioClips:
-    - {fileID: 8300000, guid: d7ffebbe0603c0243b42770af9e222ed, type: 3}
-    - {fileID: 8300000, guid: 2cb23853707c699458bc1fb8cdc158d6, type: 3}
-    - {fileID: 8300000, guid: f2b5169c71c14ae4090081076a14e19e, type: 3}
-  - name: Cloth Movement
-    audioClips:
-    - {fileID: 8300000, guid: 5df504a9b2d2d714eb399e87c274d9dd, type: 3}
-    - {fileID: 8300000, guid: f273bc446bfc70949a33430526805576, type: 3}
-    - {fileID: 8300000, guid: d39a715d04c9daa4ab61625c1a69d46e, type: 3}
-    - {fileID: 8300000, guid: 73affcdf276a9934b8ce8aa580d8d424, type: 3}
-    - {fileID: 8300000, guid: df615ea1cc3cc474aac9ebf3f200634e, type: 3}
+  - {fileID: 11400000, guid: 9270a6f1e459afa4a8c3052c0ee712e5, type: 2}
+  - {fileID: 11400000, guid: 1bf537d805258ab45bbf915d46e4538f, type: 2}
+  - {fileID: 11400000, guid: bf1c528e51c170948b98372411437361, type: 2}
+  - {fileID: 11400000, guid: b3566bdd03533444091d4fe4cccd5964, type: 2}
+  - {fileID: 11400000, guid: 482912e2a87650b4fa3d7934697c59c3, type: 2}
+  - {fileID: 11400000, guid: 89115f0e842fe714fa30d5cf72cb1315, type: 2}
+  - {fileID: 11400000, guid: 0a449639074425c47978a83584a9b42c, type: 2}
 --- !u!143 &8132709075179377168
 CharacterController:
   m_ObjectHideFlags: 0

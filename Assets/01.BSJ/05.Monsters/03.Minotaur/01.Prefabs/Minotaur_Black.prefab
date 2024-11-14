@@ -178,41 +178,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips:
-  - name: Footstep
-    audioClips:
-    - {fileID: 8300000, guid: 749b1b99b3d130d40a9b7614543b08e2, type: 3}
-    - {fileID: 8300000, guid: 4c75d9af65d5bbf4b8fe75e826e2cb59, type: 3}
-    - {fileID: 8300000, guid: 13f16bb2b0e14de4fbe538113b7f3cee, type: 3}
-    - {fileID: 8300000, guid: be08b5e4e46ece642a8ac6061e075980, type: 3}
-  - name: Death Body
-    audioClips:
-    - {fileID: 8300000, guid: a65bc087ad150b44980d27409b3c0c7b, type: 3}
-  - name: Death Voice
-    audioClips:
-    - {fileID: 8300000, guid: d357ef62f7d29dc4693c55d037c65c52, type: 3}
-  - name: Weapon Swing
-    audioClips:
-    - {fileID: 8300000, guid: 25014880d64424e4a8b460dd3bf81ed6, type: 3}
-    - {fileID: 8300000, guid: d86a031dbcb532c47a09228ba303d7f1, type: 3}
-  - name: Scream
-    audioClips:
-    - {fileID: 8300000, guid: 8834377ca6a6ec240a95be0ba27757d8, type: 3}
-    - {fileID: 8300000, guid: 6d5fbbff0d999aa4da01f20c579b989e, type: 3}
-  - name: Attack
-    audioClips:
-    - {fileID: 8300000, guid: c53af5cba50317645959a671ebdb5deb, type: 3}
-  - name: Got Hit
-    audioClips:
-    - {fileID: 8300000, guid: f77a57d4477b4f64b905200cd9689fee, type: 3}
-  - name: Heavy Foot
-    audioClips:
-    - {fileID: 8300000, guid: 448621980a103a24582c8924d18b4b6e, type: 3}
-  - name: Impact
-    audioClips:
-    - {fileID: 8300000, guid: 0b577f02b3462b440bd20fb215556542, type: 3}
-  - name: Sliding
-    audioClips:
-    - {fileID: 8300000, guid: 82ac79a27036e4241acd0d5e67f67a3d, type: 3}
+  - {fileID: 11400000, guid: 3e547bb62dbd37b47a8609d139d0ea2a, type: 2}
+  - {fileID: 11400000, guid: 3d90b12e256f9bf4997a88017dd81540, type: 2}
+  - {fileID: 11400000, guid: b7c28dedbbf537c4aaaace976b127c8a, type: 2}
+  - {fileID: 11400000, guid: 88d3fc418052dad40bdb244fe1aeb18b, type: 2}
+  - {fileID: 11400000, guid: 82ebe51565b0acd41b764d74c65ed087, type: 2}
+  - {fileID: 11400000, guid: b9c559044f973ee43b2d211d89dbf8cd, type: 2}
+  - {fileID: 11400000, guid: ce5b1f8fdcd5a64479973b065019c635, type: 2}
+  - {fileID: 11400000, guid: 82f64732232358a41ac2d024bcf4832b, type: 2}
+  - {fileID: 11400000, guid: de4a74086145c0d4eba0ffcf32ca3a3d, type: 2}
+  - {fileID: 11400000, guid: 1c9d6d9de2c9c7542806e3b7be5cde97, type: 2}
 --- !u!143 &-1617069489926129344
 CharacterController:
   m_ObjectHideFlags: 0

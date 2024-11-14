@@ -13,6 +13,8 @@ public class MonsterParticleAudioHandler : MonoBehaviour
     {
         _particleSystem = this.gameObject.GetComponentInParent<ParticleSystem>();
         _audioSource = this.gameObject.GetComponent<AudioSource>();
+
+        _audioSource.volume = BGMAudioManager.GetMonsterVolume();
     }
 
     void Update()

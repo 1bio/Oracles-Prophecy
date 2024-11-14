@@ -843,83 +843,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips:
-  - name: Armor Hit
-    audioClips:
-    - {fileID: 8300000, guid: 6f9293ac8810828449a76cae54de692d, type: 3}
-    - {fileID: 8300000, guid: 25b024af0fd20ac4baeb9890883a19f1, type: 3}
-    - {fileID: 8300000, guid: ca9d0222a31db2f4abbb193298391aa8, type: 3}
-  - name: Armor Movement
-    audioClips:
-    - {fileID: 8300000, guid: 38a27ec42aea0744e9678217a4a516fb, type: 3}
-    - {fileID: 8300000, guid: 12be1b168de80d149a1217211fc0c9c8, type: 3}
-    - {fileID: 8300000, guid: f8ec2c08d29b31c4b910008ba5d6fb0f, type: 3}
-    - {fileID: 8300000, guid: d36efb0315224ad4dad8ba216ada1d96, type: 3}
-    - {fileID: 8300000, guid: fb6556312870e67459dc3b32de0f30b8, type: 3}
-    - {fileID: 8300000, guid: 28463cec3259db446aeebd5d462545ec, type: 3}
-    - {fileID: 8300000, guid: 03fb6538e78739944aa8d81da565e70b, type: 3}
-  - name: Footstep
-    audioClips:
-    - {fileID: 8300000, guid: 883b330b075341a45bbfe93707bb05c0, type: 3}
-    - {fileID: 8300000, guid: e96aa7b959e65e444a84967872a5a42e, type: 3}
-    - {fileID: 8300000, guid: 4e6692ea42876274dada3f524be32ec9, type: 3}
-    - {fileID: 8300000, guid: 0d5de9f92d9f1c745a7c7f6611d55d21, type: 3}
-    - {fileID: 8300000, guid: 88f78a25a9342114f9b1bf75cd584d39, type: 3}
-  - name: Footstep Scuff
-    audioClips: []
-  - name: Death
-    audioClips:
-    - {fileID: 8300000, guid: 30af81c2bdcc6bf4a9e9c31fd09f86b3, type: 3}
-  - name: Attack Vocals
-    audioClips:
-    - {fileID: 8300000, guid: a388fd1e9f9020241b15d36fb79475a8, type: 3}
-    - {fileID: 8300000, guid: eeb29cbdaff1de446bb66716706f0b40, type: 3}
-    - {fileID: 8300000, guid: ca5227bffeeb98349b9e621b0eb2016b, type: 3}
-    - {fileID: 8300000, guid: c6040ebd22878774a834ac5a50feb572, type: 3}
-  - name: Scream
-    audioClips:
-    - {fileID: 8300000, guid: 77d3d4cdd31ff6c4fb6f236989b01029, type: 3}
-    - {fileID: 8300000, guid: 21af62c03cc425b458536cb550917bc0, type: 3}
-    - {fileID: 8300000, guid: e86cedbd28a2269439f65701f31cd655, type: 3}
-  - name: Snakescream Vocals
-    audioClips:
-    - {fileID: 8300000, guid: edfdb78b38c91a54a948b74725fdbf94, type: 3}
-  - name: Tail Whoosh
-    audioClips:
-    - {fileID: 8300000, guid: 9f3ccbe64fe25674a8cd792d3d31a3f7, type: 3}
-    - {fileID: 8300000, guid: 535e5d27a3ac78f46a6b01fff9fb0fbc, type: 3}
-    - {fileID: 8300000, guid: fcf2525d367cdf2408af1b2b4ceaec1c, type: 3}
-  - name: Weapon Whoosh
-    audioClips:
-    - {fileID: 8300000, guid: 2cbb28861b5531549a7e772795a42abc, type: 3}
-    - {fileID: 8300000, guid: f53ceb068fbdabd41a978c682914bfae, type: 3}
-    - {fileID: 8300000, guid: 3e24d0c679c57614e82a553d46a496a3, type: 3}
-    - {fileID: 8300000, guid: de2e37a89cee38145bd477c16a702ed8, type: 3}
-    - {fileID: 8300000, guid: 5d51219df635b054e953a84349436ec2, type: 3}
-  - name: Tail Whoosh Light
-    audioClips:
-    - {fileID: 8300000, guid: 9f3ccbe64fe25674a8cd792d3d31a3f7, type: 3}
-    - {fileID: 8300000, guid: 535e5d27a3ac78f46a6b01fff9fb0fbc, type: 3}
-    - {fileID: 8300000, guid: fcf2525d367cdf2408af1b2b4ceaec1c, type: 3}
-  - name: Footstep Light
-    audioClips:
-    - {fileID: 8300000, guid: 883b330b075341a45bbfe93707bb05c0, type: 3}
-    - {fileID: 8300000, guid: e96aa7b959e65e444a84967872a5a42e, type: 3}
-    - {fileID: 8300000, guid: 4e6692ea42876274dada3f524be32ec9, type: 3}
-    - {fileID: 8300000, guid: 0d5de9f92d9f1c745a7c7f6611d55d21, type: 3}
-    - {fileID: 8300000, guid: 88f78a25a9342114f9b1bf75cd584d39, type: 3}
-  - name: Tail Slither
-    audioClips:
-    - {fileID: 8300000, guid: 65c9cdbd24eb8ae41b084fd05b03c70a, type: 3}
-    - {fileID: 8300000, guid: e4009aacb2b2e1c4489655474cee8985, type: 3}
-    - {fileID: 8300000, guid: 40cd98a210644b34396f55706242794d, type: 3}
-    - {fileID: 8300000, guid: 06fa5ad18858cf2418a9006aa3a0dfd1, type: 3}
-    - {fileID: 8300000, guid: 4a26ef9f68d2bcd4280298a5a688416c, type: 3}
-    - {fileID: 8300000, guid: dea0e8585f8eaa945ae1f09f4728b6f7, type: 3}
-    - {fileID: 8300000, guid: 3cd4289fe6122da4abc558f5a012aa01, type: 3}
-    - {fileID: 8300000, guid: d40369624c3212e4cac4c49e1abf325b, type: 3}
-    - {fileID: 8300000, guid: 35a04fab23c9b6049bc8881afe6b17cc, type: 3}
-    - {fileID: 8300000, guid: 34de532d4daa7ec4a80f7bff7e8520a7, type: 3}
-    - {fileID: 8300000, guid: 67d40d6837b45374981034658b1284be, type: 3}
+  - {fileID: 11400000, guid: 8b384263257765f4da4e171e124b3591, type: 2}
+  - {fileID: 11400000, guid: f45e0265fc1febb46ae1ae7c6df05347, type: 2}
+  - {fileID: 11400000, guid: 09550e0bed3f75c4681ce50a898ec247, type: 2}
+  - {fileID: 11400000, guid: b48232997e2741945a39ff5207da3ba6, type: 2}
+  - {fileID: 11400000, guid: f5b4479041c6c1d42a3f80b29bdb2f7b, type: 2}
+  - {fileID: 11400000, guid: 9e2c2803b03620f4f8c22e40dbdf2f75, type: 2}
+  - {fileID: 11400000, guid: 885b76493f17f954d8f725e9ed895e18, type: 2}
+  - {fileID: 11400000, guid: 5f0f4c7e176dec946bb9b261f9556321, type: 2}
+  - {fileID: 11400000, guid: e1ccb81fc7e2ac14d94d69ef040d93ce, type: 2}
+  - {fileID: 11400000, guid: e0314bd18ac53244a90557a0e30577b2, type: 2}
+  - {fileID: 11400000, guid: 49e0fd45c4646a7458b8650423074854, type: 2}
+  - {fileID: 11400000, guid: 9675b776b99e8c04ea912a27edba8ebd, type: 2}
 --- !u!143 &-1826578382547547419
 CharacterController:
   m_ObjectHideFlags: 0

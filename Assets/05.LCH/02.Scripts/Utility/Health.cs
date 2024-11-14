@@ -37,10 +37,6 @@ public class Health : MonoBehaviour
     }
 
     #region Main Methods
-    public float GetHealth()
-    {
-        return currentHealth;
-    }
     public void SetHealth(float currentHealth)
     {
         this.currentHealth = currentHealth;

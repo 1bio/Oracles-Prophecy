@@ -14,7 +14,7 @@ public class MonsterDamageHandler : MonoBehaviour
     private void Awake()
     {
         _monster = GetComponentInParent<Monster>();
-        _playerHealth = GameObject.Find("Player").GetComponent<Health>();
+        _playerHealth = GameObject.Find("Player")?.GetComponent<Health>();
     }
 
     private void OnTriggerEnter(Collider other)

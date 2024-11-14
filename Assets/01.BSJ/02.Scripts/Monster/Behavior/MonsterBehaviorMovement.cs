@@ -32,8 +32,6 @@ public class MonsterBehaviorMovement : MonsterBehavior
         _pathIndex = 0;
 
         _checkTarget = false;
-
-        monster.CombatController.Health.ImpactEvent += OnImpact;
     }
 
     public override void OnBehaviorUpdate(Monster monster)
@@ -84,12 +82,6 @@ public class MonsterBehaviorMovement : MonsterBehavior
     public override void OnBehaviorEnd(Monster monster)
     {
         monster.AnimationController.PlayIdleAnimation();
-        monster.CombatController.Health.ImpactEvent -= OnImpact;
-    }
-
-    private void OnImpact()
-    {
-        _monster.StateMachineController.OnGotHit();
     }
 
     private PointNode FindNeighborNode(PointNode node)

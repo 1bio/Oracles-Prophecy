@@ -41,7 +41,7 @@ public class MonsterParticleDamageHandler : MonoBehaviour
 
     private void Awake()
     {
-        _playerHealth = GameObject.Find("Player").GetComponent<Health>();
+        _playerHealth = GameObject.Find("Player")?.GetComponent<Health>();
         particleSystem = this.GetComponent<ParticleSystem>();
     }
 

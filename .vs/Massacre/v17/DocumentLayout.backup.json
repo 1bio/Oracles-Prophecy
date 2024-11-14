@@ -11,16 +11,32 @@
       "RelativeMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|solutionrelative:assets\\01.bsj\\02.scripts\\pathfinding\\astar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|C:\\Users\\USER\\Desktop\\Unity\\Massacre\\assets\\01.bsj\\02.scripts\\monster\\behavior\\monsterbehaviormovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|solutionrelative:assets\\01.bsj\\02.scripts\\monster\\behavior\\monsterbehaviormovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|C:\\Users\\USER\\Desktop\\Unity\\Massacre\\assets\\01.bsj\\02.scripts\\monster\\audio\\monsteraudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|solutionrelative:assets\\01.bsj\\02.scripts\\monster\\audio\\monsteraudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|C:\\Users\\USER\\Desktop\\Unity\\Massacre\\assets\\01.bsj\\02.scripts\\monster\\behavior\\monsterbehavioridle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|solutionrelative:assets\\01.bsj\\02.scripts\\monster\\behavior\\monsterbehavioridle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\unity\\massacre\\assets\\01.bsj\\02.scripts\\monster\\monsterspawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|solutionrelative:assets\\01.bsj\\02.scripts\\monster\\monsterspawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\unity\\massacre\\assets\\01.bsj\\02.scripts\\pathfinding\\pointnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|solutionrelative:assets\\01.bsj\\02.scripts\\pathfinding\\pointnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|C:\\Users\\USER\\Desktop\\Unity\\Massacre\\assets\\01.bsj\\02.scripts\\monster\\type\\02.cobrasnake\\cobrasnakepoisonthrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|solutionrelative:assets\\01.bsj\\02.scripts\\monster\\type\\02.cobrasnake\\cobrasnakepoisonthrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|C:\\Users\\USER\\Desktop\\Unity\\Massacre\\assets\\01.bsj\\02.scripts\\monster\\type\\06.weeper\\skills\\weeperfollowingshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|solutionrelative:assets\\01.bsj\\02.scripts\\monster\\type\\06.weeper\\skills\\weeperfollowingshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|C:\\Users\\USER\\Desktop\\Unity\\Massacre\\assets\\01.bsj\\02.scripts\\monster\\behavior\\monsterbehaviormovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|solutionrelative:assets\\01.bsj\\02.scripts\\monster\\behavior\\monsterbehaviormovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Library\\PackageCache\\com.unity.render-pipelines.universal@14.0.9\\Runtime\\UniversalRenderPipeline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,10 +51,6 @@
       "RelativeMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|solutionrelative:assets\\05.lch\\02.scripts\\character\\statemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|C:\\Users\\USER\\Desktop\\Unity\\Massacre\\assets\\01.bsj\\02.scripts\\monster\\audio\\monsteraudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|solutionrelative:assets\\01.bsj\\02.scripts\\monster\\audio\\monsteraudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\unity\\massacre\\assets\\05.lch\\02.scripts\\utility\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|solutionrelative:assets\\05.lch\\02.scripts\\utility\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -49,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|C:\\Users\\USER\\Desktop\\Unity\\Massacre\\assets\\05.lch\\02.scripts\\character\\player\\freelook\\playerfreelookstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|solutionrelative:assets\\05.lch\\02.scripts\\character\\player\\freelook\\playerfreelookstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|C:\\Users\\USER\\Desktop\\Unity\\Massacre\\assets\\01.bsj\\02.scripts\\monster\\behavior\\monsterbehavioridle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|solutionrelative:assets\\01.bsj\\02.scripts\\monster\\behavior\\monsterbehavioridle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|C:\\Users\\USER\\Desktop\\Unity\\Massacre\\assets\\01.bsj\\02.scripts\\monster\\behavior\\monsterbehaviorgothit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -271,7 +279,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "TargetDetector.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\PathFinding\\TargetDetector.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\PathFinding\\TargetDetector.cs",
@@ -284,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "BGMAudioManager.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\BGM\\BGMAudioManager.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\BGM\\BGMAudioManager.cs",
@@ -297,13 +305,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "MonsterAudioManager.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Audio\\MonsterAudioManager.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\Audio\\MonsterAudioManager.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Audio\\MonsterAudioManager.cs",
               "RelativeToolTip": "Assets\\01.BSJ\\02.Scripts\\Monster\\Audio\\MonsterAudioManager.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAwB0AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAswC8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T11:08:50.569Z",
               "IsPinned": true,
@@ -311,7 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "MonsterHealthOnMouse.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\HPBar\\MonsterHealthOnMouse.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\HPBar\\MonsterHealthOnMouse.cs",
@@ -324,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Health.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\05.LCH\\02.Scripts\\Utility\\Health.cs",
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\Utility\\Health.cs",
@@ -338,7 +346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "Weeper.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Type\\06.Weeper\\Weeper.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\Type\\06.Weeper\\Weeper.cs",
@@ -351,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "WeeperFollowingShot.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Type\\06.Weeper\\Skills\\WeeperFollowingShot.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\Type\\06.Weeper\\Skills\\WeeperFollowingShot.cs",
@@ -365,7 +373,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "MonsterStateMachineController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\State\\MonsterStateMachineController.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\State\\MonsterStateMachineController.cs",
@@ -379,7 +387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "MonsterBehaviorDead.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Behavior\\MonsterBehaviorDead.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\Behavior\\MonsterBehaviorDead.cs",
@@ -392,7 +400,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "MonsterBehaviorGotHit.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Behavior\\MonsterBehaviorGotHit.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\Behavior\\MonsterBehaviorGotHit.cs",
@@ -405,26 +413,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
               "Title": "MonsterBehaviorIdle.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Behavior\\MonsterBehaviorIdle.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\Behavior\\MonsterBehaviorIdle.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Behavior\\MonsterBehaviorIdle.cs",
               "RelativeToolTip": "Assets\\01.BSJ\\02.Scripts\\Monster\\Behavior\\MonsterBehaviorIdle.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAwBkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAcwBQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T12:08:28.523Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "MonsterBehaviorMovement.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Behavior\\MonsterBehaviorMovement.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\Behavior\\MonsterBehaviorMovement.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Behavior\\MonsterBehaviorMovement.cs",
               "RelativeToolTip": "Assets\\01.BSJ\\02.Scripts\\Monster\\Behavior\\MonsterBehaviorMovement.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAWwFgAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAWwCsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T12:19:22.188Z",
               "IsPinned": true,
@@ -438,7 +447,7 @@
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\PathFinding\\PointGrid.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\PathFinding\\PointGrid.cs",
               "RelativeToolTip": "Assets\\01.BSJ\\02.Scripts\\PathFinding\\PointGrid.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAcwHcAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAHAAAAAAAAAAAAA+wIUAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T03:51:09.797Z",
               "IsPinned": true,
@@ -452,7 +461,7 @@
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\PathFinding\\Astar.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\PathFinding\\Astar.cs",
               "RelativeToolTip": "Assets\\01.BSJ\\02.Scripts\\PathFinding\\Astar.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAiwFgAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAIUAAAAAAAAAAADwvy0AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T04:37:42.174Z",
               "IsPinned": true,
@@ -461,6 +470,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "MonsterSpawnManager.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\MonsterSpawnManager.cs",
+              "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\MonsterSpawnManager.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\MonsterSpawnManager.cs",
+              "RelativeToolTip": "Assets\\01.BSJ\\02.Scripts\\Monster\\MonsterSpawnManager.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAcwF8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T05:24:22.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PointNode.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\PathFinding\\PointNode.cs",
+              "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\PathFinding\\PointNode.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\PathFinding\\PointNode.cs",
+              "RelativeToolTip": "Assets\\01.BSJ\\02.Scripts\\PathFinding\\PointNode.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAqwCUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T05:07:55.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "UniversalRenderPipeline.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Library\\PackageCache\\com.unity.render-pipelines.universal@14.0.9\\Runtime\\UniversalRenderPipeline.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@14.0.9\\Runtime\\UniversalRenderPipeline.cs",
@@ -473,7 +508,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "readme.txt",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\KETO_DISSOLVE\\readme.txt",
               "RelativeDocumentMoniker": "Assets\\KETO_DISSOLVE\\readme.txt",
@@ -485,7 +520,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "StateMachine.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\05.LCH\\02.Scripts\\Character\\StateMachine.cs",
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\Character\\StateMachine.cs",
@@ -498,7 +533,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 62,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\04.KMH\\02.Scripts\\Player\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\04.KMH\\02.Scripts\\Player\\Player.cs",
@@ -510,7 +545,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "MeleeComponenet.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\05.LCH\\02.Scripts\\Combat\\MeleeComponenet.cs",
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\Combat\\MeleeComponenet.cs",
@@ -522,7 +557,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "PlayerFreeLookState.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\05.LCH\\02.Scripts\\Character\\Player\\FreeLook\\PlayerFreeLookState.cs",
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\Character\\Player\\FreeLook\\PlayerFreeLookState.cs",
@@ -534,7 +569,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "MonsterDamageHandler.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Combat\\MonsterDamageHandler.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\Combat\\MonsterDamageHandler.cs",
@@ -546,7 +581,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "CobraSnakePoisonThrow.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Type\\02.CobraSnake\\CobraSnakePoisonThrow.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\Type\\02.CobraSnake\\CobraSnakePoisonThrow.cs",
@@ -559,7 +594,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "MonsterParticleDamageHandler.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Combat\\MonsterParticleDamageHandler.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\Combat\\MonsterParticleDamageHandler.cs",
@@ -572,7 +607,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "TestPlayerMove.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\TestScripts\\TestPlayerMove.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\TestScripts\\TestPlayerMove.cs",
@@ -584,7 +619,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "Monster.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Monster.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\Monster.cs",
@@ -596,7 +631,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "MonsterParticleController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Controller\\MonsterParticleController.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\Controller\\MonsterParticleController.cs",
@@ -608,7 +643,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "DissolveTest.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\KETO_DISSOLVE\\Scripts\\DissolveTest.cs",
               "RelativeDocumentMoniker": "Assets\\KETO_DISSOLVE\\Scripts\\DissolveTest.cs",
@@ -621,7 +656,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "Tester.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\KETO_DISSOLVE\\Scripts\\Tester.cs",
               "RelativeDocumentMoniker": "Assets\\KETO_DISSOLVE\\Scripts\\Tester.cs",
@@ -633,7 +668,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "PlayerBaseState.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\05.LCH\\02.Scripts\\Character\\Player\\PlayerBaseState.cs",
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\Character\\Player\\PlayerBaseState.cs",
@@ -645,7 +680,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "SFB_AudioManager.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\InfinityPBR\\Demo Scripts\\SFB_AudioManager.cs",
               "RelativeDocumentMoniker": "Assets\\InfinityPBR\\Demo Scripts\\SFB_AudioManager.cs",
@@ -657,7 +692,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 67,
               "Title": "MonsterParticleAudioHandler.cs",
               "DocumentMoniker": "C:\\Users\\c\\Desktop\\Unity Project\\Massacre\\Assets\\MonsterParticleAudioHandler.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\c\\Desktop\\Unity Project\\Massacre\\Assets\\MonsterParticleAudioHandler.cs",
@@ -669,7 +704,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "CobraSnake.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Type\\02.CobraSnake\\CobraSnake.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\Type\\02.CobraSnake\\CobraSnake.cs",
@@ -681,7 +716,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "RFX4_AudioCurves.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\KriptoFX\\Realistic Effects Pack v4\\Effects\\Scripts\\Curves\\RFX4_AudioCurves.cs",
               "RelativeDocumentMoniker": "Assets\\KriptoFX\\Realistic Effects Pack v4\\Effects\\Scripts\\Curves\\RFX4_AudioCurves.cs",
@@ -693,7 +728,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "RFX4_PhysicsMotion.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\KriptoFX\\Realistic Effects Pack v4\\Effects\\Scripts\\RFX4_PhysicsMotion.cs",
               "RelativeDocumentMoniker": "Assets\\KriptoFX\\Realistic Effects Pack v4\\Effects\\Scripts\\RFX4_PhysicsMotion.cs",
@@ -705,7 +740,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "DebugUpdater.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Library\\PackageCache\\com.unity.render-pipelines.core@14.0.9\\Runtime\\Debugging\\DebugUpdater.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.core@14.0.9\\Runtime\\Debugging\\DebugUpdater.cs",
@@ -717,7 +752,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "MonsterCombatController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Controller\\MonsterCombatController.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\Controller\\MonsterCombatController.cs",
@@ -729,7 +764,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "MadusaDashAttack.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Type\\04.Medusa\\Serpentine Skills\\MadusaDashAttack.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\Type\\04.Medusa\\Serpentine Skills\\MadusaDashAttack.cs",
@@ -741,7 +776,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "TransparencyController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\FadeInOut\\TransparencyController.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\FadeInOut\\TransparencyController.cs",
@@ -753,7 +788,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "Medusa.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Type\\04.Medusa\\Medusa.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\Type\\04.Medusa\\Medusa.cs",
@@ -765,7 +800,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 44,
               "Title": "DevilsFireFollowing.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Type\\05.Devils\\Skills\\DevilsFireFollowing.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\Type\\05.Devils\\Skills\\DevilsFireFollowing.cs",
@@ -777,7 +812,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "Devils.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Type\\05.Devils\\Devils.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\Type\\05.Devils\\Devils.cs",
@@ -789,7 +824,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "VFXController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\05.LCH\\02.Scripts\\Combat\\VFXController.cs",
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\Combat\\VFXController.cs",
@@ -801,7 +836,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "TrollChargeAttack.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Type\\01.Troll\\Skills\\TrollChargeAttack.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\Type\\01.Troll\\Skills\\TrollChargeAttack.cs",
@@ -813,7 +848,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "FollowCameraRotation.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\HPBar\\FollowCameraRotation.cs",
               "RelativeDocumentMoniker": "Assets\\01.BSJ\\02.Scripts\\Monster\\HPBar\\FollowCameraRotation.cs",
@@ -825,7 +860,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 51,
               "Title": "PlayerMeleeAttackState.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\05.LCH\\02.Scripts\\Character\\Player\\FreeLook\\Melee\\PlayerMeleeAttackState.cs",
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\Character\\Player\\FreeLook\\Melee\\PlayerMeleeAttackState.cs",
@@ -837,7 +872,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 49,
               "Title": "RangeAttackData.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\05.LCH\\02.Scripts\\Data\\RangeAttackData.cs",
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\Data\\RangeAttackData.cs",
@@ -849,7 +884,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 53,
               "Title": "AttackData.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\05.LCH\\02.Scripts\\Data\\AttackData.cs",
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\Data\\AttackData.cs",
@@ -861,7 +896,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 46,
               "Title": "PlayerRollingState.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\05.LCH\\02.Scripts\\Character\\Player\\FreeLook\\Roll\\PlayerRollingState.cs",
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\Character\\Player\\FreeLook\\Roll\\PlayerRollingState.cs",
@@ -873,7 +908,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 45,
               "Title": "DelegateHelpers.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Library\\PackageCache\\com.unity.inputsystem@1.7.0\\InputSystem\\Utilities\\DelegateHelpers.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.inputsystem@1.7.0\\InputSystem\\Utilities\\DelegateHelpers.cs",
@@ -885,7 +920,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 52,
               "Title": "PlayerHeavyAttackState.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\05.LCH\\02.Scripts\\Character\\Player\\FreeLook\\Melee\\PlayerHeavyAttackState.cs",
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\Character\\Player\\FreeLook\\Melee\\PlayerHeavyAttackState.cs",
@@ -897,7 +932,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 48,
               "Title": "StatusData.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\05.LCH\\02.Scripts\\Data\\StatusData.cs",
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\Data\\StatusData.cs",
@@ -909,7 +944,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "To-do.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\To-do.cs",
               "RelativeDocumentMoniker": "Assets\\To-do.cs",
@@ -921,7 +956,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 47,
               "Title": "PlayerImpactState.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\05.LCH\\02.Scripts\\Character\\Player\\FreeLook\\Gethit\\PlayerImpactState.cs",
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\Character\\Player\\FreeLook\\Gethit\\PlayerImpactState.cs",
@@ -933,7 +968,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 50,
               "Title": "Projectile.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\05.LCH\\02.Scripts\\Combat\\Projectile.cs",
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\Combat\\Projectile.cs",
@@ -945,7 +980,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 54,
               "Title": "CameraShake.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\05.LCH\\02.Scripts\\Utility\\CameraShake.cs",
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\Utility\\CameraShake.cs",
@@ -957,7 +992,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 55,
               "Title": "SceneController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\05.LCH\\02.Scripts\\System\\SceneController.cs",
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\System\\SceneController.cs",
@@ -969,7 +1004,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 64,
               "Title": "MonsterBehaviourGotHit.cs",
               "DocumentMoniker": "C:\\Project\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Behaviour\\MonsterBehaviourGotHit.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Project\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Behaviour\\MonsterBehaviourGotHit.cs",
@@ -981,7 +1016,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 63,
               "Title": "MonsterHealthOnMouse.cs",
               "DocumentMoniker": "C:\\Users\\c\\Desktop\\Unity Project\\Massacre\\Assets\\01.BSJ\\02.Scripts\\MonsterHealthOnMouse.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\c\\Desktop\\Unity Project\\Massacre\\Assets\\01.BSJ\\02.Scripts\\MonsterHealthOnMouse.cs",
@@ -993,7 +1028,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 61,
               "Title": "FollowCameraRotation.cs",
               "DocumentMoniker": "C:\\Users\\c\\Desktop\\Unity Project\\Massacre\\Assets\\01.BSJ\\02.Scripts\\FollowCameraRotation.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\c\\Desktop\\Unity Project\\Massacre\\Assets\\01.BSJ\\02.Scripts\\FollowCameraRotation.cs",
@@ -1004,7 +1039,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 56,
               "Title": "SkillManager.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\05.LCH\\02.Scripts\\System\\SkillManager.cs",
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\System\\SkillManager.cs",
@@ -1016,7 +1051,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 65,
               "Title": "MonsterBehaviourSpawn.cs",
               "DocumentMoniker": "C:\\Project\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Behaviour\\MonsterBehaviourSpawn.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Project\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Behaviour\\MonsterBehaviourSpawn.cs",
@@ -1028,7 +1063,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 59,
               "Title": "FrostSlot.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\05.LCH\\02.Scripts\\UI\\SkillSlot\\FrostSlot.cs",
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\UI\\SkillSlot\\FrostSlot.cs",
@@ -1040,7 +1075,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 57,
               "Title": "DashSlash.cs",
               "DocumentMoniker": "C:\\Project\\Massacre\\Assets\\05.LCH\\02.Scripts\\UI\\Skill\\DashSlash.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Project\\Massacre\\Assets\\05.LCH\\02.Scripts\\UI\\Skill\\DashSlash.cs",
@@ -1051,7 +1086,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 58,
               "Title": "DashSlashSlot.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\05.LCH\\02.Scripts\\UI\\SkillSlot\\DashSlashSlot.cs",
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\UI\\SkillSlot\\DashSlashSlot.cs",
@@ -1063,7 +1098,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 60,
               "Title": "PlayerMeleeFrostState.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Unity\\Massacre\\Assets\\05.LCH\\02.Scripts\\Character\\Player\\FreeLook\\Melee\\PlayerMeleeFrostState.cs",
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\Character\\Player\\FreeLook\\Melee\\PlayerMeleeFrostState.cs",
@@ -1075,7 +1110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 66,
               "Title": "TrollChargeAttack.cs",
               "DocumentMoniker": "C:\\Project\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Type\\Troll\\Skills\\TrollChargeAttack.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Project\\Massacre\\Assets\\01.BSJ\\02.Scripts\\Monster\\Type\\Troll\\Skills\\TrollChargeAttack.cs",

@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 1931479339031242187}
   - component: {fileID: -5862473297236807382}
   - component: {fileID: 2378065833526035384}
+  - component: {fileID: -313430786065692622}
   m_Layer: 10
   m_Name: Minotaur_Black
   m_TagString: Monster
@@ -36,7 +37,7 @@ Transform:
   m_GameObject: {fileID: 250573953759366113}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.5, y: 0, z: 77.1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -44,6 +45,7 @@ Transform:
   - {fileID: 8112827185352426190}
   - {fileID: 8116107954289365319}
   - {fileID: 1093468192688898945}
+  - {fileID: 2061785735254571284}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2146750712450027517
@@ -316,6 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b066cc1251f0b3840a8f32ea9ef795ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloodVFX: {fileID: 0}
 --- !u!114 &2378065833526035384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,6 +334,19 @@ MonoBehaviour:
   DissolveSpeed: 0.001
   DissolveYield: 0.015
   Particle: {fileID: 357091329568900760}
+--- !u!114 &-313430786065692622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250573953759366113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b86fa942fceeb543a15cf721355aefa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  virtualCam: {fileID: 0}
 --- !u!1 &325268362918257765
 GameObject:
   m_ObjectHideFlags: 0
@@ -21159,3 +21175,65 @@ Transform:
   - {fileID: 558904488946479160}
   m_Father: {fileID: 999531777984092795}
   m_LocalEulerAnglesHint: {x: -44.891808, y: -93.37205, z: 89.57495}
+--- !u!1001 &3306207726524659924
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2136094727510901620}
+    m_Modifications:
+    - target: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712571107704960496, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_Name
+      value: Blood_Splash_01_URP
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+--- !u!4 &2061785735254571284 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+  m_PrefabInstance: {fileID: 3306207726524659924}
+  m_PrefabAsset: {fileID: 0}

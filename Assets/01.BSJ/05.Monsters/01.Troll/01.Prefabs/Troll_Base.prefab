@@ -15186,6 +15186,7 @@ GameObject:
   - component: {fileID: 6449116757535947445}
   - component: {fileID: 5898460478478352485}
   - component: {fileID: 344153931073421555}
+  - component: {fileID: 3987142424906952126}
   m_Layer: 10
   m_Name: Troll_Base
   m_TagString: Monster
@@ -15201,8 +15202,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8870097054709720909}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 40.98, y: 0, z: 77.62}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15210,8 +15211,9 @@ Transform:
   - {fileID: 3804257148610256353}
   - {fileID: 980575598366037271}
   - {fileID: 6546273191423473416}
+  - {fileID: 4191683616848313138}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &8913398836778143088
 Animator:
   serializedVersion: 5
@@ -15308,6 +15310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b066cc1251f0b3840a8f32ea9ef795ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloodVFX: {fileID: 0}
 --- !u!114 &6232515372858526173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15366,6 +15369,19 @@ MonoBehaviour:
   DissolveSpeed: 0.001
   DissolveYield: 0.015
   Particle: {fileID: 3623008001177809425}
+--- !u!114 &3987142424906952126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8870097054709720909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b86fa942fceeb543a15cf721355aefa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  virtualCam: {fileID: 0}
 --- !u!1 &8929799592324859312
 GameObject:
   m_ObjectHideFlags: 0
@@ -15615,3 +15631,65 @@ Transform:
   m_Children: []
   m_Father: {fileID: 810815131752261683}
   m_LocalEulerAnglesHint: {x: 35.271687, y: -9.530222, z: -0.0000068800555}
+--- !u!1001 &816619725598948082
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2615435843074279792}
+    m_Modifications:
+    - target: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712571107704960496, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+      propertyPath: m_Name
+      value: Blood_Splash_01_URP
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+--- !u!4 &4191683616848313138 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3566548929316618688, guid: ac6ec696729d727438ead6d0b0f9d590, type: 3}
+  m_PrefabInstance: {fileID: 816619725598948082}
+  m_PrefabAsset: {fileID: 0}

@@ -44,7 +44,6 @@ public class Monster : MonoBehaviour
     public MonsterAnimationController AnimationController { get; protected set; }
     public MonsterCombatController CombatController { get; protected set; }
     public MonsterParticleController ParticleController { get; protected set; }
-    public TrailRenderer ObjectTrail { get => _objectTrail; }
 
     // 넉백 처리
     public CharacterController Controller { get; protected set; }

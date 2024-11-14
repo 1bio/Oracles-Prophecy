@@ -5,6 +5,7 @@ public class MonsterDamageHandler : MonoBehaviour
 {
     private Monster _monster;
     private Health _playerHealth;
+    private CameraShake _cameraShake;
 
     public void SetMonster(Monster monster)
     {
@@ -15,6 +16,7 @@ public class MonsterDamageHandler : MonoBehaviour
     {
         _monster = GetComponentInParent<Monster>();
         _playerHealth = GameObject.Find("Player")?.GetComponent<Health>();
+        _cameraShake = GetComponentInParent<CameraShake>();
     }
 
     private void OnTriggerEnter(Collider other)

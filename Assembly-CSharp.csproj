@@ -107,8 +107,8 @@
     <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\BlendShapesManager.cs" />
     <Compile Include="Assets\InfinityPBR\_InfinityPBR - Medusa\Scripts\medusaTypeControl.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\System\SkillManager.cs" />
-    <Compile Include="Assets\05.LCH\02.Scripts\Combat\VFXController.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\TestScripts\TestPlayerMove.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\Combat\VFXController.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Inventory\InventoryObject.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
@@ -211,8 +211,8 @@
     <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\Shape.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Controller\MonsterCombatController.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\System\UIManager.cs" />
-    <Compile Include="Assets\05.LCH\02.Scripts\UI\Skill\TripleShot.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\Scripts\AnimationEventEffects.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\UI\Skill\TripleShot.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Skill\ChargingShotDamage.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\UI\Skill\SkyFallShot.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\PathFinding\PointGrid.cs" />
@@ -1265,6 +1265,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Path.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Animation.Rigging.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Animation.Rigging.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1327,6 +1331,10 @@
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Animation.Rigging">
+      <HintPath>Library\ScriptAssemblies\Unity.Animation.Rigging.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">

@@ -20,14 +20,14 @@ public class MonsterHealthOnMouse : MonoBehaviour
     private void Awake()
     {
         _layerMask = (1 << LayerMask.NameToLayer(GameLayers.Monster.ToString()));
-        _textMeshPro = _slider.GetComponentInChildren<TextMeshProUGUI>();
+        _textMeshPro = _slider?.GetComponentInChildren<TextMeshProUGUI>();
 
         CurrentTime = 0;
     }
 
     private void Start()
     {
-        _slider.gameObject.SetActive(false);
+        _slider?.gameObject.SetActive(false);
     }
 
     private void Update()

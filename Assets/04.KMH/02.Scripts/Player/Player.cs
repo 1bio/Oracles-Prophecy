@@ -6,10 +6,11 @@ using UnityEngine.UIElements;
 public class Player : MonoBehaviour
 {
 
-
+    [field: Header("인벤토리 설정")]
     public InventoryObject inventory;
     public InventoryObject equipment;
 
+    [field: Header("플레이어 스탯")]
     public Attribute[] attributes;
 
     private Transform boots;
@@ -18,10 +19,15 @@ public class Player : MonoBehaviour
     private Transform offhand;
     private Transform sword;
 
+    [field: Header("아이템 모델(임시)")]
+    public GameObject helmetPrefab;
+    public GameObject chestPrefab;
+
+    [field: Header("무기 장착 위치")]
     public Transform weaponTransform;
     public Transform offhandWristTransform;
     public Transform offhandHandTransform;
-    public Transform helmetTransform;
+    //public Transform helmetTransform;
 
     private void Start()
     {
@@ -62,7 +68,10 @@ public class Player : MonoBehaviour
                     switch (_slot.AllowedItems[0])
                     {
                         case ItemType.Helmet:
-                            Destroy(helmet.gameObject);
+                            helmetPrefab.SetActive(false);
+                            break;
+                        case ItemType.Chest:
+                            chestPrefab.SetActive(false);
                             break;
                         case ItemType.Weapon:
                             Destroy(sword.gameObject);
@@ -72,9 +81,6 @@ public class Player : MonoBehaviour
                             break;
                         case ItemType.Boots:
                             Destroy(boots.gameObject);
-                            break;
-                        case ItemType.Chest:
-                            Destroy(chest.gameObject);
                             break;
                     }
                 }
@@ -110,8 +116,15 @@ public class Player : MonoBehaviour
                 {
                     switch (_slot.AllowedItems[0])
                     {
+                        case ItemType.Helmet:
+                            helmetPrefab.SetActive(true);
+                            break;
+                        case ItemType.Chest:
+                            chestPrefab.SetActive(true);
+                            break;
                         case ItemType.Weapon:
                             sword = Instantiate(_slot.ItemObject.characterDisplay, weaponTransform).transform;
+                            print(string.Concat("장착"));
                             break;
                         case ItemType.Shield:
                             switch (_slot.ItemObject.type)
@@ -125,9 +138,6 @@ public class Player : MonoBehaviour
                                         .transform;
                                     break;
                             }
-                            break;
-                        case ItemType.Helmet:
-                            
                             break;
                     }
                 }

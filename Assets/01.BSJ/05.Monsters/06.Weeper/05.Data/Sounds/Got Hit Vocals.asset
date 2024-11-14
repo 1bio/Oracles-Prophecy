@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a22fd948cb66a64e8e2f55d067a35e0, type: 3}
+  m_Name: Got Hit Vocals
+  m_EditorClassIdentifier: 
+  _audioClipName: Got Hit Vocals
+  _audioClips:
+  - {fileID: 8300000, guid: dadb07d5e7b55aa4b9cf690806e3f623, type: 3}
+  - {fileID: 8300000, guid: 4d4f3466b83c2784f9e77e387a151c73, type: 3}
+  - {fileID: 8300000, guid: dd98830faa3239947af5281cf6c1db6e, type: 3}

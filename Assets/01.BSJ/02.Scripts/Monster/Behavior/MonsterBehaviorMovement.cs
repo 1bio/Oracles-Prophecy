@@ -32,15 +32,13 @@ public class MonsterBehaviorMovement : MonsterBehavior
         _pathIndex = 0;
 
         _checkTarget = false;
-
-        monster.CombatController.Health.ImpactEvent += OnImpact;
     }
 
     public override void OnBehaviorUpdate(Monster monster)
     {
         monster.AnimationController.AnimatorStateInfo = monster.AnimationController.Animator.GetCurrentAnimatorStateInfo(0);
 
-        if (monster.MovementController.Astar.OnHasTargetMoved() && !monster.MovementController.Astar.IsCalculating)
+        if (monster.MovementController.Astar.OnHasTargetMoved())
         {
             monster.MovementController.Astar.StartPathCalculation(monster.transform.position, monster.MovementController.Astar.TargetTransform.position);
         }
@@ -84,12 +82,6 @@ public class MonsterBehaviorMovement : MonsterBehavior
     public override void OnBehaviorEnd(Monster monster)
     {
         monster.AnimationController.PlayIdleAnimation();
-        monster.CombatController.Health.ImpactEvent -= OnImpact;
-    }
-
-    private void OnImpact()
-    {
-        _monster.StateMachineController.OnGotHit();
     }
 
     private PointNode FindNeighborNode(PointNode node)
@@ -107,5 +99,4 @@ public class MonsterBehaviorMovement : MonsterBehavior
         }
         return findNode;
     }
-    
 }

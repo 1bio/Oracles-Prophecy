@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0efa0a4c06cdce429ae4bef81bef225, type: 3}
   m_Name: Helmet
   m_EditorClassIdentifier: 
-  uiDisplay: {fileID: 21300000, guid: 80415d88bd649174fbf7d66b778fca99, type: 3}
+  uiDisplay: {fileID: 21300000, guid: b63dce32b5c05e443b7f9c51de2ddf46, type: 3}
+  characterDisplay: {fileID: 100000, guid: 254fa3dd0843344db8baebe52d2db56a, type: 3}
   stackable: 0
   type: 1
   description: 
@@ -24,3 +25,4 @@ MonoBehaviour:
       value: 0
       min: 2
       max: 10
+  boneNames: []

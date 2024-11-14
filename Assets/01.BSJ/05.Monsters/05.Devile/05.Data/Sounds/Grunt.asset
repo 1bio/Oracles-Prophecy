@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a22fd948cb66a64e8e2f55d067a35e0, type: 3}
+  m_Name: Grunt
+  m_EditorClassIdentifier: 
+  _audioClipName: Grunt
+  _audioClips:
+  - {fileID: 8300000, guid: 40dcba74118f86a4eb3868c5307b1dc3, type: 3}
+  - {fileID: 8300000, guid: ac0d601d8699ec646a8a8b2446979c3f, type: 3}
+  - {fileID: 8300000, guid: a8ad3a458414b194ba6d107eed48a71a, type: 3}
+  - {fileID: 8300000, guid: 6be36a1d319da53408f57533d653b5b9, type: 3}
+  - {fileID: 8300000, guid: 77ba7582a76a05742b1c70dc35ce7e85, type: 3}
+  - {fileID: 8300000, guid: 8dc1da145399b5a46aa808c30f148afa, type: 3}
+  - {fileID: 8300000, guid: 11843b393bc5f334cae7fa847173ee2a, type: 3}
+  - {fileID: 8300000, guid: 71aca72bf67487b46a74e3db2258ae3c, type: 3}
+  - {fileID: 8300000, guid: 6cfab17876d82884ea2150e5730ac898, type: 3}

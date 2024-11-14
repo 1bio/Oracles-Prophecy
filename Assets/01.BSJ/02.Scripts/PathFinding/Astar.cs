@@ -10,8 +10,6 @@ public class Astar : MonoBehaviour
     public Transform TargetTransform => _targetTransform;
     public List<PointNode> Path => _path;
     public bool HasTargetMoved => _hasTargetMoved;
-    public bool IsCalculating { get; private set; } = false;
-
 
     private Monster _monster;
     private List<Monster> _allMonsters;
@@ -45,13 +43,11 @@ public class Astar : MonoBehaviour
 
     private IEnumerator CalculatePathCoroutine(Vector3 startPos, Vector3 targetPos)
     {
-        IsCalculating = true;
+        yield return null;
+
         _grid.InitializeNodeValues();
         _path = FindPath(startPos, targetPos);
         _lastTargetPos = _targetTransform.position;
-        IsCalculating = false;
-
-        yield return null; // 다음 프레임으로 이동
     }
 
     private List<PointNode> FindPath(Vector3 startPos, Vector3 targetPos)

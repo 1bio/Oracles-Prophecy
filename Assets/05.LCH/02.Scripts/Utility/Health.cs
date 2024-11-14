@@ -37,6 +37,10 @@ public class Health : MonoBehaviour
     }
 
     #region Main Methods
+    public float GetHealth()
+    {
+        return currentHealth;
+    }
     public void SetHealth(float currentHealth)
     {
         this.currentHealth = currentHealth;
@@ -103,14 +107,14 @@ public class Health : MonoBehaviour
 
     private void PlayBloodVFX()
     {
-        ParticleSystem[] bloods = bloodVFX.GetComponentsInChildren<ParticleSystem>();
+        /*ParticleSystem[] bloods = bloodVFX.GetComponentsInChildren<ParticleSystem>();
 
         foreach (ParticleSystem blood in bloods)
         {
             blood.transform.position = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
 
             blood.Play();
-        }
+        }*/
     }
 
     public void Delay(float damage)

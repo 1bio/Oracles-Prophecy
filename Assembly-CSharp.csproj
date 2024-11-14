@@ -319,6 +319,7 @@
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Behavior\MonsterBehaviorGotHit.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Controls\ResourceBarController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\BGM\BGMAudioManager.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\02.CobraSnake\CobraSnake.cs" />
     <Compile Include="Assets\BloodEffectsPack\Common\Script\BloodModifier.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\System\DataManager.cs" />
@@ -381,6 +382,7 @@
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Roll\PlayerRollingState.cs" />
     <Compile Include="Assets\InfinityPBR\_InfinityPBR - Devils\Scripts\DevilDemo.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\Scripts\Slash_GrvityPoint.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Audio\MonsterParticleAudioHandler.cs" />
     <Compile Include="Assets\InfinityPBR\_InfinityPBR - Minotaur\Scripts\MinotaurDemo.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\01.Troll\Skills\TrollChargeAttack.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\SceneResources\Other\RFX4_MouseOrbit.cs" />
@@ -1481,6 +1483,10 @@
       <Project>{3EC9AD76-55A6-6E37-F578-62DAA2704C70}</Project>
       <Name>Unity.2D.Common.Path.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Animation.Rigging.Editor.csproj">
+      <Project>{69F47D6E-9949-E6AB-9E73-9D60931AB395}</Project>
+      <Name>Unity.Animation.Rigging.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Rider.Editor.csproj">
       <Project>{BC3C787E-6812-FE31-B8B6-97484150E11F}</Project>
       <Name>Unity.Rider.Editor</Name>
@@ -1528,6 +1534,10 @@
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
       <Project>{6348D669-3EA1-FC7D-9D2C-6D50BA2B90E3}</Project>
       <Name>Unity.VSCode.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Animation.Rigging.csproj">
+      <Project>{8859F824-1BCC-04B8-2383-EAAC5F1D90C2}</Project>
+      <Name>Unity.Animation.Rigging</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.EditorCoroutines.Editor.csproj">
       <Project>{BFB2E29D-1149-3206-9EA1-BA01082FBDA4}</Project>

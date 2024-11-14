@@ -220,8 +220,8 @@
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\HS_ParticleCollisionInstance.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\Curves\RFX4_ShaderFloatCurve.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_StartDelay.cs" />
-    <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Combat\MonsterCombatAbility.cs" />
     <Compile Include="Assets\BloodEffectsPack\Common\Script\Scriptable\BloodPreset.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Combat\MonsterCombatAbility.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\UI\Icons\bl_MiniMapTagIcon.cs" />
     <Compile Include="Assets\MRF\Scripts\ShatterHandler.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\DemoWardrobe.cs" />

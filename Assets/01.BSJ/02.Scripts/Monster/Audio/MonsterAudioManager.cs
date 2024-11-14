@@ -24,12 +24,13 @@ public class MonsterAudioManager : MonoBehaviour
     {
         if (audioSource != null)
         {
-            audioSource.volume = BGMAudioManager.GetMonsterVolume();
+            if (BGMAudioManager.Instance != null)
+                audioSource.volume = BGMAudioManager.GetMonsterVolume();
             audioSource.spatialBlend = 1f;
             audioSource.dopplerLevel = 0f;
-            audioSource.rolloffMode = AudioRolloffMode.Linear;
-            audioSource.minDistance = 2f;
-            audioSource.maxDistance = 12f;
+            audioSource.rolloffMode = AudioRolloffMode.Logarithmic;
+            audioSource.minDistance = 0.5f;
+            audioSource.maxDistance = 20f;
         }
     }
 

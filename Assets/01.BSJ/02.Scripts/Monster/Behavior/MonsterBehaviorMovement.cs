@@ -38,7 +38,7 @@ public class MonsterBehaviorMovement : MonsterBehavior
     {
         monster.AnimationController.AnimatorStateInfo = monster.AnimationController.Animator.GetCurrentAnimatorStateInfo(0);
 
-        if (monster.MovementController.Astar.OnHasTargetMoved() && !monster.MovementController.Astar.IsCalculating)
+        if (monster.MovementController.Astar.OnHasTargetMoved())
         {
             monster.MovementController.Astar.StartPathCalculation(monster.transform.position, monster.MovementController.Astar.TargetTransform.position);
         }
@@ -99,5 +99,4 @@ public class MonsterBehaviorMovement : MonsterBehavior
         }
         return findNode;
     }
-    
 }

@@ -31,6 +31,17 @@ public class PointNode
     private bool _isObstacle;
     private bool _isGround;
 
+    public PointNode(PointNode node)
+    {
+        _position = node.Position;
+        _isObstacle = node._isObstacle;
+        _isGround = node._isGround;
+
+        _gCost = 0;
+        _hCost = 0;
+        _fCost = 0;
+    }
+
     public PointNode(Vector3 positions, bool isObstacle, bool isGround)
     {
         _position = positions;

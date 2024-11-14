@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\06.Weeper\Skills\WeeperFollowingShot.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\Audio\PlayerAudio.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\Curves\RFX4_ShaderProperties.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\SceneResources\Other\Slash_MouseOrbit.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\PlayerFreeLookState.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\05.LCH\02.Scripts\UI\UIHoverEvent.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Combat\MonsterAttack.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\UI\FadeOutUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\ExtendedFlycam.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\Scripts\Slash_AxisRotateByTime.cs" />
@@ -117,8 +119,8 @@
     <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\BlendShapesManager.cs" />
     <Compile Include="Assets\InfinityPBR\_InfinityPBR - Medusa\Scripts\medusaTypeControl.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\System\SkillManager.cs" />
-    <Compile Include="Assets\05.LCH\02.Scripts\Combat\VFXController.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\TestScripts\TestPlayerMove.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\Combat\VFXController.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_Decal.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Inventory\InventoryObject.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
@@ -230,6 +232,7 @@
     <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_CameraRotate_v2.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Data\StatusData.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_UVScroll.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Gethit\PlayerDeadState.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_TextureShaderProperties.cs" />
     <Compile Include="Assets\Vefects\ItemPickUp\Scripts\Demo_FreeCam.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\UI\Skill\ChargingShot.cs" />
@@ -1376,6 +1379,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Path.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Animation.Rigging.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Animation.Rigging.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1438,6 +1445,10 @@
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Animation.Rigging">
+      <HintPath>Library\ScriptAssemblies\Unity.Animation.Rigging.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">

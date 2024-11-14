@@ -18,7 +18,6 @@ public class MonsterBehaviorIdle : MonsterBehavior
     {
         if (monster.MovementController.TargetDetector.IsTargetDetected)
             monster.MovementController.LookAtTarget(monster.CombatController.MonsterCombatAbility.TurnSpeed);
-        monster.MovementController.Astar.StartPathCalculation(monster.transform.position, monster.MovementController.Astar.TargetTransform.position);
     }
 
     public override void OnBehaviorEnd(Monster monster)

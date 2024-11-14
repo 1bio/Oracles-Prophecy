@@ -81,10 +81,10 @@ public class PoolManager : MonoBehaviour
                 select.SetActive(false);
                 select.transform.SetParent(transform);
                 break;
-            case "DamageText":
-                yield return new WaitForSeconds(0.5f);
-                select.SetActive(false);
-                break;
+            //case "DamageText":
+            //    yield return new WaitForSeconds(0.5f);
+            //    select.SetActive(false);
+            //    break;
         }
     }
 }

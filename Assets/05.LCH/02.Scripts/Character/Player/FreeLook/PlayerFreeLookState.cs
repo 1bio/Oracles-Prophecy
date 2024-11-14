@@ -69,13 +69,14 @@ public class PlayerFreeLookState : PlayerBaseState
         }
 
         // Idle & Moving
-        if (stateMachine.InputReader.MoveValue == Vector2.zero)
+        if (stateMachine.InputReader.MoveValue != Vector2.zero)
         {
-            stateMachine.Animator.SetFloat(Velocity, 0f, DampTime, deltaTime);
+            stateMachine.Animator.SetFloat(Velocity, 1f, DampTime, deltaTime);
             return;
         }
 
-        stateMachine.Animator.SetFloat(Velocity, 1f, DampTime, deltaTime);
+        stateMachine.Animator.SetFloat(Velocity, 0f, DampTime, deltaTime);
+
     }
 
     public override void Exit()

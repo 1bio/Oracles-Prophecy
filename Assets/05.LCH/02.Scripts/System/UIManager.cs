@@ -1,5 +1,10 @@
-﻿using TMPro;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics.Contracts;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -14,7 +19,6 @@ public class UIManager : MonoBehaviour
     public GameObject inventoryWindow;
     public Text[] inventoryStatus;
 
-
     // 하단 인터페이스
     [Header("플레이어 스탯")]
     public Text level;
@@ -26,6 +30,10 @@ public class UIManager : MonoBehaviour
     public GameObject[] emptySlot;
     public GameObject[] skillSlot;
 
+    [Header("게임 오버")]
+    public CanvasGroup gameoverCG;
+    public GameObject ingameUI;
+
     private bool isMelee; // 클래스 확인
 
     private string skillName; // 스킬 이름 확인
@@ -36,6 +44,8 @@ public class UIManager : MonoBehaviour
     private float currentExp;
 
     private float lerpSpeed = 3f;
+
+    [SerializeField] private float fadeSpeed;
 
     private void Awake()
     {
@@ -52,6 +62,12 @@ public class UIManager : MonoBehaviour
     private void Update()
     {
         // 임시
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            DataManager.instance.playerData.statusData.currentHealth += 50;
+        }
+
+        // 임시
         if (Input.GetKeyDown(KeyCode.V))
         {
             DataManager.instance.playerData.statusData.skillPoint += 1;
@@ -65,7 +81,7 @@ public class UIManager : MonoBehaviour
         UpdateInventoryStatus(); // 인벤토리 스탯
 
         // 인벤토리
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.I))
         {
             InventoryWindow(!inventoryWindow.activeSelf);
         }
@@ -92,7 +108,7 @@ public class UIManager : MonoBehaviour
     }
 
     // 하단 UI 업데이트
-    private void UpdateStatus()
+    public void UpdateStatus()
     {
         level.text = DataManager.instance.playerData.statusData.level.ToString();
 
@@ -106,7 +122,7 @@ public class UIManager : MonoBehaviour
     }
 
     // 인벤토리 UI 업데이트
-    private void UpdateInventoryStatus()
+    public void UpdateInventoryStatus()
     {
         inventoryStatus[0].text = DataManager.instance.playerData.statusData.level.ToString();
         inventoryStatus[1].text = $"{DataManager.instance.playerData.statusData.minDamage} - {DataManager.instance.playerData.statusData.maxDamage}";
@@ -161,6 +177,34 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    // 게임 오버
+    public void GameoverUI()
+    {
+        gameoverCG.interactable = true;
+        
+        StartCoroutine(Fade(true));
+    }
+
+    private IEnumerator Fade(bool isFadeIn)
+    {
+        float timer = 0f;
+
+        ingameUI.SetActive(false);
+
+        while (timer <= 1f)
+        {
+            yield return null;
+            timer += Time.unscaledDeltaTime * fadeSpeed;
+            gameoverCG.alpha = isFadeIn ? Mathf.Lerp(0f, 1f, timer) : Mathf.Lerp(1f, 0f, timer);
+        }
+
+        if (!isFadeIn)
+        {
+            gameObject.SetActive(false);
+        }
+
+    }
+
     /*// 랜덤 스킬 생성
     public void GetRandomSkill()
     {
@@ -187,6 +231,17 @@ public class UIManager : MonoBehaviour
             }
         }
     }*/
+    #endregion
+
+
+    #region Button Event
+    public void ReturnToVillage()
+    {
+        gameoverCG.interactable = false;
+
+        StartCoroutine(Fade(false));
+        SceneController.instance.LoadScene("LCH");
+    }
     #endregion
 
 

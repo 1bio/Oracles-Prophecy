@@ -9,24 +9,11 @@ public class VFXController : MonoBehaviour
     [Header("Continuous VFX")]
     [SerializeField] private GameObject[] c_prefabs;
 
+    [Header("Setting")]
     [SerializeField] private Targeting Targeting;
     [SerializeField] private Transform ShootingTransform;
 
-    WaitForSeconds wait;
-
     private int hitCount = 5;
-
-    private void Start()
-    {
-        s_prefabs[0].GetComponent<ParticleSystem>().Stop();
-        s_prefabs[1].GetComponent<ParticleSystem>().Stop();
-        s_prefabs[2].GetComponent<ParticleSystem>().Stop();
-        s_prefabs[3].GetComponent<ParticleSystem>().Stop();
-
-
-        c_prefabs[0].GetComponent<ParticleSystem>().Stop();
-        c_prefabs[1].GetComponent<ParticleSystem>().Stop();
-    }
 
 
     // È­»ìºñ

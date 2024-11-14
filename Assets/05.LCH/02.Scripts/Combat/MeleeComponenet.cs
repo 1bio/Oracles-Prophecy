@@ -33,7 +33,7 @@ public class MeleeComponenet : MonoBehaviour
             
             if (health != null && health.isAlive)
             {
-                cameraShake.ShakeCamera(1.2f, 0.2f);
+                cameraShake.ShakeCamera(0.8f, 0.2f);
 
                 health.TakeDamage(damage, false);
             }

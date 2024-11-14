@@ -135,6 +135,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Indicator\Indicator.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\BGM\BGMAudioClipData.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Controller\MonsterParticleController.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\03.Minotaur\Skills\MinotaurRamAttack.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\MobileBloom\Slashes_MobileBloom.cs" />
@@ -182,6 +183,7 @@
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\04.Medusa\Humanoid Skills\MedusaSpinAttack.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Range\PlayerRangeAttackState.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_CameraShake.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Audio\MonsterAudioClipData.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Combat\MonsterParticleDamageHandler.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Utility\Health.cs" />

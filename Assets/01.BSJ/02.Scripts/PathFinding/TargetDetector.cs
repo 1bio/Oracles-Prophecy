@@ -87,12 +87,13 @@ public class TargetDetector : MonoBehaviour
 
             if (Physics.Raycast(startPos, direction, out _hit, detectionDistance, layerMask))
             {
+                Debug.Log(_hit.collider.gameObject.name);
                 Debug.DrawRay(startPos, direction * detectionDistance, Color.red);
 
                 if (_hit.distance > detectionDistance)
                     return false;
 
-                if (_hit.collider.gameObject.layer == LayerMask.NameToLayer(GameLayers.Player.ToString()) && _playerHealth != null && _playerHealth.GetHealth() > 0)
+                if (_hit.collider.gameObject.layer == LayerMask.NameToLayer(GameLayers.Player.ToString()))
                 {
                     return true;
                 }

@@ -133,6 +133,8 @@ public class MinotaurRamAttack : MonsterSkillData
                 _hasHitObject = true;
 
                 _hit.collider.gameObject.GetComponentInParent<Health>().TakeDamage(monster.SkillController.CurrentSkillData.Damage, true);
+
+                monster.CameraShake.ShakeCamera(2, 0.5f);
             }
         }
         else if (_hit.collider.gameObject.layer == LayerMask.NameToLayer(GameLayers.Obstacle.ToString()))
@@ -153,6 +155,7 @@ public class MinotaurRamAttack : MonsterSkillData
                     monster.AnimationController.PlaySkillAnimation(Minotaur.RamAttackAnimationName.RamWall.ToString());
                 }
 
+                monster.CameraShake.ShakeCamera(2, 0.5f);
                 //_indicator.gameObject.SetActive(false);
                 _hasHitObject = true;
             }

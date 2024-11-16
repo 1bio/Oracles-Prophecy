@@ -44,9 +44,10 @@ public class Monster : MonoBehaviour
     public MonsterAnimationController AnimationController { get; protected set; }
     public MonsterCombatController CombatController { get; protected set; }
     public MonsterParticleController ParticleController { get; protected set; }
+    public CameraShake CameraShake { get; protected set; }
 
     // 넉백 처리
-    public CharacterController Controller { get; protected set; }
+    public CharacterController CharacterController { get; protected set; }
     public ForceReceiver ForceReceiver { get; protected set; }
 
     void FindOrCreateVFXContainer()
@@ -78,8 +79,9 @@ public class Monster : MonoBehaviour
         MovementController = new MonsterMovementController(GetComponent<TargetDetector>(), GetComponent<Astar>(), FindObjectOfType<PointGrid>(), GetComponent<CharacterController>());
         AnimationController = new MonsterAnimationController(GetComponent<Animator>(), 100f);
         CombatController = new MonsterCombatController(p_monsterStatData, GetComponent<Health>());
-     
-        Controller = GetComponent<CharacterController>();
+
+        CameraShake = GetComponent<CameraShake>();
+        CharacterController = GetComponent<CharacterController>();
         ForceReceiver = GetComponent<ForceReceiver>();
 
         if (p_monsterSkillDatas.Length > 0)

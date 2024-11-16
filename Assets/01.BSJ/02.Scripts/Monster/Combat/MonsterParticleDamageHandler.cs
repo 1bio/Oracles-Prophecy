@@ -8,7 +8,6 @@ public class MonsterParticleDamageHandler : MonoBehaviour
     private Monster _monster;
     private Health _playerHealth;
     private ParticleSystem particleSystem;
-    private CameraShake _cameraShake;
 
     private bool _canTakeDamage = true;
     [Header(" # 피격 시 파티클 비활성화")]
@@ -38,7 +37,6 @@ public class MonsterParticleDamageHandler : MonoBehaviour
     public void SetMonster(Monster monster)
     {
         _monster = monster;
-        _cameraShake = monster.GetComponent<CameraShake>();
     }
 
     private void Awake()
@@ -140,7 +138,6 @@ public class MonsterParticleDamageHandler : MonoBehaviour
         _canTakeDamage = false;
 
         health.TakeDamage(_monster.SkillController.CurrentSkillData.Damage, true);
-        _cameraShake.ShakeCamera(1.5f, 0.3f);
 
         yield return new WaitForSeconds(_damageInterval);
 

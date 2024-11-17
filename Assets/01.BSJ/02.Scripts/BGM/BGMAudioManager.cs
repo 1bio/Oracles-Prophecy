@@ -41,6 +41,8 @@ public class BGMAudioManager : MonoBehaviour
         }
 
         _audioSource = GetComponent<AudioSource>();
+        if (_audioSource == null)
+            _audioSource = gameObject.AddComponent<AudioSource>();
         _audioSource.spatialBlend = 0f;
         _audioSource.loop = true;
     }
@@ -67,7 +69,7 @@ public class BGMAudioManager : MonoBehaviour
     {
         switch (_currentSceneName)
         {
-            case "BSJ":
+            case "Dungeon":
                 if (_isCombat) PlayBGM(BGMAudioName.Combat);
                 else PlayBGM(BGMAudioName.Dungeon);
                 break;

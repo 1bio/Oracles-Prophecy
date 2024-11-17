@@ -69,6 +69,8 @@ public class TrollChargeAttack : MonsterSkillData
                 collider.gameObject.GetComponent<Health>()?.TakeDamage(monster.SkillController.CurrentSkillData.Damage, true);
             }
         }
+
+        monster.CameraShake.ShakeCamera(2, 0.2f);
         _hasHit = true;
     }
 }

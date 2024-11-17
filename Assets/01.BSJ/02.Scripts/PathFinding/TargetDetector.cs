@@ -87,7 +87,7 @@ public class TargetDetector : MonoBehaviour
 
             if (Physics.Raycast(startPos, direction, out _hit, detectionDistance, layerMask))
             {
-                Debug.Log(_hit.collider.gameObject.name);
+                //Debug.Log(_hit.collider.gameObject.name);
                 Debug.DrawRay(startPos, direction * detectionDistance, Color.red);
 
                 if (_hit.distance > detectionDistance)

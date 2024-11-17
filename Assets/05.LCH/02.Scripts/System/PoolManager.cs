@@ -76,15 +76,10 @@ public class PoolManager : MonoBehaviour
     {
         switch (select.tag)
         {
-            case "Projectile":
-                yield return new WaitForSeconds(3f);
+            case "DamageText":
+                yield return new WaitForSeconds(0.5f);
                 select.SetActive(false);
-                select.transform.SetParent(transform);
                 break;
-            //case "DamageText":
-            //    yield return new WaitForSeconds(0.5f);
-            //    select.SetActive(false);
-            //    break;
         }
     }
 }

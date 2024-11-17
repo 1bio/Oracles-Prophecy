@@ -9,7 +9,7 @@ public class FrostSlot : MonoBehaviour
 
     private void Update()
     {
-        SlotCoolDownUpdate("빙결");
+        SlotCoolDownUpdate("Frost");
     }
 
     public void SlotCoolDownUpdate(string skillName)

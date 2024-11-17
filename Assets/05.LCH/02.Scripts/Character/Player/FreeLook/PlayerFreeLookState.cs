@@ -56,7 +56,7 @@ public class PlayerFreeLookState : PlayerBaseState
         // Attacking
         if (stateMachine.InputReader.IsAttacking)
         {
-            if (SkillManager.instance.IsPassiveActive("화염칼")) 
+            if (SkillManager.instance.IsPassiveActive("Fire Blade")) 
             {
                 stateMachine.ChangeState(new PlayerHeavyAttackState(stateMachine, heavyAttackDataIndex));
                 return;
@@ -114,7 +114,7 @@ public class PlayerFreeLookState : PlayerBaseState
 
     private void OnFirstSkill() // 절단 [3]
     {
-        if (SkillManager.instance.GetRemainingCooldown("절단") <= 0f && !DataManager.instance.playerData.skillData[3].isUnlock 
+        if (SkillManager.instance.GetRemainingCooldown("Single Slash") <= 0f && !DataManager.instance.playerData.skillData[3].isUnlock 
             && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[3].useMana)
         {
             stateMachine.ChangeState(new PlayerMeleeDashSlashState(stateMachine));
@@ -123,7 +123,7 @@ public class PlayerFreeLookState : PlayerBaseState
 
     private void OnSecondSkill() // 화염칼 [4]
     {
-        if (SkillManager.instance.GetRemainingCooldown("화염칼") <= 0f && !DataManager.instance.playerData.skillData[4].isUnlock
+        if (SkillManager.instance.GetRemainingCooldown("Fire Blade") <= 0f && !DataManager.instance.playerData.skillData[4].isUnlock
             && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[4].useMana)
         {
             SkillManager.instance.SetActiveSkill(true);
@@ -132,7 +132,7 @@ public class PlayerFreeLookState : PlayerBaseState
 
     private void OnThirdSkill() // 빙결 [5]
     {
-        if(SkillManager.instance.GetRemainingCooldown("빙결") <= 0f && !DataManager.instance.playerData.skillData[5].isUnlock 
+        if(SkillManager.instance.GetRemainingCooldown("Frost") <= 0f && !DataManager.instance.playerData.skillData[5].isUnlock 
             && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[5].useMana)
         {
             stateMachine.ChangeState(new PlayerMeleeFrostState(stateMachine));

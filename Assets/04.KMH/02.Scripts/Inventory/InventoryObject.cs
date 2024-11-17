@@ -1,12 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
-using UnityEditor;
-using JetBrains.Annotations;
 using System.Runtime.Serialization;
-using static UnityEditor.Progress;
 
 public enum InterfaceType
 {
@@ -23,7 +18,6 @@ public class InventoryObject : ScriptableObject
     public InterfaceType type;
     public Inventory Container;
     public InventorySlot[] GetSlots { get { return Container.Slots; } }
-
 
     public bool AddItem(Item _item, int _amount)
     {

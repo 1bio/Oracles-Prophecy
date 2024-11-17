@@ -52043,7 +52043,7 @@ AnimationClip:
   m_Events:
   - time: 0
     functionName: CoolDownEvent
-    data: "\uD654\uC0B4\uBE44"
+    data: SkyFallShot
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

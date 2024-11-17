@@ -57,7 +57,7 @@ public class FireBlade : MonoBehaviour
             Debug.Log("화염칼 얻음!");
         }
 
-        DataManager.instance.SkillLevelUp("화염칼", 1);
+        DataManager.instance.SkillLevelUp("Fire Blade", 1);
     }
 
     // 텍스트 업데이트
@@ -75,7 +75,7 @@ public class FireBlade : MonoBehaviour
         fireBladeTexts[2].text = fireBlade.description; // 설명
         fireBladeTexts[3].text = $"Damage {Mathf.Floor(fireBlade.minDamage)} - {Mathf.Floor(fireBlade.maxDamage)}"; // 공격력 증가율 
         fireBladeTexts[4].text = $"CoolDown {Mathf.Floor(fireBlade.coolDown)}"; // 쿨타임 감소율
-        fireBladeTexts[5].text = $"Mana: {Mathf.Floor(fireBlade.useMana)}";
+        fireBladeTexts[5].text = $"Mana {Mathf.Floor(fireBlade.useMana)}";
     }
     #endregion
 }

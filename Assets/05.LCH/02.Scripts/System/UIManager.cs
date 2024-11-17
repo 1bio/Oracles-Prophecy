@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics.Contracts;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -30,12 +28,14 @@ public class UIManager : MonoBehaviour
     public GameObject[] emptySlot;
     public GameObject[] skillSlot;
 
+    [Header("현재 장소 텍스트")]
+    public TextMeshProUGUI zoneName;
+
     [Header("게임 오버")]
     public CanvasGroup gameoverCG;
     public GameObject ingameUI;
 
     private bool isMelee; // 클래스 확인
-
     private string skillName; // 스킬 이름 확인
 
     // 스탯 필드
@@ -59,6 +59,11 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        StartCoroutine(DisplayZoneName());
+    }
+
     private void Update()
     {
         // 임시
@@ -67,12 +72,7 @@ public class UIManager : MonoBehaviour
             DataManager.instance.playerData.statusData.currentHealth += 50;
         }
 
-        // 임시
         if (Input.GetKeyDown(KeyCode.V))
-        {
-            DataManager.instance.playerData.statusData.skillPoint += 1;
-        }
-        else if (Input.GetKeyDown(KeyCode.B))
         {
             DataManager.instance.LevelUp(50, 50);
         }
@@ -177,6 +177,39 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    // 현재 위치 디스플레이 텍스트
+    private IEnumerator DisplayZoneName()
+    {
+        Color color = zoneName.color;
+        color.a = 0f;
+        zoneName.color = color;
+
+        // 텍스트를 씬의 이름으로 설정
+        //zoneName.text = SceneManager.GetActiveScene().name; 
+
+        // 알파 값을 1까지 올리기
+        while (color.a < 1f)
+        {
+            color.a += Time.deltaTime * 0.5f;
+            zoneName.color = color;
+            yield return null;
+        }
+
+        color.a = 1f;
+        zoneName.color = color;
+
+        // 알파값을 0까지 내리기
+        while (color.a > 0f)
+        {
+            color.a -= Time.deltaTime * 0.5f;
+            zoneName.color = color;
+            yield return null;
+        }
+
+        color.a = 0f;
+        zoneName.color = color;
+    }
+
     // 게임 오버
     public void GameoverUI()
     {
@@ -185,6 +218,7 @@ public class UIManager : MonoBehaviour
         StartCoroutine(Fade(true));
     }
 
+    // 캔버스 그룹 페이드
     private IEnumerator Fade(bool isFadeIn)
     {
         float timer = 0f;
@@ -235,6 +269,7 @@ public class UIManager : MonoBehaviour
 
 
     #region Button Event
+    // 게임 오버 후 마을로 돌아가는 이벤트
     public void ReturnToVillage()
     {
         gameoverCG.interactable = false;

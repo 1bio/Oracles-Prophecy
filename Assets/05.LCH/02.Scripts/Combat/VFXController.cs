@@ -72,13 +72,17 @@ public class VFXController : MonoBehaviour
 
         s_prefabs[3].transform.position = transform.position;
         s_prefabs[3].transform.SetParent(null);
-        s_prefabs[3].GetComponent<ParticleSystem>().Play();
+        //s_prefabs[3].GetComponent<ParticleSystem>().Play();
+
+        s_prefabs[3].SetActive(true);
 
         if (s_prefabs[3].GetComponent<AudioSource>() != null)
         {
             AudioSource soundComponentCast = s_prefabs[3].GetComponent<AudioSource>();
             AudioClip clip = soundComponentCast.clip;
             soundComponentCast.PlayOneShot(clip);
+
+            StartCoroutine(Attack(2));
         }
     }
     
@@ -118,6 +122,17 @@ public class VFXController : MonoBehaviour
             c_prefabs[EffectNumber].transform.position = ShootingTransform.transform.position;
             c_prefabs[EffectNumber].transform.rotation = ShootingTransform.transform.rotation;
             c_prefabs[EffectNumber].GetComponent<ParticleSystem>().Play();
+        }
+
+        // ºù°á
+        if(EffectNumber == 2)
+        {
+            yield return new WaitForSeconds(2.5f);
+
+            if (s_prefabs[3].GetComponent<ParticleSystem>().isPlaying == false)
+            {
+                s_prefabs[3].SetActive(false);
+            }
         }
     }
 

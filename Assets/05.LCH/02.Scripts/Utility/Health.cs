@@ -103,28 +103,13 @@ public class Health : MonoBehaviour
 
     private void PlayBloodVFX()
     {
-        /*ParticleSystem[] bloods = bloodVFX.GetComponentsInChildren<ParticleSystem>();
+        ParticleSystem[] bloods = bloodVFX.GetComponentsInChildren<ParticleSystem>();
 
         foreach (ParticleSystem blood in bloods)
         {
             blood.transform.position = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
 
             blood.Play();
-        }*/
-    }
-
-    public void Delay(float damage)
-    {
-        StartCoroutine(EventDelay(damage));
-    }
-
-    // 이벤트 딜레이(연속 피격 스킬용)
-    IEnumerator EventDelay(float damage)
-    {
-        for (int i = 0; i < 5; i++)
-        {
-            TakeDamage(damage, false);
-            yield return new WaitForSeconds(0.3f);
         }
     }
 

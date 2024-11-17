@@ -57,7 +57,7 @@ public class ChargingShot : MonoBehaviour
             Debug.Log("정조준 얻음!");
         }
 
-        DataManager.instance.SkillLevelUp("정조준", 1);
+        DataManager.instance.SkillLevelUp("ChargingShot", 1);
     }
 
     // 텍스트 업데이트
@@ -68,7 +68,7 @@ public class ChargingShot : MonoBehaviour
         chargingShotTexts[2].text = chargingShot.description; // 설명
         chargingShotTexts[3].text = $"Damage {Mathf.Floor(chargingShot.minDamage)} - {Mathf.Floor(chargingShot.maxDamage)}"; // 공격력 증가율 
         chargingShotTexts[4].text = $"CoolDown {Mathf.Floor(chargingShot.coolDown)}"; // 쿨타임 감소율
-        chargingShotTexts[5].text = $"Mana: {Mathf.Floor(chargingShot.useMana)}";
+        chargingShotTexts[5].text = $"Mana {Mathf.Floor(chargingShot.useMana)}";
     }
     #endregion
 }

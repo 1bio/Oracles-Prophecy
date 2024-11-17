@@ -68,7 +68,7 @@ public class PlayerStateMachine : StateMachine
         SetPlayerClass();
 
         // 삭제 예정
-        //ChangeState(new PlayerFreeLookState(this));
+        ChangeState(new PlayerFreeLookState(this));
         //ChangeState(new PlayerRangeFreeLookState(this));
 
         DataManager.instance.SaveData();

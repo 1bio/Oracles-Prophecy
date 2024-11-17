@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     public GameObject chestPrefab;
 
     [field: Header("무기 장착 위치")]
+    public Transform boneRoot; // 캐릭터 boneRoot
     public Transform weaponTransform;
     public Transform offhandWristTransform;
     public Transform offhandHandTransform;
@@ -40,6 +41,30 @@ public class Player : MonoBehaviour
             equipment.GetSlots[i].OnBeforeUpdate += OnRemoveItem;
             equipment.GetSlots[i].OnAfterUpdate += OnAddItem;
         }
+    }
+
+    void AttachEquipmentToCharacter(Transform characterBoneRoot, SkinnedMeshRenderer equipmentRenderer)
+    {
+        Transform[] characterBones = characterBoneRoot.GetComponentsInChildren<Transform>(); // 캐릭터 boneRoot 하위 객체 가져오기
+        Transform[] updatedBones = new Transform[equipmentRenderer.bones.Length]; // 장비의 스킨 매쉬 렌더러의 개수 만큼 
+
+        for (int i = 0; i < equipmentRenderer.bones.Length; i++)
+        {
+            string boneName = equipmentRenderer.bones[i].name;
+
+            foreach (Transform characterBone in characterBones)
+            {
+                if (characterBone.name == boneName)
+                {
+                    updatedBones[i] = characterBone;
+                    break;
+                }
+            }
+        }
+
+        equipmentRenderer.bones = updatedBones;
+
+        equipmentRenderer.rootBone = characterBoneRoot;
     }
 
 
@@ -117,7 +142,8 @@ public class Player : MonoBehaviour
                     switch (_slot.AllowedItems[0])
                     {
                         case ItemType.Helmet:
-                            helmetPrefab.SetActive(true);
+                            SkinnedMeshRenderer equipmentRenderer = _slot.ItemObject.characterDisplay.GetComponentInChildren<SkinnedMeshRenderer>();
+                            AttachEquipmentToCharacter(boneRoot, equipmentRenderer);
                             break;
                         case ItemType.Chest:
                             chestPrefab.SetActive(true);

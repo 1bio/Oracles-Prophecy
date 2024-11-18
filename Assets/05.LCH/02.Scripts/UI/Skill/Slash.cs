@@ -58,7 +58,7 @@ public class Slash : MonoBehaviour
             Debug.Log("절단 얻음!");
         }
 
-        DataManager.instance.SkillLevelUp("절단", 1);
+        DataManager.instance.SkillLevelUp("Single Slash", 1);
     }
 
     // 텍스트 업데이트
@@ -76,7 +76,7 @@ public class Slash : MonoBehaviour
         slashTexts[2].text = slash.description; // 설명
         slashTexts[3].text = $"Damage {Mathf.Floor(slash.minDamage)} - {Mathf.Floor(slash.maxDamage)}"; // 공격력 증가율 
         slashTexts[4].text = $"CoolDown {Mathf.Floor(slash.coolDown)}"; // 쿨타임 감소율
-        slashTexts[5].text = $"Mana: {Mathf.Floor(slash.useMana)}";
+        slashTexts[5].text = $"Mana {Mathf.Floor(slash.useMana)}";
     }
     #endregion
 }

@@ -4,14 +4,21 @@ public class FrostDamage : MonoBehaviour
 {
     private float damage;
 
+    private int hitCount = 3;
+
     private void Start()
     {
         damage = DataManager.instance.playerData.skillData[5].damage;
     }
 
-    private void OnParticleCollision(GameObject other)
+    private void OnTriggerEnter(Collider other)
     {
-        other.GetComponent<Health>().TakeDamage(damage, false);
+        Health health = other.GetComponent<Health>();
+
+        for (int i = 0; i < hitCount; i++)
+        {
+            health.TakeDamage(damage, false);
+        }
     }
 
 }

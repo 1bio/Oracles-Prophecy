@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +9,7 @@ public class ChargingShotSlot : MonoBehaviour
 
     private void Update()
     {
-        SlotCoolDownUpdate("정조준");
+        SlotCoolDownUpdate("ChargingShot");
     }
 
     public void SlotCoolDownUpdate(string skillName)

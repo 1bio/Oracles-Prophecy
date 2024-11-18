@@ -57,7 +57,7 @@ public class SkyFallShot : MonoBehaviour
             Debug.Log("화살비 얻음!");
         }
 
-        DataManager.instance.SkillLevelUp("화살비", 1);
+        DataManager.instance.SkillLevelUp("SkyFallShot", 1);
     }
 
     // 텍스트 업데이트
@@ -68,7 +68,7 @@ public class SkyFallShot : MonoBehaviour
         skyfallShotTexts[2].text = skyfallShot.description; // 설명
         skyfallShotTexts[3].text = $"Damage {Mathf.Floor(skyfallShot.minDamage)} - {Mathf.Floor(skyfallShot.maxDamage)}"; // 공격력 증가율 
         skyfallShotTexts[4].text = $"CoolDown {Mathf.Floor(skyfallShot.coolDown)}"; // 쿨타임 감소율
-        skyfallShotTexts[5].text = $"Mana: {Mathf.Floor(skyfallShot.useMana)}";
+        skyfallShotTexts[5].text = $"Mana {Mathf.Floor(skyfallShot.useMana)}";
     }
     #endregion
 }

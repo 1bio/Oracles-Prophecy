@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Chest
   m_EditorClassIdentifier: 
   uiDisplay: {fileID: 21300000, guid: eca402ded414e2041abe4846c23df6e3, type: 3}
-  characterDisplay: {fileID: 100000, guid: 00b872aa9f502614fae9b0fca6a2a828, type: 3}
+  characterDisplay:
+  - {fileID: 1516821245979322564, guid: aa8a815cc1c854e568913ca9ceae6ba4, type: 3}
   stackable: 0
   type: 5
   description: 

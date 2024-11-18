@@ -701,13 +701,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8aeb292db1e4940ab6cf91afda962c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinSlashTexts:
-  - {fileID: 7988529590576975598}
-  - {fileID: 2706344662488656253}
-  - {fileID: 1297237511616444531}
-  - {fileID: 6352869254938274407}
-  - {fileID: 4929816744538627039}
-  - {fileID: 6385611106579317293}
+  frostTexts: []
+  icon_skill: {fileID: 0}
+  icon_lock: {fileID: 0}
+  limitLevel: 5
 --- !u!1 &5101102191543660255
 GameObject:
   m_ObjectHideFlags: 0

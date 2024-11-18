@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f029196cf3f797f4c9d9210bf3cc0605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  icon: {fileID: 4349231452270919538}
   coolDownImage: {fileID: 3818579855221594838}
   coolDownText: {fileID: 4433308101575075891}
 --- !u!1 &7096837344680725722

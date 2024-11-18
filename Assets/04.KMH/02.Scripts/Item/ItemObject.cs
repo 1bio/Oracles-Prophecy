@@ -14,7 +14,7 @@ public enum ItemType
     Chest,
     Back,
     Pants,
-    Glove,
+    Gloves,
     Shoulder,
     Belt,
     Default
@@ -32,7 +32,7 @@ public enum Attributes
 public class ItemObject : ScriptableObject
 {
     public Sprite uiDisplay;
-    public GameObject characterDisplay;
+    public GameObject[] characterDisplay;
     public bool stackable;
     public ItemType type;
     [TextArea(15,20)]
@@ -47,12 +47,12 @@ public class ItemObject : ScriptableObject
         return newItem;
     }
 
-    private void OnValidate()
+   /* private void OnValidate()
     {
         boneNames.Clear();
         if (characterDisplay == null)
             return;
-        if(characterDisplay.GetComponent<SkinnedMeshRenderer>())
+        if(!characterDisplay.GetComponent<SkinnedMeshRenderer>())
             return;
 
         var renderer = characterDisplay.GetComponent<SkinnedMeshRenderer>();
@@ -62,7 +62,7 @@ public class ItemObject : ScriptableObject
         {
             boneNames.Add(t.name);
         }
-    }
+    }*/
 }
 
 [System.Serializable]

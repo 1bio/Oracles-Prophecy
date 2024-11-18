@@ -82,6 +82,7 @@
     <Compile Include="Assets\04.KMH\02.Scripts\Player\Player.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Indicator\LineAttackIndicator.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Data\PlayerData.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\Potion\HPPotionSlot.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Window\AnimatedWindowController.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\FadeInOut\ObjectFadeInOut.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Combat\Targeting.cs" />
@@ -94,6 +95,7 @@
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_DeactivateByTime.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_StayWithTarget.cs" />
     <Compile Include="Assets\MRF\Scripts\Splines.cs" />
+    <Compile Include="Assets\01.BSJ\10.Temp\Medusa\RecordingMedusaH.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\System\PoolManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Input\InputReader.cs" />
@@ -157,6 +159,7 @@
     <Compile Include="Assets\InfinityPBR\_InfinityPBR - Medusa\Scripts\medusaTextureControl.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Combat\Projectile.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Enemy\FreeLook\EnemyFreeLookState.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\Potion\PotionSlot.cs" />
     <Compile Include="Assets\InfinityPBR\Magic Spells &amp; Particles\Scripts\SFB_LightAutoOff.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\04.Medusa\Humanoid Skills\MedusaJumpAttack.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Enum\GameVFX.cs" />
@@ -229,6 +232,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Controls\SliderValueController.cs" />
+    <Compile Include="Assets\04.KMH\02.Scripts\Player\CharacterRiging.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\IPBR_EnvironmentWarning.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Combat\RangeComponent.cs" />
@@ -368,6 +372,7 @@
     <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_ToggleOpposite.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Data\MonsterLootItemData.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Enum\GameLayers.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\Potion\MPPotionSlot.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\ParticleSysem\RFX4_CollisionPropertyDeactiavtion.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\State\MonsterStateMachineController.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Utility\RotationWeapon.cs" />
@@ -378,7 +383,6 @@
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\PlayerRangeFreeLookState.cs" />
     <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\WardrobePrefabManager.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\InfinityDemoAnimationButton.cs" />
-    <Compile Include="Assets\05.LCH\02.Scripts\Utility\CharacterRiging.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\InfinityDemoFloatSlider.cs" />
     <Compile Include="Assets\InfinityPBR\Audio Snapshot Exporter\SFB_AudioSnapshotExporter.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_PhysicsMotion.cs" />

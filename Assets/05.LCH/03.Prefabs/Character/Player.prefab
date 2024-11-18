@@ -4296,9 +4296,8 @@ MonoBehaviour:
   inventory: {fileID: 11400000, guid: 67f9db96f281fbd468ad8eb0bc219606, type: 2}
   equipment: {fileID: 11400000, guid: 2e85a6936d158134abcbe41b7a48cb61, type: 2}
   attributes: []
-  helmetPrefab: {fileID: 0}
-  chestPrefab: {fileID: 0}
-  weaponTransform: {fileID: 0}
+  boneRoot: {fileID: 1046643677032741771}
+  weaponTransform: {fileID: 4187723979898851642}
   offhandWristTransform: {fileID: 0}
   offhandHandTransform: {fileID: 0}
 --- !u!114 &6421235098220618430

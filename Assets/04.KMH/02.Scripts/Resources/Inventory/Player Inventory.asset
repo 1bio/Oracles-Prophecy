@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePath: /Inventory.Save
   database: {fileID: 11400000, guid: 2d33e8b0fd3f1eb40ac96e4025c0e7fb, type: 2}
+  type: 0
   Container:
     Slots:
     - AllowedItems: 

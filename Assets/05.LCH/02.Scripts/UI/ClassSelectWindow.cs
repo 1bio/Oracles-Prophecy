@@ -14,7 +14,7 @@ public class ClassSelectWindow : MonoBehaviour
     public void ArrowLeft()
     {
         // 중복 호출 방지
-        if (texts[0].text == "전사")
+        if (texts[0].text == "Warrior")
             return;
 
         // 왼쪽 사이드 바
@@ -40,8 +40,8 @@ public class ClassSelectWindow : MonoBehaviour
         elements[1].characterSkillIcon?.SetActive(false);
 
         // 텍스트 전환
-        texts[0].text = "전사";
-        texts[1].text = "전사";
+        texts[0].text = "Warrior";
+        texts[1].text = "Warrior";
         texts[2].text = "전사는 대개 높은 체력과 방어력을 지녀 적의 공격을\r\n" +
                         "흡수하거나 피해를 최소화하면서도 오랜 시간 전투를\r\n" +
                         "지속할 수 있습니다";
@@ -53,7 +53,7 @@ public class ClassSelectWindow : MonoBehaviour
     public void ArrowRight()
     {
         // 중복 호출 방지
-        if (texts[0].text == "궁수")
+        if (texts[0].text == "Archer")
             return;
 
         // 왼쪽 사이드 바
@@ -80,8 +80,8 @@ public class ClassSelectWindow : MonoBehaviour
         elements[1].characterSkillIcon?.SetActive(true);
 
         // 텍스트 전환
-        texts[0].text = "궁수";
-        texts[1].text = "궁수";
+        texts[0].text = "Archer";
+        texts[1].text = "Archer";
         texts[2].text = "궁수는 탁월한 기동성을 활용해 적의 공격을 회피하며\r\n " +
                         "전투 상황에서 적절히 거리를 조절해 피해를 줄 수 있어\r\n " +
                         "생존력도 높은 편입니다";

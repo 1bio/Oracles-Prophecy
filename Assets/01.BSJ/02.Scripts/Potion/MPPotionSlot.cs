@@ -17,7 +17,7 @@ public class MPPotionSlot : PotionSlot
 
             DataManager.instance.playerData.statusData.currentHealth = Mathf.Min(playerMaxMana, playerCurrentMana + _manaHealAmount);
 
-            p_Count--;
+            _count--;
         }
     }
 }

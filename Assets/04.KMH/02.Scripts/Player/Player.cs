@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal.VersionControl;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -177,15 +178,21 @@ public class Player : MonoBehaviour
     }
 
 
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerStay(Collider other)
     {
-        var groundItem = other.GetComponent<GroundItem>();
-        if (groundItem)
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            Item _item = new Item(groundItem.item);
-            if (inventory.AddItem(_item, 1))
+            var Itemobject = other.GetComponent<ItemObjectController>();
+            if (Itemobject != null)
             {
-                Destroy(other.gameObject);
+                foreach (var item in Itemobject.GetDropItems())
+                {
+                    Item _item = new Item(item);
+                    if (inventory.AddItem(_item, 1))
+                    {
+                        Destroy(other.gameObject);
+                    }
+                }
             }
         }
     }

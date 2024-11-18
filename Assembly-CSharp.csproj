@@ -79,6 +79,7 @@
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\Scripts\Slash_AxisRotateByTime.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\UI\CharacterUI.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Data\RangeAttackData.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Controller\ItemObjectController.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_OnEnableResetTransform.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Player\Player.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Indicator\LineAttackIndicator.cs" />
@@ -206,6 +207,7 @@
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Combat\MonsterDamageHandler.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\UI\SkillSlot\DashSlashSlot.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\FadeInOut\TransparencyController.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Controller\ItemUIController.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_EffectEvent.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Domain\NationProperties.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\PlayerBaseState.cs" />
@@ -235,6 +237,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Controls\SliderValueController.cs" />
+    <Compile Include="Assets\04.KMH\02.Scripts\Player\CharacterRiging.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\IPBR_EnvironmentWarning.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Combat\RangeComponent.cs" />

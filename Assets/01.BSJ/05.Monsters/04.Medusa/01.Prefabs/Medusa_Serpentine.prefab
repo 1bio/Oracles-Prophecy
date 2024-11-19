@@ -686,7 +686,7 @@ GameObject:
   - component: {fileID: -6489126039494171889}
   - component: {fileID: 442402378598529950}
   - component: {fileID: 6626088750905848651}
-  - component: {fileID: 436942652998468435}
+  - component: {fileID: 2340731960369887235}
   m_Layer: 10
   m_Name: Medusa_Serpentine
   m_TagString: Monster
@@ -976,7 +976,7 @@ MonoBehaviour:
   DissolveSpeed: 0.001
   DissolveYield: 0.015
   Particle: {fileID: 8880864992799193200}
---- !u!114 &436942652998468435
+--- !u!114 &2340731960369887235
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -1061,7 +1061,7 @@ GameObject:
   - component: {fileID: 1375701588853561516}
   - component: {fileID: 3989245594237044854}
   - component: {fileID: 729991485967966793}
-  - component: {fileID: 8779328216018176255}
+  - component: {fileID: 4009242273441392674}
   m_Layer: 10
   m_Name: Devils
   m_TagString: Monster
@@ -1370,7 +1370,7 @@ MonoBehaviour:
   DissolveSpeed: 0.001
   DissolveYield: 0.015
   Particle: {fileID: 8832719142859204536}
---- !u!114 &8779328216018176255
+--- !u!114 &4009242273441392674
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

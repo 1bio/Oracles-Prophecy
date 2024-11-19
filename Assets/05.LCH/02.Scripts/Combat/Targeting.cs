@@ -53,6 +53,14 @@ public class Targeting : MonoBehaviour
         if (Targets.Count == 0)
             return;
 
+        foreach(Target target in Targets)
+        {
+            if (target.GetComponent<Health>().isAlive == false)
+            {
+                Targets.Remove(target);
+            }
+        }
+
         CurrentTarget = SetRanking();
     }
 

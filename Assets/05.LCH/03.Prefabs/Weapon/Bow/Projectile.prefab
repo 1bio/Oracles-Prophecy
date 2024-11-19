@@ -5036,12 +5036,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.01697475, y: 0.018356634, z: 0.1930524}
-  m_Center: {x: -0.00022615679, y: -0.00052571204, z: 0.2962742}
+  m_Size: {x: 0.01697475, y: 0.018356634, z: 0.36801904}
+  m_Center: {x: -0.00022615679, y: -0.00052571204, z: -0.076280326}
 --- !u!54 &6619882542492516339
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5082,7 +5082,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trail: {fileID: 7494013494781164848}
-  delay: 1
 --- !u!82 &8555749783291908298
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10083,7 +10082,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5575694356891752627
 Transform:
   m_ObjectHideFlags: 0

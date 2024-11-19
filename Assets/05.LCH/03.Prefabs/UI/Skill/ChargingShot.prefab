@@ -1449,6 +1449,9 @@ MonoBehaviour:
   - {fileID: 6828435912279248293}
   - {fileID: 2704646032574732199}
   - {fileID: 7337316215800184893}
+  icon_skill: {fileID: 0}
+  icon_lock: {fileID: 0}
+  limitLevel: 3
 --- !u!1 &8728320780156205940
 GameObject:
   m_ObjectHideFlags: 0

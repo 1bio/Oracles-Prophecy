@@ -10,7 +10,7 @@ public class FireBladeSlot : MonoBehaviour
 
     private void Update()
     {
-        SlotCoolDownUpdate("화염칼");
+        SlotCoolDownUpdate("Fire Blade");
     }
 
     public void SlotCoolDownUpdate(string skillName)

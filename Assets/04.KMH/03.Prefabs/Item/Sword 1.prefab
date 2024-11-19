@@ -177,7 +177,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2105236796417742487}
-  - component: {fileID: 4144684987852413805}
   m_Layer: 0
   m_Name: Sword 1
   m_TagString: Untagged
@@ -207,27 +206,6 @@ Transform:
   - {fileID: 5778166644759241426}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 194.725, y: -8.539978, z: 117.052}
---- !u!95 &4144684987852413805
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3569749609429209188}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 5665c9fe0edd3bb41a0385545fd93fee, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4593512145561994631
 GameObject:
   m_ObjectHideFlags: 0

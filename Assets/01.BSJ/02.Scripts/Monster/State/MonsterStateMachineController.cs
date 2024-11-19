@@ -9,11 +9,6 @@ public class MonsterStateMachineController : MonsterStateMachine
 {
     public float CurrentBasicAttackCooldownTime { get; set; }
 
-    private void OnEnable()
-    {
-        OnSpawn();
-    }
-
     private new void Update()
     {
         base.Update();
@@ -29,12 +24,6 @@ public class MonsterStateMachineController : MonsterStateMachine
         {
             if (p_monster.MonsterStateType != MonsterStateType.Death)
                 OnDead();
-
-            // 사라지지 않았을 때
-            /*if (p_monster.gameObject.activeSelf)
-            {
-                StartCoroutine(DeathCheck());
-            }*/
         }
         else if (p_monster.MovementController.TargetDetector.IsTargetDetected)
         {
@@ -86,17 +75,6 @@ public class MonsterStateMachineController : MonsterStateMachine
         {
             p_monster.CombatController.MonsterCombatAbility.IsDead = true;
             return false;
-        }
-    }
-
-    private IEnumerator DeathCheck()
-    {
-        yield return new WaitForEndOfFrame();
-
-        if (p_monster.MonsterStateType != MonsterStateType.Death &&
-            !p_monster.AnimationController.AnimatorStateInfo.IsName("Death"))
-        {
-            OnDead();
         }
     }
 }

@@ -82,6 +82,8 @@ public class SceneController : MonoBehaviour
         progressBar_Fill.fillAmount = 0f;
         yield return StartCoroutine(Fade(true)); // Fade 코루틴이 끝날 때 까지 대기 
 
+        yield return new WaitForSeconds(3f);
+
         AsyncOperation op = SceneManager.LoadSceneAsync(loadSceneName);
         op.allowSceneActivation = false;
 
@@ -95,7 +97,7 @@ public class SceneController : MonoBehaviour
             }
             else
             {
-                timer += Time.unscaledDeltaTime;
+                timer += Time.unscaledDeltaTime ;
                 progressBar_Fill.fillAmount = Mathf.Lerp(0.9f, 1f, timer);
 
                 if(progressBar_Fill.fillAmount >= 1f)

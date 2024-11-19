@@ -1,12 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
-using UnityEditor;
-using JetBrains.Annotations;
 using System.Runtime.Serialization;
-using static UnityEditor.Progress;
 
 public enum InterfaceType
 {
@@ -24,18 +19,18 @@ public class InventoryObject : ScriptableObject
     public Inventory Container;
     public InventorySlot[] GetSlots { get { return Container.Slots; } }
 
-
     public bool AddItem(Item _item, int _amount)
     {
         if (EmptySlotCount <= 0)
             return false;
+
         InventorySlot slot = FindItemOnInventroy(_item);
         if (!database.GetItem[_item.Id].stackable || slot == null)
         {
             SetEmptySlot(_item, _amount);
             return true;
         }
-        slot.AddAount(_amount);
+        slot.AddAmout(_amount);
         return true;
     }
     public int EmptySlotCount
@@ -62,7 +57,6 @@ public class InventoryObject : ScriptableObject
         }
         return null;
     }
-
     public InventorySlot SetEmptySlot(Item _item, int _amount)
     {
         for (int i = 0; i < GetSlots.Length; i++)
@@ -87,7 +81,7 @@ public class InventoryObject : ScriptableObject
         }
     }
 
-    public void RemoveItem(Item _item)
+  /*  public void RemoveItem(Item _item)
     {
         for (int i = 0; i < GetSlots.Length; i++)
         {
@@ -96,7 +90,7 @@ public class InventoryObject : ScriptableObject
                 GetSlots[i].UpdateSlot(null, 0);
             }
         }
-    }
+    }*/
 
     [ContextMenu("Save")]
     public void Save()
@@ -163,12 +157,16 @@ public class InventorySlot
     public ItemType[] AllowedItems = new ItemType[0];
     [System.NonSerialized]
     public UserInterface parent;
+
     [System.NonSerialized]
     public GameObject slotDisplay;
+
     [System.NonSerialized]
     public SlotUpdated OnAfterUpdate;
+
     [System.NonSerialized]
     public SlotUpdated OnBeforeUpdate;
+
     public Item item = new Item();
     public int amount;
 
@@ -176,52 +174,42 @@ public class InventorySlot
     {
         get
         {
-            if(item.Id >= 0)
+            if (item.Id >= 0)
             {
                 return parent.inventory.database.GetItem[item.Id];
             }
+
             return null;
         }
     }
 
+    public InventorySlot() => UpdateSlot(new Item(), 0);
 
-    public InventorySlot()
-    {
-        UpdateSlot(new Item(), 0);
-    }
-
-    public InventorySlot(Item _item, int _amount)
-    {
-        UpdateSlot(_item, _amount);
-    }
+    public InventorySlot(Item _item, int _amount) => UpdateSlot(_item, _amount);
 
     public void UpdateSlot(Item _item, int _amount)
     {
-        if (OnBeforeUpdate != null)
-            OnBeforeUpdate.Invoke(this);
+        OnBeforeUpdate?.Invoke(this);
         item = _item;
         amount = _amount;
-        if (OnAfterUpdate != null)
-            OnAfterUpdate.Invoke(this);
-    }
-    public void RemoveItem()
-    {
-        UpdateSlot(new Item(), 0);
+        OnAfterUpdate?.Invoke(this);
     }
 
-    public void AddAount(int value)
-    {
-        UpdateSlot(item, amount += value);
-    }
+    public void RemoveItem() => UpdateSlot(new Item(), 0);
+
+    public void AddAmout(int value) => UpdateSlot(item, amount += value);
+
     public bool CanPlaceInSlot(ItemObject _itemObject)
     {
         if (AllowedItems.Length <= 0 || _itemObject == null || _itemObject.data.Id < 0)
             return true;
+
         for (int i = 0; i < AllowedItems.Length; i++)
         {
             if (_itemObject.type == AllowedItems[i])
                 return true;
         }
+
         return false;
     }
 }

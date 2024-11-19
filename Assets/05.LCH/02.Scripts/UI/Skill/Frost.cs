@@ -59,7 +59,7 @@ public class Frost : MonoBehaviour
             Debug.Log("빙결 얻음!");
         }
 
-        DataManager.instance.SkillLevelUp("빙결", 1);
+        DataManager.instance.SkillLevelUp("Frost", 1);
     }
 
     // 텍스트 업데이트
@@ -77,7 +77,7 @@ public class Frost : MonoBehaviour
         frostTexts[2].text = frost.description; // 설명
         frostTexts[3].text = $"Damage {Mathf.Floor(frost.minDamage)} - {Mathf.Floor(frost.maxDamage)}"; // 공격력 증가율 
         frostTexts[4].text = $"CoolDown {Mathf.Floor(frost.coolDown)}"; // 쿨타임 감소율
-        frostTexts[5].text = $"Mana: {Mathf.Floor(frost.useMana)}";
+        frostTexts[5].text = $"Mana {Mathf.Floor(frost.useMana)}";
     }
     #endregion
 }

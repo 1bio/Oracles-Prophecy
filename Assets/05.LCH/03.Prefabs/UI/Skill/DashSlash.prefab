@@ -227,13 +227,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80728f4aeafcbd74995b7664b06dcd65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSlashTexts:
-  - {fileID: 56091106714544692}
-  - {fileID: 5834087947633306258}
-  - {fileID: 7115889860913088892}
-  - {fileID: 5437050238947713340}
-  - {fileID: 7409977356321087887}
-  - {fileID: 4222687365477547704}
+  slashTexts: []
+  icon_skill: {fileID: 0}
+  icon_lock: {fileID: 0}
+  limitLevel: 3
 --- !u!1 &2864364932523213813
 GameObject:
   m_ObjectHideFlags: 0

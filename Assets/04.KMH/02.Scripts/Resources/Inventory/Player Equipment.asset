@@ -27,13 +27,21 @@ MonoBehaviour:
       item:
         Name: 
         Id: -1
-        buffs: []
+        buffs:
+        - attribute: 0
+          value: 0
+          min: 0
+          max: 0
       amount: 0
     - AllowedItems: 08000000
       item:
         Name: 
         Id: -1
-        buffs: []
+        buffs:
+        - attribute: 0
+          value: 0
+          min: 0
+          max: 0
       amount: 0
     - AllowedItems: 04000000
       item:
@@ -47,31 +55,31 @@ MonoBehaviour:
         Id: -1
         buffs: []
       amount: 0
-    - AllowedItems: 06000000
+    - AllowedItems: 
       item:
         Name: 
         Id: -1
         buffs: []
       amount: 0
-    - AllowedItems: 0a000000
+    - AllowedItems: 
       item:
         Name: 
         Id: -1
         buffs: []
       amount: 0
-    - AllowedItems: 07000000
+    - AllowedItems: 
       item:
         Name: 
         Id: -1
         buffs: []
       amount: 0
-    - AllowedItems: 02000000
+    - AllowedItems: 
       item:
         Name: 
         Id: -1
         buffs: []
       amount: 0
-    - AllowedItems: 03000000
+    - AllowedItems: 
       item:
         Name: 
         Id: -1

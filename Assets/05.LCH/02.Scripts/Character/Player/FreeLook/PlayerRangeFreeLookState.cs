@@ -44,7 +44,7 @@ public class PlayerRangeFreeLookState : PlayerBaseState
         // Attack
         if (stateMachine.InputReader.IsAttacking)
         {
-            if (SkillManager.instance.IsPassiveActive("트리플샷")) // 트리플샷 [1]
+            if (SkillManager.instance.IsPassiveActive("TripleShot")) // 트리플샷 [1]
             {
                 stateMachine.ChangeState(new PlayerRangeRapidShotState(stateMachine));
                 return;
@@ -100,7 +100,7 @@ public class PlayerRangeFreeLookState : PlayerBaseState
 
     private void OnFirstSkill() // 정조준 [0]
     {
-        if (SkillManager.instance.GetRemainingCooldown("정조준") <= 0f && !DataManager.instance.playerData.skillData[0].isUnlock
+        if (SkillManager.instance.GetRemainingCooldown("ChargingShot") <= 0f && !DataManager.instance.playerData.skillData[0].isUnlock
             && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[0].useMana)
         {
             stateMachine.ChangeState(new PlayerRangeAimState(stateMachine));
@@ -109,7 +109,7 @@ public class PlayerRangeFreeLookState : PlayerBaseState
 
     private void OnSecondSkill() // 트리플샷 [1]
     {
-        if (SkillManager.instance.GetRemainingCooldown("트리플샷") <= 0f && !DataManager.instance.playerData.skillData[1].isUnlock 
+        if (SkillManager.instance.GetRemainingCooldown("TripleShot") <= 0f && !DataManager.instance.playerData.skillData[1].isUnlock 
             && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[1].useMana)
         {
             SkillManager.instance.SetActiveSkill(true);
@@ -118,7 +118,7 @@ public class PlayerRangeFreeLookState : PlayerBaseState
 
     private void OnThirdSkill() // 화살비 [2]
     {
-        if (SkillManager.instance.GetRemainingCooldown("화살비") <= 0f && !DataManager.instance.playerData.skillData[2].isUnlock 
+        if (SkillManager.instance.GetRemainingCooldown("SkyFallShot") <= 0f && !DataManager.instance.playerData.skillData[2].isUnlock 
             && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[2].useMana
             && stateMachine.Targeting.CurrentTarget != null)
         {

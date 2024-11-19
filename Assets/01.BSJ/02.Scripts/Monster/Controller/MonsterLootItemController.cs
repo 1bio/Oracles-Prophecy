@@ -41,7 +41,7 @@ public class MonsterLootItemController
 
         foreach (GameObject lootItem in lootItems)
         {
-            Vector3 dropPosition = monsterPosition + Vector3.up / 10 + new Vector3(Random.Range(-1.5f, 1.5f), 0f, Random.Range(-1.5f, 1.5f));
+            Vector3 dropPosition = monsterPosition + Vector3.up / 5 + new Vector3(Random.Range(-1.5f, 1.5f), 0f, Random.Range(-1.5f, 1.5f));
 
             GameObject droppedItem = GameObject.Instantiate(lootItem, dropPosition, Quaternion.identity);
 

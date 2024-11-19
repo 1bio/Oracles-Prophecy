@@ -9,7 +9,7 @@ public class SkyFallShotSlot : MonoBehaviour
 
     private void Update()
     {
-        SlotCoolDownUpdate("화살비");
+        SlotCoolDownUpdate("SkyFallShot");
     }
 
     public void SlotCoolDownUpdate(string skillName)

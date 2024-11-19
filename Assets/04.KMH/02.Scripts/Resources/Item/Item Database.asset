@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Item Database
   m_EditorClassIdentifier: 
   ItemObjects:
-  - {fileID: 11400000, guid: 9119aef130148064c92cab5ae49810ef, type: 2}
-  - {fileID: 11400000, guid: 242876cfea777ff4fa8653da129c71f2, type: 2}
-  - {fileID: 11400000, guid: 6064de420f5d18b409f684cd368434d2, type: 2}
   - {fileID: 11400000, guid: b4631a8873ff8c14087f66a7298cb3a8, type: 2}
+  - {fileID: 11400000, guid: 6064de420f5d18b409f684cd368434d2, type: 2}
+  - {fileID: 11400000, guid: 9262a24c9cf580042b4785c5e808900c, type: 2}
+  - {fileID: 11400000, guid: 57417d42123e2924f84d86cc14a27a08, type: 2}
+  - {fileID: 11400000, guid: 242876cfea777ff4fa8653da129c71f2, type: 2}
   - {fileID: 11400000, guid: 293ec28d4a1730f4782f2870621b6b70, type: 2}
   - {fileID: 11400000, guid: 469b7f203ee1a5f47ba01f1ab5ed438d, type: 2}
   - {fileID: 11400000, guid: b9cc35e0d7f85f54795a4a6e98072218, type: 2}
   - {fileID: 11400000, guid: b90656ee41d16344093a1406876fc5c3, type: 2}
   - {fileID: 11400000, guid: da471f4c25eca924496aeff9b470667a, type: 2}
+  - {fileID: 11400000, guid: 9119aef130148064c92cab5ae49810ef, type: 2}

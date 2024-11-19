@@ -90797,7 +90797,7 @@ AnimationClip:
   m_Events:
   - time: 0
     functionName: CoolDownEvent
-    data: "\uBE59\uACB0"
+    data: Frost
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

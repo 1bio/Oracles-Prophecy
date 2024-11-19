@@ -26,14 +26,14 @@ public class DataManager : MonoBehaviour
         skillData = new List<SkillData>
         {
             // 원거리
-            new SkillData("정조준", 0, 5f, 10f, 5f, 0, 0, true, "1초 동안 힘을 모아 \r\n강력한 화살을 발사합니다", 1.15f, 0.9f, 0f, false, 20f), // 스킬 1 [0]
-            new SkillData("트리플샷", 0, 5f, 10f, 5f, 0, 0, true, "기본 공격 시 10초 동안 3발의 \r\n화살을 연속으로 발사합니다", 1.1f, 0.95f, 5f, true, 20f), // 스킬 2 [1]
-            new SkillData("화살비", 0, 5f, 10f, 5f, 0, 0, true, "하늘에 떨어지는 화살을 \r\n여러 번 발사합니다", 1.05f, 0.95f, 0f, false, 20f), // 스킬 3 [2]
+            new SkillData("ChargingShot", 0, 5f, 10f, 5f, 0, 0, true, "Fires a powerful arrow after \r\ngathering strength for one second", 1.15f, 0.9f, 0f, false, 20f), // 스킬 1 [0]
+            new SkillData("TripleShot", 0, 5f, 10f, 5f, 0, 0, true, "Fires three arrows in quick \r\nsuccession with a basic attack", 1.1f, 0.95f, 5f, true, 20f), // 스킬 2 [1]
+            new SkillData("SkyFallShot", 0, 5f, 10f, 5f, 0, 0, true, "Fires multiple arrows that \r\nfall from the sky", 1.05f, 0.95f, 0f, false, 20f), // 스킬 3 [2]
 
             // 근거리
-            new SkillData("절단", 0,  5f, 10f, 6f, 0, 0, true, "짧게 도약하며 \r\n근처의 적들을 공격합니다", 1.07f, 0.85f, 0f, false, 20f), // 스킬 1 [3]
-            new SkillData("화염칼", 0,  5f, 10f, 10f, 5f, 0.35f, true, "12초동안 근거리 무기를 \r\n불로 강화하여 공격합니다", 1.13f, 0.95f, 5f, true, 20f), // 스킬 2 [4]
-            new SkillData("빙결", 0,  5f, 10f, 5f, 0, 0, true, "강력한 빙결의 힘을 방출합니다", 1.10f, 0.9f, 0f, false, 20f), // 스킬 3 [5]
+            new SkillData("Single Slash", 0,  5f, 10f, 6f, 0, 0, true, "Performs a powerful attack \r\nover a wide area", 1.07f, 0.85f, 0f, false, 20f), // 스킬 1 [3]
+            new SkillData("Fire Blade", 0,  5f, 10f, 10f, 5f, 0.35f, true, "Enhances a melee weapon with \r\nfire to perform an attack", 1.13f, 0.95f, 5f, true, 20f), // 스킬 2 [4]
+            new SkillData("Frost", 0,  5f, 10f, 5f, 0, 0, true, "Instantly releases the power of frost", 1.10f, 0.9f, 0f, false, 20f), // 스킬 3 [5]
         };
         
         attackData = new List<AttackData>()

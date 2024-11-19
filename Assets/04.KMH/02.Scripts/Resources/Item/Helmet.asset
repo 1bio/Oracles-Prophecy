@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Helmet
   m_EditorClassIdentifier: 
   uiDisplay: {fileID: 21300000, guid: b63dce32b5c05e443b7f9c51de2ddf46, type: 3}
-  characterDisplay: {fileID: 8689674144867471451, guid: dee7b33194edf4e1ea8bf0ada384892c, type: 3}
+  characterDisplay: {fileID: 3817110904867703351, guid: f407f8d71fae24242a6cb189091cbd5d, type: 3}
   stackable: 0
   type: 1
   description: 

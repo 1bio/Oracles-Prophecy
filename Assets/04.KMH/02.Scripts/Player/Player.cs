@@ -142,8 +142,7 @@ public class Player : MonoBehaviour
                     switch (_slot.AllowedItems[0])
                     {
                         case ItemType.Helmet:
-                            SkinnedMeshRenderer equipmentRenderer = _slot.ItemObject.characterDisplay.GetComponentInChildren<SkinnedMeshRenderer>();
-                            AttachEquipmentToCharacter(boneRoot, equipmentRenderer);
+                            chestPrefab.SetActive(true);
                             break;
                         case ItemType.Chest:
                             chestPrefab.SetActive(true);

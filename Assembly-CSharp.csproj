@@ -82,7 +82,6 @@
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\Scripts\Slash_AxisRotateByTime.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\UI\CharacterUI.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Data\RangeAttackData.cs" />
-    <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Controller\ItemObjectController.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_OnEnableResetTransform.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Player\Player.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Indicator\LineAttackIndicator.cs" />
@@ -100,6 +99,7 @@
     <Compile Include="Assets\KETO_DISSOLVE\Scripts\Tester.cs" />
     <Compile Include="Assets\InfinityPBR\_InfinityPBR - Gargoyle\Scripts\SFB_DemoGargoyle.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_DeactivateByTime.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\AnimationDestroyEvent.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Util\bl_MiniMapRenderTool.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Base\bl_MiniMapPlaneBase.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_StayWithTarget.cs" />
@@ -124,6 +124,7 @@
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Scriptables\bl_MiniMapData.cs" />
     <Compile Include="Assets\InfinityPBR\Magic Spells &amp; Particles\Scripts\SFB_ParticleGrowOverTime.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Base\bl_MiniMapInputBase.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\DropItem\ItemUIController.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_TornadoParticles.cs" />
     <Compile Include="Assets\InfinityPBR\Magic Spells &amp; Particles\Scripts\SFB_ParticleTrailRotation.cs" />
     <Compile Include="Assets\UGUIMiniMap\Example\Standard Assets\Characters\FirstPersonCharacter\Scripts\MinimapPlayerController.cs" />
@@ -233,10 +234,10 @@
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Combat\MonsterDamageHandler.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\UI\SkillSlot\DashSlashSlot.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\FadeInOut\TransparencyController.cs" />
-    <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Controller\ItemUIController.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\Core\bl_MiniMap.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_EffectEvent.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\UI\bl_MiniMapCompass.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\DropItem\ItemObjectController.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Domain\NationProperties.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\PlayerBaseState.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Inventory\UserInterface.cs" />
@@ -440,6 +441,7 @@
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\Curves\RFX4_ScaleCurves.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Roll\PlayerRollingState.cs" />
     <Compile Include="Assets\InfinityPBR\_InfinityPBR - Devils\Scripts\DevilDemo.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\TrapDamageHandler.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\UI\bl_MiniMapUI.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\Scripts\Slash_GrvityPoint.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Audio\MonsterParticleAudioHandler.cs" />

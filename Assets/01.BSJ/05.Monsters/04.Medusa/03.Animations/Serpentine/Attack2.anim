@@ -128911,6 +128911,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.23333333
+    functionName: CreateTrail
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.33413306
     functionName: PlayAudio
     data: Weapon Whoosh
@@ -128923,6 +128930,13 @@ AnimationClip:
     data: Attack Vocals
     objectReferenceParameter: {fileID: 0}
     floatParameter: 1
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.6
+    functionName: DestroyTrail
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.6333333

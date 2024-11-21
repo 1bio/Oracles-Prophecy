@@ -20,7 +20,7 @@ MonoBehaviour:
   description: 
   data:
     Name: 
-    Id: 2
+    Id: 1
     buffs:
     - attribute: 3
       value: 0

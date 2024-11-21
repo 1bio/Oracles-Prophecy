@@ -37,12 +37,8 @@ public class PlayerRangeFreeLookState : PlayerBaseState
 
         Rotate(movement, deltaTime); // 회전
 
-        if (Input.GetKeyDown(KeyCode.E)) { Swap(); }
-
-        //Debug.Log($"정조준 스킬 쿨타임: {SkillManager.instance.GetRemainingCooldown("정조준")}");
-
         // Attack
-        if (stateMachine.InputReader.IsAttacking)
+        if (stateMachine.InputReader.IsAttacking && HasWeapon() && UIManager.instance.IsActiveUI())
         {
             if (SkillManager.instance.IsPassiveActive("TripleShot")) // 트리플샷 [1]
             {
@@ -76,21 +72,39 @@ public class PlayerRangeFreeLookState : PlayerBaseState
     }
     #endregion
 
-
-    #region Main Methods
-    private void Swap()
+    #region
+    public bool HasWeapon()
     {
-        if (stateMachine.WeaponPrefabs[1].activeSelf)
+        switch (ClassSelectWindow.classIndex)
         {
-            stateMachine.WeaponPrefabs[0].SetActive(true);  // 근접 무기 활성화
-            stateMachine.WeaponPrefabs[1].SetActive(false); // 원거리 무기 비활성화
+            case 0:
+                Transform sword = stateMachine.Player.swordTransform;
 
-            stateMachine.ChangeState(new PlayerFreeLookState(stateMachine));
-            return;
+                foreach (Transform child in sword)
+                {
+                    if (child.CompareTag("Weapon"))
+                    {
+                        return true;
+                    }
+                }
+                break;
+
+            case 1:
+                Transform bow = stateMachine.Player.bowTransform;
+
+                foreach (Transform child in bow)
+                {
+                    if (child.CompareTag("Weapon"))
+                    {
+                        return true;
+                    }
+                }
+                break;
         }
+
+        return false;
     }
     #endregion
-
 
     #region Event Methods
     private void OnRolling()

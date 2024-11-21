@@ -1399,6 +1399,7 @@ GameObject:
   - component: {fileID: 2628151016770411405}
   - component: {fileID: 1600202259785218707}
   - component: {fileID: 7818138606021899846}
+  - component: {fileID: 3752326637625245508}
   m_Layer: 10
   m_Name: Medusa_Humanoid
   m_TagString: Monster
@@ -1670,6 +1671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodVFX: {fileID: 0}
+  hitCount: 0
 --- !u!114 &995606814836722059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1729,6 +1731,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   virtualCam: {fileID: 0}
+--- !u!114 &3752326637625245508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147675175948022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd540d5ecfc8f85488684915acb7142f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1153596900122122
 GameObject:
   m_ObjectHideFlags: 0

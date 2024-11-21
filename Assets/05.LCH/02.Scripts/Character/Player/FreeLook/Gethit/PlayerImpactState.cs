@@ -18,16 +18,11 @@ public class PlayerImpactState : PlayerBaseState
     {
         stateMachine.Animator.CrossFadeInFixedTime(ImpactAnimationHash, CrossFadeDuration);
 
-        stateMachine.Health.SetHealth(DataManager.instance.playerData.statusData.currentHealth);
-
         // 근거리 무기 이펙트 제거
-        if (stateMachine.WeaponPrefabs[0].activeSelf)
-        {
-            stateMachine.WeaponToggle.DisableWeapon();
+        stateMachine.WeaponToggle?.DisableWeapon();
 
-            stateMachine.WeaponTrail.DestroyTrail();
-            stateMachine.ParticleEventHandler.StopParticleSystem();
-        }
+        stateMachine.WeaponTrail?.DestroyTrail();
+        stateMachine.ParticleEventHandler?.StopParticleSystem();
     }
 
 
@@ -37,17 +32,36 @@ public class PlayerImpactState : PlayerBaseState
 
         duration -= deltaTime;
 
-        // FreeLook
-        if (duration <= 0f && stateMachine.WeaponPrefabs[0].activeSelf)
+        switch (ClassSelectWindow.classIndex)
+        {
+            case 0: // 전사
+                if (duration <= 0f)
+                {
+                    stateMachine.ChangeState(new PlayerFreeLookState(stateMachine)); 
+                    return;
+                }
+                break;
+
+            case 1:  // 궁수
+                if (duration <= 0f)
+                {
+                    stateMachine.ChangeState(new PlayerRangeFreeLookState(stateMachine));
+                    return;
+                }
+                break;
+        }
+
+       /* // FreeLook
+        if (duration <= 0f && ClassSelectWindow.classIndex == 0) // 전사
         {
             stateMachine.ChangeState(new PlayerFreeLookState(stateMachine));
             return;
         }
-        else if (duration <= 0f && stateMachine.WeaponPrefabs[1].activeSelf)
+        else if (duration <= 0f && stateMachine.WeaponPrefabs[1].activeSelf) // 궁수
         {
             stateMachine.ChangeState(new PlayerRangeFreeLookState(stateMachine));
             return;
-        }
+        }*/
     }
 
     public override void Exit()

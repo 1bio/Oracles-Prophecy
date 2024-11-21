@@ -259,7 +259,6 @@
     <Compile Include="Assets\InfinityPBR\Magic Spells &amp; Particles\Scripts\SFB_LightFlicker.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_ReplaceModelOnCollision.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\HS_FrontAttack.cs" />
-    <Compile Include="Assets\05.LCH\02.Scripts\System\GameManager.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_AnubisDemo.cs" />
     <Compile Include="Assets\InfinityPBR\_InfinityPBR - Medusa\Scripts\SFB_MedusaDemoCameras.cs" />
     <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\Shape.cs" />

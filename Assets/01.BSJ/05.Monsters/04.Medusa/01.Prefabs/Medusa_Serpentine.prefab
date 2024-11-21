@@ -687,6 +687,7 @@ GameObject:
   - component: {fileID: 442402378598529950}
   - component: {fileID: 6626088750905848651}
   - component: {fileID: 436942652998468435}
+  - component: {fileID: 1607707865544034815}
   m_Layer: 10
   m_Name: Medusa_Serpentine
   m_TagString: Monster
@@ -931,6 +932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodVFX: {fileID: 0}
+  hitCount: 0
 --- !u!114 &-6489126039494171889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -989,6 +991,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   virtualCam: {fileID: 0}
+--- !u!114 &1607707865544034815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065442944784076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd540d5ecfc8f85488684915acb7142f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1071621697809182
 GameObject:
   m_ObjectHideFlags: 0

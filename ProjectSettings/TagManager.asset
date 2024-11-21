@@ -15,6 +15,7 @@ TagManager:
   - Ground
   - Projectile
   - DamageText
+  - Weapon
   layers:
   - Default
   - TransparentFX

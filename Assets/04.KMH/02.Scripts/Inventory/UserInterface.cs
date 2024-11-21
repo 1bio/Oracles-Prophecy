@@ -9,7 +9,7 @@ public abstract class UserInterface : MonoBehaviour
 {
     public InventoryObject inventory;
     public Dictionary<GameObject, InventorySlot> slotsOnInterface = new Dictionary<GameObject, InventorySlot>();
-    
+
     void Start()
     {
         CreateSlots();

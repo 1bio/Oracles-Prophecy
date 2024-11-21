@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Medusa_Serpentine Data
   m_EditorClassIdentifier: 
   _moveSpeed: 4
-  _turnSpeed: 600
+  _turnSpeed: 500
   _monsterHealth:
     _currentHealth: 100
-    _maxHealth: 100
+    _maxHealth: 1000
   _monsterAttack:
     _damage: 5
     _range: 1.7

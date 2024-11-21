@@ -18,7 +18,7 @@ public class MonsterBehaviorGotHit : MonsterBehavior
         if (monster.CombatController.MonsterCombatAbility.MonsterHealth.CurrentHealth > 0)
             monster.AnimationController.PlayGotHitAnimation();
         else
-            monster.StateMachineController.OnDead();
+            monster.AnimationController.IsLockedInAnimation = false;
 
         monster.MovementController.TargetDetector.IsTargetDetected = true;
     }

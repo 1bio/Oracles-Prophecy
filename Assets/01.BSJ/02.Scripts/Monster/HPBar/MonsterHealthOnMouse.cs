@@ -51,7 +51,7 @@ public class MonsterHealthOnMouse : MonoBehaviour
             _slider.gameObject.SetActive(true);
 
             _slider.maxValue = Monster.CombatController.MonsterCombatAbility.MonsterHealth.MaxHealth;
-            _slider.value = Monster.CombatController.MonsterCombatAbility.MonsterHealth.CurrentHealth;
+            _slider.value = Mathf.Lerp(_slider.value, Monster.CombatController.MonsterCombatAbility.MonsterHealth.CurrentHealth, Time.deltaTime * 10);
 
             int index = Monster.gameObject.name.IndexOf("_");
             string gameObjectName = Monster.gameObject.name;

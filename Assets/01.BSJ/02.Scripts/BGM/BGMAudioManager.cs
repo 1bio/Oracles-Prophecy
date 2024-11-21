@@ -76,6 +76,8 @@ public class BGMAudioManager : MonoBehaviour
             case "Village":
                 PlayBGM(BGMAudioName.Village);
                 break;
+            case "MainMenu":
+                break;
         }
     }
 

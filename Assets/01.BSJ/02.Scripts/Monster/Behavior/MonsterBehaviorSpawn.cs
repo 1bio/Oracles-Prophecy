@@ -11,7 +11,6 @@ public class MonsterBehaviorSpawn : MonsterBehavior
 
     public override void OnBehaviorStart(Monster monster)
     {
-        monster.AnimationController.IsLockedInAnimation = true;
         _currentTime = 0f;
         _monster = monster;
 

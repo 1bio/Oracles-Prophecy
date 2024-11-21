@@ -15,9 +15,9 @@ public class MPPotionSlot : PotionSlot
             float playerCurrentMana = DataManager.instance.playerData.statusData.currentMana;
             float playerMaxMana = DataManager.instance.playerData.statusData.maxMana;
 
-            DataManager.instance.playerData.statusData.currentHealth = Mathf.Min(playerMaxMana, playerCurrentMana + _manaHealAmount);
+            DataManager.instance.playerData.statusData.currentMana = Mathf.Min(playerMaxMana, playerCurrentMana + _manaHealAmount);
 
-            p_Count--;
+            _count--;
         }
     }
 }

@@ -92,7 +92,7 @@ public class MinotaurRamAttack : MonsterSkillData
             {
                 _hasHitObject = false;
             }
-            monster.MovementController.CharacterController.SimpleMove(monster.transform.forward * monster.CombatController.MonsterCombatAbility.MoveSpeed * 2f);
+            monster.MovementController.CharacterController.SimpleMove(monster.transform.forward * monster.CombatController.MonsterCombatAbility.MoveSpeed * 3f);
         }
         else if (stateInfo.IsName(Minotaur.RamAttackAnimationName.RamWall.ToString())
             && stateInfo.normalizedTime >= 0.8f)

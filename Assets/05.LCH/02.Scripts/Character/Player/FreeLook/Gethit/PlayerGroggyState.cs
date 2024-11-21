@@ -30,7 +30,7 @@ public class PlayerGroggyState : PlayerBaseState
 
         AnimatorStateInfo currentInfo = stateMachine.Animator.GetCurrentAnimatorStateInfo(0);
 
-        // 애니메이션 재생이 끝난 후
+        /*// 애니메이션 재생이 끝난 후
         if (currentInfo.normalizedTime >= 0.8f && stateMachine.WeaponPrefabs[0].activeSelf)
         {
             stateMachine.ChangeState(new PlayerFreeLookState(stateMachine));
@@ -40,7 +40,7 @@ public class PlayerGroggyState : PlayerBaseState
         {
             stateMachine.ChangeState(new PlayerRangeFreeLookState(stateMachine));
             return;
-        }
+        }*/
     }
 
     public override void Exit()

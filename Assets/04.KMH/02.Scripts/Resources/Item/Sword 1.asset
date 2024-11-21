@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0efa0a4c06cdce429ae4bef81bef225, type: 3}
   m_Name: Sword 1
   m_EditorClassIdentifier: 
-  uiDisplay: {fileID: 21300000, guid: da37f0a89af62fe4b8bee328d761dab8, type: 3}
-  characterDisplay: {fileID: 3569749609429209188, guid: 07c6bbc6d0cfb1440af7e71cb00c022c, type: 3}
+  uiDisplay: {fileID: 21300000, guid: c5632919c7eedf34ea3fce4ddb103880, type: 3}
+  characterDisplay:
+  - {fileID: 3776560327943261949, guid: 57444f294f206ed4a8e0ed575f0456a6, type: 3}
   stackable: 0
   type: 2
   description: 
   data:
     Name: 
-    Id: 6
+    Id: 5
     buffs:
     - attribute: 3
       value: 0

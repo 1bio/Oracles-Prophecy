@@ -9,12 +9,12 @@ public class PotionSlot : MonoBehaviour
 {
     [SerializeField] private Image _emptyImage;
     [SerializeField] protected TextMeshProUGUI _countText;
-    protected float p_Count = 5;
+    [SerializeField] protected float _count = 5;
     protected bool p_HasPotion = false;
 
     private void Start()
     {
-        _countText.text = p_Count.ToString();
+        _countText.text = _count.ToString();
     }
 
     protected void Update()
@@ -24,8 +24,8 @@ public class PotionSlot : MonoBehaviour
 
     protected void CheckPotionCount()
     {
-        _countText.text = p_Count.ToString();
-        p_HasPotion = p_Count > 0;
+        _countText.text = _count.ToString();
+        p_HasPotion = _count > 0;
         _emptyImage.gameObject.SetActive(!p_HasPotion);
     }
 }

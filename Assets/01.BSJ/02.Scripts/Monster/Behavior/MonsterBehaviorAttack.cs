@@ -20,9 +20,6 @@ public class MonsterBehaviorAttack : MonsterBehavior
 
     public override void OnBehaviorUpdate(Monster monster)
     {
-        if (!monster.StateMachineController.IsAlive())
-            monster.StateMachineController.OnDead();
-
         _currentTime += Time.deltaTime;
 
         if (!monster.AnimationController.IsLockedInAnimation)

@@ -1,14 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjectFadeInOut : MonoBehaviour
 {
-    private Renderer[] _renderers;
+    [SerializeField] private Image _fadeImage;
 
-    private void Awake()
+    public void StartFadeInOut()
     {
-        _renderers = GetComponentsInChildren<Renderer>();
+        StartCoroutine(FadeSequence(5));
+    }
+
+    private IEnumerator FadeSequence(float duration)
+    {
+        yield return StartCoroutine(FadeInOut(duration / 2, 0, 1));
+        yield return StartCoroutine(FadeInOut(duration / 2, 1, 0));
+        StopAllCoroutines();
     }
 
     public void StartFadeIn(float duration)
@@ -23,32 +31,24 @@ public class ObjectFadeInOut : MonoBehaviour
 
     private IEnumerator FadeInOut(float duration, float startAlpha, float endAlpha)
     {
-        Color[] colors = new Color[_renderers.Length];
-        
-        for (int i = 0; i < colors.Length; i++)
+        Color color = _fadeImage.color;
+        color.a = startAlpha;
+        _fadeImage.color = color;
+
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
         {
-            colors[i] = _renderers[i].material.color;
-            colors[i].a = startAlpha;
-            _renderers[i].material.color = colors[i];
-        }
+            float alpha = Mathf.Lerp(startAlpha, endAlpha, elapsedTime / duration);
+            color.a = alpha;
+            _fadeImage.color = color;
+            Debug.Log($"Alpha: {_fadeImage.color.a}");
 
-        for (int t = 0; t <= duration; t++)
-        {
-            float alpha = Mathf.Lerp(startAlpha, endAlpha, t / duration);
-
-            for (int i = 0; i < colors.Length; i++)
-            {
-                colors[i].a = alpha;
-                _renderers[i].material.color = colors[i];
-            }
-
+            elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        for (int i = 0; i < _renderers.Length; i++)
-        {
-            colors[i].a = endAlpha;
-            _renderers[i].material.color = colors[i];
-        }
+        color.a = endAlpha;
+        _fadeImage.color = color;
     }
 }

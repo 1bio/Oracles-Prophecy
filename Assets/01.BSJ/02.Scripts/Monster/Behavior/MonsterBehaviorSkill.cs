@@ -19,9 +19,6 @@ public class MonsterBehaviorSkill : MonsterBehavior
 
     public override void OnBehaviorUpdate(Monster monster)
     {
-        if (!monster.StateMachineController.IsAlive())
-            monster.StateMachineController.OnDead();
-
         monster.AnimationController.AnimatorStateInfo = monster.AnimationController.Animator.GetCurrentAnimatorStateInfo(0);
         _skillData.ActiveSkillTick(monster);
     }

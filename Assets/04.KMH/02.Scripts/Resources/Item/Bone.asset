@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Bone
   m_EditorClassIdentifier: 
   uiDisplay: {fileID: 21300000, guid: b5f40b42ce02da34b8927f96da1d9d1d, type: 3}
+  characterDisplay:
+  - {fileID: 0}
   stackable: 1
-  type: 11
+  type: 0
   description: 
   data:
     Name: 
-    Id: 0
+    Id: 100
     buffs: []
+  boneNames: []

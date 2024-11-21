@@ -22370,7 +22370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p_monsterStatData: {fileID: 11400000, guid: 0d6011f2742455e48b938d7c2ba6766f, type: 2}
   p_monsterSkillDatas:
-  - {fileID: 11400000, guid: 932b475c408e4bf4ab5f0b1329586532, type: 2}
+  - {fileID: 11400000, guid: 40fe965d42b3734409027f549ae5d79c, type: 2}
   p_monsterLootItemData: {fileID: 11400000, guid: fab7c1ddcaa51ac44aa2d494d082e35c, type: 2}
 --- !u!114 &1371681597545601410
 MonoBehaviour:

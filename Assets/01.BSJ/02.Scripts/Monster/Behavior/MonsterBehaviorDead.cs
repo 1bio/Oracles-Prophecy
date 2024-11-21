@@ -10,7 +10,6 @@ public class MonsterBehaviorDead : MonsterBehavior
     public override void OnBehaviorStart(Monster monster)
     {
         monster.ParticleController?.AllClearVFXs();
-        monster.AnimationController.PlayDeathAnimation();
         _monsterObj = monster.gameObject;
 
         monster.LootItemController.DropLootItems(monster.transform.position);

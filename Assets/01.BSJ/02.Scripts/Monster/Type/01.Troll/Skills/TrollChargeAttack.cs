@@ -70,7 +70,7 @@ public class TrollChargeAttack : MonsterSkillData
             }
         }
 
-        monster.CameraShake.ShakeCamera(2, 0.2f);
+        monster.CameraShake?.ShakeCamera(2, 0.2f);
         _hasHit = true;
     }
 }

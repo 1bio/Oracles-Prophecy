@@ -27,16 +27,12 @@ public class PlayerRollingState : PlayerBaseState
 
         stateMachine.Health.SetInvulnerable(true);
 
+        //근거리 무기 이펙트 제거
+        stateMachine.WeaponToggle.DisableWeapon();
 
-        // 근거리 무기 이펙트 제거
-        if (stateMachine.WeaponPrefabs[0].activeSelf)
-        {
-            stateMachine.WeaponToggle.DisableWeapon();
+        stateMachine.WeaponTrail.DestroyTrail();
+        stateMachine.ParticleEventHandler.StopParticleSystem();
 
-            stateMachine.WeaponTrail.DestroyTrail();
-            stateMachine.ParticleEventHandler.StopParticleSystem();
-        }
-     
         if (Time.time - stateMachine.PreviousDodgeTime < stateMachine.DodgeCooldown)
             return;
 
@@ -53,7 +49,26 @@ public class PlayerRollingState : PlayerBaseState
 
         AnimatorStateInfo currentInfo = stateMachine.Animator.GetCurrentAnimatorStateInfo(0);
 
-        // FreeLook
+        switch (ClassSelectWindow.classIndex)
+        {
+            case 0: // 전사
+                if (currentInfo.IsName("Roll") && currentInfo.normalizedTime > 0.8f)
+                {
+                    stateMachine.ChangeState(new PlayerFreeLookState(stateMachine));
+                    return;
+                }
+                break;
+
+            case 1: // 궁수
+                if (currentInfo.IsName("Roll") && currentInfo.normalizedTime > 0.8f)
+                {
+                    stateMachine.ChangeState(new PlayerRangeFreeLookState(stateMachine));
+                    return;
+                }
+                break;
+        }
+
+        /*// FreeLook
         if (currentInfo.IsName("Roll") && currentInfo.normalizedTime > 0.8f && stateMachine.WeaponPrefabs[0].activeSelf)
         {
             stateMachine.ChangeState(new PlayerFreeLookState(stateMachine));
@@ -63,7 +78,7 @@ public class PlayerRollingState : PlayerBaseState
         {
             stateMachine.ChangeState(new PlayerRangeFreeLookState(stateMachine));
             return;
-        }
+        }*/
     }
 
     public override void Exit()

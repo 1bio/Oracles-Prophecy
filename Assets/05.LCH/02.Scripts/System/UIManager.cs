@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -59,11 +57,6 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        StartCoroutine(DisplayZoneName());
-    }
-
     private void Update()
     {
         // 임시
@@ -91,12 +84,12 @@ public class UIManager : MonoBehaviour
         {
             case true: // 전사 스킬 트리
                 skillPoint[0].text = $"Unused Skill Points {DataManager.instance.playerData.statusData.skillPoint} point";
-                if (Input.GetKeyDown(KeyCode.K)) { SetActiveSKillWindow(!selectWindow[0].activeSelf); }
+                if (Input.GetKeyDown(KeyCode.K)) { SKillWindow(!selectWindow[0].activeSelf); }
                 break;
 
             case false: // 궁수 스킬 트리
                 skillPoint[1].text = $"Unused Skill Points {DataManager.instance.playerData.statusData.skillPoint} point";
-                if (Input.GetKeyDown(KeyCode.K)) { SetActiveSKillWindow(!selectWindow[1].activeSelf); }
+                if (Input.GetKeyDown(KeyCode.K)) { SKillWindow(!selectWindow[1].activeSelf); }
                 break;
         }
     }
@@ -178,7 +171,7 @@ public class UIManager : MonoBehaviour
     }
 
     // 현재 위치 디스플레이 텍스트
-    private IEnumerator DisplayZoneName()
+    public IEnumerator DisplayZoneName()
     {
         Color color = zoneName.color;
         color.a = 0f;
@@ -239,6 +232,19 @@ public class UIManager : MonoBehaviour
 
     }
 
+    // UI가 켜져 있으면 공격 입력 막기
+    public bool IsActiveUI()
+    {
+        if (inventoryWindow.activeSelf || selectWindow[0].activeSelf || selectWindow[1].activeSelf)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
     /*// 랜덤 스킬 생성
     public void GetRandomSkill()
     {
@@ -265,6 +271,7 @@ public class UIManager : MonoBehaviour
             }
         }
     }*/
+
     #endregion
 
 
@@ -282,7 +289,7 @@ public class UIManager : MonoBehaviour
 
     #region Toggle Window
     // 스킬 선택 UI 토글
-    public void SetActiveSKillWindow(bool openWindow)
+    public void SKillWindow(bool openWindow)
     {
         switch (isMelee)
         {
@@ -299,6 +306,24 @@ public class UIManager : MonoBehaviour
     public void InventoryWindow(bool openWindow)
     {
         inventoryWindow.SetActive(openWindow);
+    }
+
+    public void BottomIconSkill()
+    {
+        switch (isMelee)
+        {
+            case true:
+                selectWindow[0].SetActive(true);
+                break;
+            case false:
+                selectWindow[1].SetActive(true);
+                break;
+        }
+    }
+
+    public void BottomIconInventory()
+    {
+        inventoryWindow.SetActive(true);
     }
     #endregion
 }

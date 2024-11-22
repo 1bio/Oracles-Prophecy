@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class Targeting : MonoBehaviour
@@ -29,6 +28,9 @@ public class Targeting : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (!other.gameObject.TryGetComponent<Target>(out Target target))
+            return;
+
+        if (other.gameObject.GetComponent<MonsterStateMachineController>().IsAlive() == false)
             return;
 
         Targets.Add(target);

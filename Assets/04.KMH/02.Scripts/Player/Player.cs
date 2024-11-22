@@ -1,24 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditorInternal.VersionControl;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
-
     [field: Header("인벤토리 설정")]
     public InventoryObject inventory;
     public InventoryObject equipment;
 
+    [field: Header("무기 장착 위치")]
+    [SerializeField] private Transform boneRoot;
+    public Transform swordTransform; // 전사: 오른손, 궁수: 왼손
+    public Transform bowTransform;
+
     [field: Header("플레이어 스탯")]
     public Attribute[] attributes;
-
-    private Transform boots;
-    //private Transform chest;
-    //private Transform helmet;
-    private Transform offhand;
-    private Transform sword;
 
     // 착용 장비
     private GameObject helmet;
@@ -33,6 +27,9 @@ public class Player : MonoBehaviour
     private GameObject L_shoulder;
     private GameObject R_shoulder;
 
+    private GameObject sword;
+    private GameObject bow;
+
     // 프리팹 스킨 매쉬
     private SkinnedMeshRenderer helmetMesh;
     private SkinnedMeshRenderer chestMesh;
@@ -46,13 +43,7 @@ public class Player : MonoBehaviour
     private SkinnedMeshRenderer L_sholuderMesh;
     private SkinnedMeshRenderer R_sholuderMesh;
 
-    [field: Header("무기 장착 위치")]
-    [SerializeField ] private Transform boneRoot;
-
-    public Transform weaponTransform;
-    public Transform offhandWristTransform;
-    public Transform offhandHandTransform;
-
+   
     private void Start()
     {
         for (int i = 0; i < attributes.Length; i++)
@@ -64,6 +55,20 @@ public class Player : MonoBehaviour
             equipment.GetSlots[i].OnBeforeUpdate += OnRemoveItem;
             equipment.GetSlots[i].OnAfterUpdate += OnAddItem;
         }
+    }
+
+    private void Update()
+    {
+       /* if (Input.GetKeyDown(KeyCode.Space))
+        {
+            inventory.Save();
+            equipment.Save();
+        }
+        else if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
+            inventory.Load();
+            equipment.Load();
+        }*/
     }
 
     void AttachEquipmentToCharacter(Transform characterBoneRoot, SkinnedMeshRenderer equipmentRenderer)
@@ -139,10 +144,8 @@ public class Player : MonoBehaviour
                             break;
 
                         case ItemType.Weapon:
-                            Destroy(sword.gameObject);
-                            break;
-                        case ItemType.Shield:
-                            Destroy(offhand.gameObject);
+                            Destroy(sword);
+                            Destroy(bow);
                             break;
                     }
                 }
@@ -222,23 +225,33 @@ public class Player : MonoBehaviour
                             break;
 
                         case ItemType.Weapon:
-                            sword = Instantiate(_slot.ItemObject.characterDisplay[0], weaponTransform).transform;
-                            print(string.Concat("장착"));
-                            break;
-
-                        case ItemType.Shield:
-                            switch (_slot.ItemObject.type)
+                            switch (ClassSelectWindow.classIndex)
                             {
-                                case ItemType.Weapon:
-                                    offhand = Instantiate(_slot.ItemObject.characterDisplay[0], offhandHandTransform)
-                                        .transform;
+                                case 0:
+                                    sword = Instantiate(_slot.ItemObject.characterDisplay[0], swordTransform);
+                                    sword.transform.SetParent(swordTransform);
                                     break;
-                                case ItemType.Shield:
-                                    offhand = Instantiate(_slot.ItemObject.characterDisplay[0], offhandWristTransform)
-                                        .transform;
+
+                                case 1:
+                                    bow = Instantiate(_slot.ItemObject.characterDisplay[0], bowTransform);
+                                    bow.transform.SetParent(bowTransform);
                                     break;
                             }
                             break;
+
+                            /*case ItemType.Shield:
+                                switch (_slot.ItemObject.type)
+                                {
+                                    case ItemType.Weapon:
+                                        offhand = Instantiate(_slot.ItemObject.characterDisplay[0], offhandHandTransform)
+                                            .transform;
+                                        break;
+                                    case ItemType.Shield:
+                                        offhand = Instantiate(_slot.ItemObject.characterDisplay[0], offhandWristTransform)
+                                            .transform;
+                                        break;
+                                }
+                                break;*/
                     }
                 }
 
@@ -263,38 +276,20 @@ public class Player : MonoBehaviour
     }
 
 
-    public void OnTriggerStay(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        var groundItem = other.GetComponent<GroundItem>();
+        if (groundItem)
         {
-            var Itemobject = other.GetComponent<ItemObjectController>();
-            if (Itemobject != null)
+            Item _item = new Item(groundItem.item);
+            if (inventory.AddItem(_item, 1))
             {
-                foreach (var item in Itemobject.GetDropItems())
-                {
-                    Item _item = new Item(item);
-                    if (inventory.AddItem(_item, 1))
-                    {
-                        Destroy(other.gameObject);
-                    }
-                }
+                Destroy(other.gameObject);
             }
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            inventory.Save();
-            equipment.Save();
-        }
-        if (Input.GetKeyDown(KeyCode.KeypadEnter))
-        {
-            inventory.Load();
-            equipment.Load();
-        }
-    }
+   
 
     public void AttributeModified(Attribute attribute)
     {

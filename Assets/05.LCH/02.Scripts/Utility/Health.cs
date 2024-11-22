@@ -14,7 +14,7 @@ public class Health : MonoBehaviour
     [SerializeField] private GameObject bloodVFX;
 
     // 피격 카운트 필드
-    private int hitCount;
+    public int hitCount;
     private int groggyCount = 3;
 
     private float currentTime;
@@ -33,7 +33,7 @@ public class Health : MonoBehaviour
 
     private void Update()
     {
-        //CheckCoolDown(); 
+        CheckCoolDown();
     }
 
     #region Main Methods
@@ -66,6 +66,11 @@ public class Health : MonoBehaviour
         {
             if (isInvunerable)
                 return;
+
+            // 피격 횟수 로직
+            float currentImpactTime = Time.time;
+            lastImpactTime = currentImpactTime;
+            hitCount++;
 
             currentHealth = Mathf.Max(currentHealth - damage, 0);
 
@@ -145,8 +150,8 @@ public class Health : MonoBehaviour
         }
     }
 
-    /*// hitCount 확인
-    private void Groggy()
+    // hitCount 확인
+   /* private void Groggy()
     {
         // 피격 횟수 로직
         float currentImpactTime = Time.time;

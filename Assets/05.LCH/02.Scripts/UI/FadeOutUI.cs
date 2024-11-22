@@ -16,7 +16,7 @@ public class FadeOutUI : MonoBehaviour
 
     IEnumerator FadeOut()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
 
         float elapsedTime = 0f; 
         Color color = fade.color;
@@ -32,6 +32,11 @@ public class FadeOutUI : MonoBehaviour
 
         color.a = 0f;
         fade.color = color;
+
+        if(fade.color.a == 0f)
+        {
+            StartCoroutine(UIManager.instance.DisplayZoneName());
+        }
 
         if (!inGameUI.activeSelf)
         {

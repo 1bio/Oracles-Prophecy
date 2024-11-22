@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Xml.Linq;
 using Unity.VisualScripting;
 using UnityEditor;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.InputSystem.XR;
 using UnityEngine.UIElements;
@@ -90,6 +91,11 @@ public class Monster : MonoBehaviour
         }
     }
 
+    protected void Update()
+    {
+        Move(Time.deltaTime);
+    }
+
     protected void LateUpdate()
     {
         if (MonsterStateType != MonsterStateType.Skill && ParticleController != null)
@@ -159,5 +165,17 @@ public class Monster : MonoBehaviour
         {
             ParticleController.RePlayVFX(vfxNameWithScale);
         }
+    }
+
+    // 이동
+    protected void Move(Vector3 motion, float deltaTime)
+    {
+        CharacterController.Move((motion + ForceReceiver.movement) * 1f * deltaTime);
+    }
+
+    // 이동(넉백과 같은 물리적인 힘)
+    protected void Move(float deltaTime)
+    {
+        Move(Vector3.zero, deltaTime);
     }
 }

@@ -6,6 +6,7 @@ public class SkillData
     public float minDamage;
     public float maxDamage;
     public float damage;
+    public float knockBack;
     public float coolDown;
     public float force;
     public float forceTime;
@@ -17,13 +18,14 @@ public class SkillData
     public bool isPassive;
     public float useMana;
 
-    public SkillData(string skillName, int level, float minDamage, float maxDamage, float coolDown, float force, float forceTime, bool isUnlock, string description, float multipleDamage, float multipleCoolDown, float duration, bool isPassive, float useMana)
+    public SkillData(string skillName, int level, float minDamage, float maxDamage, float knockBack, float coolDown, float force, float forceTime, bool isUnlock, string description, float multipleDamage, float multipleCoolDown, float duration, bool isPassive, float useMana)
     {
         this.skillName = skillName;
         this.level = level;
         this.minDamage = minDamage;
         this.maxDamage = maxDamage;
         damage = UnityEngine.Random.Range(minDamage, maxDamage);
+        this.knockBack = knockBack;
         this.coolDown = coolDown;
         this.force = force;
         this.forceTime = forceTime;

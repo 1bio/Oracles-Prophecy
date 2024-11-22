@@ -87742,7 +87742,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ItemList:
   - {fileID: 11400000, guid: b4631a8873ff8c14087f66a7298cb3a8, type: 2}
+  - {fileID: 11400000, guid: 469b7f203ee1a5f47ba01f1ab5ed438d, type: 2}
+  - {fileID: 11400000, guid: 57417d42123e2924f84d86cc14a27a08, type: 2}
+  - {fileID: 11400000, guid: 6064de420f5d18b409f684cd368434d2, type: 2}
+  - {fileID: 11400000, guid: 9262a24c9cf580042b4785c5e808900c, type: 2}
   _dropPercent:
+  - 100
+  - 100
+  - 100
+  - 100
   - 100
 --- !u!114 &-6985019207964619622
 MonoBehaviour:
@@ -87757,6 +87765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemNearbyMessage: {fileID: 8415916218293852107}
+  _itemPickupPrefab: {fileID: 7349187571116661871, guid: f071da980d3f8274ab894c7de210972a, type: 3}
 --- !u!1 &8697400331893045183
 GameObject:
   m_ObjectHideFlags: 0

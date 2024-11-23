@@ -4,6 +4,8 @@ using UnityEngine;
 public class PlayerStateMachine : StateMachine
 {
     [field: Header("클래스")]
+    [field: SerializeField] public Player Player { get; private set; }
+
     [field: SerializeField] public InputReader InputReader { get; private set; }
 
     [field: SerializeField] public ForceReceiver ForceReceiver { get; private set; }
@@ -36,7 +38,7 @@ public class PlayerStateMachine : StateMachine
 
     [field: SerializeField] public Transform CameraTransform { get; private set; }
 
-    [field: SerializeField] public GameObject[] WeaponPrefabs { get; private set; }
+    //[field: SerializeField] public GameObject[] WeaponPrefabs { get; private set; }
 
 
     [field: Header("플레이어 세팅")]
@@ -49,6 +51,10 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public float PreviousDodgeTime { get; private set; } = Mathf.NegativeInfinity;
 
     [field: SerializeField] public float DodgeCooldown { get; private set; }
+
+
+    [field: Header("기본 무기")]
+    [field: SerializeField] public ItemObject[] BaseWeapon { get; private set; }
 
 
     private void OnEnable()
@@ -67,10 +73,6 @@ public class PlayerStateMachine : StateMachine
     {
         SetPlayerClass();
 
-        // 삭제 예정
-        ChangeState(new PlayerFreeLookState(this));
-        //ChangeState(new PlayerRangeFreeLookState(this));
-
         DataManager.instance.SaveData();
     }
 
@@ -84,16 +86,15 @@ public class PlayerStateMachine : StateMachine
     // 플레이어 클래스 설정
     public void SetPlayerClass()
     {
-        // 기본 무기 활성화 및 비활성화
-        foreach (GameObject weapon in WeaponPrefabs)
+        ClassSelectWindow.classIndex = 0;
+
+        // 기본 무기 활성화
+        foreach (ItemObject weapon in BaseWeapon)
         {
-            if (weapon == WeaponPrefabs[ClassSelectWindow.classIndex])
+            if (weapon == BaseWeapon[ClassSelectWindow.classIndex])
             {
-                WeaponPrefabs[ClassSelectWindow.classIndex].SetActive(true);
-            }
-            else
-            {
-                weapon.SetActive(false);
+                Item item = new Item(weapon);
+                Player.inventory.AddItem(item, 1);
             }
         }
 
@@ -123,9 +124,13 @@ public class PlayerStateMachine : StateMachine
     // Impact
     void OnHandleTakeDamage()
     {
-        //ChangeState(new PlayerImpactState(this));
-
         Health.SetHealth(DataManager.instance.playerData.statusData.currentHealth);
+
+        if (Health.hitCount > 3)
+        {
+            ChangeState(new PlayerImpactState(this));
+            Health.hitCount = 0;
+        }
     }
 
     // Dead

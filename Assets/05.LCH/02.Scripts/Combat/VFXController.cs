@@ -127,12 +127,9 @@ public class VFXController : MonoBehaviour
         // ºù°á
         if(EffectNumber == 2)
         {
-            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(2f);
 
-            if (s_prefabs[3].GetComponent<ParticleSystem>().isPlaying == false)
-            {
-                s_prefabs[3].SetActive(false);
-            }
+            s_prefabs[3].SetActive(false);
         }
     }
 

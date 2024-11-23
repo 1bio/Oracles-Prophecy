@@ -42,7 +42,7 @@ public class ForceReceiver : MonoBehaviour
         controller.Move(transform.forward * rollSpeed * deltaTime);
     }
 
-    // 공격 시 앞으로 이동
+    // 근접 공격 시 가속 및 넉백
     public void AddForce(Vector3 force)
     {
         impact += force;

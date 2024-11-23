@@ -33,6 +33,7 @@ public class InventoryObject : ScriptableObject
         slot.AddAmout(_amount);
         return true;
     }
+
     public int EmptySlotCount
     {
         get
@@ -46,6 +47,7 @@ public class InventoryObject : ScriptableObject
             return counter;
         }
     }
+
     public InventorySlot FindItemOnInventroy(Item _item)
     {
         for (int i = 0; i < GetSlots.Length; i++)
@@ -57,6 +59,7 @@ public class InventoryObject : ScriptableObject
         }
         return null;
     }
+
     public InventorySlot SetEmptySlot(Item _item, int _amount)
     {
         for (int i = 0; i < GetSlots.Length; i++)

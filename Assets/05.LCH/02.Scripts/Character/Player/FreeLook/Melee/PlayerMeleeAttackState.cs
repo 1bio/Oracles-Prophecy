@@ -23,7 +23,7 @@ public class PlayerMeleeAttackState : PlayerFreeLookState
 
         StatusData status = DataManager.instance.playerData.statusData;
 
-        stateMachine.MeleeComponenet.SetAttack(status.minDamage, status.maxDamage);
+        stateMachine.MeleeComponenet.SetAttack(status.minDamage, status.maxDamage, attack.KnockBack);
 
         //stateMachine.MeleeComponenet.SetAttack(attack.Damage, attack.KnockBack);
 

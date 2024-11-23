@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class PlayerFreeLookState : PlayerBaseState
 {
@@ -33,10 +34,10 @@ public class PlayerFreeLookState : PlayerBaseState
 
         stateMachine.Animator.CrossFadeInFixedTime(FreeLookWithMelee, CrossFadeDuration);
 
-        stateMachine.WeaponToggle.DisableWeapon();
+        //stateMachine.WeaponToggle.DisableWeapon();
 
-        stateMachine.WeaponTrail.DestroyTrail();
-        stateMachine.ParticleEventHandler.StopParticleSystem();
+        //stateMachine.WeaponTrail.DestroyTrail();
+        //stateMachine.ParticleEventHandler.StopParticleSystem();
     }
 
     public override void Tick(float deltaTime)
@@ -47,14 +48,12 @@ public class PlayerFreeLookState : PlayerBaseState
 
         Rotate(movement, deltaTime); // 회전
 
-        if(Input.GetKeyDown(KeyCode.E)) { Swap(); }
-
         //Debug.Log(SkillManager.instance.GetRemainingCooldown("도약베기"));
         //Debug.Log(SkillManager.instance.GetRemainingCooldown("화염칼"));
         //Debug.Log(SkillManager.instance.GetRemainingCooldown("회전베기"));
 
         // Attacking
-        if (stateMachine.InputReader.IsAttacking)
+        if (stateMachine.InputReader.IsAttacking && HasWeapon() && UIManager.instance.IsActiveUI())
         {
             if (SkillManager.instance.IsPassiveActive("Fire Blade")) 
             {
@@ -91,17 +90,36 @@ public class PlayerFreeLookState : PlayerBaseState
 
 
     #region Main Methods
-    // 무기 스왑
-    private void Swap()
+    public bool HasWeapon()
     {
-        if (stateMachine.WeaponPrefabs[0].activeSelf)
+        switch (ClassSelectWindow.classIndex)
         {
-            // Range Weapon
-            stateMachine.WeaponPrefabs[0].SetActive(false); // 근접 무기 비활성화
-            stateMachine.WeaponPrefabs[1].SetActive(true);  // 원거리 무기 활성화
+            case 0:
+                Transform sword = stateMachine.Player.swordTransform;
 
-            stateMachine.ChangeState(new PlayerRangeFreeLookState(stateMachine));
+                foreach (Transform child in sword)
+                {
+                    if (child.CompareTag("Weapon"))
+                    {
+                        return true;
+                    }
+                }
+                break;
+
+            case 1:
+                Transform bow = stateMachine.Player.bowTransform;
+
+                foreach (Transform child in bow)
+                {
+                    if (child.CompareTag("Weapon"))
+                    {
+                        return true;
+                    }
+                }
+                break;
         }
+
+        return false;
     }
     #endregion
 

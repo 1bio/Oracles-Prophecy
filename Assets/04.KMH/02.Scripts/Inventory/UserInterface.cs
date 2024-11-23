@@ -7,6 +7,7 @@ using Image = UnityEngine.UI.Image;
 
 public abstract class UserInterface : MonoBehaviour
 {
+    public Sprite emptySlot;
     public InventoryObject inventory;
     public Dictionary<GameObject, InventorySlot> slotsOnInterface = new Dictionary<GameObject, InventorySlot>();
 
@@ -21,6 +22,7 @@ public abstract class UserInterface : MonoBehaviour
         }
         AddEvent(gameObject, EventTriggerType.PointerEnter, delegate { OnEnterInterface(gameObject); });
         AddEvent(gameObject, EventTriggerType.PointerExit, delegate { OnExitInterface(gameObject); });
+
     }
 
     private void OnSlotUpdate(InventorySlot _slot)
@@ -57,11 +59,11 @@ public abstract class UserInterface : MonoBehaviour
         }
     }
 
-    //// Update is called once per frame
-    //void Update()
-    //{
-    //    slotsOnInterface.UpdateSlotDisplay();
-    //}
+    // Update is called once per frame
+    void Update()
+    {
+        slotsOnInterface.UpdateSlotDisplay();
+    }
 
     public abstract void CreateSlots();
 

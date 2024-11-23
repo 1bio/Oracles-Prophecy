@@ -81,6 +81,7 @@
     <Compile Include="Assets\MRF\Scripts\DynamicTrailGenerator.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Behavior\MonsterBehavior.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\AnimationDestroyEvent.cs" />
     <Compile Include="Assets\MRF\Scripts\Splines.cs" />
     <Compile Include="Assets\01.BSJ\10.Temp\Medusa\RecordingMedusaH.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\System\PoolManager.cs" />
@@ -93,6 +94,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\MRF\Scripts\TrailController.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\DropItem\ItemUIController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Behavior\MonsterBehaviorMovement.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\System\SkillManager.cs" />
@@ -151,6 +153,7 @@
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Combat\MonsterDamageHandler.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\UI\SkillSlot\DashSlashSlot.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\FadeInOut\TransparencyController.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\DropItem\ItemObjectController.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\PlayerBaseState.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Inventory\UserInterface.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Monster.cs" />
@@ -180,7 +183,6 @@
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Controller\MonsterLootItemController.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Behavior\MonsterBehaviorSpawn.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\UI\NPCDialogue.cs" />
-    <Compile Include="Assets\05.LCH\02.Scripts\System\GameManager.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Controller\MonsterCombatController.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\System\UIManager.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\UI\Skill\TripleShot.cs" />
@@ -246,8 +248,8 @@
     <Compile Include="Assets\MRF\Scripts\SimpleWeaponTrail.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Item\GroundItem.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\PlayerRangeFreeLookState.cs" />
-    <Compile Include="Assets\05.LCH\02.Scripts\Utility\CharacterRiging.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Roll\PlayerRollingState.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\TrapDamageHandler.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Audio\MonsterParticleAudioHandler.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\01.Troll\Skills\TrollChargeAttack.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\02.CobraSnake\CobraSnakePoisonThrow.cs" />

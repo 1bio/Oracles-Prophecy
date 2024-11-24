@@ -78,6 +78,9 @@ public class BGMAudioManager : MonoBehaviour
                 break;
             case "MainMenu":
                 break;
+            case "boss":
+                PlayBGM(BGMAudioName.Boss);
+                break;
         }
     }
 
@@ -134,5 +137,6 @@ public class BGMAudioManager : MonoBehaviour
         Dungeon,
         Combat,
         Village,
+        Boss
     }
 }

@@ -129383,9 +129383,23 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.26666668
+    functionName: PlayAudio
+    data: Footstep Scuff
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 1.0333333
     functionName: Jump
     data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.0333333
+    functionName: PlayAudio
+    data: Footstep Light
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

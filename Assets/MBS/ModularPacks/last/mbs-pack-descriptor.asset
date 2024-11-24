@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!49 &4900000
+TextAsset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: mbs-pack-descriptor
+  m_Script: "{\n    \"guid\": \"5b9f5bb5f3b04acebd59dc539a4dcab2\",\n    \"_name\":
+    \"last\",\n    \"_wallGroups\": [],\n    \"_floorGroups\": [],\n    \"_decoratorGroups\":
+    [\n        {\n            \"guid\": \"d6eb227e2d344dc5a252540a1a2cdc9d\",\n           
+    \"name\": \"torch\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"4b6c17e694f54408ab6133d57b1ac855\",\n                    \"name\":
+    \"torch\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 7541522275336497423,\n                            \"guid\": \"e6bad38fc30dfef4d8de4fa89eaec265\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"8eeb11d25f1340debc721eba76a89096\"\n       
+    },\n        {\n            \"guid\": \"3032cc46065645fb95caa037bbdc5b97\",\n           
+    \"name\": \"trap1\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"2d2168d466364f84aa7b1e828e509336\",\n                    \"name\":
+    \"trap1\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 5890549847980082634,\n                            \"guid\": \"7b2557dbbdcfb694487e63c12d7e1d38\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"8eeb11d25f1340debc721eba76a89096\"\n       
+    },\n        {\n            \"guid\": \"1d589063d59d43a2885f8ef1833bf28a\",\n           
+    \"name\": \"trap2\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"aecd7970fd6d47d9ab67ef9c1e5d2bc5\",\n                    \"name\":
+    \"trap2\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 1420318200403035364,\n                            \"guid\": \"a4d27a5dd712c964281ec398d70bf104\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"8eeb11d25f1340debc721eba76a89096\"\n       
+    },\n        {\n            \"guid\": \"90e7da8c641a473091f17cea35028669\",\n           
+    \"name\": \"trap3\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"db745b99f5d7461b9b46be649e5d9dc1\",\n                    \"name\":
+    \"trap3\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 5189249611760966889,\n                            \"guid\": \"bcf4f9fd1b5aa0249a4f99b1d6ee0079\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"8eeb11d25f1340debc721eba76a89096\"\n       
+    },\n        {\n            \"guid\": \"f5c929bdff6b4c1abe9989a4319d9ce1\",\n           
+    \"name\": \"trap4\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"1c95cca13fc741d1943e7d6489730a07\",\n                    \"name\":
+    \"trap4\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 716412372122632434,\n                            \"guid\": \"0c5c3c5c934fae64788551813d41125f\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"8eeb11d25f1340debc721eba76a89096\"\n       
+    },\n        {\n            \"guid\": \"ecf5807334c94991992b9e0558eabbb6\",\n           
+    \"name\": \"chestO\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"0aba1544e07940bf8505ff675f474649\",\n                    \"name\":
+    \"chestO\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 2848896794002258194,\n                            \"guid\": \"0590d7a1cce70014baefe0e4c8e22463\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"8eeb11d25f1340debc721eba76a89096\"\n       
+    },\n        {\n            \"guid\": \"003dff9cec754dbfbf3b7bab91ee8dc9\",\n           
+    \"name\": \"chestC\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"30fac713319e47b6a950926d21d2d70e\",\n                    \"name\":
+    \"chestC\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 9218405394392798504,\n                            \"guid\": \"029ccd5db18f7a549baefc26a8ca9718\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"8eeb11d25f1340debc721eba76a89096\"\n       
+    },\n        {\n            \"guid\": \"b1c675f94c494d099e5ca21a077457c3\",\n           
+    \"name\": \"rum\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"275f474c53a04cd9b1bfa5eba9066b5e\",\n                    \"name\":
+    \"rum\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 56503530203865967,\n                            \"guid\": \"5090310b53f93a54cb2fb0510ff48aa3\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"8eeb11d25f1340debc721eba76a89096\"\n       
+    },\n        {\n            \"guid\": \"86d438ff67bd45d7a1144e75d2aa9f98\",\n           
+    \"name\": \"broken wood\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"a804da85ac46482288b93816b9a23e68\",\n                    \"name\":
+    \"broken wood\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 3663328725254552040,\n                           
+    \"guid\": \"07ac550e41425a64dbe6077f7bb19626\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"8eeb11d25f1340debc721eba76a89096\"\n       
+    },\n        {\n            \"guid\": \"cce0d738c8f1422fb6af61433d20585b\",\n           
+    \"name\": \"broken wood S\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"eec6899407064d82b5bf5b132b22bbdd\",\n                    \"name\":
+    \"broken wood S\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 2667135220486189790,\n                           
+    \"guid\": \"a149530c12fef1942917ce1bc68145e8\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"8eeb11d25f1340debc721eba76a89096\"\n       
+    },\n        {\n            \"guid\": \"2b5f3204f05d47d1b9fa009a96509c79\",\n           
+    \"name\": \"suraeO\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"45392fd430cd46138424fc400bb9a6d6\",\n                    \"name\":
+    \"suraeO\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 475524476851794210,\n                            \"guid\": \"cb75ac1e77c0ac54384acf5d80801d45\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"8eeb11d25f1340debc721eba76a89096\"\n       
+    },\n        {\n            \"guid\": \"a366378203a54a6883e86e411cc69969\",\n           
+    \"name\": \"suraeOB\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"b61c8e25f85b482bb1015f14e6dcb62f\",\n                    \"name\":
+    \"suraeOB\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 3436504228422362334,\n                            \"guid\": \"945958893aa7b9843bcb83c5f6c6ad6e\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"8eeb11d25f1340debc721eba76a89096\"\n       
+    }\n    ],\n    \"_decoratorCategories\": [\n        {\n            \"guid\":
+    \"8eeb11d25f1340debc721eba76a89096\",\n            \"_name\": \"All\"\n       
+    }\n    ]\n}"

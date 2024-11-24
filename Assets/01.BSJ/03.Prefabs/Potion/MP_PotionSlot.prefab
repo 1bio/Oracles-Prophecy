@@ -202,6 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _emptyImage: {fileID: 3818579855221594838}
   _countText: {fileID: 5672011617125036670}
+  _count: 5
   _manaHealAmount: 20
 --- !u!1 &3200921052461593374
 GameObject:
@@ -810,7 +811,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Q
+  m_text: E
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

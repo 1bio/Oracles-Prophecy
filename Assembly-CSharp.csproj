@@ -93,6 +93,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\KETO_DISSOLVE\Scripts\Tester.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_DeactivateByTime.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\AnimationDestroyEvent.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_StayWithTarget.cs" />
     <Compile Include="Assets\MRF\Scripts\Splines.cs" />
     <Compile Include="Assets\01.BSJ\10.Temp\Medusa\RecordingMedusaH.cs" />
@@ -110,6 +111,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\MRF\Scripts\TrailController.cs" />
     <Compile Include="Assets\InfinityPBR\Magic Spells &amp; Particles\Scripts\SFB_ParticleGrowOverTime.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\DropItem\ItemUIController.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_TornadoParticles.cs" />
     <Compile Include="Assets\InfinityPBR\Magic Spells &amp; Particles\Scripts\SFB_ParticleTrailRotation.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
@@ -204,6 +206,7 @@
     <Compile Include="Assets\05.LCH\02.Scripts\UI\SkillSlot\DashSlashSlot.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\FadeInOut\TransparencyController.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_EffectEvent.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\DropItem\ItemObjectController.cs" />
     <Compile Include="Assets\MedievalKingdomUI\Scripts\Domain\NationProperties.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\PlayerBaseState.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Inventory\UserInterface.cs" />
@@ -388,8 +391,10 @@
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\Curves\RFX4_ScaleCurves.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\Roll\PlayerRollingState.cs" />
     <Compile Include="Assets\InfinityPBR\_InfinityPBR - Devils\Scripts\DevilDemo.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\TrapDamageHandler.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\Scripts\Slash_GrvityPoint.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Audio\MonsterParticleAudioHandler.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\System\AudioManager.cs" />
     <Compile Include="Assets\InfinityPBR\_InfinityPBR - Minotaur\Scripts\MinotaurDemo.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\01.Troll\Skills\TrollChargeAttack.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\SceneResources\Other\RFX4_MouseOrbit.cs" />

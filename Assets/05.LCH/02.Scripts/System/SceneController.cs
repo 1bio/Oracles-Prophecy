@@ -57,6 +57,10 @@ public class SceneController : MonoBehaviour
 
     private string loadSceneName;
 
+    public string ReturnCurrentSceneName()
+    {
+        return loadSceneName;
+    }
 
     public void LoadScene(string sceneName)
     {

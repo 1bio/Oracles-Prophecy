@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform boneRoot;
     public Transform swordTransform; // Àü»ç: ¿À¸¥¼Õ, ±Ã¼ö: ¿Þ¼Õ
     public Transform bowTransform;
+    public GameObject playerHair;
 
     [field: Header("ÇÃ·¹ÀÌ¾î ½ºÅÈ")]
     public Attribute[] attributes;
@@ -122,6 +123,7 @@ public class Player : MonoBehaviour
                     {
                         case ItemType.Helmet:
                             Destroy(helmet);
+                            playerHair.SetActive(true);
                             break;
 
                         case ItemType.Chest:
@@ -186,6 +188,8 @@ public class Player : MonoBehaviour
                             helmet = Instantiate(_slot.ItemObject.characterDisplay[0]);
                             helmetMesh = GetEquipmentSkinnedMeshRenderer(helmet);
                             AttachEquipmentToCharacter(boneRoot, helmetMesh);
+                            playerHair.SetActive(false);
+
                             break;
 
                         case ItemType.Chest:

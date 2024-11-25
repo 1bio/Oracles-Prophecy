@@ -108,9 +108,6 @@ public class PlayerHeavyAttackState : PlayerFreeLookState
         if (!stateMachine.InputReader.IsAttacking)
             return;
 
-        /*if (!stateMachine.InputReader.IsAiming)
-            return;
-*/
         stateMachine.ChangeState(new PlayerHeavyAttackState(stateMachine, attack.ComboAttackIndex));
     }
 

@@ -21,10 +21,10 @@ MonoBehaviour:
   - {fileID: 1903159153122426679, guid: 59740811524dc485abed442a6d18c9b4, type: 3}
   - {fileID: 3559835057169592269, guid: 3903f61cd6cd84b8caaa5af81138b8a4, type: 3}
   stackable: 0
-  type: 4
+  type: 0
   description: 
   data:
     Name: 
-    Id: 13
+    Id: 12
     buffs: []
   boneNames: []

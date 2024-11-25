@@ -15910,6 +15910,7 @@ GameObject:
   - component: {fileID: -3013573343040472468}
   - component: {fileID: 218704714950101428}
   - component: {fileID: 6461990866799538108}
+  - component: {fileID: 8864990629463279158}
   m_Layer: 10
   m_Name: CobraSnake_Black
   m_TagString: Monster
@@ -16163,6 +16164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodVFX: {fileID: 0}
+  hitCount: 0
 --- !u!114 &218704714950101428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16192,6 +16194,18 @@ MonoBehaviour:
   DissolveSpeed: 0.001
   DissolveYield: 0.015
   Particle: {fileID: 1677509126683358204}
+--- !u!114 &8864990629463279158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5008248685002125660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd540d5ecfc8f85488684915acb7142f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5211715474435907065
 GameObject:
   m_ObjectHideFlags: 0

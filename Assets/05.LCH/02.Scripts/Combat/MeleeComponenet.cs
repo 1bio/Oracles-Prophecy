@@ -36,6 +36,7 @@ public class MeleeComponenet : MonoBehaviour
                 cameraShake.ShakeCamera(0.8f, 0.2f);
 
                 health.TakeDamage(damage, false);
+                AudioManager.instance.PlaySwingHitSound();
             }
         }
     }

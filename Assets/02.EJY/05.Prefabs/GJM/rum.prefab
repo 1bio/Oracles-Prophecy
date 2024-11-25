@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3353632857347287244}
   - component: {fileID: 298258712772406088}
   - component: {fileID: 7816954661342312082}
+  - component: {fileID: 6086023375636179492}
   m_Layer: 0
   m_Name: rum
   m_TagString: Untagged
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6086023375636179492
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56503530203865967}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.5312967, y: 3.2789586, z: 2.5312967}
+  m_Center: {x: 0, y: 0, z: 0}

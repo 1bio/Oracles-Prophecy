@@ -23,8 +23,10 @@ public class BGMAudioManager : MonoBehaviour
     private bool _isSwitching = false;
     private static bool _isCombat = false;
 
-    public static float GetMonsterVolume() => Instance._monsterVolume;
-    public static float GetPlayerVolume() => Instance._playerVolume;
+    public static float BGMVolume { get => Instance._bgmVolume; set => Instance._bgmVolume = value; }
+    public static float MonsterVolume { get => Instance._monsterVolume; set => Instance._monsterVolume = value; }
+    public static float PlayerVolume { get => Instance._playerVolume; set => Instance._playerVolume = value; }
+
     public static void SetIsCombat(bool isCombat) { _isCombat = isCombat; }
 
     private void Awake()
@@ -65,7 +67,7 @@ public class BGMAudioManager : MonoBehaviour
         }
     }
 
-    private void SetBGMForScene()
+    public void SetBGMForScene()
     {
         switch (_currentSceneName)
         {
@@ -78,7 +80,7 @@ public class BGMAudioManager : MonoBehaviour
                 break;
             case "MainMenu":
                 break;
-            case "boss":
+            case "Boss":
                 PlayBGM(BGMAudioName.Boss);
                 break;
         }

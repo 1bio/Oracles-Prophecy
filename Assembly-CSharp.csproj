@@ -278,6 +278,7 @@
     <Compile Include="Assets\TwoUncleVFX\Common\Script\RotateAround.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Skill\SlashDamage.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\Video\BossCutscene.cs" />
     <Compile Include="Assets\UGUIMiniMap\Example\Scripts\bl_CreateItemExample.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_CameraRotate_v2.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\UI\bl_MiniMapMaskHandler.cs" />

@@ -445,6 +445,7 @@
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Runtime\UI\bl_MiniMapUI.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\Scripts\Slash_GrvityPoint.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Audio\MonsterParticleAudioHandler.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\System\AudioManager.cs" />
     <Compile Include="Assets\InfinityPBR\_InfinityPBR - Minotaur\Scripts\MinotaurDemo.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\01.Troll\Skills\TrollChargeAttack.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\02.CobraSnake\CobraSnakePoisonThrow.cs" />

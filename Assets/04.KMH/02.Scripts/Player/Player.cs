@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -293,7 +294,22 @@ public class Player : MonoBehaviour
         }
     }
 
-   
+    private void OnTriggerStay(Collider other)
+    {
+        if (Input.GetKey(KeyCode.R))
+        {
+            ItemObjectController itemObjectController = other.gameObject.GetComponent<ItemObjectController>();
+
+            List<ItemObject> itemObjects = itemObjectController.GetDropItems();
+            foreach (ItemObject itemobj in itemObjects)
+            {
+                Item _item = new Item(itemobj);
+                inventory.AddItem(_item, 1);
+            }
+
+            Destroy(other.gameObject);
+        }
+    }
 
     public void AttributeModified(Attribute attribute)
     {

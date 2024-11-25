@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1374102433548564351}
   - component: {fileID: 2749045331686062957}
   - component: {fileID: 2291319591673657614}
+  - component: {fileID: 7430757503971289637}
+  - component: {fileID: 7590869429246128523}
   m_Layer: 13
   m_Name: pillar7
   m_TagString: Obstacle
@@ -83,3 +85,45 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7430757503971289637
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4930818174071484651}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.2038081, y: 4.295598, z: 1.1987194}
+  m_Center: {x: 1.9974444, y: 2.147799, z: 0}
+--- !u!65 &7590869429246128523
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4930818174071484651}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.2540311, y: 4.295598, z: 1.1987194}
+  m_Center: {x: -1.9999417, y: 2.147799, z: 0}

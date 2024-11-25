@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class FrostDamage : MonoBehaviour
 {
+    [SerializeField] private Collider collider;
+
     private float damage;
     private float knockBack;
 
@@ -9,8 +11,12 @@ public class FrostDamage : MonoBehaviour
 
     private void Start()
     {
-        damage = DataManager.instance.playerData.skillData[5].damage;
         knockBack = DataManager.instance.playerData.skillData[5].knockBack;
+    }
+
+    private void OnDisable()
+    {
+        collider.enabled = true;   
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,8 +35,14 @@ public class FrostDamage : MonoBehaviour
 
         for (int i = 0; i < hitCount; i++)
         {
+            float min = DataManager.instance.playerData.skillData[5].minDamage;
+            float max = DataManager.instance.playerData.skillData[5].minDamage;
+            damage = Random.Range(min, max);
+
             health.TakeDamage(damage, false);
         }
+
+        collider.enabled = false;
     }
 
 }

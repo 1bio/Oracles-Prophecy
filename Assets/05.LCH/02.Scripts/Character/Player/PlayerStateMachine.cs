@@ -114,7 +114,7 @@ public class PlayerStateMachine : StateMachine
     }
 
     // 스킬 애니메이션 이벤트
-    protected void CoolDownEvent(string skillName)
+    public void CoolDownEvent(string skillName)
     {
         SkillManager.instance.StartCooldown(skillName);
     }
@@ -122,7 +122,7 @@ public class PlayerStateMachine : StateMachine
 
     #region Event Methods
     // Impact
-    void OnHandleTakeDamage()
+    public void OnHandleTakeDamage()
     {
         Health.SetHealth(DataManager.instance.playerData.statusData.currentHealth);
 
@@ -134,7 +134,7 @@ public class PlayerStateMachine : StateMachine
     }
 
     // Dead
-    void OnHandleDie()
+    public void OnHandleDie()
     {
         ChangeState(new PlayerDeadState(this));
 

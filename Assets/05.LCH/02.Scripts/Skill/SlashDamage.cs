@@ -10,7 +10,6 @@ public class SlashDamage : MonoBehaviour
 
     private void OnEnable()
     {
-        damage = DataManager.instance.playerData.skillData[3].damage;
         knockBack = DataManager.instance.playerData.skillData[3].knockBack;
     }
 
@@ -30,6 +29,10 @@ public class SlashDamage : MonoBehaviour
         {
             for (int i = 0; i < hitCount; i++)
             {
+                float min = DataManager.instance.playerData.skillData[3].minDamage;
+                float max = DataManager.instance.playerData.skillData[3].maxDamage;
+                damage = Random.Range(min, max);
+
                 health?.TakeDamage(damage, false);
 
                 StartCoroutine(Deactivate());

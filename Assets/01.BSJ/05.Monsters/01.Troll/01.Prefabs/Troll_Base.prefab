@@ -15285,6 +15285,7 @@ GameObject:
   - component: {fileID: 344153931073421555}
   - component: {fileID: 877555964642969916}
   - component: {fileID: 7968210569528221093}
+  - component: {fileID: 8579753025478709398}
   m_Layer: 10
   m_Name: Troll_Base
   m_TagString: Monster
@@ -15520,6 +15521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodVFX: {fileID: 0}
+  hitCount: 0
 --- !u!114 &6232515372858526173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15597,6 +15599,18 @@ MonoBehaviour:
   MaxFrame: 5
   TrailSubs: 4
   StopMultiplier: 2
+--- !u!114 &8579753025478709398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8870097054709720909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd540d5ecfc8f85488684915acb7142f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8929799592324859312
 GameObject:
   m_ObjectHideFlags: 0

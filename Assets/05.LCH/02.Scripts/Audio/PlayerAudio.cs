@@ -2,33 +2,9 @@ using UnityEngine;
 
 public class PlayerAudio : MonoBehaviour
 {
-    public AudioSource audioSource;
+    public void FootStepEvent() => AudioManager.instance.PlayFootStepSound();
 
-    public Animator animator;
+    public void PlaySwordSwingEvent(int index) => AudioManager.instance.PlaySwingSound(index);
 
-    [Header("FootStep")]
-    [SerializeField] public AudioClip[] footStep;
-    private bool isLeftFootStep = true;
-
-    [Range(0f, 1f)]
-    [SerializeField] private float footStepVolume;
-
-    public void FootStep()
-    {
-        audioSource.volume = footStepVolume;
-
-        if (animator.GetFloat("Velocity") > 0.8f || animator.GetFloat("RangeVelocity") > 0.8f)
-        {
-            if (isLeftFootStep)
-            {
-                audioSource.PlayOneShot(footStep[0]);
-            }
-            else
-            {
-                audioSource.PlayOneShot(footStep[1]);
-            }
-
-            isLeftFootStep = !isLeftFootStep;
-        }
-    }
+    public void PlaySlashEvent() => AudioManager.instance.PlaySlashSound();
 }

@@ -1400,6 +1400,7 @@ GameObject:
   - component: {fileID: 1600202259785218707}
   - component: {fileID: 28025293951908478}
   - component: {fileID: 1468182352243183928}
+  - component: {fileID: 6986686105211429051}
   m_Layer: 10
   m_Name: Medusa_Humanoid
   m_TagString: Monster
@@ -1671,6 +1672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodVFX: {fileID: 0}
+  hitCount: 0
 --- !u!114 &995606814836722059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1748,6 +1750,18 @@ MonoBehaviour:
   MaxFrame: 5
   TrailSubs: 4
   StopMultiplier: 2
+--- !u!114 &6986686105211429051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147675175948022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd540d5ecfc8f85488684915acb7142f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1153596900122122
 GameObject:
   m_ObjectHideFlags: 0

@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 5699220193374020854}
   - component: {fileID: 1224237425512719654}
   - component: {fileID: 6402401801009467553}
+  - component: {fileID: 895886630518619085}
   m_Layer: 10
   m_Name: CobraSnake_Green
   m_TagString: Monster
@@ -461,6 +462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodVFX: {fileID: 0}
+  hitCount: 0
 --- !u!114 &1224237425512719654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,6 +492,18 @@ MonoBehaviour:
   DissolveSpeed: 0.001
   DissolveYield: 0.015
   Particle: {fileID: 8580482047209847610}
+--- !u!114 &895886630518619085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088499713875132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd540d5ecfc8f85488684915acb7142f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1088585946576714
 GameObject:
   m_ObjectHideFlags: 0

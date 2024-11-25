@@ -24,7 +24,6 @@ public class SkillData
         this.level = level;
         this.minDamage = minDamage;
         this.maxDamage = maxDamage;
-        damage = UnityEngine.Random.Range(minDamage, maxDamage);
         this.knockBack = knockBack;
         this.coolDown = coolDown;
         this.force = force;

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/05.LCH/01.Scenes/MainMenu.unity
     guid: 801bdb30900484441a7ca94a79256cee
   - enabled: 1
+    path: Assets/01.BSJ/01.Scenes/boss.unity
+    guid: 3f6f0bc0743f3ab4fb5de1c5ad12b559
+  - enabled: 0
     path: Assets/05.LCH/01.Scenes/LCH.unity
     guid: 02bb25041e03b3d49a7fafaec5bd019c
   m_configObjects: {}

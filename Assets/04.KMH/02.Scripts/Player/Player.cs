@@ -1,21 +1,22 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [field: Header("ÀÎº¥Åä¸® ¼³Á¤")]
+    [field: Header("ï¿½Îºï¿½ï¿½ä¸® ï¿½ï¿½ï¿½ï¿½")]
     public InventoryObject inventory;
     public InventoryObject equipment;
 
-    [field: Header("¹«±â ÀåÂø À§Ä¡")]
+    [field: Header("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡")]
     [SerializeField] private Transform boneRoot;
-    public Transform swordTransform; // Àü»ç: ¿À¸¥¼Õ, ±Ã¼ö: ¿Þ¼Õ
+    public Transform swordTransform; // ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Ã¼ï¿½: ï¿½Þ¼ï¿½
     public Transform bowTransform;
     public GameObject playerHair;
 
-    [field: Header("ÇÃ·¹ÀÌ¾î ½ºÅÈ")]
+    [field: Header("ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½")]
     public Attribute[] attributes;
 
-    // Âø¿ë Àåºñ
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
     private GameObject helmet;
     private GameObject chest;
 
@@ -31,7 +32,7 @@ public class Player : MonoBehaviour
     private GameObject sword;
     private GameObject bow;
 
-    // ÇÁ¸®ÆÕ ½ºÅ² ¸Å½¬
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å² ï¿½Å½ï¿½
     private SkinnedMeshRenderer helmetMesh;
     private SkinnedMeshRenderer chestMesh;
 
@@ -269,31 +270,47 @@ public class Player : MonoBehaviour
 
     public SkinnedMeshRenderer GetEquipmentSkinnedMeshRenderer(GameObject equipment)
     {
-        if (equipment.GetComponent<SkinnedMeshRenderer>()) // ÃÖ»óÀ§ ¿ÀºêÁ§Æ®¿¡ Á¸Àç ÇÒ °æ¿ì
+        if (equipment.GetComponent<SkinnedMeshRenderer>()) // ï¿½Ö»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½
         {
             return equipment.GetComponent<SkinnedMeshRenderer>();
         }
         else
         {
-            return equipment.GetComponentInChildren<SkinnedMeshRenderer>(); // ÇÏÀ§ ¿ÀºêÁ§Æ®¿¡ Á¸Àç ÇÒ °æ¿ì
+            return equipment.GetComponentInChildren<SkinnedMeshRenderer>(); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½
         }
     }
 
+    // ï¿½Ó½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¹ï¿½ ï¿½ï¿½ï¿½ï¿½
+    /* public void OnTriggerEnter(Collider other)
+     {
+         var groundItem = other.GetComponent<GroundItem>();
+         if (groundItem)
+         {
+             Item _item = new Item(groundItem.item);
+             if (inventory.AddItem(_item, 1))
+             {
+                 Destroy(other.gameObject);
+             }
+         }
+     }*/
 
-    public void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        var groundItem = other.GetComponent<GroundItem>();
-        if (groundItem)
+        if (Input.GetKey(KeyCode.R))
         {
-            Item _item = new Item(groundItem.item);
-            if (inventory.AddItem(_item, 1))
+            ItemObjectController itemObjectController = other.gameObject.GetComponent<ItemObjectController>();
+
+            List<ItemObject> itemObjects = itemObjectController.GetDropItems();
+            foreach (ItemObject itemobj in itemObjects)
             {
-                Destroy(other.gameObject);
+                Item _item = new Item(itemobj);
+                inventory.AddItem(_item, 1);
             }
+
+            Destroy(other.gameObject);
         }
     }
 
-   
 
     public void AttributeModified(Attribute attribute)
     {

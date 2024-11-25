@@ -4332,6 +4332,7 @@ MonoBehaviour:
   boneRoot: {fileID: 1046643677032741771}
   swordTransform: {fileID: 0}
   bowTransform: {fileID: 0}
+  playerHair: {fileID: 0}
   attributes: []
 --- !u!114 &6421235098220618430
 MonoBehaviour:
@@ -4406,6 +4407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodVFX: {fileID: 0}
+  hitCount: 0
 --- !u!114 &1988570932401786285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4525,12 +4527,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9739ce0133a8c594ab0d9d8c7c53f941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 3593814723785431650}
-  animator: {fileID: 1824995815437883135}
-  footStep:
-  - {fileID: 8300000, guid: 63e2c641da46bcb458d46620d7ad2183, type: 3}
-  - {fileID: 8300000, guid: 71838592c157eac4499bfcbd4dff2c5f, type: 3}
-  footStepVolume: 0.2
 --- !u!1 &5060991818238451091
 GameObject:
   m_ObjectHideFlags: 0
@@ -13889,6 +13885,10 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8948111113566557053, guid: ba68dc2789b8d0f48b5ab81f7a456310, type: 3}
+      propertyPath: collider
+      value: 
+      objectReference: {fileID: 1058923669370316322}
     - target: {fileID: 9063511947338625457, guid: ba68dc2789b8d0f48b5ab81f7a456310, type: 3}
       propertyPath: playOnAwake
       value: 1
@@ -13898,6 +13898,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba68dc2789b8d0f48b5ab81f7a456310, type: 3}
+--- !u!135 &1058923669370316322 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 6656840389744287402, guid: ba68dc2789b8d0f48b5ab81f7a456310, type: 3}
+  m_PrefabInstance: {fileID: 5968347470583593096}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4956276694599605701 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1593129692826985805, guid: ba68dc2789b8d0f48b5ab81f7a456310, type: 3}

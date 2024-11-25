@@ -6146,6 +6146,7 @@ GameObject:
   - component: {fileID: 1558285271300407855}
   - component: {fileID: 6616133655260696730}
   - component: {fileID: 5419596045998041099}
+  - component: {fileID: 5200431245066722778}
   m_Layer: 10
   m_Name: Weeper
   m_TagString: Monster
@@ -6430,6 +6431,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd540d5ecfc8f85488684915acb7142f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5200431245066722778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2234037607394181917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb6f3a597cf4bf40b7242eb7b7d0564, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 8132709075179377168}
+  rollSpeed: 0
 --- !u!1 &2243591111499271117
 GameObject:
   m_ObjectHideFlags: 0

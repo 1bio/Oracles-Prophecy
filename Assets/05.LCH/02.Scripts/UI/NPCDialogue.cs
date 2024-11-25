@@ -21,9 +21,9 @@ public class NPCDialogue : MonoBehaviour
         }        
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.R))
         {
             scrollRect.verticalNormalizedPosition = 1f;
             dialogue.SetActive(true);

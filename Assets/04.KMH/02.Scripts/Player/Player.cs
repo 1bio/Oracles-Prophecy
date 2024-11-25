@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -279,21 +280,37 @@ public class Player : MonoBehaviour
         }
     }
 
+    // 임시 아이템 파밍 로직
+    /* public void OnTriggerEnter(Collider other)
+     {
+         var groundItem = other.GetComponent<GroundItem>();
+         if (groundItem)
+         {
+             Item _item = new Item(groundItem.item);
+             if (inventory.AddItem(_item, 1))
+             {
+                 Destroy(other.gameObject);
+             }
+         }
+     }*/
 
-    public void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        var groundItem = other.GetComponent<GroundItem>();
-        if (groundItem)
+        if (Input.GetKey(KeyCode.R))
         {
-            Item _item = new Item(groundItem.item);
-            if (inventory.AddItem(_item, 1))
+            ItemObjectController itemObjectController = other.gameObject.GetComponent<ItemObjectController>();
+
+            List<ItemObject> itemObjects = itemObjectController.GetDropItems();
+            foreach (ItemObject itemobj in itemObjects)
             {
-                Destroy(other.gameObject);
+                Item _item = new Item(itemobj);
+                inventory.AddItem(_item, 1);
             }
+
+            Destroy(other.gameObject);
         }
     }
 
-   
 
     public void AttributeModified(Attribute attribute)
     {

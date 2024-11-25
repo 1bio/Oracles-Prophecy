@@ -16,7 +16,7 @@ MonoBehaviour:
   characterDisplay:
   - {fileID: 682417478886063923, guid: 35412de33aac5471a9018e3eee7ebefe, type: 3}
   stackable: 0
-  type: 1
+  type: 0
   description: 
   data:
     Name: 

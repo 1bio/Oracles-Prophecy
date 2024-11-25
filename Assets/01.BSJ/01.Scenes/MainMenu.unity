@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3860240
 Transform:
   m_ObjectHideFlags: 0
@@ -7688,15 +7688,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199916347119306737, guid: 25a32c5e2c0ffaf4b9dd501f167f2f18, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 1199916347119306737, guid: 25a32c5e2c0ffaf4b9dd501f167f2f18, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1199916347119306737, guid: 25a32c5e2c0ffaf4b9dd501f167f2f18, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 1199916347119306737, guid: 25a32c5e2c0ffaf4b9dd501f167f2f18, type: 3}
       propertyPath: m_SizeDelta.x
@@ -9863,15 +9863,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7351655704623290251, guid: 78d4052cf7d53f74b94083025e0a6dd0, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7351655704623290251, guid: 78d4052cf7d53f74b94083025e0a6dd0, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7351655704623290251, guid: 78d4052cf7d53f74b94083025e0a6dd0, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7351655704623290251, guid: 78d4052cf7d53f74b94083025e0a6dd0, type: 3}
       propertyPath: m_SizeDelta.x
@@ -13841,7 +13841,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 78d6f4036dd2b7a4c9869bc3f54c02e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 572c6cc07e6f3c24aae87ffc610f48ac, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17262,7 +17262,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269253900}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -19034,15 +19034,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3610289161839922408, guid: 94395b9b5f578d44a9c1097a600be9e5, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3610289161839922408, guid: 94395b9b5f578d44a9c1097a600be9e5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3610289161839922408, guid: 94395b9b5f578d44a9c1097a600be9e5, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3610289161839922408, guid: 94395b9b5f578d44a9c1097a600be9e5, type: 3}
       propertyPath: m_SizeDelta.x
@@ -19232,7 +19232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199916347119306737, guid: 25a32c5e2c0ffaf4b9dd501f167f2f18, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1199916347119306737, guid: 25a32c5e2c0ffaf4b9dd501f167f2f18, type: 3}
       propertyPath: m_AnchorMin.x
@@ -23448,7 +23448,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a21da03504cb81246b1508a5b82202f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0b8b2e80989641b4d82143cc60181b8d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -26983,7 +26983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199916347119306737, guid: 25a32c5e2c0ffaf4b9dd501f167f2f18, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1199916347119306737, guid: 25a32c5e2c0ffaf4b9dd501f167f2f18, type: 3}
       propertyPath: m_AnchorMin.x
@@ -27770,7 +27770,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0c45d239fe19faf499b56334cc4591a6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ca709f832af86d646a118494ee7a675c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

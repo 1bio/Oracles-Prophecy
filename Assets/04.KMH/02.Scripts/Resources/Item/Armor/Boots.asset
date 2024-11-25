@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 933702174792606878, guid: 48f11794dbfdf4488b42e0404dd630db, type: 3}
   - {fileID: 8680697325787534746, guid: 4cf832837fd4f407aa70746e00c2f32a, type: 3}
   stackable: 0
-  type: 4
+  type: 0
   description: 
   data:
     Name: 

@@ -219,6 +219,7 @@
     <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\BlendShapePreset.cs" />
     <Compile Include="Assets\InfinityPBR\Equipment System\Scripts\MatchValue.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Utility\CameraShake.cs" />
+    <Compile Include="Assets\InfinityPBR\_InfinityPBR - Serpent Warrior\Scripts\SerpentWarriorDemo.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\For demo scenes\HS_CameraController.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Player\ModifiableInt.cs" />
     <Compile Include="Assets\InfinityPBR\Scripts Static\InfinityStatic.cs" />
@@ -370,6 +371,7 @@
     <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_HumanDemoModel.cs" />
     <Compile Include="Assets\InfinityPBR\_InfinityPBR - Devils\Scripts\SFB_DemoDevils.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_ShotFollowTarget.cs" />
+    <Compile Include="Assets\InfinityPBR\_InfinityPBR - Serpent Warrior\Scripts\SFB_DemoSerpentWarrior.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_RaycastCollision.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_ToggleOpposite.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Data\MonsterLootItemData.cs" />
@@ -436,6 +438,7 @@
     <None Include="Assets\InfinityPBR\Shaders\AV\Hair\AV Standard Hair.shader" />
     <None Include="Assets\MBS\InternalData\UIToolkit\PackManager\Uss\CategoriesManagerWindow_Styles.uss" />
     <None Include="Assets\InfinityPBR\Shaders\AV\Hair\AV URP Hair.shader" />
+    <None Include="Assets\InfinityPBR\_InfinityPBR - Serpent Warrior\Blendshape Preset Files\SerpentWarrior Demo Range 0.txt" />
     <None Include="Assets\InfinityPBR\_InfinityPBR Human - Humans\Blendshape Preset Files\Human Female (v4) Range 0.txt" />
     <None Include="Assets\MRF\Shaders\CommonMeshLoop.shader" />
     <None Include="Assets\InfinityPBR\__READ ME &amp; Support &amp; Instructions\READ ME.txt" />

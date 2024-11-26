@@ -7,15 +7,15 @@ public class ObjectFadeInOut : MonoBehaviour
 {
     [SerializeField] private Image _fadeImage;
 
-    public void StartFadeInOut()
+    public void StartFadeInOut(float duration, float startAlpha, float endAlpha)
     {
-        StartCoroutine(FadeSequence(5));
+        StartCoroutine(FadeSequence(duration, startAlpha, endAlpha));
     }
 
-    private IEnumerator FadeSequence(float duration)
+    private IEnumerator FadeSequence(float duration, float startAlpha, float endAlpha)
     {
-        yield return StartCoroutine(FadeInOut(duration / 2, 0, 1));
-        yield return StartCoroutine(FadeInOut(duration / 2, 1, 0));
+        yield return StartCoroutine(FadeInOut(duration / 2, startAlpha, endAlpha));
+        yield return StartCoroutine(FadeInOut(duration / 2, endAlpha, startAlpha));
         StopAllCoroutines();
     }
 
@@ -42,7 +42,6 @@ public class ObjectFadeInOut : MonoBehaviour
             float alpha = Mathf.Lerp(startAlpha, endAlpha, elapsedTime / duration);
             color.a = alpha;
             _fadeImage.color = color;
-            Debug.Log($"Alpha: {_fadeImage.color.a}");
 
             elapsedTime += Time.deltaTime;
             yield return null;

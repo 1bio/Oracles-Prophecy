@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00.Main/Abandoned Prison.unity
     guid: 02bb25041e03b3d49a7fafaec5bd019c
+  - enabled: 1
+    path: Assets/00.Main/Boss.unity
+    guid: 81185a01d500b4340a7417ed90e51c1d
   m_configObjects: {}

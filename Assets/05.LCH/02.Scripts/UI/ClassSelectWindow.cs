@@ -8,7 +8,7 @@ public class ClassSelectWindow : MonoBehaviour
     [SerializeField] private List<ClassSelectWindowData> elements = new List<ClassSelectWindowData>();
     [SerializeField] private TextMeshProUGUI[] texts;
 
-    public static int classIndex; /*{ get; private set; }*/ // 0 = 전사, 1 = 궁수
+    public static int classIndex { get; private set; } // 0 = 전사, 1 = 궁수
 
     // 전사
     public void ArrowLeft()

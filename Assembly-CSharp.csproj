@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\06.Weeper\Skills\WeeperFollowingShot.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Audio\PlayerAudio.cs" />
+    <Compile Include="Assets\04.KMH\02.Scripts\Inventory\ItemDataUI.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\SceneResources\Other\Slash_MouseOrbit.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Character\Player\FreeLook\PlayerFreeLookState.cs" />
     <Compile Include="Assets\InfinityPBR\Scripts - Jason Storey\EnumerableExtensions.cs" />

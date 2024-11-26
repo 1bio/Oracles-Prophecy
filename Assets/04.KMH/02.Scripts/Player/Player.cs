@@ -177,7 +177,6 @@ public class Player : MonoBehaviour
                             helmetMesh = GetEquipmentSkinnedMeshRenderer(helmet);
                             AttachEquipmentToCharacter(boneRoot, helmetMesh);
                             playerHair.SetActive(false);
-
                             break;
 
                         case ItemType.Chest:

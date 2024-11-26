@@ -227,6 +227,7 @@
     <Compile Include="Assets\InfinityPBR\Scripts Static\InfinityStatic.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Player\IModifiers.cs" />
     <Compile Include="Assets\BloodEffectsPack\Common\Script\Demo\CircularMovement.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\SceneChanger.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_CustomLight.cs" />
     <Compile Include="Assets\04.KMH\02.Scripts\Player\BoneCombiner.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Controller\MonsterMovementController.cs" />

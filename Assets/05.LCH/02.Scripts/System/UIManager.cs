@@ -283,7 +283,7 @@ public class UIManager : MonoBehaviour
         gameoverCG.interactable = false;
 
         StartCoroutine(Fade(false));
-        SceneController.instance.LoadScene("Abandoned Prison");
+        SceneController.instance.LoadScene("Village");
     }
     #endregion
 

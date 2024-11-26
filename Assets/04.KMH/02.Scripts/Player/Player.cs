@@ -295,9 +295,11 @@ public class Player : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             ItemObjectController itemObjectController = other.gameObject.GetComponent<ItemObjectController>();
+
+            if (itemObjectController == null) return;
 
             List<ItemObject> itemObjects = itemObjectController.GetDropItems();
             foreach (ItemObject itemobj in itemObjects)

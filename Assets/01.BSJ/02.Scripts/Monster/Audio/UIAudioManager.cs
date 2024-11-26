@@ -7,6 +7,7 @@ public class UIAudioManager : MonoBehaviour
     private AudioSource _audioSource;
 
     [SerializeField] private AudioClip _buttonSound;
+    [SerializeField] private AudioClip _equipmentSound;
 
     private void Awake()
     {
@@ -16,6 +17,12 @@ public class UIAudioManager : MonoBehaviour
     public void ClickedButton()
     {
         _audioSource.clip = _buttonSound;
+        _audioSource.Play();
+    }
+
+    public void Equipment()
+    {
+        _audioSource.clip = _equipmentSound;
         _audioSource.Play();
     }
 }

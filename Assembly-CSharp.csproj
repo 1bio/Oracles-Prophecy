@@ -244,6 +244,7 @@
     <Compile Include="Assets\04.KMH\02.Scripts\Item\ItemObject.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Skill\SlashDamage.cs" />
+    <Compile Include="Assets\01.BSJ\02.Scripts\Video\BossCutscene.cs" />
     <Compile Include="Assets\InfinityPBR\Demo Scripts\SFB_CameraRotate_v2.cs" />
     <Compile Include="Assets\05.LCH\02.Scripts\Data\StatusData.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_UVScroll.cs" />

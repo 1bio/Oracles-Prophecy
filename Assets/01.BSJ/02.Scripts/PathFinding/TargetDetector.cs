@@ -38,8 +38,6 @@ public class TargetDetector : MonoBehaviour
         }
         else
         {
-            BGMAudioManager.SetIsCombat(IsTargetDetected);
-
             if (_monster.SkillController.CurrentSkillData != null)
             {
                 _monster.SkillController.CurrentSkillData.IsTargetWithinSkillRange =
@@ -58,14 +56,12 @@ public class TargetDetector : MonoBehaviour
         if (_currentTime > _updateTime)
         {
             IsTargetDetected = IsInFanShapeDetection(_detectionDistance);
-            BGMAudioManager.SetIsCombat(IsTargetDetected);
             _currentTime = 0;
         }
 
         if (!_monster.StateMachineController.IsAlive())
         {
             IsTargetDetected = false;
-            BGMAudioManager.SetIsCombat(IsTargetDetected);
         }
     }
 

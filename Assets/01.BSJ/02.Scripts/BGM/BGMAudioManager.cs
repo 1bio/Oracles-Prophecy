@@ -21,11 +21,11 @@ public class BGMAudioManager : MonoBehaviour
     private string _currentSceneName;
     private BGMAudioName _lastPlayBGM = BGMAudioName.None;
     private bool _isSwitching = false;
-    private static bool _isCombat = false;
 
-    public static float GetMonsterVolume() => Instance._monsterVolume;
-    public static float GetPlayerVolume() => Instance._playerVolume;
-    public static void SetIsCombat(bool isCombat) { _isCombat = isCombat; }
+    public static float BGMVolume { get => Instance._bgmVolume; set => Instance._bgmVolume = value; }
+    public static float MonsterVolume { get => Instance._monsterVolume; set => Instance._monsterVolume = value; }
+    public static float PlayerVolume { get => Instance._playerVolume; set => Instance._playerVolume = value; }
+
 
     private void Awake()
     {
@@ -52,7 +52,7 @@ public class BGMAudioManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        _currentSceneName = scene.name.Split(' ')[0];
+        _currentSceneName = scene.name;
         SetBGMForScene();
     }
 
@@ -65,18 +65,21 @@ public class BGMAudioManager : MonoBehaviour
         }
     }
 
-    private void SetBGMForScene()
+    public void SetBGMForScene()
     {
         switch (_currentSceneName)
         {
-            case "Dungeon":
-                if (_isCombat) PlayBGM(BGMAudioName.Combat);
-                else PlayBGM(BGMAudioName.Dungeon);
+            case "Abandoned Prison":
+                PlayBGM(BGMAudioName.Dungeon);
                 break;
             case "Village":
                 PlayBGM(BGMAudioName.Village);
                 break;
             case "MainMenu":
+                PlayBGM(BGMAudioName.MainMenu);
+                break;
+            case "Boss":
+                PlayBGM(BGMAudioName.Boss);
                 break;
         }
     }
@@ -87,7 +90,7 @@ public class BGMAudioManager : MonoBehaviour
 
         _lastPlayBGM = bgmName;
 
-        StartCoroutine(SwitchBGM(bgmName.ToString(), bgmName == BGMAudioName.Combat ? 0.5f : 1.5f));
+        StartCoroutine(SwitchBGM(bgmName.ToString(), 0.5f));
     }
 
     private IEnumerator SwitchBGM(string bgmName, float transitionTime)
@@ -132,7 +135,8 @@ public class BGMAudioManager : MonoBehaviour
     {
         None,
         Dungeon,
-        Combat,
         Village,
+        MainMenu,
+        Boss
     }
 }

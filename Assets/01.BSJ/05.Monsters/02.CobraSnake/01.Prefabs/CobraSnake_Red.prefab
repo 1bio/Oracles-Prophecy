@@ -22132,6 +22132,8 @@ GameObject:
   - component: {fileID: 1371681597545601410}
   - component: {fileID: 1503378787335356023}
   - component: {fileID: 232792084402634485}
+  - component: {fileID: 2228861233999124070}
+  - component: {fileID: 4655942408212511294}
   m_Layer: 10
   m_Name: CobraSnake_Red
   m_TagString: Monster
@@ -22355,7 +22357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ed43d0d2f99e3b41943cd6fc5d557d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _detectionDistance: 10
+  _detectionDistance: 5
 --- !u!114 &7069471497140077566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22385,6 +22387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodVFX: {fileID: 0}
+  hitCount: 0
 --- !u!114 &1503378787335356023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22414,6 +22417,30 @@ MonoBehaviour:
   DissolveSpeed: 0.001
   DissolveYield: 0.015
   Particle: {fileID: 2383440553970171891}
+--- !u!114 &2228861233999124070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8349535809384076125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd540d5ecfc8f85488684915acb7142f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4655942408212511294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8349535809384076125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd540d5ecfc8f85488684915acb7142f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8369308589066396080
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,21 +1,22 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [field: Header("ÀÎº¥Åä¸® ¼³Á¤")]
+    [field: Header("í”Œë ˆì´ì–´")]
     public InventoryObject inventory;
     public InventoryObject equipment;
 
-    [field: Header("¹«±â ÀåÂø À§Ä¡")]
+    [field: Header("ì¥ë¹„ ì¥ì°© ìœ„ì¹˜")]
     [SerializeField] private Transform boneRoot;
-    public Transform swordTransform; // Àü»ç: ¿À¸¥¼Õ, ±Ã¼ö: ¿Ş¼Õ
+    public Transform swordTransform;
     public Transform bowTransform;
     public GameObject playerHair;
 
-    [field: Header("ÇÃ·¹ÀÌ¾î ½ºÅÈ")]
+    [field: Header("ì†ì„±")]
     public Attribute[] attributes;
 
-    // Âø¿ë Àåºñ
+    // ì¥ì°©í•  ì¥ë¹„
     private GameObject helmet;
     private GameObject chest;
 
@@ -31,7 +32,7 @@ public class Player : MonoBehaviour
     private GameObject sword;
     private GameObject bow;
 
-    // ÇÁ¸®ÆÕ ½ºÅ² ¸Å½¬
+    // ì¥ë¹„ ë§¤ì‰¬ ë Œë”ëŸ¬
     private SkinnedMeshRenderer helmetMesh;
     private SkinnedMeshRenderer chestMesh;
 
@@ -58,19 +59,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-       /* if (Input.GetKeyDown(KeyCode.Space))
-        {
-            inventory.Save();
-            equipment.Save();
-        }
-        else if (Input.GetKeyDown(KeyCode.KeypadEnter))
-        {
-            inventory.Load();
-            equipment.Load();
-        }*/
-    }
 
     void AttachEquipmentToCharacter(Transform characterBoneRoot, SkinnedMeshRenderer equipmentRenderer)
     {
@@ -269,16 +257,15 @@ public class Player : MonoBehaviour
 
     public SkinnedMeshRenderer GetEquipmentSkinnedMeshRenderer(GameObject equipment)
     {
-        if (equipment.GetComponent<SkinnedMeshRenderer>()) // ÃÖ»óÀ§ ¿ÀºêÁ§Æ®¿¡ Á¸Àç ÇÒ °æ¿ì
+        if (equipment.GetComponent<SkinnedMeshRenderer>()) // ìµœìƒìœ„ ì˜¤ë¸Œì íŠ¸ íƒìƒ‰
         {
             return equipment.GetComponent<SkinnedMeshRenderer>();
         }
         else
         {
-            return equipment.GetComponentInChildren<SkinnedMeshRenderer>(); // ÇÏÀ§ ¿ÀºêÁ§Æ®¿¡ Á¸Àç ÇÒ °æ¿ì
+            return equipment.GetComponentInChildren<SkinnedMeshRenderer>(); // í•˜ìœ„ ì˜¤ë¸Œì íŠ¸ íƒìƒ‰
         }
     }
-
 
     public void OnTriggerEnter(Collider other)
     {
@@ -293,7 +280,25 @@ public class Player : MonoBehaviour
         }
     }
 
-   
+    private void OnTriggerStay(Collider other)
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ItemObjectController itemObjectController = other.gameObject.GetComponent<ItemObjectController>();
+
+            if (itemObjectController == null) return;
+
+            List<ItemObject> itemObjects = itemObjectController.GetDropItems();
+            foreach (ItemObject itemobj in itemObjects)
+            {
+                Item _item = new Item(itemobj);
+                inventory.AddItem(_item, 1);
+            }
+
+            Destroy(other.gameObject);
+        }
+    }
+
 
     public void AttributeModified(Attribute attribute)
     {

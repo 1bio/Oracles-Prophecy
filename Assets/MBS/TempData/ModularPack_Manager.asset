@@ -13,6 +13,110 @@ MonoBehaviour:
   m_Name: ModularPack_Manager
   m_EditorClassIdentifier: 
   _modularPacks:
+  - guid: 5b9f5bb5f3b04acebd59dc539a4dcab2
+    _name: last
+    _wallGroups: []
+    _floorGroups: []
+    _decoratorGroups:
+    - guid: d6eb227e2d344dc5a252540a1a2cdc9d
+      name: torch
+      _modules:
+      - guid: 4b6c17e694f54408ab6133d57b1ac855
+        name: torch
+        prefabs:
+        - {fileID: 7541522275336497423, guid: e6bad38fc30dfef4d8de4fa89eaec265, type: 3}
+      _assetCategoryGuid: 8eeb11d25f1340debc721eba76a89096
+    - guid: 3032cc46065645fb95caa037bbdc5b97
+      name: trap1
+      _modules:
+      - guid: 2d2168d466364f84aa7b1e828e509336
+        name: trap1
+        prefabs:
+        - {fileID: 5890549847980082634, guid: 7b2557dbbdcfb694487e63c12d7e1d38, type: 3}
+      _assetCategoryGuid: 8eeb11d25f1340debc721eba76a89096
+    - guid: 1d589063d59d43a2885f8ef1833bf28a
+      name: trap2
+      _modules:
+      - guid: aecd7970fd6d47d9ab67ef9c1e5d2bc5
+        name: trap2
+        prefabs:
+        - {fileID: 1420318200403035364, guid: a4d27a5dd712c964281ec398d70bf104, type: 3}
+      _assetCategoryGuid: 8eeb11d25f1340debc721eba76a89096
+    - guid: 90e7da8c641a473091f17cea35028669
+      name: trap3
+      _modules:
+      - guid: db745b99f5d7461b9b46be649e5d9dc1
+        name: trap3
+        prefabs:
+        - {fileID: 5189249611760966889, guid: bcf4f9fd1b5aa0249a4f99b1d6ee0079, type: 3}
+      _assetCategoryGuid: 8eeb11d25f1340debc721eba76a89096
+    - guid: f5c929bdff6b4c1abe9989a4319d9ce1
+      name: trap4
+      _modules:
+      - guid: 1c95cca13fc741d1943e7d6489730a07
+        name: trap4
+        prefabs:
+        - {fileID: 716412372122632434, guid: 0c5c3c5c934fae64788551813d41125f, type: 3}
+      _assetCategoryGuid: 8eeb11d25f1340debc721eba76a89096
+    - guid: ecf5807334c94991992b9e0558eabbb6
+      name: chestO
+      _modules:
+      - guid: 0aba1544e07940bf8505ff675f474649
+        name: chestO
+        prefabs:
+        - {fileID: 2848896794002258194, guid: 0590d7a1cce70014baefe0e4c8e22463, type: 3}
+      _assetCategoryGuid: 8eeb11d25f1340debc721eba76a89096
+    - guid: 003dff9cec754dbfbf3b7bab91ee8dc9
+      name: chestC
+      _modules:
+      - guid: 30fac713319e47b6a950926d21d2d70e
+        name: chestC
+        prefabs:
+        - {fileID: 9218405394392798504, guid: 029ccd5db18f7a549baefc26a8ca9718, type: 3}
+      _assetCategoryGuid: 8eeb11d25f1340debc721eba76a89096
+    - guid: b1c675f94c494d099e5ca21a077457c3
+      name: rum
+      _modules:
+      - guid: 275f474c53a04cd9b1bfa5eba9066b5e
+        name: rum
+        prefabs:
+        - {fileID: 56503530203865967, guid: 5090310b53f93a54cb2fb0510ff48aa3, type: 3}
+      _assetCategoryGuid: 8eeb11d25f1340debc721eba76a89096
+    - guid: 86d438ff67bd45d7a1144e75d2aa9f98
+      name: broken wood
+      _modules:
+      - guid: a804da85ac46482288b93816b9a23e68
+        name: broken wood
+        prefabs:
+        - {fileID: 3663328725254552040, guid: 07ac550e41425a64dbe6077f7bb19626, type: 3}
+      _assetCategoryGuid: 8eeb11d25f1340debc721eba76a89096
+    - guid: cce0d738c8f1422fb6af61433d20585b
+      name: broken wood S
+      _modules:
+      - guid: eec6899407064d82b5bf5b132b22bbdd
+        name: broken wood S
+        prefabs:
+        - {fileID: 2667135220486189790, guid: a149530c12fef1942917ce1bc68145e8, type: 3}
+      _assetCategoryGuid: 8eeb11d25f1340debc721eba76a89096
+    - guid: 2b5f3204f05d47d1b9fa009a96509c79
+      name: suraeO
+      _modules:
+      - guid: 45392fd430cd46138424fc400bb9a6d6
+        name: suraeO
+        prefabs:
+        - {fileID: 475524476851794210, guid: cb75ac1e77c0ac54384acf5d80801d45, type: 3}
+      _assetCategoryGuid: 8eeb11d25f1340debc721eba76a89096
+    - guid: a366378203a54a6883e86e411cc69969
+      name: suraeOB
+      _modules:
+      - guid: b61c8e25f85b482bb1015f14e6dcb62f
+        name: suraeOB
+        prefabs:
+        - {fileID: 3436504228422362334, guid: 945958893aa7b9843bcb83c5f6c6ad6e, type: 3}
+      _assetCategoryGuid: 8eeb11d25f1340debc721eba76a89096
+    _decoratorCategories:
+    - guid: 8eeb11d25f1340debc721eba76a89096
+      _name: All
   - guid: e53e1af8d67447dbb190d80be2a6e803
     _name: LCH Modular Pack
     _wallGroups:

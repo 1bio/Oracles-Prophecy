@@ -15,7 +15,7 @@ public class TargetDetector : MonoBehaviour
     private float _fanCount = 25f;
 
     private float _currentTime = 0;
-    private float _updateTime = 100f;
+    private float _updateTime = 5f;
 
     public bool IsTargetDetected { get; set; } = false;
     public float DetectionDistance { get => _detectionDistance; }
@@ -38,8 +38,6 @@ public class TargetDetector : MonoBehaviour
         }
         else
         {
-            BGMAudioManager.SetIsCombat(IsTargetDetected);
-
             if (_monster.SkillController.CurrentSkillData != null)
             {
                 _monster.SkillController.CurrentSkillData.IsTargetWithinSkillRange =
@@ -58,14 +56,12 @@ public class TargetDetector : MonoBehaviour
         if (_currentTime > _updateTime)
         {
             IsTargetDetected = IsInFanShapeDetection(_detectionDistance);
-            BGMAudioManager.SetIsCombat(IsTargetDetected);
             _currentTime = 0;
         }
 
         if (!_monster.StateMachineController.IsAlive())
         {
             IsTargetDetected = false;
-            BGMAudioManager.SetIsCombat(IsTargetDetected);
         }
     }
 
@@ -97,10 +93,10 @@ public class TargetDetector : MonoBehaviour
                 {
                     return true;
                 }
-                else if (_hit.collider.gameObject.layer == LayerMask.NameToLayer(GameLayers.Obstacle.ToString()))
+                /*else if (_hit.collider.gameObject.layer == LayerMask.NameToLayer(GameLayers.Obstacle.ToString()))
                 {
                     return false;
-                }
+                }*/
             }
             else
             {

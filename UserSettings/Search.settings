@@ -8,12 +8,15 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.E8DA15E5" = "iconplace"
+	"last_search.E8DA15E5" = "walltrim"
 	"OpenInspectorPreview.E8DA15E5" = "0"
 	"currentGroup.E8DA15E5" = "all"
 	"last_search.310DEAF1" = ""
 	"OpenInspectorPreview.310DEAF1" = "0"
 	"currentGroup.310DEAF1" = "all"
+	"last_search.3BE40471" = ""
+	"OpenInspectorPreview.3BE40471" = "0"
+	"currentGroup.3BE40471" = "_group_provider_Files"
 }
 providers = {
 	scene = {
@@ -65,7 +68,9 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
-	"iconplace"
+	""
+	"mesh"
+	"walltrim"
 ]
 searchItemFavorites = [
 ]
@@ -76,7 +81,7 @@ expandedQueries = [
 ]
 queryBuilder = false
 ignoredProperties = "id;name;classname;imagecontentshash"
-helperWidgetCurrentArea = "all"
+helperWidgetCurrentArea = "h:"
 disabledIndexers = ""
 minIndexVariations = 2
 findProviderIndexHelper = true

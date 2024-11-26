@@ -413,6 +413,7 @@ GameObject:
   - component: {fileID: -3652370745785116128}
   - component: {fileID: 8733906047148015180}
   - component: {fileID: 2228479140124646594}
+  - component: {fileID: 5954129350860273165}
   m_Layer: 10
   m_Name: SerpentWarrior
   m_TagString: Monster
@@ -652,6 +653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodVFX: {fileID: 0}
+  hitCount: 0
 --- !u!114 &-4692648637979635903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,6 +711,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   virtualCam: {fileID: 0}
+--- !u!114 &5954129350860273165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd540d5ecfc8f85488684915acb7142f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &112098
 GameObject:
   m_ObjectHideFlags: 0

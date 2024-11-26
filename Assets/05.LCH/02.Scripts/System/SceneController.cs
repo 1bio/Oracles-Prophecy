@@ -57,7 +57,6 @@ public class SceneController : MonoBehaviour
 
     private string loadSceneName;
 
-
     public void LoadScene(string sceneName)
     {
         gameObject.SetActive(true);

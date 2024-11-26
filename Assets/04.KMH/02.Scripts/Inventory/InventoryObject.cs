@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Runtime.Serialization;
+using Unity.VisualScripting;
 
 public enum InterfaceType
 {
@@ -197,6 +198,7 @@ public class InventorySlot
         amount = _amount;
         OnAfterUpdate?.Invoke(this);
     }
+
 
     public void RemoveItem() => UpdateSlot(new Item(), 0);
 

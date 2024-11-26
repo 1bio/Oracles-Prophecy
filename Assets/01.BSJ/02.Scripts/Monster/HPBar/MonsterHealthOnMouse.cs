@@ -32,7 +32,7 @@ public class MonsterHealthOnMouse : MonoBehaviour
 
     private void Update()
     {
-        if (Physics.SphereCast(Camera.main.ScreenPointToRay(Input.mousePosition), 0.5f, out RaycastHit hit, 100, _layerMask))
+        if (Physics.SphereCast(Camera.main.ScreenPointToRay(Input.mousePosition), 0.5f, out RaycastHit hit, 50, _layerMask))
         {
             Monster = hit.collider.gameObject.GetComponentInParent<Monster>();
 

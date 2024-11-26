@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2644673025485535817}
   - component: {fileID: 2060588840312273294}
   - component: {fileID: 4961807210337932990}
+  - component: {fileID: -8942289751848849476}
   m_Layer: 13
   m_Name: weapon wall
   m_TagString: Wall
@@ -61,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: e2acfa1dd3ac78546b569e0dec46c3e9, type: 3}
+  - {fileID: 2100000, guid: 3fda52ab22a27cf4aab43bcae5bb45fa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-8942289751848849476
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808275083503820000}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.009451, y: 3.3105526, z: 1.4436183}
+  m_Center: {x: 0.0026043653, y: 1.6517949, z: -0.28526187}

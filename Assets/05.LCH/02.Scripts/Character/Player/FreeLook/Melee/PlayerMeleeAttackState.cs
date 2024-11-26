@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
 
 public class PlayerMeleeAttackState : PlayerFreeLookState
 {
@@ -107,9 +108,6 @@ public class PlayerMeleeAttackState : PlayerFreeLookState
 
         if (!stateMachine.InputReader.IsAttacking)
             return;
-
-     /*   if (!stateMachine.InputReader.IsAiming)
-            return;*/
 
         stateMachine.ChangeState(new PlayerMeleeAttackState(stateMachine, attack.ComboAttackIndex));
     }

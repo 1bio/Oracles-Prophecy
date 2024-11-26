@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Village
   m_EditorClassIdentifier: 
   _sceneName: Village
-  _audioClip: {fileID: 8300000, guid: 6a229e22fc2de1d4ab234278a77b2881, type: 3}
+  _audioClip: {fileID: 8300000, guid: 0008047c636d7eb4fa7ae214803a0968, type: 3}

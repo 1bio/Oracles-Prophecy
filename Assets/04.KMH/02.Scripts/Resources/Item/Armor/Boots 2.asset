@@ -25,6 +25,14 @@ MonoBehaviour:
   description: 
   data:
     Name: 
-    Id: 13
-    buffs: []
+    Id: 12
+    buffs:
+    - attribute: 1
+      value: 0
+      min: 5
+      max: 10
+    - attribute: 2
+      value: 0
+      min: 5
+      max: 10
   boneNames: []

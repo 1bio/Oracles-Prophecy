@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -67,7 +68,7 @@ public class UIManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.V))
         {
-            DataManager.instance.LevelUp(50, 50);
+            DataManager.instance.LevelUp(50, 50, 3f, 3f);
         }
 
         UpdateStatus(); // 하단 스탯
@@ -178,7 +179,7 @@ public class UIManager : MonoBehaviour
         zoneName.color = color;
 
         // 텍스트를 씬의 이름으로 설정
-        //zoneName.text = SceneManager.GetActiveScene().name; 
+        zoneName.text = SceneManager.GetActiveScene().name;
 
         // 알파 값을 1까지 올리기
         while (color.a < 1f)
@@ -282,7 +283,7 @@ public class UIManager : MonoBehaviour
         gameoverCG.interactable = false;
 
         StartCoroutine(Fade(false));
-        SceneController.instance.LoadScene("LCH");
+        SceneController.instance.LoadScene("Abandoned Prison");
     }
     #endregion
 

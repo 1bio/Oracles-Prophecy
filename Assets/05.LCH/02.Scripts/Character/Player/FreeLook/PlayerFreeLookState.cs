@@ -34,10 +34,10 @@ public class PlayerFreeLookState : PlayerBaseState
 
         stateMachine.Animator.CrossFadeInFixedTime(FreeLookWithMelee, CrossFadeDuration);
 
-        //stateMachine.WeaponToggle.DisableWeapon();
+        stateMachine.WeaponToggle.DisableWeapon();
 
-        //stateMachine.WeaponTrail.DestroyTrail();
-        //stateMachine.ParticleEventHandler.StopParticleSystem();
+        stateMachine.WeaponTrail.DestroyTrail();
+        stateMachine.ParticleEventHandler.StopParticleSystem();
     }
 
     public override void Tick(float deltaTime)

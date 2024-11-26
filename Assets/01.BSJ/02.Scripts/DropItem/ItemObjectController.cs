@@ -35,6 +35,8 @@ public class ItemObjectController : MonoBehaviour
         {
             foreach (ItemObject item in _ItemDropRates.Keys)
             {
+                if (itemlist.Count >= 3) break;
+
                 randPersent = UnityEngine.Random.Range(0, 101);
 
                 if (_ItemDropRates[item] >= randPersent)

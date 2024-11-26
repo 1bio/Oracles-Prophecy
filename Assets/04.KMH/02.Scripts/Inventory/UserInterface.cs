@@ -22,44 +22,45 @@ public abstract class UserInterface : MonoBehaviour
         }
         AddEvent(gameObject, EventTriggerType.PointerEnter, delegate { OnEnterInterface(gameObject); });
         AddEvent(gameObject, EventTriggerType.PointerExit, delegate { OnExitInterface(gameObject); });
-
     }
 
     private void OnSlotUpdate(InventorySlot _slot)
     {
-        if (_slot.item.Id >= 0)
+        if (_slot != null) // null 체크 추가
         {
-            var image = _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>();
-            if (image != null)
+            if (_slot.item.Id >= 0)
             {
-                image.sprite = _slot.ItemObject.uiDisplay;
-                image.color = new Color(1, 1, 1, 1);
-            }
+                var image = _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>();
+                if (image != null)
+                {
+                    image.sprite = _slot.ItemObject.uiDisplay;
+                    image.color = new Color(1, 1, 1, 1);
+                }
 
-            var text = _slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>(); // 텍스트 메쉬 프로 X, 레거시 텍스트 사용 중 
-            if (text != null)
-            {
-                text.text = _slot.amount == 1 ? "" : _slot.amount.ToString("n0");
+                var text = _slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>(); // 텍스트 메쉬 프로 X, 레거시 텍스트 사용 중 
+                if (text != null)
+                {
+                    text.text = _slot.amount == 1 ? "" : _slot.amount.ToString("n0");
+                }
             }
-        }
-        else
-        {
-            var image = _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>(); 
-            if (image != null)
+            else
             {
-                image.sprite = null;
-                image.color = new Color(1, 1, 1, 0);
-            }
+                var image = _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>();
+                if (image != null)
+                {
+                    image.sprite = null;
+                    image.color = new Color(1, 1, 1, 0);
+                }
 
-            var text = _slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>(); // 텍스트 메쉬 프로 X, 레거시 텍스트 사용 중 
-            if (text != null)
-            {
-                text.text = "";
+                var text = _slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>(); // 텍스트 메쉬 프로 X, 레거시 텍스트 사용 중 
+                if (text != null)
+                {
+                    text.text = "";
+                }
             }
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         slotsOnInterface.UpdateSlotDisplay();
@@ -158,44 +159,16 @@ public static class ExtensionMethods
         {
             if (_slot.Value.item.Id >= 0)
             {
-                var image = _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>();
-                if(image != null)
-                {
-                    image.sprite = _slot.Value.ItemObject.uiDisplay;
-                    image.color = new Color(1, 1, 1, 1);
-                }
-
-                var text = _slot.Key.GetComponentInChildren<TextMeshProUGUI>();
-                if (text != null)
-                {
-                    text.text = _slot.Value.amount == 1 ? "" : _slot.Value.amount.ToString("n0");
-                }
-
-              /*  _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().sprite = _slot.Value.ItemObject.uiDisplay;
+                _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().sprite = _slot.Value.ItemObject.uiDisplay;
                 _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1);
-                _slot.Key.GetComponentInChildren<TextMeshProUGUI>().text = _slot.Value.amount == 1 ? "" : _slot.Value.amount.ToString("n0");*/
+                _slot.Key.GetComponentInChildren<TextMeshProUGUI>().text = _slot.Value.amount == 1 ? "" : _slot.Value.amount.ToString("n0");
             }
-            else
+        /*    else
             {
-                var image = _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>();
-                if (image != null)
-                {
-                    image.sprite = null;
-                    image.color = new Color(1, 1, 1, 0);
-                }
-
-                var text = _slot.Key.GetComponentInChildren<TextMeshProUGUI>();
-                if (text != null)
-                {
-                    text.text = "";
-                }
-
-
-
-                /*  _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().sprite = null;
-                  _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0);
-                  _slot.Key.GetComponentInChildren<TextMeshProUGUI>().text = "";*/
-            }
+                _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().sprite = null;
+                _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0);
+                _slot.Key.GetComponentInChildren<TextMeshProUGUI>().text = "";
+            }*/
         }
     }
 }

@@ -3,20 +3,20 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [field: Header("�κ��丮 ����")]
+    [field: Header("플레이어")]
     public InventoryObject inventory;
     public InventoryObject equipment;
 
-    [field: Header("���� ���� ��ġ")]
+    [field: Header("장비 장착 위치")]
     [SerializeField] private Transform boneRoot;
-    public Transform swordTransform; // ����: ������, �ü�: �޼�
+    public Transform swordTransform;
     public Transform bowTransform;
     public GameObject playerHair;
 
-    [field: Header("�÷��̾� ����")]
+    [field: Header("속성")]
     public Attribute[] attributes;
 
-    // ���� ���
+    // 장착할 장비
     private GameObject helmet;
     private GameObject chest;
 
@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
     private GameObject sword;
     private GameObject bow;
 
-    // ������ ��Ų �Ž�
+    // 장비 매쉬 렌더러
     private SkinnedMeshRenderer helmetMesh;
     private SkinnedMeshRenderer chestMesh;
 
@@ -270,29 +270,28 @@ public class Player : MonoBehaviour
 
     public SkinnedMeshRenderer GetEquipmentSkinnedMeshRenderer(GameObject equipment)
     {
-        if (equipment.GetComponent<SkinnedMeshRenderer>()) // �ֻ��� ������Ʈ�� ���� �� ���
+        if (equipment.GetComponent<SkinnedMeshRenderer>()) // 최상위 오브젝트 탐색
         {
             return equipment.GetComponent<SkinnedMeshRenderer>();
         }
         else
         {
-            return equipment.GetComponentInChildren<SkinnedMeshRenderer>(); // ���� ������Ʈ�� ���� �� ���
+            return equipment.GetComponentInChildren<SkinnedMeshRenderer>(); // 하위 오브젝트 탐색
         }
     }
 
-    // �ӽ� ������ �Ĺ� ����
-    /* public void OnTriggerEnter(Collider other)
-     {
-         var groundItem = other.GetComponent<GroundItem>();
-         if (groundItem)
-         {
-             Item _item = new Item(groundItem.item);
-             if (inventory.AddItem(_item, 1))
-             {
-                 Destroy(other.gameObject);
-             }
-         }
-     }*/
+    public void OnTriggerEnter(Collider other)
+    {
+        var groundItem = other.GetComponent<GroundItem>();
+        if (groundItem)
+        {
+            Item _item = new Item(groundItem.item);
+            if (inventory.AddItem(_item, 1))
+            {
+                Destroy(other.gameObject);
+            }
+        }
+    }
 
     private void OnTriggerStay(Collider other)
     {

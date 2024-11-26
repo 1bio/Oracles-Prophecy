@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -53,9 +54,9 @@ public class AudioManager : MonoBehaviour
     {
         playerAudio.volume = footStepVolume;
 
-        switch (SceneController.instance.ReturnCurrentSceneName())
+        switch (SceneManager.GetActiveScene().name)
         {
-            case "Viliage":
+            case "Abandoned Prison":
                 if (playerAnimator.GetFloat("Velocity") > 0.8f || playerAnimator.GetFloat("RangeVelocity") > 0.8f)
                 {
                     if (isLeftFootStep)
@@ -71,7 +72,7 @@ public class AudioManager : MonoBehaviour
                 }
                 break;
 
-            case "Dungeon":
+            case "Village":
                 if (playerAnimator.GetFloat("Velocity") > 0.8f || playerAnimator.GetFloat("RangeVelocity") > 0.8f)
                 {
                     if (isLeftFootStep)

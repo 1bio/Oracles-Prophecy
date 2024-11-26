@@ -21,6 +21,9 @@ public class ItemDatabaseObject : ScriptableObject, ISerializationCallbackReceiv
 
     public void OnBeforeSerialize()
     {
-        GetItem = new Dictionary<int, ItemObject>();
+        if (GetItem == null || GetItem.Count == 0)
+        {
+            GetItem = new Dictionary<int, ItemObject>();
+        }
     }
 }

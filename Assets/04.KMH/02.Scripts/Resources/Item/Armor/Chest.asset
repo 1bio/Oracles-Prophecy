@@ -22,12 +22,12 @@ MonoBehaviour:
     Name: 
     Id: 1
     buffs:
-    - attribute: 3
-      value: 0
-      min: 1
-      max: 30
     - attribute: 1
       value: 0
-      min: 1
-      max: 21
+      min: 5
+      max: 10
+    - attribute: 2
+      value: 0
+      min: 5
+      max: 12
   boneNames: []

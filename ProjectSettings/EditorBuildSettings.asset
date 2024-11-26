@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/01.BSJ/01.Scenes/boss.unity
     guid: 3f6f0bc0743f3ab4fb5de1c5ad12b559
   - enabled: 0
-    path: Assets/05.LCH/01.Scenes/LCH.unity
+    path: Assets/00.Main/Abandoned Prison.unity
     guid: 02bb25041e03b3d49a7fafaec5bd019c
   m_configObjects: {}

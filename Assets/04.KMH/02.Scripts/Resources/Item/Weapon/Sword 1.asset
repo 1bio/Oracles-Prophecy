@@ -24,6 +24,6 @@ MonoBehaviour:
     buffs:
     - attribute: 3
       value: 0
-      min: 10
-      max: 20
+      min: 5
+      max: 10
   boneNames: []

@@ -89,7 +89,7 @@ public class PlayerStateMachine : StateMachine
         //ClassSelectWindow.classIndex = 0;
 
         // 기본 무기 활성화
-     /*   foreach (ItemObject weapon in BaseWeapon)
+        foreach (ItemObject weapon in BaseWeapon)
         {
             if (weapon == BaseWeapon[ClassSelectWindow.classIndex])
             {
@@ -97,7 +97,7 @@ public class PlayerStateMachine : StateMachine
                 Player.inventory.AddItem(item, 1);
             }
         }
-*/
+
         // 기본 상태 전환
         switch (ClassSelectWindow.classIndex)
         {

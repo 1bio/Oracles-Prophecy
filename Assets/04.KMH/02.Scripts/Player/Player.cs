@@ -59,19 +59,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-       /* if (Input.GetKeyDown(KeyCode.Space))
-        {
-            inventory.Save();
-            equipment.Save();
-        }
-        else if (Input.GetKeyDown(KeyCode.KeypadEnter))
-        {
-            inventory.Load();
-            equipment.Load();
-        }*/
-    }
 
     void AttachEquipmentToCharacter(Transform characterBoneRoot, SkinnedMeshRenderer equipmentRenderer)
     {

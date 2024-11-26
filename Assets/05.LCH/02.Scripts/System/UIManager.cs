@@ -67,7 +67,7 @@ public class UIManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.V))
         {
-            DataManager.instance.LevelUp(50, 50);
+            DataManager.instance.LevelUp(50, 50, 3f, 3f);
         }
 
         UpdateStatus(); // 하단 스탯

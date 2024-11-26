@@ -280,6 +280,7 @@
     <Compile Include="Assets\InfinityPBR\Animation Scripts\BoneMotionReaction.cs" />
     <Compile Include="Assets\OrdosFX\Magic Slashes FX\Scripts\Slash_UIEffectList.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+    <Compile Include="Assets\05.LCH\02.Scripts\Utility\DontDestory.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_ParticleGravityPoint.cs" />
     <Compile Include="Assets\KriptoFX\Realistic Effects Pack v4\Effects\Scripts\RFX4_PhysXSetImpulse.cs" />
     <Compile Include="Assets\01.BSJ\02.Scripts\Monster\Type\15.Dragon\Dragon.cs" />

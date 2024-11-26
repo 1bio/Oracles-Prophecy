@@ -77,7 +77,7 @@ public class SkillManager : MonoBehaviour
         if (skills.ContainsKey(skillName))
         {
             skills[skillName] = Time.time + ReturnCoolDown(skillName);
-            //DataManager.instance.UseMana(skillName);
+            DataManager.instance.UseMana(skillName);
         }
     }
 

@@ -8344,6 +8344,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ac1aa9d6d3aadf24ca4b888853bbccd1, type: 2}
   - {fileID: 11400000, guid: be1279647fdcdb349992067737b03b04, type: 2}
   - {fileID: 11400000, guid: 409c98f11b2f1674e8227eff98dc22a6, type: 2}
+  - {fileID: 11400000, guid: 156d8889ef3178c41ae9646336961a0e, type: 2}
   _bgmVolume: 0.1
   _monsterVolume: 0.41
   _playerVolume: 0.51
@@ -19825,6 +19826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonSound: {fileID: 8300000, guid: 0999b0b87f1641f4c83f4f6148d7abed, type: 3}
+  _equipmentSound: {fileID: 0}
 --- !u!1 &1679206853
 GameObject:
   m_ObjectHideFlags: 0

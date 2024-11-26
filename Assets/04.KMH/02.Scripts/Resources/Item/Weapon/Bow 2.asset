@@ -20,9 +20,9 @@ MonoBehaviour:
   description: 
   data:
     Name: 
-    Id: 8
+    Id: 12
     buffs:
-    - attribute: 3
+    - attribute: 0
       value: 0
       min: 10
       max: 15

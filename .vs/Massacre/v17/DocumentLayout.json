@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Project\\Massacre\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|C:\\Project\\Massacre\\assets\\05.lch\\02.scripts\\system\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|c:\\project\\massacre\\assets\\05.lch\\02.scripts\\system\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|solutionrelative:assets\\05.lch\\02.scripts\\system\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -67,7 +67,7 @@
       "RelativeMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|solutionrelative:assets\\05.lch\\02.scripts\\audio\\playeraudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|c:\\project\\massacre\\assets\\medievalkingdomui\\scripts\\window\\animatedwindowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|C:\\Project\\Massacre\\assets\\medievalkingdomui\\scripts\\window\\animatedwindowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5CFD31A-4CCC-9933-BC68-5BF7DC0C4C70}|Assembly-CSharp.csproj|solutionrelative:assets\\medievalkingdomui\\scripts\\window\\animatedwindowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -617,8 +617,7 @@
               "ViewState": "AgIAACgAAAAAAAAAAAAAwFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T11:19:49.421Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -644,8 +643,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T05:36:00.12Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -723,8 +721,7 @@
               "ViewState": "AgIAACUAAAAAAAAAAAAWwEEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T07:55:03.34Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -737,8 +734,7 @@
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-18T21:20:37.046Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -763,8 +759,7 @@
               "ViewState": "AgIAAGkAAAAAAAAAAAAAAG0AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T17:06:26.455Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -777,8 +772,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T17:08:29.386Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -803,8 +797,7 @@
               "RelativeToolTip": "Assets\\05.LCH\\02.Scripts\\UI\\NPCDialogue.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T18:44:55.634Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T18:44:55.634Z"
             },
             {
               "$type": "Document",
@@ -816,8 +809,7 @@
               "RelativeToolTip": "Assets\\01.BSJ\\02.Scripts\\DropItem\\ItemObjectController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T10:26:43.986Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T10:26:43.986Z"
             },
             {
               "$type": "Document",
@@ -829,8 +821,7 @@
               "RelativeToolTip": "Assets\\04.KMH\\02.Scripts\\Inventory\\InventoryObject.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAAAKwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T21:33:12.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T21:33:12.359Z"
             },
             {
               "$type": "Document",
@@ -842,8 +833,7 @@
               "RelativeToolTip": "Assets\\04.KMH\\02.Scripts\\Inventory\\StaticInterface.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T09:30:30.154Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T09:30:30.154Z"
             },
             {
               "$type": "Document",
@@ -855,8 +845,7 @@
               "RelativeToolTip": "Assets\\05.LCH\\02.Scripts\\Audio\\PlayerAudio.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T14:02:58.89Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T14:02:58.89Z"
             },
             {
               "$type": "Document",
@@ -868,8 +857,7 @@
               "RelativeToolTip": "Assets\\05.LCH\\02.Scripts\\System\\UIManager.cs",
               "ViewState": "AgIAAKUAAAAAAAAAAAAAALUAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T15:05:48.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T15:05:48.985Z"
             },
             {
               "$type": "Document",
@@ -881,8 +869,7 @@
               "RelativeToolTip": "Assets\\05.LCH\\02.Scripts\\System\\SceneController.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAUwDsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T17:38:23.98Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T17:38:23.98Z"
             },
             {
               "$type": "Document",
@@ -894,8 +881,7 @@
               "RelativeToolTip": "Assets\\05.LCH\\02.Scripts\\Character\\Player\\PlayerStateMachine.cs",
               "ViewState": "AgIAAHUAAAAAAAAAAAAAAIwAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T13:31:25.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T13:31:25.889Z"
             },
             {
               "$type": "Document",
@@ -905,7 +891,7 @@
               "RelativeDocumentMoniker": "Assets\\05.LCH\\02.Scripts\\System\\AudioManager.cs",
               "ToolTip": "C:\\Project\\Massacre\\Assets\\05.LCH\\02.Scripts\\System\\AudioManager.cs",
               "RelativeToolTip": "Assets\\05.LCH\\02.Scripts\\System\\AudioManager.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAUwDkAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAFgAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T13:36:43.236Z",
               "EditorCaption": ""
@@ -944,8 +930,7 @@
               "RelativeToolTip": "Assets\\04.KMH\\02.Scripts\\Player\\Player.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAAADcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T18:39:20.556Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T18:39:20.556Z"
             },
             {
               "$type": "Document",
@@ -981,8 +966,7 @@
               "RelativeToolTip": "Assets\\MedievalKingdomUI\\Scripts\\Window\\AnimatedWindowController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvxoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T14:22:47.094Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T14:22:47.094Z"
             },
             {
               "$type": "Document",
@@ -1198,8 +1182,7 @@
               "RelativeToolTip": "Assets\\04.KMH\\02.Scripts\\Item\\ItemObject.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAmwBwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T07:10:27.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T07:10:27.833Z"
             },
             {
               "$type": "Document",
@@ -1583,8 +1566,7 @@
               "RelativeToolTip": "Assets\\01.BSJ\\02.Scripts\\Monster\\MonsterSpawnManager.cs",
               "ViewState": "AgIAAFAAAAAAAAAAAAAcwF8AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T05:24:22.647Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T05:24:22.647Z"
             },
             {
               "$type": "Document",

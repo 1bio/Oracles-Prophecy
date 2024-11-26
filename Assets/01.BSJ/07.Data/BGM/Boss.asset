@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Boss
   m_EditorClassIdentifier: 
   _sceneName: Boss
-  _audioClip: {fileID: 8300000, guid: 7b353f1858d308849911436969f203bb, type: 3}
+  _audioClip: {fileID: 8300000, guid: 3b2978670fe1eae4a9dba384938ff1c2, type: 3}

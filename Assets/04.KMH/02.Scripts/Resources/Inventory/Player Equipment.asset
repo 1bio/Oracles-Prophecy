@@ -51,36 +51,20 @@ MonoBehaviour:
       item:
         Name: 
         Id: -1
-        buffs:
-        - attribute: 3
-          value: 24
-          min: 1
-          max: 30
-        - attribute: 1
-          value: 20
-          min: 1
-          max: 21
-      amount: 1
+        buffs: []
+      amount: 0
     - AllowedItems: 0a000000
       item:
         Name: 
         Id: -1
-        buffs:
-        - attribute: 2
-          value: 7
-          min: 2
-          max: 10
-      amount: 1
+        buffs: []
+      amount: 0
     - AllowedItems: 07000000
       item:
         Name: 
         Id: -1
-        buffs:
-        - attribute: 2
-          value: 7
-          min: 2
-          max: 10
-      amount: 1
+        buffs: []
+      amount: 0
     - AllowedItems: 02000000
       item:
         Name: 

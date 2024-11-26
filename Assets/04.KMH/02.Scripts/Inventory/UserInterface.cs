@@ -11,7 +11,7 @@ public abstract class UserInterface : MonoBehaviour
     public InventoryObject inventory;
     public Dictionary<GameObject, InventorySlot> slotsOnInterface = new Dictionary<GameObject, InventorySlot>();
 
-    void Start()
+    private void Awake()
     {
         CreateSlots();
 
@@ -23,6 +23,19 @@ public abstract class UserInterface : MonoBehaviour
         AddEvent(gameObject, EventTriggerType.PointerEnter, delegate { OnEnterInterface(gameObject); });
         AddEvent(gameObject, EventTriggerType.PointerExit, delegate { OnExitInterface(gameObject); });
     }
+
+    //void Start()
+    //{
+    //    CreateSlots();
+
+    //    for (int i = 0; i < inventory.GetSlots.Length; i++)
+    //    {
+    //        inventory.GetSlots[i].parent = this;
+    //        inventory.GetSlots[i].OnAfterUpdate += OnSlotUpdate;
+    //    }
+    //    AddEvent(gameObject, EventTriggerType.PointerEnter, delegate { OnEnterInterface(gameObject); });
+    //    AddEvent(gameObject, EventTriggerType.PointerExit, delegate { OnExitInterface(gameObject); });
+    //}
 
     private void OnSlotUpdate(InventorySlot _slot)
     {

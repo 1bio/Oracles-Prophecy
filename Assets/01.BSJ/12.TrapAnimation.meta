@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/01.BSJ/12.TrapAnimation.meta
 guid: 67c8d65ce06b9864a977d3accf4f8dcd
+========
+guid: 398eb1ac8db0b444c91bdc377f648468
+>>>>>>>> 7e571557c6edd3afc8bb929fbd92bf0e26d7b379:Assets/05.LCH/03.Prefabs/Monster/SerpentWarrior.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

@@ -16,7 +16,7 @@ MonoBehaviour:
   _turnSpeed: 700
   _monsterHealth:
     _currentHealth: 0
-    _maxHealth: 100
+    _maxHealth: 60
   _monsterAttack:
     _damage: 5
     _range: 0

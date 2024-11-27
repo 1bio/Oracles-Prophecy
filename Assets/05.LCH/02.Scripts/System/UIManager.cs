@@ -245,34 +245,6 @@ public class UIManager : MonoBehaviour
             return true;
         }
     }
-
-    /*// 랜덤 스킬 생성
-    public void GetRandomSkill()
-    {
-        if (!isMelee)
-        {
-            int[] randomValues = RandomNumberGenerator.GenerateRandomIndex(meleeSkillPrefabs.Length, selectPosition.Length);
-
-            for (int i = 0; i < randomValues.Length; i++)
-            {
-                int randomValue = randomValues[i];
-
-                Instantiate(meleeSkillPrefabs[randomValue], selectPosition[i].transform);
-            }
-        }
-        else
-        {
-            int[] randomValues = RandomNumberGenerator.GenerateRandomIndex(rangeSkillPrefabs.Length, selectPosition.Length);
-
-            for (int i = 0; i < randomValues.Length; i++)
-            {
-                int randomValue = randomValues[i];
-
-                Instantiate(rangeSkillPrefabs[randomValue], selectPosition[i].transform);
-            }
-        }
-    }*/
-
     #endregion
 
 

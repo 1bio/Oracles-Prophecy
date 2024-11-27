@@ -60,6 +60,14 @@ public class Player : MonoBehaviour
         equipment.Clear();
     }
 
+    private void OnDisable()
+    {
+        for (int i = 0; i < equipment.GetSlots.Length; i++)
+        {
+            equipment.GetSlots[i].OnBeforeUpdate -= OnRemoveItem;
+            equipment.GetSlots[i].OnAfterUpdate -= OnAddItem;
+        }
+    }
 
     void AttachEquipmentToCharacter(Transform characterBoneRoot, SkinnedMeshRenderer equipmentRenderer)
     {

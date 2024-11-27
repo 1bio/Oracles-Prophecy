@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 353905942362878362}
   - component: {fileID: 2183463933492314151}
   - component: {fileID: 5301940406952465084}
+  - component: {fileID: 2409549518966367077}
   m_Layer: 0
   m_Name: RedFlameThrower
   m_TagString: Untagged
@@ -5017,6 +5018,30 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &2409549518966367077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5629863535950133263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 045c4bf43f025d040bf7af2ee29e55ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shutDown: 0
+  _shutDownIfHitPlayer: 0
+  _shutDownIfHitObstacle: 0
+  _isFollowing: 0
+  _spawnVFXOnHit: 0
+  _nextVFXPrefab: {fileID: 0}
+  _deactivationTime: 0
+  _deactivationTimeVariance: 0
+  _stayTime: 0
+  _damageInterval: 1.5
+  _moveSpeed: 0
+  _rotationSpeed: 0
 --- !u!1 &7443529324241350733
 GameObject:
   m_ObjectHideFlags: 0

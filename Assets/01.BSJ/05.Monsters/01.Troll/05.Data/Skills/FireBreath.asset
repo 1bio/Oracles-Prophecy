@@ -15,6 +15,6 @@ MonoBehaviour:
   _vfx:
   - {fileID: 5629863535950133263, guid: 530e25074242d474aa36ce275ca86098, type: 3}
   _cooldownThreshold: 15
-  _damage: 50
+  _damage: 20
   _range: 4
   _castTime: 0

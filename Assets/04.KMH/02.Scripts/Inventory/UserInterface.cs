@@ -39,40 +39,47 @@ public abstract class UserInterface : MonoBehaviour
 
     private void OnSlotUpdate(InventorySlot _slot)
     {
-        if (_slot != null) // null 체크 추가
+        // null 체크: 슬롯, 아이템, 아이템 오브젝트가 모두 유효한지 확인
+        if (_slot == null || _slot.item == null || _slot.ItemObject == null || _slot.slotDisplay == null)
         {
-            if (_slot.item.Id >= 0)
-            {
-                var image = _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>();
-                if (image != null)
-                {
-                    image.sprite = _slot.ItemObject.uiDisplay;
-                    image.color = new Color(1, 1, 1, 1);
-                }
+            Debug.LogWarning("Slot, item, ItemObject, or slotDisplay is null.");
+            return;
+        }
 
-                var text = _slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>(); // 텍스트 메쉬 프로 X, 레거시 텍스트 사용 중 
-                if (text != null)
-                {
-                    text.text = _slot.amount == 1 ? "" : _slot.amount.ToString("n0");
-                }
+        // 아이템 ID가 유효한 경우 (ID >= 0)
+        if (_slot.item.Id >= 0)
+        {
+            var image = _slot.slotDisplay.transform.GetChild(0)?.GetComponentInChildren<Image>();
+            if (image != null)
+            {
+                image.sprite = _slot.ItemObject.uiDisplay;
+                image.color = new Color(1, 1, 1, 1);
             }
-            else
-            {
-                var image = _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>();
-                if (image != null)
-                {
-                    image.sprite = null;
-                    image.color = new Color(1, 1, 1, 0);
-                }
 
-                var text = _slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>(); // 텍스트 메쉬 프로 X, 레거시 텍스트 사용 중 
-                if (text != null)
-                {
-                    text.text = "";
-                }
+            var text = _slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>();
+            if (text != null)
+            {
+                text.text = _slot.amount == 1 ? "" : _slot.amount.ToString("n0");
+            }
+        }
+        // 아이템 ID가 유효하지 않은 경우 (ID < 0)
+        else
+        {
+            var image = _slot.slotDisplay.transform.GetChild(0)?.GetComponentInChildren<Image>();
+            if (image != null)
+            {
+                image.sprite = null;
+                image.color = new Color(1, 1, 1, 0);
+            }
+
+            var text = _slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>();
+            if (text != null)
+            {
+                text.text = "";
             }
         }
     }
+
 
     void Update()
     {
@@ -170,17 +177,42 @@ public static class ExtensionMethods
     {
         foreach (KeyValuePair<GameObject, InventorySlot> _slot in _slotsOnInterface)
         {
-            if (_slot.Value.item.Id >= 0)
+            if (_slot.Key != null && _slot.Value != null)
             {
-                _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().sprite = _slot.Value.ItemObject.uiDisplay;
-                _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1);
-                _slot.Key.GetComponentInChildren<TextMeshProUGUI>().text = _slot.Value.amount == 1 ? "" : _slot.Value.amount.ToString("n0");
-            }
-            else
-            {
-                _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().sprite = null;
-                _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0);
-                _slot.Key.GetComponentInChildren<TextMeshProUGUI>().text = "";
+                if (_slot.Value.item != null && _slot.Value.item.Id >= 0)
+                {
+                    // 이미지 설정
+                    var image = _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>();
+                    if (image != null)
+                    {
+                        image.sprite = _slot.Value.ItemObject.uiDisplay;
+                        image.color = new Color(1, 1, 1, 1);
+                    }
+
+                    // 텍스트 설정
+                    var text = _slot.Key.GetComponentInChildren<TextMeshProUGUI>();
+                    if (text != null)
+                    {
+                        text.text = _slot.Value.amount == 1 ? "" : _slot.Value.amount.ToString("n0");
+                    }
+                }
+                else
+                {
+                    // 이미지 초기화
+                    var image = _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>();
+                    if (image != null)
+                    {
+                        image.sprite = null;
+                        image.color = new Color(1, 1, 1, 0);
+                    }
+
+                    // 텍스트 초기화
+                    var text = _slot.Key.GetComponentInChildren<TextMeshProUGUI>();
+                    if (text != null)
+                    {
+                        text.text = "";
+                    }
+                }
             }
         }
     }

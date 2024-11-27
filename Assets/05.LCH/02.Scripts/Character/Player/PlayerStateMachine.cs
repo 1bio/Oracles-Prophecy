@@ -86,8 +86,6 @@ public class PlayerStateMachine : StateMachine
     // 플레이어 클래스 설정
     public void SetPlayerClass()
     {
-        //ClassSelectWindow.classIndex = 0;
-
         // 기본 무기 활성화
         foreach (ItemObject weapon in BaseWeapon)
         {

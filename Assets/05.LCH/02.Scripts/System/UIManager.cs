@@ -266,7 +266,7 @@ public class UIManager : MonoBehaviour
     {
         switch (isMelee)
         {
-            case true: 
+            case true:
                 selectWindow[0].SetActive(openWindow);
                 break;
             case false: 
@@ -298,5 +298,6 @@ public class UIManager : MonoBehaviour
     {
         inventoryWindow.SetActive(true);
     }
+
     #endregion
 }

@@ -31,7 +31,7 @@ public class DataManager : MonoBehaviour
             new SkillData("SkyFallShot", 0, 10f, 20f ,0f, 18f, 0, 0, true, "Fires multiple arrows that \r\nfall from the sky", 1.05f, 0.95f, 0f, false, 25f), // 스킬 3 [2]
 
             // 근거리
-            new SkillData("Single Slash", 0, 30f, 50f, 10f, 6f, 0, 0, true, "Performs a powerful attack \r\nover a wide area", 1.07f, 0.85f, 0f, false, 15f), // 스킬 1 [3]
+            new SkillData("Single Slash", 0, 30f, 50f, 10f, 14f, 0, 0, true, "Performs a powerful attack \r\nover a wide area", 1.07f, 0.85f, 0f, false, 15f), // 스킬 1 [3]
             new SkillData("Fire Blade", 0, 20f, 40f, 0f, 10f, 5f, 0.35f, true, "Enhances a melee weapon with \r\nfire to perform an attack", 1.13f, 0.95f, 8f, true, 10f), // 스킬 2 [4]
             new SkillData("Frost", 0, 40f, 60f, 10f, 16f, 0, 0, true, "Instantly releases the power of frost", 1.10f, 0.9f, 0f, false, 25f), // 스킬 3 [5]
         };

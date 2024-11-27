@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class Player : MonoBehaviour
 {
     [field: Header("플레이어")]
@@ -9,7 +8,7 @@ public class Player : MonoBehaviour
     public InventoryObject equipment;
 
     [field: Header("장비 장착 위치")]
-    public Transform boneRoot;
+    [SerializeField] private Transform boneRoot;
     public Transform swordTransform;
     public Transform bowTransform;
     public GameObject playerHair;
@@ -46,6 +45,7 @@ public class Player : MonoBehaviour
     private SkinnedMeshRenderer L_sholuderMesh;
     private SkinnedMeshRenderer R_sholuderMesh;
 
+   
     private void Start()
     {
         for (int i = 0; i < attributes.Length; i++)
@@ -57,8 +57,16 @@ public class Player : MonoBehaviour
             equipment.GetSlots[i].OnBeforeUpdate += OnRemoveItem;
             equipment.GetSlots[i].OnAfterUpdate += OnAddItem;
         }
-
         equipment.Clear();
+    }
+
+    private void OnDisable()
+    {
+        for (int i = 0; i < equipment.GetSlots.Length; i++)
+        {
+            equipment.GetSlots[i].OnBeforeUpdate -= OnRemoveItem;
+            equipment.GetSlots[i].OnAfterUpdate -= OnAddItem;
+        }
     }
 
     void AttachEquipmentToCharacter(Transform characterBoneRoot, SkinnedMeshRenderer equipmentRenderer)
@@ -81,15 +89,15 @@ public class Player : MonoBehaviour
         }
 
         equipmentRenderer.bones = updatedBones;
+
         equipmentRenderer.rootBone = characterBoneRoot;
     }
 
 
     public void OnRemoveItem(InventorySlot _slot)
     {
-        if (_slot.ItemObject == null) // Ensure the item object is not null before proceeding
+        if (_slot.ItemObject == null)
             return;
-
         switch (_slot.parent.inventory.type)
         {
             case InterfaceType.Inventory:
@@ -121,14 +129,12 @@ public class Player : MonoBehaviour
 
                         case ItemType.Gloves:
                             Destroy(L_gloves);
-                           Destroy(R_gloves);
+                            Destroy(R_gloves);
                             break;
 
                         case ItemType.Boots:
                             Destroy(L_boot);
                             Destroy(R_boot);
-                            L_boot = null;
-                            R_boot = null;
                             break;
 
                         case ItemType.Shoulder:
@@ -142,6 +148,7 @@ public class Player : MonoBehaviour
                             break;
                     }
                 }
+
                 break;
             case InterfaceType.Box:
                 break;
@@ -149,7 +156,6 @@ public class Player : MonoBehaviour
                 break;
         }
     }
-
     public void OnAddItem(InventorySlot _slot)
     {
         if (_slot.ItemObject == null)

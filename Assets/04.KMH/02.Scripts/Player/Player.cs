@@ -56,8 +56,8 @@ public class Player : MonoBehaviour
         {
             equipment.GetSlots[i].OnBeforeUpdate += OnRemoveItem;
             equipment.GetSlots[i].OnAfterUpdate += OnAddItem;
+            OnAddItem(equipment.GetSlots[i]);
         }
-        equipment.Clear();
     }
 
     private void OnDisable()
@@ -69,9 +69,9 @@ public class Player : MonoBehaviour
         }
     }
 
-    void AttachEquipmentToCharacter(Transform characterBoneRoot, SkinnedMeshRenderer equipmentRenderer)
+    void AttachEquipmentToCharacter(SkinnedMeshRenderer equipmentRenderer)
     {
-        Transform[] characterBones = characterBoneRoot.GetComponentsInChildren<Transform>(); 
+        Transform[] characterBones = boneRoot.GetComponentsInChildren<Transform>(); 
         Transform[] updatedBones = new Transform[equipmentRenderer.bones.Length];
 
         for (int i = 0; i < equipmentRenderer.bones.Length; i++)
@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
 
         equipmentRenderer.bones = updatedBones;
 
-        equipmentRenderer.rootBone = characterBoneRoot;
+        equipmentRenderer.rootBone = boneRoot;
     }
 
 
@@ -184,44 +184,44 @@ public class Player : MonoBehaviour
                         case ItemType.Helmet:
                             helmet = Instantiate(_slot.ItemObject.characterDisplay[0]);
                             helmetMesh = GetEquipmentSkinnedMeshRenderer(helmet);
-                            AttachEquipmentToCharacter(boneRoot, helmetMesh);
+                            AttachEquipmentToCharacter(helmetMesh);
                             playerHair.SetActive(false);
                             break;
 
                         case ItemType.Chest:
                             chest = Instantiate(_slot.ItemObject.characterDisplay[0]);
                             chestMesh = GetEquipmentSkinnedMeshRenderer(chest);
-                            AttachEquipmentToCharacter(boneRoot, chestMesh);
+                            AttachEquipmentToCharacter(chestMesh);
                             break;
 
                         case ItemType.Gloves:
                             L_gloves = Instantiate(_slot.ItemObject.characterDisplay[0]);
                             L_glovesMesh = GetEquipmentSkinnedMeshRenderer(L_gloves);   
-                            AttachEquipmentToCharacter(boneRoot, L_glovesMesh);
+                            AttachEquipmentToCharacter(L_glovesMesh);
 
                             R_gloves = Instantiate(_slot.ItemObject.characterDisplay[1]);
                             R_glovesMesh = GetEquipmentSkinnedMeshRenderer(R_gloves);
-                            AttachEquipmentToCharacter(boneRoot, R_glovesMesh);
+                            AttachEquipmentToCharacter(R_glovesMesh);
                             break;
 
                         case ItemType.Boots:
                             L_boot = Instantiate(_slot.ItemObject.characterDisplay[0]);
                             L_bootMesh = GetEquipmentSkinnedMeshRenderer(L_boot);
-                            AttachEquipmentToCharacter(boneRoot, L_bootMesh);
+                            AttachEquipmentToCharacter(L_bootMesh);
 
                             R_boot = Instantiate(_slot.ItemObject.characterDisplay[1]);
                             R_bootMesh = GetEquipmentSkinnedMeshRenderer(R_boot);
-                            AttachEquipmentToCharacter(boneRoot, R_bootMesh);
+                            AttachEquipmentToCharacter(R_bootMesh);
                             break;
 
                         case ItemType.Shoulder:
                             L_shoulder = Instantiate(_slot.ItemObject.characterDisplay[0]);
                             L_sholuderMesh = GetEquipmentSkinnedMeshRenderer(L_shoulder);
-                            AttachEquipmentToCharacter(boneRoot, L_sholuderMesh);
+                            AttachEquipmentToCharacter(L_sholuderMesh);
 
                             R_shoulder = Instantiate(_slot.ItemObject.characterDisplay[1]);
                             R_sholuderMesh = GetEquipmentSkinnedMeshRenderer(R_shoulder);
-                            AttachEquipmentToCharacter(boneRoot, R_sholuderMesh);
+                            AttachEquipmentToCharacter(R_sholuderMesh);
                             break;
 
                         case ItemType.Weapon:

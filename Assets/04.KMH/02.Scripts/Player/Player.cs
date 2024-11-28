@@ -66,6 +66,23 @@ public class Player : MonoBehaviour
         {
             equipment.GetSlots[i].OnBeforeUpdate -= OnRemoveItem;
             equipment.GetSlots[i].OnAfterUpdate -= OnAddItem;
+
+            foreach (ItemBuff buff in equipment.GetSlots[i].ItemObject.data.buffs)
+            {
+                switch (buff.attribute)
+                {
+                    case Attributes.Strength:
+                        DataManager.instance.playerData.statusData.minDamage -= buff.min;
+                        DataManager.instance.playerData.statusData.maxDamage -= buff.max;
+                        break;
+                    case Attributes.Defense:
+                        DataManager.instance.playerData.statusData.defense -= buff.value;
+                        break;
+                    case Attributes.Health:
+                        DataManager.instance.playerData.statusData.maxHealth -= buff.value;
+                        break;
+                }
+            }
         }
     }
 

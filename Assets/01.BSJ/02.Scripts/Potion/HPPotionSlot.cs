@@ -18,6 +18,8 @@ public class HPPotionSlot : PotionSlot
             DataManager.instance.playerData.statusData.currentHealth = Mathf.Min(playerMaxHealth, playerCurrentHealth + _healAmount);
 
             _count--;
+
+            AudioManager.instance.PlayPotionSound();
         }
     }
 }

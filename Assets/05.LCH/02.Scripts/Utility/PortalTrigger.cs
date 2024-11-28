@@ -10,7 +10,12 @@ public class PortalTrigger : MonoBehaviour
         // ¸¶À» Æ÷Å»
         if (other.CompareTag("Player") && SceneManager.GetActiveScene().name == "Village")
         {
+            DataManager.instance.SaveData();
+            DataManager.instance.LoadData();
+
+
             SceneController.instance.LoadScene("Abandoned Prison");
+
         }
 
         // ´øÀü Æ÷Å»
@@ -22,7 +27,7 @@ public class PortalTrigger : MonoBehaviour
         // º¸½º Æ÷Å»
         if (other.CompareTag("Player") && SceneManager.GetActiveScene().name == "Boss")
         {
-            if (boss[0].gameObject.activeSelf && boss[1].gameObject.activeSelf)
+            if (!boss[0].gameObject.activeSelf && ! boss[1].gameObject.activeSelf)
             {
                 SceneController.instance.LoadScene("Village");
             }

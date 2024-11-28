@@ -53,13 +53,15 @@ public class Frost : MonoBehaviour
 
             icon_lock.SetActive(false);
             frost.isUnlock = false;
-           
-            SkillManager.instance.AddSkill(frost.skillName, frost.coolDown);
-            UIManager.instance.AddSkillSlot(5);
+
             Debug.Log("빙결 얻음!");
+
         }
 
         DataManager.instance.SkillLevelUp("Frost", 1);
+
+        UIManager.instance.AddSkillSlot(5);
+        SkillManager.instance.AddSkill(frost.skillName, frost.coolDown);
     }
 
     // 텍스트 업데이트
@@ -71,6 +73,16 @@ public class Frost : MonoBehaviour
         //spinSlashTexts[3].text = frost.description; // 설명
         //spinSlashTexts[4].text = $"공격력 +{Mathf.Floor((frost.multipleDamage - 1) * 100)}%"; // 공격력 증가율 
         //spinSlashTexts[5].text = $"쿨타임 {Mathf.Floor((frost.multipleCoolDown - 1) * 100)}%"; // 쿨타임 감소율
+
+        if (frost.level > 0)
+        {
+            icon_lock.SetActive(false);
+
+            // 스킬 아이콘 투명도 조절
+            Color color = icon_skill.color;
+            color.a = 0.8f;
+            icon_skill.color = color;
+        }
 
         frostTexts[0].text = $"{frost.level}"; // 레벨
         frostTexts[1].text = frost.skillName; // 스킬 이름

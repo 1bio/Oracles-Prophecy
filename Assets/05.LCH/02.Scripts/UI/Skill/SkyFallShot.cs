@@ -52,17 +52,28 @@ public class SkyFallShot : MonoBehaviour
             icon_lock.SetActive(false);
             skyfallShot.isUnlock = false;
 
-            SkillManager.instance.AddSkill(skyfallShot.skillName, skyfallShot.coolDown);
-            UIManager.instance.AddSkillSlot(2);
             Debug.Log("화살비 얻음!");
         }
 
         DataManager.instance.SkillLevelUp("SkyFallShot", 1);
+
+        UIManager.instance.AddSkillSlot(2);
+        SkillManager.instance.AddSkill(skyfallShot.skillName, skyfallShot.coolDown);
     }
 
     // 텍스트 업데이트
     private void UpdateUI()
     {
+        if (skyfallShot.level > 0)
+        {
+            icon_lock.SetActive(false);
+
+            // 스킬 아이콘 투명도 조절
+            Color color = icon_skill.color;
+            color.a = 0.8f;
+            icon_skill.color = color;
+        }
+
         skyfallShotTexts[0].text = $"{skyfallShot.level}"; // 레벨
         skyfallShotTexts[1].text = skyfallShot.skillName; // 스킬 이름
         skyfallShotTexts[2].text = skyfallShot.description; // 설명

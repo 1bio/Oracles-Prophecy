@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using MedievalKingdomUI.Scripts.Window;
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -95,6 +97,8 @@ public class UIManager : MonoBehaviour
         }
     }
 
+
+
     #region Main Methods
     public void SetIsMelee(bool isMelee)
     {
@@ -126,6 +130,14 @@ public class UIManager : MonoBehaviour
         inventoryStatus[5].text = Mathf.Floor(100f / DataManager.instance.playerData.statusData.moveSpeed).ToString() + "%";
     }
 
+    public void UpdateSkllSlot()
+    {
+        for(int i = 0; i < skillSlot.Length; i++)
+        {
+            AddSkillSlot(i);
+        }
+    }
+
     // 스킬 슬롯 생성
     public void AddSkillSlot(int index)
     {
@@ -136,36 +148,53 @@ public class UIManager : MonoBehaviour
                 switch (index)
                 {
                     case 0: // 정조준
-                        GameObject aimingSlot = Instantiate(skillSlot[index], emptySlot[0].transform);
-                        aimingSlot.transform.SetSiblingIndex(0);
+                        if (DataManager.instance.playerData.skillData[index].level > 0)
+                        {
+                            GameObject aimingSlot = Instantiate(skillSlot[index], emptySlot[0].transform);
+                            aimingSlot.transform.SetSiblingIndex(0);
+                        }
                         break;
 
                     case 1: // 트리플샷
-                        GameObject tripleShotSlot = Instantiate(skillSlot[index], emptySlot[1].transform);
-                        tripleShotSlot.transform.SetSiblingIndex(0);
+                        if (DataManager.instance.playerData.skillData[index].level > 0)
+                        {
+                            GameObject tripleShotSlot = Instantiate(skillSlot[index], emptySlot[1].transform);
+                            tripleShotSlot.transform.SetSiblingIndex(0);
+                        }
                         break;
 
                     case 2: // 화살비
-                        GameObject skyFallShotSlot = Instantiate(skillSlot[index], emptySlot[2].transform);
-                        skyFallShotSlot.transform.SetSiblingIndex(0);
+                        if (DataManager.instance.playerData.skillData[index].level > 0)
+                        {
+                            GameObject skyFallShotSlot = Instantiate(skillSlot[index], emptySlot[2].transform);
+                            skyFallShotSlot.transform.SetSiblingIndex(0);
+                        }
                         break;
 
                     case 3: // 도약베기
-                        GameObject dashSlashSlot = Instantiate(skillSlot[index], emptySlot[0].transform);
-                        dashSlashSlot.transform.SetSiblingIndex(0);
+                        if (DataManager.instance.playerData.skillData[index].level > 0)
+                        {
+                            GameObject dashSlashSlot = Instantiate(skillSlot[index], emptySlot[0].transform);
+                            dashSlashSlot.transform.SetSiblingIndex(0);
+                        }
                         break;
 
                     case 4: // 화염칼
-                        GameObject fireBladeSlot = Instantiate(skillSlot[index], emptySlot[1].transform);
-                        fireBladeSlot.transform.SetSiblingIndex(0);
+                        if (DataManager.instance.playerData.skillData[index].level > 0)
+                        {
+                            GameObject fireBladeSlot = Instantiate(skillSlot[index], emptySlot[1].transform);
+                            fireBladeSlot.transform.SetSiblingIndex(0);
+                        }
                         break;
 
                     case 5: // 빙결
-                        GameObject spinSlashSlot = Instantiate(skillSlot[index], emptySlot[2].transform);
-                        spinSlashSlot.transform.SetSiblingIndex(0);
+                        if (DataManager.instance.playerData.skillData[index].level > 0)
+                        {
+                            GameObject spinSlashSlot = Instantiate(skillSlot[index], emptySlot[2].transform);
+                            spinSlashSlot.transform.SetSiblingIndex(0);
+                        }
                         break;
                 }
-
                 break;
             }
         }

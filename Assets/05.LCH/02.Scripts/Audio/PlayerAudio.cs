@@ -9,4 +9,6 @@ public class PlayerAudio : MonoBehaviour
     public void PlayFireSwordSwingEvent(int index) => AudioManager.instance.PlayFireSwordSwingSound(index);
 
     public void PlaySlashEvent() => AudioManager.instance.PlaySlashSound();
+
+    public void PlayShotEvent() => AudioManager.instance.PlayShotSound();
 }

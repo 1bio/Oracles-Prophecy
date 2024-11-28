@@ -13200,10 +13200,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC804\uC0AC\uB294 \uB300\uAC1C \uB192\uC740 \uCCB4\uB825\uACFC \uBC29\uC5B4\uB825\uC744
-    \uC9C0\uB140 \uC801\uC758 \uACF5\uACA9\uC744 \n\uD761\uC218\uD558\uAC70\uB098
-    \uD53C\uD574\uB97C \uCD5C\uC18C\uD654\uD558\uBA74\uC11C\uB3C4 \uC624\uB79C \uC2DC\uAC04
-    \uC804\uD22C\uB97C\n\uC9C0\uC18D\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4"
+  m_text: "\uAD81\uC218\uB294 \uD0C1\uC6D4\uD55C \uAE30\uB3D9\uC131\uC744 \uD65C\uC6A9\uD574
+    \uC801\uC758 \uACF5\uACA9\uC744 \uD68C\uD53C\n \uD558\uBA70 \uC804\uD22C \uC0C1\uD669\uC5D0\uC11C
+    \uC801\uC808\uD788 \uAC70\uB9AC\uB97C \uC870\uC808\uD574 \uD53C\uD574\uB97C\n
+    \uC904 \uC218 \uC788\uC5B4 \uC0DD\uC874\uB825\uB3C4 \uB192\uC740 \uD3B8\uC785\uB2C8\uB2E4"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d0ce2c72468edc64db7f787401931146, type: 2}
   m_sharedMaterial: {fileID: 2179748923633695442, guid: d0ce2c72468edc64db7f787401931146, type: 2}
@@ -19651,6 +19651,7 @@ GameObject:
   - component: {fileID: 1670510448}
   - component: {fileID: 1670510451}
   - component: {fileID: 1670510453}
+  - component: {fileID: 1670510454}
   - component: {fileID: 1670510452}
   m_Layer: 5
   m_Name: UIWindowController
@@ -19684,6 +19685,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialActiveWindow: {fileID: 741552848}
+  choiceClassUI:
+  - {fileID: 492234069}
+  - {fileID: 593996321}
   graphicRaycaster: {fileID: 138248289}
   animator: {fileID: 43736366}
 --- !u!4 &1670510450
@@ -19701,8 +19705,8 @@ Transform:
   m_Children:
   - {fileID: 138248286}
   - {fileID: 741552849}
-  - {fileID: 1269253901}
   - {fileID: 3860240}
+  - {fileID: 1269253901}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1670510451
@@ -19829,6 +19833,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _buttonSound: {fileID: 8300000, guid: 0999b0b87f1641f4c83f4f6148d7abed, type: 3}
   _equipmentSound: {fileID: 0}
+--- !u!114 &1670510454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670510447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797a2680dc93c124d8b7f9a2842515de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actvieClassUI: []
 --- !u!1 &1679206853
 GameObject:
   m_ObjectHideFlags: 0

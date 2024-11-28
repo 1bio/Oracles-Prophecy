@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1138279417152161029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2711438779421984823}
+  - component: {fileID: 7920054559103752573}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2711438779421984823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138279417152161029}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7920054559103752573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138279417152161029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e724b4a902033f489633d2b332862aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAudio: {fileID: 0}
+  playerAnimator: {fileID: 0}
+  footStep:
+  - {fileID: 8300000, guid: 63e2c641da46bcb458d46620d7ad2183, type: 3}
+  - {fileID: 8300000, guid: 71838592c157eac4499bfcbd4dff2c5f, type: 3}
+  - {fileID: 8300000, guid: 36b45482206664e15a8574e0954381a5, type: 3}
+  - {fileID: 8300000, guid: b9736b8b1037649879105138a9917d32, type: 3}
+  footStepVolume: 0.2
+  swordSwing:
+  - {fileID: 8300000, guid: dfa4468768403a049a9bc7efc096e9e7, type: 3}
+  - {fileID: 8300000, guid: e6acd245e82bd1e4190e50b19f29d732, type: 3}
+  - {fileID: 8300000, guid: ab58ec0ccffda404d961e7b5e7d0fe07, type: 3}
+  swordSwingVolume: 0.08
+  fireSwordSwing:
+  - {fileID: 8300000, guid: 5908bd59885390e4fa5d92aa5d1dd89e, type: 3}
+  - {fileID: 8300000, guid: e80195be070ab0b419c72e2d1661ecf3, type: 3}
+  - {fileID: 8300000, guid: 03593382985dce1428f3ab280fb7861f, type: 3}
+  fireSwordSwingVolume: 0.1
+  swingHit:
+  - {fileID: 8300000, guid: f8c813e8608cd75419d1ebfc02bb9be9, type: 3}
+  - {fileID: 8300000, guid: 1e15c6a25455f8f43b089a55cb308f9e, type: 3}
+  - {fileID: 8300000, guid: 8d9a8aa7c2fead74b8da4928364add83, type: 3}
+  swingHitVolume: 0.2
+  slash: {fileID: 8300000, guid: 1171ff3a33395f54fad42280a93ef31b, type: 3}
+  slashVolume: 0.8
+  shot: {fileID: 8300000, guid: 267c41f5b671a4541869a15be3f6e889, type: 3}
+  shotVolume: 0.1
+  equipment: {fileID: 8300000, guid: 91b0c1803d38b804d90aeca0687ad23e, type: 3}
+  equipmentVolume: 0.1
+  potion: {fileID: 8300000, guid: 7e7b48508f03d594aa7d993e80b4117a, type: 3}
+  potionVolume: 0.5

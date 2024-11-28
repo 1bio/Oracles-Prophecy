@@ -1,81 +1,81 @@
 {
     "statusData": {
-        "level": 1,
+        "level": 8,
         "exp": 0.0,
-        "skillPoint": 0,
+        "skillPoint": 2,
         "moveSpeed": 5.0,
-        "currentHealth": 100.0,
-        "maxHealth": 100.0,
-        "currentMana": 100.0,
-        "maxMana": 100.0,
-        "minDamage": 8.0,
-        "maxDamage": 15.0,
+        "currentHealth": 150.0,
+        "maxHealth": 375.0,
+        "currentMana": 110.0,
+        "maxMana": 450.0,
+        "minDamage": 29.0,
+        "maxDamage": 36.0,
         "damage": 0.0,
         "defense": 0.0
     },
     "skillData": [
         {
             "skillName": "ChargingShot",
-            "level": 0,
-            "minDamage": 5.0,
-            "maxDamage": 10.0,
-            "damage": 6.722591876983643,
+            "level": 1,
+            "minDamage": 23.0,
+            "maxDamage": 43.0,
+            "damage": 0.0,
             "knockBack": 0.0,
-            "coolDown": 5.0,
+            "coolDown": 10.799999237060547,
             "force": 0.0,
             "forceTime": 0.0,
-            "isUnlock": true,
+            "isUnlock": false,
             "description": "Fires a powerful arrow after \r\ngathering strength for one second",
             "multipleDamage": 1.149999976158142,
             "multipleCoolDown": 0.8999999761581421,
             "duration": 0.0,
             "isPassive": false,
-            "useMana": 20.0
+            "useMana": 15.0
         },
         {
             "skillName": "TripleShot",
-            "level": 0,
-            "minDamage": 5.0,
-            "maxDamage": 10.0,
-            "damage": 9.174927711486817,
+            "level": 1,
+            "minDamage": 13.0,
+            "maxDamage": 23.0,
+            "damage": 0.0,
             "knockBack": 0.0,
-            "coolDown": 5.0,
+            "coolDown": 8.550000190734864,
             "force": 0.0,
             "forceTime": 0.0,
-            "isUnlock": true,
+            "isUnlock": false,
             "description": "Fires three arrows in quick \r\nsuccession with a basic attack",
             "multipleDamage": 1.100000023841858,
             "multipleCoolDown": 0.949999988079071,
-            "duration": 5.0,
+            "duration": 8.0,
             "isPassive": true,
-            "useMana": 20.0
+            "useMana": 10.0
         },
         {
             "skillName": "SkyFallShot",
-            "level": 0,
-            "minDamage": 5.0,
-            "maxDamage": 10.0,
-            "damage": 8.67532730102539,
+            "level": 3,
+            "minDamage": 19.0,
+            "maxDamage": 29.0,
+            "damage": 0.0,
             "knockBack": 0.0,
-            "coolDown": 5.0,
+            "coolDown": 15.432750701904297,
             "force": 0.0,
             "forceTime": 0.0,
-            "isUnlock": true,
+            "isUnlock": false,
             "description": "Fires multiple arrows that \r\nfall from the sky",
             "multipleDamage": 1.0499999523162842,
             "multipleCoolDown": 0.949999988079071,
             "duration": 0.0,
             "isPassive": false,
-            "useMana": 20.0
+            "useMana": 25.0
         },
         {
             "skillName": "Single Slash",
             "level": 0,
-            "minDamage": 5.0,
-            "maxDamage": 10.0,
-            "damage": 8.673477172851563,
+            "minDamage": 30.0,
+            "maxDamage": 50.0,
+            "damage": 0.0,
             "knockBack": 10.0,
-            "coolDown": 6.0,
+            "coolDown": 14.0,
             "force": 0.0,
             "forceTime": 0.0,
             "isUnlock": true,
@@ -84,14 +84,14 @@
             "multipleCoolDown": 0.8500000238418579,
             "duration": 0.0,
             "isPassive": false,
-            "useMana": 20.0
+            "useMana": 15.0
         },
         {
             "skillName": "Fire Blade",
             "level": 0,
-            "minDamage": 5.0,
-            "maxDamage": 10.0,
-            "damage": 9.552812576293946,
+            "minDamage": 20.0,
+            "maxDamage": 40.0,
+            "damage": 0.0,
             "knockBack": 0.0,
             "coolDown": 10.0,
             "force": 5.0,
@@ -100,18 +100,18 @@
             "description": "Enhances a melee weapon with \r\nfire to perform an attack",
             "multipleDamage": 1.1299999952316285,
             "multipleCoolDown": 0.949999988079071,
-            "duration": 5.0,
+            "duration": 8.0,
             "isPassive": true,
-            "useMana": 20.0
+            "useMana": 10.0
         },
         {
             "skillName": "Frost",
             "level": 0,
-            "minDamage": 5.0,
-            "maxDamage": 10.0,
-            "damage": 8.745654106140137,
+            "minDamage": 40.0,
+            "maxDamage": 60.0,
+            "damage": 0.0,
             "knockBack": 10.0,
-            "coolDown": 5.0,
+            "coolDown": 16.0,
             "force": 0.0,
             "forceTime": 0.0,
             "isUnlock": true,
@@ -120,11 +120,12 @@
             "multipleCoolDown": 0.8999999761581421,
             "duration": 0.0,
             "isPassive": false,
-            "useMana": 20.0
+            "useMana": 25.0
         }
     ],
     "attackData": [
         {
+            "AnimationName": "Attack1@Melee",
             "ComboAttackIndex": 1,
             "ComboAttackTime": 0.6000000238418579,
             "TransitionDuration": 0.10000000149011612,
@@ -136,6 +137,7 @@
             "KnockBack": 0.0
         },
         {
+            "AnimationName": "Attack2@Melee",
             "ComboAttackIndex": 2,
             "ComboAttackTime": 0.5,
             "TransitionDuration": 0.10000000149011612,
@@ -147,6 +149,7 @@
             "KnockBack": 0.0
         },
         {
+            "AnimationName": "Attack3@Melee",
             "ComboAttackIndex": -1,
             "ComboAttackTime": 0.0,
             "TransitionDuration": 0.10000000149011612,
@@ -158,6 +161,7 @@
             "KnockBack": 0.0
         },
         {
+            "AnimationName": "HeavyAttack1@Melee",
             "ComboAttackIndex": 4,
             "ComboAttackTime": 0.6000000238418579,
             "TransitionDuration": 0.10000000149011612,
@@ -169,6 +173,7 @@
             "KnockBack": 0.0
         },
         {
+            "AnimationName": "HeavyAttack2@Melee",
             "ComboAttackIndex": 5,
             "ComboAttackTime": 0.5,
             "TransitionDuration": 0.10000000149011612,
@@ -180,6 +185,7 @@
             "KnockBack": 0.0
         },
         {
+            "AnimationName": "HeavyAttack3@Melee",
             "ComboAttackIndex": -1,
             "ComboAttackTime": 0.0,
             "TransitionDuration": 0.10000000149011612,
@@ -192,6 +198,7 @@
         }
     ],
     "rangeAttackData": {
+        "AnimationName": "None",
         "ComboAttackIndex": 0,
         "ComboAttackTime": 0.0,
         "TransitionDuration": 0.0,

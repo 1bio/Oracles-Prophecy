@@ -20,5 +20,5 @@ MonoBehaviour:
   _monsterAttack:
     _damage: 15
     _range: 1.5
-    _cooldownThreshold: 0
+    _cooldownThreshold: 0.5
     _totalCount: 3

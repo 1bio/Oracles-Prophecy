@@ -78,14 +78,27 @@ public class DataManager : MonoBehaviour
         switch (monster)
         {
             case Troll:
-                playerData.statusData.exp += Random.Range(15f, 30f);
+                playerData.statusData.exp += Random.Range(15f, 25f);
                 break;
             case Minotaur:
-                playerData.statusData.exp += Random.Range(25f, 35f);
+                playerData.statusData.exp += Random.Range(20f, 30f);
                 break;
             case Medusa:
-                playerData.statusData.exp += Random.Range(35f, 45f);
+                playerData.statusData.exp += Random.Range(35f, 50f);
                 break;
+            case CobraSnake:
+                playerData.statusData.exp += Random.Range(5f, 15f);
+                break;
+            case Devils:
+                playerData.statusData.exp += Random.Range(20f, 30f);
+                break;
+            case Weeper:
+                playerData.statusData.exp += Random.Range(5f, 15f);
+                break;
+            case SerpentWarrior:
+                playerData.statusData.exp += Random.Range(8f, 15f);
+                break;
+
         }
 
         // 레벨 업
@@ -93,7 +106,7 @@ public class DataManager : MonoBehaviour
         {
             LevelUp(25f, 50f, 3f, 3f);
 
-            limitExp += 10f;
+            limitExp += 15f;
         }
     }
 

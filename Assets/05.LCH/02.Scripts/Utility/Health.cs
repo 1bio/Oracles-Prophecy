@@ -72,7 +72,9 @@ public class Health : MonoBehaviour
             lastImpactTime = currentImpactTime;
             hitCount++;
 
-            currentHealth = Mathf.Max(currentHealth - damage, 0);
+            float defends =  1 - (DataManager.instance.playerData.statusData.defense / 100f) > 0 ? DataManager.instance.playerData.statusData.defense / 100f : 0;
+
+            currentHealth = Mathf.Max(currentHealth - (damage * (1 - defends)), 0);
 
             DataManager.instance.playerData.statusData.currentHealth = currentHealth;
 

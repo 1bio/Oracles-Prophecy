@@ -120,7 +120,7 @@ public class UIManager : MonoBehaviour
     {
         inventoryStatus[0].text = DataManager.instance.playerData.statusData.level.ToString();
         inventoryStatus[1].text = $"{DataManager.instance.playerData.statusData.minDamage} - {DataManager.instance.playerData.statusData.maxDamage}";
-        inventoryStatus[2].text = Mathf.Floor(100f / DataManager.instance.playerData.statusData.defense).ToString() + "%";
+        inventoryStatus[2].text = Mathf.Floor(DataManager.instance.playerData.statusData.defense / 100f).ToString() + "%";
         inventoryStatus[3].text = DataManager.instance.playerData.statusData.currentHealth.ToString();
         inventoryStatus[4].text = DataManager.instance.playerData.statusData.currentMana.ToString();
         inventoryStatus[5].text = Mathf.Floor(100f / DataManager.instance.playerData.statusData.moveSpeed).ToString() + "%";

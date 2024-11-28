@@ -114,6 +114,23 @@ public class Player : MonoBehaviour
                     }
                 }
 
+                foreach (ItemBuff buff in _slot.ItemObject.data.buffs)
+                {
+                    switch (buff.attribute)
+                    {
+                        case Attributes.Strength:
+                            DataManager.instance.playerData.statusData.minDamage -= buff.min;
+                            DataManager.instance.playerData.statusData.maxDamage -= buff.max;
+                            break;
+                        case Attributes.Defense:
+                            DataManager.instance.playerData.statusData.defense -= buff.value;
+                            break;
+                        case Attributes.Health:
+                            DataManager.instance.playerData.statusData.maxHealth -= buff.value;
+                            break;
+                    }
+                }
+
                 if (_slot.ItemObject.characterDisplay != null)
                 {
                     switch (_slot.AllowedItems[0])
@@ -179,6 +196,23 @@ public class Player : MonoBehaviour
 
                 if (_slot.ItemObject.characterDisplay != null)
                 {
+                    foreach (ItemBuff buff in _slot.ItemObject.data.buffs)
+                    {
+                        switch (buff.attribute)
+                        {
+                            case Attributes.Strength:
+                                DataManager.instance.playerData.statusData.minDamage += buff.min;
+                                DataManager.instance.playerData.statusData.maxDamage += buff.max;
+                                break;
+                            case Attributes.Defense:
+                                DataManager.instance.playerData.statusData.defense += buff.value;
+                                break;
+                            case Attributes.Health:
+                                DataManager.instance.playerData.statusData.maxHealth += buff.value;
+                                break;
+                        }
+                    }
+
                     switch (_slot.AllowedItems[0])
                     {
                         case ItemType.Helmet:

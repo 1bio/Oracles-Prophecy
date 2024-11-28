@@ -10,6 +10,7 @@ public class MPPotionSlot : PotionSlot
     {
         base.Update();
 
+
         if (p_HasPotion && Input.GetKeyUp(KeyCode.E))
         {
             float playerCurrentMana = DataManager.instance.playerData.statusData.currentMana;
@@ -18,6 +19,8 @@ public class MPPotionSlot : PotionSlot
             DataManager.instance.playerData.statusData.currentMana = Mathf.Min(playerMaxMana, playerCurrentMana + _manaHealAmount);
 
             _count--;
+
+            AudioManager.instance.PlayPotionSound();
         }
     }
 }

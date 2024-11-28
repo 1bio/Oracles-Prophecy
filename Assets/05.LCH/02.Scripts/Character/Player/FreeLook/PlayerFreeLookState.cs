@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using MedievalKingdomUI.Scripts.Window;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -63,6 +64,9 @@ public class PlayerFreeLookState : PlayerBaseState
             }
             else
             {
+                DataManager.instance.SaveData();
+                DataManager.instance.LoadData();
+
                 stateMachine.ChangeState(new PlayerMeleeAttackState(stateMachine, basicAttackDataIndex));
                 return;
             }
@@ -93,7 +97,7 @@ public class PlayerFreeLookState : PlayerBaseState
     #region Main Methods
     public bool HasWeapon()
     {
-        switch (ClassSelectWindow.classIndex)
+        switch (AnimatedWindowController.choiceIndex)
         {
             case 0:
                 Transform sword = stateMachine.Player.swordTransform;
@@ -134,7 +138,7 @@ public class PlayerFreeLookState : PlayerBaseState
     private void OnFirstSkill() // 절단 [3]
     {
         if (SkillManager.instance.GetRemainingCooldown("Single Slash") <= 0f && !DataManager.instance.playerData.skillData[3].isUnlock 
-            && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[3].useMana)
+            && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[3].useMana && HasWeapon())
         {
             stateMachine.ChangeState(new PlayerMeleeDashSlashState(stateMachine));
         }
@@ -143,7 +147,7 @@ public class PlayerFreeLookState : PlayerBaseState
     private void OnSecondSkill() // 화염칼 [4]
     {
         if (SkillManager.instance.GetRemainingCooldown("Fire Blade") <= 0f && !DataManager.instance.playerData.skillData[4].isUnlock
-            && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[4].useMana)
+            && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[4].useMana && HasWeapon())
         {
             SkillManager.instance.SetActiveSkill(true);
         }
@@ -152,7 +156,7 @@ public class PlayerFreeLookState : PlayerBaseState
     private void OnThirdSkill() // 빙결 [5]
     {
         if(SkillManager.instance.GetRemainingCooldown("Frost") <= 0f && !DataManager.instance.playerData.skillData[5].isUnlock 
-            && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[5].useMana)
+            && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[5].useMana && HasWeapon())
         {
             stateMachine.ChangeState(new PlayerMeleeFrostState(stateMachine));
         }

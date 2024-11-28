@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using MedievalKingdomUI.Scripts.Window;
+using UnityEngine;
 
 public class PlayerImpactState : PlayerBaseState
 {
@@ -32,7 +33,7 @@ public class PlayerImpactState : PlayerBaseState
 
         duration -= deltaTime;
 
-        switch (ClassSelectWindow.classIndex)
+        switch (AnimatedWindowController.choiceIndex)
         {
             case 0: // 전사
                 if (duration <= 0f)

@@ -65,12 +65,15 @@ public class SceneController : MonoBehaviour
         loadSceneName = sceneName;
 
         StartCoroutine(LoadSceneProcess());
+
     }
 
     private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
     {
         if(arg0.name == loadSceneName)
         {
+            UIManager.instance.UpdateSkllSlot();
+
             StartCoroutine(Fade(false));
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }

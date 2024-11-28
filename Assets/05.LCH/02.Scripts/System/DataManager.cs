@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MedievalKingdomUI.Scripts.Window;
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -57,6 +58,8 @@ public class DataManager : MonoBehaviour
         if(instance == null)
         {
             instance = this;
+
+            DontDestroyOnLoad(gameObject);
         }
         else
         {

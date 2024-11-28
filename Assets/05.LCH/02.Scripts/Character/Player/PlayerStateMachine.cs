@@ -1,4 +1,5 @@
 ﻿using MasterRealisticFX;
+using MedievalKingdomUI.Scripts.Window;
 using UnityEngine;
 
 public class PlayerStateMachine : StateMachine
@@ -86,27 +87,23 @@ public class PlayerStateMachine : StateMachine
     // 플레이어 클래스 설정
     public void SetPlayerClass()
     {
-        // 기본 무기 활성화
-        foreach (ItemObject weapon in BaseWeapon)
-        {
-            if (weapon == BaseWeapon[ClassSelectWindow.classIndex])
-            {
-                Item item = new Item(weapon);
-                Player.inventory.AddItem(item, 1);
-            }
-        }
-
         // 기본 상태 전환
-        switch (ClassSelectWindow.classIndex)
+        switch (AnimatedWindowController.choiceIndex)
         {
             case 0: // 전사
                 UIManager.instance.SetIsMelee(true);
+                Item sword = new Item(BaseWeapon[0]);
+                Player.inventory.AddItem(sword, 1);
                 ChangeState(new PlayerFreeLookState(this));
+                Debug.Log("warrior");
                 break;
 
             case 1: // 궁수
                 UIManager.instance.SetIsMelee(false);
+                Item bow = new Item(BaseWeapon[1]);
+                Player.inventory.AddItem(bow, 1);
                 ChangeState(new PlayerRangeFreeLookState(this));
+                Debug.Log("archer");
                 break;
         }
     }

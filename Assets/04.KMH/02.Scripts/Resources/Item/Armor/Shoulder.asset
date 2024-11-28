@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0efa0a4c06cdce429ae4bef81bef225, type: 3}
   m_Name: Shoulder
   m_EditorClassIdentifier: 
-  uiDisplay: {fileID: 21300000, guid: f137c5009f3a6924c95569e1f1e39b7e, type: 3}
+  uiDisplay: {fileID: 21300000, guid: e9af07d166e50104897d18ad5e0571a5, type: 3}
   characterDisplay:
   - {fileID: 6440515267657640506, guid: 2485ccb02b02b4fb2b97725d315ead4c, type: 3}
   - {fileID: 8995191414515445637, guid: 53fe39dfb6db74132a5ca546a90544f8, type: 3}

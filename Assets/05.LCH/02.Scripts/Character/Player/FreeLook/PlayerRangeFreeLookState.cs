@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MedievalKingdomUI.Scripts.Window;
+using System;
 using UnityEngine;
 
 public class PlayerRangeFreeLookState : PlayerBaseState
@@ -75,7 +76,7 @@ public class PlayerRangeFreeLookState : PlayerBaseState
     #region
     public bool HasWeapon()
     {
-        switch (ClassSelectWindow.classIndex)
+        switch (AnimatedWindowController.choiceIndex)
         {
             case 0:
                 Transform sword = stateMachine.Player.swordTransform;
@@ -115,7 +116,7 @@ public class PlayerRangeFreeLookState : PlayerBaseState
     private void OnFirstSkill() // 정조준 [0]
     {
         if (SkillManager.instance.GetRemainingCooldown("ChargingShot") <= 0f && !DataManager.instance.playerData.skillData[0].isUnlock
-            && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[0].useMana)
+            && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[0].useMana && HasWeapon())
         {
             stateMachine.ChangeState(new PlayerRangeAimState(stateMachine));
         }
@@ -124,7 +125,7 @@ public class PlayerRangeFreeLookState : PlayerBaseState
     private void OnSecondSkill() // 트리플샷 [1]
     {
         if (SkillManager.instance.GetRemainingCooldown("TripleShot") <= 0f && !DataManager.instance.playerData.skillData[1].isUnlock 
-            && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[1].useMana)
+            && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[1].useMana && HasWeapon())
         {
             SkillManager.instance.SetActiveSkill(true);
         }
@@ -134,7 +135,7 @@ public class PlayerRangeFreeLookState : PlayerBaseState
     {
         if (SkillManager.instance.GetRemainingCooldown("SkyFallShot") <= 0f && !DataManager.instance.playerData.skillData[2].isUnlock 
             && DataManager.instance.playerData.statusData.currentMana >= DataManager.instance.playerData.skillData[2].useMana
-            && stateMachine.Targeting.CurrentTarget != null)
+            && stateMachine.Targeting.CurrentTarget != null && HasWeapon())
         {
             stateMachine.ChangeState(new PlayerRangeSkyFallState(stateMachine));
         }

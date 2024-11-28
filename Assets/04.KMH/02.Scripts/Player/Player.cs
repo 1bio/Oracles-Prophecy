@@ -1,3 +1,4 @@
+using MedievalKingdomUI.Scripts.Window;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -57,7 +58,8 @@ public class Player : MonoBehaviour
             equipment.GetSlots[i].OnBeforeUpdate += OnRemoveItem;
             equipment.GetSlots[i].OnAfterUpdate += OnAddItem;
         }
-        equipment.Clear();
+
+        //equipment.Clear();
     }
 
     private void OnDisable()
@@ -98,6 +100,7 @@ public class Player : MonoBehaviour
     {
         if (_slot.ItemObject == null)
             return;
+
         switch (_slot.parent.inventory.type)
         {
             case InterfaceType.Inventory:
@@ -155,6 +158,8 @@ public class Player : MonoBehaviour
             default:
                 break;
         }
+
+        AudioManager.instance.PlayEquipmentSound();
     }
     public void OnAddItem(InventorySlot _slot)
     {
@@ -225,7 +230,7 @@ public class Player : MonoBehaviour
                             break;
 
                         case ItemType.Weapon:
-                            switch (ClassSelectWindow.classIndex)
+                            switch (AnimatedWindowController.choiceIndex)
                             {
                                 case 0:
                                     sword = Instantiate(_slot.ItemObject.characterDisplay[0], swordTransform);
@@ -261,6 +266,8 @@ public class Player : MonoBehaviour
             default:
                 break;
         }
+
+        AudioManager.instance.PlayEquipmentSound();
     }
 
     public SkinnedMeshRenderer GetEquipmentSkinnedMeshRenderer(GameObject equipment)

@@ -1,3 +1,4 @@
+using MedievalKingdomUI.Scripts.Window;
 using UnityEngine;
 
 public class PlayerRollingState : PlayerBaseState
@@ -30,8 +31,8 @@ public class PlayerRollingState : PlayerBaseState
         //근거리 무기 이펙트 제거
         stateMachine.WeaponToggle.DisableWeapon();
 
-        stateMachine.WeaponTrail.DestroyTrail();
-        stateMachine.ParticleEventHandler.StopParticleSystem();
+ /*       stateMachine.WeaponTrail.DestroyTrail();
+        stateMachine.ParticleEventHandler.StopParticleSystem();*/
 
         if (Time.time - stateMachine.PreviousDodgeTime < stateMachine.DodgeCooldown)
             return;
@@ -49,7 +50,7 @@ public class PlayerRollingState : PlayerBaseState
 
         AnimatorStateInfo currentInfo = stateMachine.Animator.GetCurrentAnimatorStateInfo(0);
 
-        switch (ClassSelectWindow.classIndex)
+        switch (AnimatedWindowController.choiceIndex)
         {
             case 0: // 전사
                 if (currentInfo.IsName("Roll") && currentInfo.normalizedTime > 0.8f)

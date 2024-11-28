@@ -104,7 +104,10 @@ public class VFXController : MonoBehaviour
                 soundComponentCast.PlayOneShot(clip);
 
                 // 데미지 처리
-                float damage = DataManager.instance.playerData.skillData[2].damage;
+                float minDamage = DataManager.instance.playerData.skillData[2].minDamage;
+                float maxDamage = DataManager.instance.playerData.skillData[2].maxDamage;
+                float damage = Random.Range(minDamage, maxDamage);
+
                 for (int i = 0; i < hitCount; i++)
                 {
                     yield return new WaitForSeconds(0.2f);

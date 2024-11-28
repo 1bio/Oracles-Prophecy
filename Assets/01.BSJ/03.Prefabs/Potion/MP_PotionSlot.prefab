@@ -202,8 +202,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _emptyImage: {fileID: 3818579855221594838}
   _countText: {fileID: 5672011617125036670}
-  _count: 5
-  _manaHealAmount: 20
+  _count: 8
+  _manaHealAmount: 10
 --- !u!1 &3200921052461593374
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.Recorder.OutputPath;
 
 public class TripleShot : MonoBehaviour
 {
@@ -52,17 +53,29 @@ public class TripleShot : MonoBehaviour
             icon_lock.SetActive(false);
             tripleShot.isUnlock = false;
 
-            SkillManager.instance.AddSkill(tripleShot.skillName, tripleShot.coolDown);
-            UIManager.instance.AddSkillSlot(1);
             Debug.Log("트리플샷 얻음!");
+
         }
 
         DataManager.instance.SkillLevelUp("TripleShot", 1);
+
+        UIManager.instance.AddSkillSlot(1);
+        SkillManager.instance.AddSkill(tripleShot.skillName, tripleShot.coolDown);
     }
 
     // 텍스트 업데이트
     private void UpdateUI()
     {
+        if (tripleShot.level > 0)
+        {
+            icon_lock.SetActive(false);
+
+            // 스킬 아이콘 투명도 조절
+            Color color = icon_skill.color;
+            color.a = 0.8f;
+            icon_skill.color = color;
+        }
+
         tripleShotTexts[0].text = $"{tripleShot.level}"; // 레벨
         tripleShotTexts[1].text = tripleShot.skillName; // 스킬 이름
         tripleShotTexts[2].text = tripleShot.description; // 설명

@@ -52,12 +52,13 @@ public class FireBlade : MonoBehaviour
             icon_lock.SetActive(false);
             fireBlade.isUnlock = false;
 
-            SkillManager.instance.AddSkill(fireBlade.skillName, fireBlade.coolDown);
-            UIManager.instance.AddSkillSlot(4);
             Debug.Log("화염칼 얻음!");
         }
 
         DataManager.instance.SkillLevelUp("Fire Blade", 1);
+
+        UIManager.instance.AddSkillSlot(4);
+        SkillManager.instance.AddSkill(fireBlade.skillName, fireBlade.coolDown);
     }
 
     // 텍스트 업데이트
@@ -69,6 +70,16 @@ public class FireBlade : MonoBehaviour
         //fireBladeTexts[3].text = fireBlade.description; // 설명
         //fireBladeTexts[4].text = $"공격력 +{Mathf.Floor((fireBlade.multipleDamage - 1) * 100)}%"; // 공격력 증가율 
         //fireBladeTexts[5].text = $"쿨타임 {Mathf.Floor((fireBlade.multipleCoolDown - 1) * 100)}%"; // 쿨타임 감소율
+
+        if (fireBlade.level > 0)
+        {
+            icon_lock.SetActive(false);
+
+            // 스킬 아이콘 투명도 조절
+            Color color = icon_skill.color;
+            color.a = 0.8f;
+            icon_skill.color = color;
+        }
 
         fireBladeTexts[0].text = $"{fireBlade.level}"; // 레벨
         fireBladeTexts[1].text = fireBlade.skillName; // 스킬 이름

@@ -30,7 +30,17 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip slash;
     [Range(0f, 1f)][SerializeField] private float slashVolume;
 
+    [Header("Shoot")]
+    [SerializeField] private AudioClip shot;
+    [Range(0f, 1f)][SerializeField] private float shotVolume;
 
+    [Header("Equipment")]
+    [SerializeField] private AudioClip equipment;
+    [Range(0f, 1f)][SerializeField] private float equipmentVolume;
+
+    [Header("Potion Drink")]
+    [SerializeField] private AudioClip potion;
+    [Range(0f, 1f)][SerializeField] private float potionVolume;
 
     public void Init()
     {
@@ -132,5 +142,23 @@ public class AudioManager : MonoBehaviour
     {
         playerAudio.volume = slashVolume;
         playerAudio.PlayOneShot(slash);
+    }
+
+    public void PlayShotSound()
+    {
+        playerAudio.volume = shotVolume;
+        playerAudio.PlayOneShot(shot);
+    }
+
+    public void PlayEquipmentSound()
+    {
+        playerAudio.volume = equipmentVolume;
+        playerAudio.PlayOneShot(equipment);
+    }
+
+    public void PlayPotionSound()
+    {
+        playerAudio.volume = potionVolume;
+        playerAudio.PlayOneShot(potion);
     }
 }

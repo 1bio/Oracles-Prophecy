@@ -52,17 +52,28 @@ public class ChargingShot : MonoBehaviour
             icon_lock.SetActive(false);
             chargingShot.isUnlock = false;
 
-            SkillManager.instance.AddSkill(chargingShot.skillName, chargingShot.coolDown);
-            UIManager.instance.AddSkillSlot(0);
             Debug.Log("정조준 얻음!");
         }
 
         DataManager.instance.SkillLevelUp("ChargingShot", 1);
+
+        UIManager.instance.AddSkillSlot(0);
+        SkillManager.instance.AddSkill(chargingShot.skillName, chargingShot.coolDown);
     }
 
     // 텍스트 업데이트
     private void UpdateUI()
     {
+        if (chargingShot.level > 0)
+        {
+            icon_lock.SetActive(false);
+
+            // 스킬 아이콘 투명도 조절
+            Color color = icon_skill.color;
+            color.a = 0.8f;
+            icon_skill.color = color;
+        }
+
         chargingShotTexts[0].text = $"{chargingShot.level}"; // 레벨
         chargingShotTexts[1].text = chargingShot.skillName; // 스킬 이름
         chargingShotTexts[2].text = chargingShot.description; // 설명

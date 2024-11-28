@@ -115,7 +115,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5965555404607644212}
-  - component: {fileID: 4960243538890867205}
   - component: {fileID: 3410780055090552090}
   - component: {fileID: 5388776188475828535}
   m_Layer: 0
@@ -140,29 +139,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 407081860866745964}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!136 &4960243538890867205
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5990641767828892705}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1
-  m_Height: 21
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &3410780055090552090
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -198,5 +174,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 577ab1417b2def54e8bb3ac4fd505d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 5
+  _damage: 50
   _damageInterval: 2

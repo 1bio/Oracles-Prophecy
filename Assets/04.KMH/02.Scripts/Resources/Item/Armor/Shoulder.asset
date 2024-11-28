@@ -24,11 +24,11 @@ MonoBehaviour:
     Id: 5
     buffs:
     - attribute: 1
-      value: 0
+      value: 10
       min: 3
       max: 7
     - attribute: 2
-      value: 0
+      value: 2
       min: 3
       max: 7
   boneNames: []

@@ -22,6 +22,7 @@ public class ItemUIController : MonoBehaviour
     private void OnDisable()
     {
         _itemObjectController.ItemGetEvent -= FlotingItemPickupMessage;
+        PickupMessageObj.Clear();
     }
 
     private void OnTriggerStay(Collider other)

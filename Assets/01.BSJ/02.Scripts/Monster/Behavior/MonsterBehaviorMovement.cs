@@ -1,3 +1,4 @@
+using MasterRealisticFX;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -22,6 +23,9 @@ public class MonsterBehaviorMovement : MonsterBehavior
 
     public override void OnBehaviorStart(Monster monster)
     {
+        SimpleWeaponTrail simpleWeaponTrail = monster.GetComponent<SimpleWeaponTrail>();
+        simpleWeaponTrail?.DestroyTrail();
+
         _monster = monster;
         _targetDetector = monster.GetComponent<TargetDetector>();
 

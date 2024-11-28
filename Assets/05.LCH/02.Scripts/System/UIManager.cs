@@ -276,6 +276,18 @@ public class UIManager : MonoBehaviour
     }
     #endregion
 
+    public void ObjectSetActive(GameObject gameObject)
+    {
+        if (gameObject.activeSelf)
+        {
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            gameObject.SetActive(true);
+        }
+    }
+
 
     #region Button Event
     // 게임 오버 후 마을로 돌아가는 이벤트

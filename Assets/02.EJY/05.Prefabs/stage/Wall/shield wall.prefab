@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3218316724361469042}
   m_Layer: 13
   m_Name: shield wall
-  m_TagString: Obstacle
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -26,6 +26,8 @@ public class MonsterLootItemController
                 {
                     lootlist.Add(item);
                 }
+
+                if (lootlist.Count > 2) break;
             }
         }
         

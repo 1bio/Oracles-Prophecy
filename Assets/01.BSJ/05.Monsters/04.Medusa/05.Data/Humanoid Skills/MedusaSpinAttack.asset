@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _vfx:
   - {fileID: 1646871050452766, guid: 603c8179142c0fb44907620c0fc2277f, type: 3}
-  _cooldownThreshold: 1
+  _cooldownThreshold: 13
   _damage: 15
   _range: 5
   _castTime: 0

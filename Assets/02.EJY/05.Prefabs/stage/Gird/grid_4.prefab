@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 424488513322243727}
   - component: {fileID: 4545905072414637155}
   - component: {fileID: -2200411656050415552}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: grid_4
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

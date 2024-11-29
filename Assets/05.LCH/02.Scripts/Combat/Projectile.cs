@@ -35,16 +35,6 @@ public class Projectile : MonoBehaviour
         if (other.CompareTag("Player"))
             return;
 
-        if (other.gameObject.TryGetComponent<Health>(out Health health))
-        {
-            // 피격 시 화살 비활성화
-            Debug.Log("Hit!");
-            health.TakeDamage(damage, false);
-            gameObject.SetActive(false);
-            //StartCoroutine(TrailOffDelay(3f));
-            return;
-        }
-
         if (other.CompareTag("Wall"))
         {
             gameObject.SetActive(false);
@@ -54,6 +44,16 @@ public class Projectile : MonoBehaviour
 
         if (other.CompareTag("Obstacle"))
         {
+            gameObject.SetActive(false);
+            //StartCoroutine(TrailOffDelay(3f));
+            return;
+        }
+
+        if (other.gameObject.TryGetComponent<Health>(out Health health))
+        {
+            // 피격 시 화살 비활성화
+            Debug.Log("Hit!");
+            health.TakeDamage(damage, false);
             gameObject.SetActive(false);
             //StartCoroutine(TrailOffDelay(3f));
             return;

@@ -9818,9 +9818,9 @@ MonoBehaviour:
   _isFollowing: 0
   _spawnVFXOnHit: 0
   _nextVFXPrefab: {fileID: 0}
-  _deactivationTime: 0
-  _deactivationTimeVariance: 0
-  _stayTime: 0
+  _deactivationTime: 5
+  _deactivationTimeVariance: 1
+  _stayTime: 0.3
   _damageInterval: 1.5
   _moveSpeed: 7
   _rotationSpeed: 0

@@ -12,6 +12,7 @@ public class Health : MonoBehaviour
     private bool isDead = false;
 
     [SerializeField] private GameObject bloodVFX;
+    [SerializeField] private PlayerHealthMonitor playerhealthMonitor;
 
     // 피격 카운트 필드
     public int hitCount;
@@ -78,7 +79,9 @@ public class Health : MonoBehaviour
 
             DataManager.instance.playerData.statusData.currentHealth = currentHealth;
 
-            if(currentHealth <= 0)
+            playerhealthMonitor.OnImpact();
+
+            if (currentHealth <= 0)
             {
                 Dead();
             }

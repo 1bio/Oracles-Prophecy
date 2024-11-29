@@ -1328,6 +1328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodVFX: {fileID: 0}
+  playerhealthMonitor: {fileID: 0}
   hitCount: 0
 --- !u!114 &1375701588853561516
 MonoBehaviour:
@@ -1344,7 +1345,7 @@ MonoBehaviour:
   p_monsterStatData: {fileID: 11400000, guid: a986dda6afd52a94a89e7b31b11d3274, type: 2}
   p_monsterSkillDatas:
   - {fileID: 11400000, guid: e88df191f6948b943b8dfe44dbf5157f, type: 2}
-  p_monsterLootItemData: {fileID: 11400000, guid: fab7c1ddcaa51ac44aa2d494d082e35c, type: 2}
+  p_monsterLootItemData: {fileID: 11400000, guid: 334f43b7e32ca7044847a7e3f02a8736, type: 2}
 --- !u!114 &3989245594237044854
 MonoBehaviour:
   m_ObjectHideFlags: 0

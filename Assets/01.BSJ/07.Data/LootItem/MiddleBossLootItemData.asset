@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b912508b3ba2745906420d072156ec, type: 3}
+  m_Name: MiddleBossLootItemData
+  m_EditorClassIdentifier: 
+  _lootItemArray:
+  - {fileID: 5043167619198549530, guid: 3eea89ae144a4bb44b46faf9ab38ecae, type: 3}
+  - {fileID: 7235906724420313109, guid: e49c6432ab5584545acee7b00118363e, type: 3}
+  - {fileID: 5914037922799018170, guid: dcf6bbf3783b5874eb50a535ca8a7772, type: 3}
+  - {fileID: 8697400331180497108, guid: 22f734b673e73e846a2c81dfe7d22c7c, type: 3}
+  _persentArray:
+  - 90
+  - 70
+  - 20
+  - 5

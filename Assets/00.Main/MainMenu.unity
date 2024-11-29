@@ -19832,7 +19832,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonSound: {fileID: 8300000, guid: 0999b0b87f1641f4c83f4f6148d7abed, type: 3}
-  _equipmentSound: {fileID: 0}
 --- !u!114 &1670510454
 MonoBehaviour:
   m_ObjectHideFlags: 0

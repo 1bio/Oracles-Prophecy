@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class TargetDetector : MonoBehaviour
@@ -15,7 +14,7 @@ public class TargetDetector : MonoBehaviour
     private float _fanCount = 25f;
 
     private float _currentTime = 0;
-    private float _updateTime = 5f;
+    private float _updateTime = 10f;
 
     public bool IsTargetDetected { get; set; } = false;
     public float DetectionDistance { get => _detectionDistance; }

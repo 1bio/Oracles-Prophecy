@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0efa0a4c06cdce429ae4bef81bef225, type: 3}
   m_Name: Gloves
   m_EditorClassIdentifier: 
-  uiDisplay: {fileID: 21300000, guid: 6efe68578879d764c87d78f9e7d9b3b5, type: 3}
+  uiDisplay: {fileID: 21300000, guid: 9382fd06b9cc87c4e869713049ecbf03, type: 3}
   characterDisplay:
   - {fileID: 1062849087741425437, guid: 447740452fb5041f3ad677b0bfa16900, type: 3}
   - {fileID: 8623525436012913239, guid: abcbae852a58042a99817cdc3e381ee7, type: 3}
@@ -24,11 +24,11 @@ MonoBehaviour:
     Id: 2
     buffs:
     - attribute: 1
-      value: 10
+      value: 5
       min: 3
       max: 8
     - attribute: 2
-      value: 3
+      value: 2
       min: 3
       max: 8
   boneNames: []

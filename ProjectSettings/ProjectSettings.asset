@@ -843,7 +843,9 @@ PlayerSettings:
     Build: 0
     Collab: 1
     Game Performance: 0
+    Legacy Analytics: 0
     Purchasing: 0
+    UDP: 0
     UNet: 1
     Unity Ads: 0
   luminIcon:
@@ -865,11 +867,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: e819b819-a42f-40c7-b2dc-52583f03b0c4
+  cloudProjectId: 735d1d45-3bd3-425a-af84-4ba8d0d8a4ed
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Massacre 2024-09-04_15-27-53
-  organizationId: presuc
+  projectName: Massacre
+  organizationId: leeckdgns07
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

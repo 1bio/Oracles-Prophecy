@@ -72,7 +72,13 @@ public class SceneController : MonoBehaviour
     {
         if(arg0.name == loadSceneName)
         {
-            UIManager.instance.UpdateSkllSlot();
+            if(!loadSceneName.Equals("MainMenu"))
+            {
+                UIManager.instance.UpdateSkllSlot();
+                DataManager.instance.playerData.statusData.currentHealth = DataManager.instance.playerData.statusData.maxHealth;
+                DataManager.instance.playerData.statusData.currentMana = DataManager.instance.playerData.statusData.maxMana;
+
+            }
 
             StartCoroutine(Fade(false));
             SceneManager.sceneLoaded -= OnSceneLoaded;

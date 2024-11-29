@@ -133,6 +133,11 @@ public class PlayerStateMachine : StateMachine
     {
         ChangeState(new PlayerDeadState(this));
 
+        Player.equipment.Clear();
+        Player.inventory.Clear();
+
+        DataManager.instance.Initialized();
+
         UIManager.instance.GameoverUI();
     }
     #endregion

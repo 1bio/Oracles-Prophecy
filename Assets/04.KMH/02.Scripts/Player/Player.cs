@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
     private SkinnedMeshRenderer L_sholuderMesh;
     private SkinnedMeshRenderer R_sholuderMesh;
 
-   
+
     private void Start()
     {
         for (int i = 0; i < attributes.Length; i++)
@@ -57,6 +57,7 @@ public class Player : MonoBehaviour
         {
             equipment.GetSlots[i].OnBeforeUpdate += OnRemoveItem;
             equipment.GetSlots[i].OnAfterUpdate += OnAddItem;
+
             OnAddItem(equipment.GetSlots[i]);
         }
     }
@@ -68,20 +69,23 @@ public class Player : MonoBehaviour
             equipment.GetSlots[i].OnBeforeUpdate -= OnRemoveItem;
             equipment.GetSlots[i].OnAfterUpdate -= OnAddItem;
 
-            foreach (ItemBuff buff in equipment.GetSlots[i].ItemObject.data.buffs)
+            if (equipment.GetSlots[i].ItemObject != null)
             {
-                switch (buff.attribute)
+                foreach (ItemBuff buff in equipment.GetSlots[i].ItemObject.data.buffs)
                 {
-                    case Attributes.Strength:
-                        DataManager.instance.playerData.statusData.minDamage -= buff.min;
-                        DataManager.instance.playerData.statusData.maxDamage -= buff.max;
-                        break;
-                    case Attributes.Defense:
-                        DataManager.instance.playerData.statusData.defense -= buff.value;
-                        break;
-                    case Attributes.Health:
-                        DataManager.instance.playerData.statusData.maxHealth -= buff.value;
-                        break;
+                    switch (buff.attribute)
+                    {
+                        case Attributes.Strength:
+                            DataManager.instance.playerData.statusData.minDamage -= buff.min;
+                            DataManager.instance.playerData.statusData.maxDamage -= buff.max;
+                            break;
+                        case Attributes.Defense:
+                            DataManager.instance.playerData.statusData.defense -= buff.value;
+                            break;
+                        case Attributes.Health:
+                            DataManager.instance.playerData.statusData.maxHealth -= buff.value;
+                            break;
+                    }
                 }
             }
         }
@@ -133,20 +137,23 @@ public class Player : MonoBehaviour
                     }
                 }
 
-                foreach (ItemBuff buff in _slot.ItemObject.data.buffs)
+                if (_slot.ItemObject != null)
                 {
-                    switch (buff.attribute)
+                    foreach (ItemBuff buff in _slot.ItemObject.data.buffs)
                     {
-                        case Attributes.Strength:
-                            DataManager.instance.playerData.statusData.minDamage -= buff.min;
-                            DataManager.instance.playerData.statusData.maxDamage -= buff.max;
-                            break;
-                        case Attributes.Defense:
-                            DataManager.instance.playerData.statusData.defense -= buff.value;
-                            break;
-                        case Attributes.Health:
-                            DataManager.instance.playerData.statusData.maxHealth -= buff.value;
-                            break;
+                        switch (buff.attribute)
+                        {
+                            case Attributes.Strength:
+                                DataManager.instance.playerData.statusData.minDamage -= buff.min;
+                                DataManager.instance.playerData.statusData.maxDamage -= buff.max;
+                                break;
+                            case Attributes.Defense:
+                                DataManager.instance.playerData.statusData.defense -= buff.value;
+                                break;
+                            case Attributes.Health:
+                                DataManager.instance.playerData.statusData.maxHealth -= buff.value;
+                                break;
+                        }
                     }
                 }
 
@@ -217,20 +224,23 @@ public class Player : MonoBehaviour
 
                 if (_slot.ItemObject.characterDisplay != null)
                 {
-                    foreach (ItemBuff buff in _slot.ItemObject.data.buffs)
+                    if (_slot.ItemObject != null)
                     {
-                        switch (buff.attribute)
+                        foreach (ItemBuff buff in _slot.ItemObject.data.buffs)
                         {
-                            case Attributes.Strength:
-                                DataManager.instance.playerData.statusData.minDamage += buff.min;
-                                DataManager.instance.playerData.statusData.maxDamage += buff.max;
-                                break;
-                            case Attributes.Defense:
-                                DataManager.instance.playerData.statusData.defense += buff.value;
-                                break;
-                            case Attributes.Health:
-                                DataManager.instance.playerData.statusData.maxHealth += buff.value;
-                                break;
+                            switch (buff.attribute)
+                            {
+                                case Attributes.Strength:
+                                    DataManager.instance.playerData.statusData.minDamage += buff.min;
+                                    DataManager.instance.playerData.statusData.maxDamage += buff.max;
+                                    break;
+                                case Attributes.Defense:
+                                    DataManager.instance.playerData.statusData.defense += buff.value;
+                                    break;
+                                case Attributes.Health:
+                                    DataManager.instance.playerData.statusData.maxHealth += buff.value;
+                                    break;
+                            }
                         }
                     }
 

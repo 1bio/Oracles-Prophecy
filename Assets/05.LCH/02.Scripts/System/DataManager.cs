@@ -20,7 +20,7 @@ public class DataManager : MonoBehaviour
 
     // 데이터 초기화
     #region Initialized Methods
-    private void Initialized()
+    public void Initialized()
     {
         statusData = new StatusData(1, 0f, 5f, 100f, 100f, 8f, 15f, 0f);
 

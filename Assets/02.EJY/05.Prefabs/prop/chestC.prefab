@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3127924214814050844}
   - component: {fileID: 773491064658475024}
   - component: {fileID: 2205413836411783318}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Iron
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3203691746102049611}
   - component: {fileID: 1002668742304427519}
   - component: {fileID: 2802361906435802106}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Wood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,9 +176,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8661699982575827802}
   - component: {fileID: -3903913994869417519}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: chestC
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

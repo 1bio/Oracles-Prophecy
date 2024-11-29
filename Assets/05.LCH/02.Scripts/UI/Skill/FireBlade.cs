@@ -73,6 +73,7 @@ public class FireBlade : MonoBehaviour
 
         if (fireBlade.level > 0)
         {
+            fireBlade.isUnlock = false;
             icon_lock.SetActive(false);
 
             // 스킬 아이콘 투명도 조절

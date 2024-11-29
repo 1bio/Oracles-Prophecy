@@ -66,6 +66,7 @@ public class ChargingShot : MonoBehaviour
     {
         if (chargingShot.level > 0)
         {
+            chargingShot.isUnlock = false;
             icon_lock.SetActive(false);
 
             // 스킬 아이콘 투명도 조절

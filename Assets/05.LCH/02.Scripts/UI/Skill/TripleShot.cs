@@ -67,6 +67,7 @@ public class TripleShot : MonoBehaviour
     {
         if (tripleShot.level > 0)
         {
+            tripleShot.isUnlock = false;
             icon_lock.SetActive(false);
 
             // 스킬 아이콘 투명도 조절

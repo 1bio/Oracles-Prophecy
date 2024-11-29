@@ -74,8 +74,9 @@ public class Slash : MonoBehaviour
 
         if (slash.level > 0)
         {
+            slash.isUnlock = false;
             icon_lock.SetActive(false);
-
+            
             // 스킬 아이콘 투명도 조절
             Color color = icon_skill.color;
             color.a = 0.8f;

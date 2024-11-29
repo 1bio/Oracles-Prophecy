@@ -76,6 +76,7 @@ public class Frost : MonoBehaviour
 
         if (frost.level > 0)
         {
+            frost.isUnlock = false;
             icon_lock.SetActive(false);
 
             // 스킬 아이콘 투명도 조절

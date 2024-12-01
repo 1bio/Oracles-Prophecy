@@ -3303,8 +3303,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1670510448}
-        m_TargetAssemblyTypeName: MedievalKingdomUI.Scripts.ExitButtonController,
+      - m_Target: {fileID: 1670510449}
+        m_TargetAssemblyTypeName: MedievalKingdomUI.Scripts.Window.AnimatedWindowController,
           Assembly-CSharp
         m_MethodName: Exit
         m_Mode: 1

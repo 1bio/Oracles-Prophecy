@@ -32,9 +32,6 @@ public class Projectile : MonoBehaviour
     #region Main Methods
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-            return;
-
         if (other.CompareTag("Wall"))
         {
             gameObject.SetActive(false);
@@ -51,6 +48,9 @@ public class Projectile : MonoBehaviour
 
         if (other.gameObject.TryGetComponent<Health>(out Health health))
         {
+            if (other.CompareTag("Player"))
+                return;
+
             // 피격 시 화살 비활성화
             Debug.Log("Hit!");
             health.TakeDamage(damage, false);

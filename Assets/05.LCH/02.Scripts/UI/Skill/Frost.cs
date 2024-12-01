@@ -58,7 +58,7 @@ public class Frost : MonoBehaviour
 
         }
 
-        DataManager.instance.SkillLevelUp("Frost", 1);
+        DataManager.instance.SkillLevelUp("Frost");
 
         UIManager.instance.AddSkillSlot(5);
         SkillManager.instance.AddSkill(frost.skillName, frost.coolDown);
@@ -76,7 +76,6 @@ public class Frost : MonoBehaviour
 
         if (frost.level > 0)
         {
-            frost.isUnlock = false;
             icon_lock.SetActive(false);
 
             // 스킬 아이콘 투명도 조절

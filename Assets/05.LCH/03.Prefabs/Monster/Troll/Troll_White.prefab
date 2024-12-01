@@ -1354,8 +1354,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.3, z: 1.8}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.28147358, y: 0.3, z: 2.131862}
+  m_Center: {x: -0.020407744, y: 0.0000000702769, z: -0.16593075}
 --- !u!114 &6000769971794597472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14552,6 +14552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodVFX: {fileID: 0}
+  playerhealthMonitor: {fileID: 0}
   hitCount: 0
 --- !u!114 &9160130346796224751
 MonoBehaviour:

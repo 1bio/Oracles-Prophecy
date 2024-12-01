@@ -55,7 +55,7 @@ public class SkyFallShot : MonoBehaviour
             Debug.Log("화살비 얻음!");
         }
 
-        DataManager.instance.SkillLevelUp("SkyFallShot", 1);
+        DataManager.instance.SkillLevelUp("SkyFallShot");
 
         UIManager.instance.AddSkillSlot(2);
         SkillManager.instance.AddSkill(skyfallShot.skillName, skyfallShot.coolDown);

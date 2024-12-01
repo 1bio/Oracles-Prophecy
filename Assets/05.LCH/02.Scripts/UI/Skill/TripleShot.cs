@@ -56,7 +56,7 @@ public class TripleShot : MonoBehaviour
 
         }
 
-        DataManager.instance.SkillLevelUp("TripleShot", 1);
+        DataManager.instance.SkillLevelUp("TripleShot");
 
         UIManager.instance.AddSkillSlot(1);
         SkillManager.instance.AddSkill(tripleShot.skillName, tripleShot.coolDown);
@@ -67,7 +67,6 @@ public class TripleShot : MonoBehaviour
     {
         if (tripleShot.level > 0)
         {
-            tripleShot.isUnlock = false;
             icon_lock.SetActive(false);
 
             // 스킬 아이콘 투명도 조절

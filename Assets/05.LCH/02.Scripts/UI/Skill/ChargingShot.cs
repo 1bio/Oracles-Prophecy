@@ -55,7 +55,7 @@ public class ChargingShot : MonoBehaviour
             Debug.Log("정조준 얻음!");
         }
 
-        DataManager.instance.SkillLevelUp("ChargingShot", 1);
+        DataManager.instance.SkillLevelUp("ChargingShot");
 
         UIManager.instance.AddSkillSlot(0);
         SkillManager.instance.AddSkill(chargingShot.skillName, chargingShot.coolDown);
@@ -66,7 +66,6 @@ public class ChargingShot : MonoBehaviour
     {
         if (chargingShot.level > 0)
         {
-            chargingShot.isUnlock = false;
             icon_lock.SetActive(false);
 
             // 스킬 아이콘 투명도 조절

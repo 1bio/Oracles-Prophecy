@@ -128,14 +128,15 @@ public class DataManager : MonoBehaviour
     }
 
     // 스킬 레벨 업
-    public void SkillLevelUp(string skillName, int level)
+    public void SkillLevelUp(string skillName)
     {
         foreach (SkillData skill in playerData.skillData)
         {
             if (skill.skillName != skillName)
                 continue;
 
-            skill.level += level;
+            skill.level += 1;
+            skill.isUnlock = false;
             skill.minDamage += 3;
             skill.maxDamage += 3;
             skill.coolDown *= skill.multipleCoolDown;

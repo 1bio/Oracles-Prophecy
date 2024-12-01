@@ -64,9 +64,6 @@ public class PlayerFreeLookState : PlayerBaseState
             }
             else
             {
-                DataManager.instance.SaveData();
-                DataManager.instance.LoadData();
-
                 stateMachine.ChangeState(new PlayerMeleeAttackState(stateMachine, basicAttackDataIndex));
                 return;
             }

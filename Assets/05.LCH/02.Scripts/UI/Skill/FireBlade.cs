@@ -55,7 +55,7 @@ public class FireBlade : MonoBehaviour
             Debug.Log("화염칼 얻음!");
         }
 
-        DataManager.instance.SkillLevelUp("Fire Blade", 1);
+        DataManager.instance.SkillLevelUp("Fire Blade");
 
         UIManager.instance.AddSkillSlot(4);
         SkillManager.instance.AddSkill(fireBlade.skillName, fireBlade.coolDown);
@@ -73,7 +73,6 @@ public class FireBlade : MonoBehaviour
 
         if (fireBlade.level > 0)
         {
-            fireBlade.isUnlock = false;
             icon_lock.SetActive(false);
 
             // 스킬 아이콘 투명도 조절

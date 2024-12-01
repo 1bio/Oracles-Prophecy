@@ -56,7 +56,7 @@ public class Slash : MonoBehaviour
             Debug.Log("절단 얻음!");
         }
 
-        DataManager.instance.SkillLevelUp("Single Slash", 1);
+        DataManager.instance.SkillLevelUp("Single Slash");
 
         UIManager.instance.AddSkillSlot(3);
         SkillManager.instance.AddSkill(slash.skillName, slash.coolDown);
@@ -74,7 +74,6 @@ public class Slash : MonoBehaviour
 
         if (slash.level > 0)
         {
-            slash.isUnlock = false;
             icon_lock.SetActive(false);
             
             // 스킬 아이콘 투명도 조절
@@ -83,6 +82,7 @@ public class Slash : MonoBehaviour
             icon_skill.color = color;
         }
 
+        slash = GetDashSlashData();
 
         slashTexts[0].text = $"{slash.level}"; // 레벨
         slashTexts[1].text = slash.skillName; // 스킬 이름

@@ -44,6 +44,8 @@ public class SkyFallShot : MonoBehaviour
         // 스킬 잠금 해제
         if (skyfallShot.level == 0)
         {
+            SkillManager.instance.AddSkill(skyfallShot.skillName, skyfallShot.coolDown);
+
             // 스킬 아이콘 투명도 조절
             Color color = icon_skill.color;
             color.a = 0.8f;
@@ -58,7 +60,6 @@ public class SkyFallShot : MonoBehaviour
         DataManager.instance.SkillLevelUp("SkyFallShot");
 
         UIManager.instance.AddSkillSlot(2);
-        SkillManager.instance.AddSkill(skyfallShot.skillName, skyfallShot.coolDown);
     }
 
     // 텍스트 업데이트

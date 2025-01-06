@@ -44,6 +44,8 @@ public class TripleShot : MonoBehaviour
         // 스킬 잠금 해제
         if (tripleShot.level == 0)
         {
+            SkillManager.instance.AddSkill(tripleShot.skillName, tripleShot.coolDown);
+
             // 스킬 아이콘 투명도 조절
             Color color = icon_skill.color;
             color.a = 0.8f;
@@ -59,7 +61,6 @@ public class TripleShot : MonoBehaviour
         DataManager.instance.SkillLevelUp("TripleShot");
 
         UIManager.instance.AddSkillSlot(1);
-        SkillManager.instance.AddSkill(tripleShot.skillName, tripleShot.coolDown);
     }
 
     // 텍스트 업데이트

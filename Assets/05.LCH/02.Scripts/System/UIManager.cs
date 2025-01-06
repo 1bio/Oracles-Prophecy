@@ -1,6 +1,4 @@
-﻿using MedievalKingdomUI.Scripts.Window;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -294,6 +292,9 @@ public class UIManager : MonoBehaviour
     public void ReturnToVillage()
     {
         gameoverCG.interactable = false;
+
+        SkillManager.instance.SetActiveSkill(false);
+        SkillManager.instance.SetClearPassiveSkill();
 
         StartCoroutine(Fade(false));
         SceneController.instance.LoadScene("Village");

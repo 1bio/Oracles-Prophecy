@@ -44,6 +44,8 @@ public class ChargingShot : MonoBehaviour
         // 스킬 잠금 해제
         if (chargingShot.level == 0)
         {
+            SkillManager.instance.AddSkill(chargingShot.skillName, chargingShot.coolDown);
+
             // 스킬 아이콘 투명도 조절
             Color color = icon_skill.color;
             color.a = 0.8f;
@@ -58,7 +60,6 @@ public class ChargingShot : MonoBehaviour
         DataManager.instance.SkillLevelUp("ChargingShot");
 
         UIManager.instance.AddSkillSlot(0);
-        SkillManager.instance.AddSkill(chargingShot.skillName, chargingShot.coolDown);
     }
 
     // 텍스트 업데이트

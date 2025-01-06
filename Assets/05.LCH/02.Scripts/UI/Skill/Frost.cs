@@ -46,6 +46,8 @@ public class Frost : MonoBehaviour
         // 스킬 잠금 해제
         if (frost.level == 0)
         {
+            SkillManager.instance.AddSkill(frost.skillName, frost.coolDown);
+
             // 스킬 아이콘 투명도 조절
             Color color = icon_skill.color;
             color.a = 0.8f;
@@ -61,7 +63,6 @@ public class Frost : MonoBehaviour
         DataManager.instance.SkillLevelUp("Frost");
 
         UIManager.instance.AddSkillSlot(5);
-        SkillManager.instance.AddSkill(frost.skillName, frost.coolDown);
     }
 
     // 텍스트 업데이트

@@ -45,6 +45,8 @@ public class Slash : MonoBehaviour
         // 스킬 잠금 해제
         if (slash.level == 0)
         {
+            SkillManager.instance.AddSkill(slash.skillName, slash.coolDown);
+
             // 스킬 아이콘 투명도 조절
             Color color = icon_skill.color;
             color.a = 0.8f;
@@ -59,7 +61,6 @@ public class Slash : MonoBehaviour
         DataManager.instance.SkillLevelUp("Single Slash");
 
         UIManager.instance.AddSkillSlot(3);
-        SkillManager.instance.AddSkill(slash.skillName, slash.coolDown);
     }
 
     // 텍스트 업데이트

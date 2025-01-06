@@ -44,6 +44,8 @@ public class FireBlade : MonoBehaviour
         // 스킬 잠금 해제
         if (fireBlade.level == 0)
         {
+            SkillManager.instance.AddSkill(fireBlade.skillName, fireBlade.coolDown);
+
             // 스킬 아이콘 투명도 조절
             Color color = icon_skill.color;
             color.a = 0.8f;
@@ -58,7 +60,6 @@ public class FireBlade : MonoBehaviour
         DataManager.instance.SkillLevelUp("Fire Blade");
 
         UIManager.instance.AddSkillSlot(4);
-        SkillManager.instance.AddSkill(fireBlade.skillName, fireBlade.coolDown);
     }
 
     // 텍스트 업데이트

@@ -35,6 +35,14 @@ public class SkillManager : MonoBehaviour
         this.isActvie = isActive;
     }
 
+    // 패시브 스킬 초기화
+    public void SetClearPassiveSkill()
+    {
+        skills.Clear();
+        activePassives.Clear();
+    }
+
+
     // 스킬 추가
     public void AddSkill(string skillName, float coolDown)
     {

@@ -1,5 +1,4 @@
-﻿using MedievalKingdomUI.Scripts.Window;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -15,7 +14,7 @@ public class DataManager : MonoBehaviour
     private List<AttackData> attackData;
     private RangeAttackData rangeAttackData;
 
-    private float limitExp = 30f; // 경험치 제한(레벨 업 시 경험치 증가)
+    private float limitExp = 100f; // 경험치 제한(레벨 업 시 경험치 증가)
     
 
     // 데이터 초기화
@@ -27,14 +26,14 @@ public class DataManager : MonoBehaviour
         skillData = new List<SkillData>
         {
             // 원거리
-            new SkillData("ChargingShot", 0, 20f, 40f, 0f, 12f, 0, 0, true, "Fires a powerful arrow after \r\ngathering strength for one second", 1.15f, 0.9f, 0f, false, 15f), // 스킬 1 [0]
-            new SkillData("TripleShot", 0, 10f, 20f, 0f , 9f, 0, 0, true, "Fires three arrows in quick \r\nsuccession with a basic attack", 1.1f, 0.95f, 8f, true, 10f), // 스킬 2 [1]
-            new SkillData("SkyFallShot", 0, 10f, 20f ,0f, 18f, 0, 0, true, "Fires multiple arrows that \r\nfall from the sky", 1.05f, 0.95f, 0f, false, 25f), // 스킬 3 [2]
+            new SkillData("ChargingShot", 0, 20f, 40f, 0f, 12f, 0, 0, true, "Fires a powerful arrow after \r\ngathering strength for one second", 1.15f, 0.9f, 0f, false, 35f), // 스킬 1 [0]
+            new SkillData("TripleShot", 0, 10f, 20f, 0f , 9f, 0, 0, true, "Fires three arrows in quick \r\nsuccession with a basic attack", 1.1f, 0.95f, 8f, true, 40f), // 스킬 2 [1]
+            new SkillData("SkyFallShot", 0, 10f, 20f ,0f, 18f, 0, 0, true, "Fires multiple arrows that \r\nfall from the sky", 1.05f, 0.95f, 0f, false, 45f), // 스킬 3 [2]
 
             // 근거리
-            new SkillData("Single Slash", 0, 30f, 50f, 10f, 14f, 0, 0, true, "Performs a powerful attack \r\nover a wide area", 1.07f, 0.85f, 0f, false, 15f), // 스킬 1 [3]
-            new SkillData("Fire Blade", 0, 20f, 40f, 0f, 10f, 5f, 0.35f, true, "Enhances a melee weapon with \r\nfire to perform an attack", 1.13f, 0.95f, 8f, true, 10f), // 스킬 2 [4]
-            new SkillData("Frost", 0, 40f, 60f, 10f, 16f, 0, 0, true, "Instantly releases the power of frost", 1.10f, 0.9f, 0f, false, 25f), // 스킬 3 [5]
+            new SkillData("Single Slash", 0, 30f, 50f, 10f, 14f, 0, 0, true, "Performs a powerful attack \r\nover a wide area", 1.07f, 0.85f, 0f, false, 35f), // 스킬 1 [3]
+            new SkillData("Fire Blade", 0, 20f, 40f, 0f, 10f, 5f, 0.35f, true, "Enhances a melee weapon with \r\nfire to perform an attack", 1.13f, 0.95f, 8f, true, 40f), // 스킬 2 [4]
+            new SkillData("Frost", 0, 40f, 60f, 10f, 16f, 0, 0, true, "Instantly releases the power of frost", 1.10f, 0.9f, 0f, false, 45f), // 스킬 3 [5]
         };
         
         attackData = new List<AttackData>()
@@ -78,25 +77,25 @@ public class DataManager : MonoBehaviour
         switch (monster)
         {
             case Troll:
-                playerData.statusData.exp += Random.Range(15f, 25f);
+                playerData.statusData.exp += Random.Range(40f, 75f);
                 break;
             case Minotaur:
-                playerData.statusData.exp += Random.Range(20f, 30f);
+                playerData.statusData.exp += Random.Range(100f, 125f);
                 break;
             case Medusa:
-                playerData.statusData.exp += Random.Range(35f, 50f);
+                playerData.statusData.exp += Random.Range(125f, 150f);
                 break;
             case CobraSnake:
-                playerData.statusData.exp += Random.Range(5f, 15f);
+                playerData.statusData.exp += Random.Range(25f, 50f);
                 break;
             case Devils:
-                playerData.statusData.exp += Random.Range(20f, 30f);
+                playerData.statusData.exp += Random.Range(100f, 125f);
                 break;
             case Weeper:
-                playerData.statusData.exp += Random.Range(5f, 15f);
+                playerData.statusData.exp += Random.Range(25f, 50f);
                 break;
             case SerpentWarrior:
-                playerData.statusData.exp += Random.Range(8f, 15f);
+                playerData.statusData.exp += Random.Range(40f, 75f);
                 break;
 
         }
@@ -104,9 +103,9 @@ public class DataManager : MonoBehaviour
         // 레벨 업
         if (playerData.statusData.exp >= limitExp)
         {
-            LevelUp(25f, 50f, 3f, 3f);
+            LevelUp(25f, 50f, 1.5f, 1.5f);
 
-            limitExp += 15f;
+            limitExp += 30f;
         }
     }
 
@@ -121,6 +120,9 @@ public class DataManager : MonoBehaviour
         // 추가 체력만큼 최대 체력 및 마나 증가
         player.maxHealth += addHealth;
         player.maxMana += addMana;
+        player.currentHealth = player.maxHealth;
+        player.currentMana = player.maxMana;
+
         player.minDamage += addMinDamage;
         player.maxDamage += addMaxDamage;
 
